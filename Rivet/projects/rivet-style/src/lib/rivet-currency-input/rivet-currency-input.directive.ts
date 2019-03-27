@@ -1,14 +1,5 @@
 import { CurrencyPipe } from '@angular/common';
-import {
-  Directive,
-  ElementRef,
-  HostBinding,
-  HostListener,
-  Inject,
-  Input,
-  LOCALE_ID,
-  OnInit
-} from '@angular/core';
+import { Directive, ElementRef, HostBinding, HostListener, Inject, Input, LOCALE_ID, OnInit } from '@angular/core';
 import { ControlValueAccessor, NgControl } from '@angular/forms';
 import { currencyValidator } from './rivet-currency-validator';
 import { RivetCurrencyService } from './rivet-currency.service';
@@ -16,8 +7,7 @@ import { RivetCurrencyService } from './rivet-currency.service';
 @Directive({
   selector: '[advicentRivetCurrencyInput]'
 })
-export class RivetCurrencyInputDirective
-  implements OnInit, ControlValueAccessor {
+export class RivetCurrencyInputDirective implements OnInit, ControlValueAccessor {
   @Inject(LOCALE_ID) public locale: string;
 
   @Input()
@@ -40,18 +30,13 @@ export class RivetCurrencyInputDirective
   ngOnInit(): void {
     const control = this.controlDir.control;
     const validator = currencyValidator(this.advicentRivetCurrencyMaxValue);
-    control.setValidators(
-      control.validator ? [control.validator, validator] : validator
-    );
+    control.setValidators(control.validator ? [control.validator, validator] : validator);
     control.updateValueAndValidity();
   }
 
   @HostListener('input', ['$event.target.value'])
   input(value) {
-    const parsedValue = RivetCurrencyService.Parse(
-      value,
-      this.advicentRivetCurrencyDigits
-    );
+    const parsedValue = RivetCurrencyService.Parse(value, this.advicentRivetCurrencyDigits);
     this.onChange(parsedValue);
   }
 
@@ -64,14 +49,13 @@ export class RivetCurrencyInputDirective
   }
 
   writeValue(value: any): void {
-    const digitsInfo =
-      '1.' +
-      this.advicentRivetCurrencyDigits +
-      '-' +
-      this.advicentRivetCurrencyDigits;
-    this.elementRef.nativeElement.value = new CurrencyPipe(
-      this.locale || 'en-US'
-    ).transform(value, undefined, undefined, digitsInfo);
+    const digitsInfo = '1.' + this.advicentRivetCurrencyDigits + '-' + this.advicentRivetCurrencyDigits;
+    this.elementRef.nativeElement.value = new CurrencyPipe(this.locale || 'en-US').transform(
+      value,
+      undefined,
+      undefined,
+      digitsInfo
+    );
   }
 
   registerOnChange(fn: any): void {
