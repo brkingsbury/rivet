@@ -1,0 +1,25 @@
+@import '../../projects/rivet-style/src/lib/styles/typeStyles.scss';
+@import '../../projects/rivet-style/src/lib/styles/rivetTheme.scss';
+
+.test-btn {
+    position: absolute;
+    top: 46px;
+    z-index: 100;
+    right: 0;
+}
+
+.mat-sidenav-container {
+    top: 46px;
+    background-color: $rvt-white;
+}
+
+.mat-sidenav-content {
+    background: none;
+    background-color: $rvt-white;
+    padding: 0;
+    .component-container {
+        padding: 0 30px;
+    }
+}
+
+// ----------------------------------------

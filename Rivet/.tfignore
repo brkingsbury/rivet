@@ -1,0 +1,7 @@
+# Add .tfignore to ignore node_modules as well
+/dist
+/tmp
+/out-tsc
+/coverage
+/node_modules
+/node_modules/.bin

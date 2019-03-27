@@ -1,0 +1,69 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+
+//------- Color Variables
+$rvt-primary-color: #585096;
+$rvt-primary-color-light: #877CC7;
+$rvt-primary-color-dark: #292868;
+
+$rvt-accent-color: #E7AA39;
+
+$rvt-warning-color: #C72929;
+$rvt-good-color: #26A54A;
+$rvt-insufficient-color: #F3E31D;
+
+
+$rvt-white: #fff;
+$rvt-neutral-50: #F7F7F7;
+$rvt-neutral-100: #EBEBEC;
+$rvt-neutral-200: #CBCED5;
+$rvt-neutral-300: #ADB3BE;
+$rvt-neutral-400: #6B7280;
+$rvt-neutral-600: #394059;
+$rvt-neutral-900: #192239;
+
+
+//---------------------- ! All #'s (50-900) must be defined !
+
+$rivet-primary: (
+    50: $rvt-neutral-50,
+    100: $rvt-neutral-100,
+    200: $rvt-neutral-200,
+    300: $rvt-neutral-300,
+    400: $rvt-neutral-400,
+    500: $rvt-neutral-400,
+    600: $rvt-neutral-600,
+    700: $rvt-neutral-600,
+    800: $rvt-neutral-600,
+    900: $rvt-neutral-900,
+
+    A100: $rvt-accent-color, // Accent
+    A200: $rvt-primary-color-light, // Primary Light
+    A400: $rvt-primary-color, // Primary
+    A700: $rvt-primary-color-dark, // Primary Dark
+    contrast:
+        (
+        50: $rvt-neutral-900,
+        100: $rvt-neutral-900,
+        200: $rvt-neutral-900,
+        300: $rvt-neutral-900,
+        400: $rvt-white,
+        500: $rvt-white,
+        600: $rvt-white,
+        700: $rvt-white,
+        800: $rvt-neutral-900,
+        900: $rvt-white,
+        A100: $rvt-neutral-900,
+        A200: $rvt-neutral-900,
+        A400: $rvt-white,
+        A700: $rvt-white
+        )
+);
+
+$rvt-primary: mat-palette($rivet-primary, A400, 300, 900);
+$rvt-accent: mat-palette($rivet-primary, A100);
+$rvt-warn: mat-palette($rivet-primary, 800);
+$rivet-theme: mat-light-theme($rvt-primary, $rvt-accent, $rvt-warn);
+
+@include angular-material-theme($rivet-theme);

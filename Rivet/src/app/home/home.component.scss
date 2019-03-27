@@ -1,0 +1,46 @@
+@import "../../styles.scss";
+
+.center-container {
+    margin-top: 60px;
+    padding: 0 30px;
+}
+a.section {
+    display: inline-block;
+    width: "calc(25% - 60px)";
+    margin: 0 30px 30px 0;
+    padding: 15px;
+    border-radius: 5px;
+    background: white;
+    border: none;
+    box-shadow: none;
+    text-align: left;
+    text-decoration: none;
+    color: black;
+    &:hover {
+        background-color: #eee;
+    }
+    i.material-icons {
+        font-size: 50px;
+    }
+    h3 {
+        margin-top: 0;
+    }
+    a {
+        margin: 0 10px;
+    }
+}
+.latest-version {
+    padding: 0 30px;
+    h5 {
+        margin: 0;
+    }
+    span {
+        font-size: 12px;
+    }
+    ul {
+        padding-left: 0;
+        li {
+            margin-left: 15px;
+        }
+    }
+}

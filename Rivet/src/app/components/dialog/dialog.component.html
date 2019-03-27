@@ -1,0 +1,28 @@
+<div class="component-container">
+    <h5>Dialog
+        <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/Polaris_Dialog_Specs.pdf" target="new"></a>
+    </h5>
+
+    <p>
+        Dialogs can be used as alerts or for confirmation of certain high level actions. Within the <code>dialogRef</code>, set it to <code>autoFocus: false</code> to prevent the buttons from being focused on open.
+    </p>
+
+    <button class="rvt-btn-primary" (click)="openDialog()">Test Dialog</button>
+
+    <br /><br />
+
+    <!-- Example -->
+    <span>Example dialog template:</span>
+    <textarea class="example-code">
+        <h5 mat-dialog-title>Title</h5>
+        <div mat-dialog-content>
+            <p>Content</p>
+        </div>
+        
+        <div mat-dialog-actions>
+            <button class="rvt-btn-primary">Action</button>
+            <button class="rvt-btn-standard" [mat-dialog-close]>Close</button>
+        </div>
+    </textarea>
+    <!-- End Example -->
+</div>

@@ -1,0 +1,48 @@
+$rivet-icon-path: "rivet-style/lib/rivet-icons";
+
+@import 'rivetTheme';
+@import 'buttonStyles';
+@import 'inputStyles';
+@import 'typeStyles';
+@import 'iconStyles';
+@import 'checkboxStyles';
+@import 'dropdownStyles';
+@import 'tabStyles';
+@import 'navStyles';
+@import 'dialogStyles';
+@import 'tableStyles';
+@import 'loadingStyles';
+@import 'radioStyles';
+@import "app/app.component.scss"; // used to import any temporary styles before they are in style package
+
+@import '~@angular/material/theming';
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: $RvtFontFamily; //imported from typeStyles
+    margin: 0;
+    height: 100vh;
+}
+
+#center-container {
+    max-width: 120rem;
+    margin: 90px 0 0 250px;
+    padding: 0 30px;
+    @media(max-width: 768px){
+        margin: 90px 30px 0 30px;
+    }
+}
+
+hr {
+    margin: 5rem 0 6rem;
+}
+
+code {
+    background-color: #ebebec;
+    font-family: 'Courier New', Courier, monospace;
+    padding: 2px 4px;
+}

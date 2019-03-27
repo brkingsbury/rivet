@@ -1,0 +1,39 @@
+<div class="center-container">
+    <a class="section" href="/components">
+        <i class="material-icons">view_compact</i>
+        <h3>Components</h3>
+        <a class="rvt-text-link" href="">Material</a>
+        <a class="rvt-text-link" href="/components/#rivet">Rivet</a>
+    </a>
+    <a class="section" href="/design">
+        <i class="material-icons">style</i>
+        <h3>Design</h3>
+        <a class="rvt-text-link" href="/design/#fonts">Font styles</a>
+        <a class="rvt-text-link" href="/design/#colors">Colors</a>
+    </a>
+    <a class="section" href="/accessibility">
+        <i class="material-icons">accessibility_new</i>
+        <h3>Accessibility</h3>
+        <a class="rvt-text-link">Contrast</a>
+        <a class="rvt-text-link">Keyboard Navigation</a>
+    </a>
+    <a class="section" href="/changelog">
+        <i class="material-icons">code</i>
+        <h3>Changelog</h3>
+        <a class="rvt-text-link">Versions</a>
+        <a class="rvt-text-link" href="/changelog/#roadmap">Roadmap</a>
+    </a>
+</div>
+
+<hr />
+
+<div class="latest-version">
+    <h3>Latest version</h3>
+
+    <h5>v{{versions[0].version}} - {{versions[0].date}}</h5>
+    <p>{{versions[0].note}}</p>
+    <ul *ngFor="let update of versions[0].updates">
+        {{update.category}}
+        <li *ngFor="let bullet of update.bullets">{{bullet}}</li>
+    </ul>
+</div>

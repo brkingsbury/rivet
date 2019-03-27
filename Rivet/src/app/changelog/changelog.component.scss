@@ -1,0 +1,19 @@
+@import "../../styles.scss";
+
+.version-history {
+    max-height: 75vh;
+    overflow-y: scroll;
+    div:last-child hr{
+        display: none;
+    }
+}
+
+s {
+    color: $rvt-neutral-400;
+}
+
+.rivet-icon-check {
+    margin-left: 10px;
+    color: $rvt-good-color;
+    font-size: 12px;
+}

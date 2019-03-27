@@ -1,0 +1,12 @@
+<app-top-nav></app-top-nav>
+<button class="rvt-btn-standard test-btn" (click)="sidenav.toggle()">Test</button>
+
+<mat-sidenav-container autosize>
+    <mat-sidenav #sidenav mode="side" opened>
+        <app-side-nav></app-side-nav>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>

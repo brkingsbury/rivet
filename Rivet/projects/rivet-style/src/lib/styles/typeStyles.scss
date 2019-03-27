@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600');
+
+$RvtFontFamily: 'Nunito Sans', Arial, sans-serif;
+
+body {
+    font-family: $RvtFontFamily;
+}
+
+h1 {
+    font-family: $RvtFontFamily;
+    font-size: 56px;
+    font-weight: 200;
+}
+
+h2 {
+    font-family: $RvtFontFamily;
+    font-size: 48px;
+    font-weight: 200;
+}
+
+h3 {
+    font-family: $RvtFontFamily;
+    font-size: 38px;
+    font-weight: 300;
+}
+
+h4 {
+    font-family: $RvtFontFamily;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+h5 {
+    font-family: $RvtFontFamily;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+h6 {
+    font-family: $RvtFontFamily;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+p {
+    font-family: $RvtFontFamily;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+label {
+    font-family: $RvtFontFamily;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+input, textarea {
+    font-family: $RvtFontFamily;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+button {
+    font-family: $RvtFontFamily;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+a {
+    font-family: $RvtFontFamily;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+    }
+    &:focus:not(:active) {
+        outline-offset: 1px;
+    }
+}
+
+span {
+    font-family: $RvtFontFamily;
+}

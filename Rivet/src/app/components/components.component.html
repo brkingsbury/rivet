@@ -1,0 +1,194 @@
+<div class="component-container">
+    <h3>Material Components</h3>
+    <p>Material components use Angular Material as the base and have style overrides to match Rivet styling.
+        Full documentation for how to use the components can be found
+        <a target="new" href="https://material.angular.io/components/categories">here</a>.
+    </p>
+</div>
+
+<hr/>
+
+<app-checkbox id="checkbox"></app-checkbox>
+
+<hr/>
+
+<app-datepicker id="datepicker"></app-datepicker>
+
+<hr/>
+
+<app-dialog id="dialog"></app-dialog>
+
+<hr/>
+
+<app-event-picker id="eventPicker"></app-event-picker>
+
+<hr/>
+
+<app-dropdown id="dropdown"></app-dropdown>
+
+<hr/>
+
+<app-radio-buttons id="radio"></app-radio-buttons>
+
+<hr/>
+
+<app-tables id="table"></app-tables>
+
+<hr/>
+
+<app-tabs id="tab"></app-tabs>
+
+<hr/>
+
+<div class="component-container">
+    <h5 id="matInput">Text Inputs 
+        <a class="rivet-icon-pdf" id="inputs" target="new" href="../../assets/Polaris_Input_Specs.pdf" title="spec sheet"></a>
+    </h5>
+    <p>Inputs with labels are used for standalone inputs, where the labels refer to what the single input is asking for. Inputs without labels are used for multiple/form inputs as the form itself will contain the labels.</p>
+
+    <form>
+        <mat-form-field>
+            <input matInput placeholder="Label" value="Input Text">
+            <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field>
+            <input matInput placeholder="Label" value="">
+            <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="invalid">
+            <input matInput placeholder="Label" value="Invalid Input Text">
+            <mat-hint>This is invalid</mat-hint>
+        </mat-form-field>
+
+        <mat-form-field class="mat-form-field">
+            <input matInput placeholder="Label" value="Disabled Input Text" disabled>
+            <mat-hint>This is disabled</mat-hint>
+        </mat-form-field>
+    </form>
+
+    <!-- Example -->
+    <textarea class="example-code" readonly>
+        <form>
+            <mat-form-field>
+                <input matInput placeholder="Label">
+                <mat-hint>Helper Text</mat-hint>
+            </mat-form-field>
+        </form>
+    </textarea>
+    <!-- End Example -->
+</div>
+
+<hr class="section-divider"/>
+
+<div class="component-container">
+    <h3>Rivet Components</h3>
+    <p>Rivet components are custom built components for easy implementation and styling.</p>
+</div>
+
+<hr/>
+
+<app-buttons id="button"></app-buttons>
+
+<hr />
+
+<app-expansion-panel id="expansion"></app-expansion-panel>
+
+<hr/>
+
+<app-loading id="loading"></app-loading>
+
+<hr/>
+
+<app-nav id="nav"></app-nav>
+
+<hr/>
+
+<div class="component-container">
+    <h5 id="txtArea">Text Areas 
+        <a class="rivet-icon-pdf" title="spec sheet" target="new" href="../../assets/Polaris_Input_Specs.pdf" target="new"></a>
+    </h5>
+    <p>Used when users need to enter large amounts of text such as comments/suggestions or messages.</p>
+
+    <form>
+        <div class="rvt-input-wrap">
+            <label for="empty">Label</label>
+            <textarea id="empty"></textarea>
+        </div>
+
+        <div class="rvt-input-wrap">
+            <label for="filled">Label</label>
+            <textarea id="filled">Entry</textarea>
+        </div>
+
+        <div class="rvt-input-wrap invalid">
+            <label for="invalid">Label</label>
+            <textarea id="invalid">Invalid Entry or maybe just a really long one</textarea>
+            <span class="helper-text">Reason for invalid</span>
+        </div>
+
+        <div class="rvt-input-wrap">
+            <label for="disabled">Label</label>
+            <textarea id="disabled" disabled>Disabled Entry</textarea>
+            <span class="helper-text">Reason for disabled</span>
+        </div>
+    </form>
+
+    <!-- Example -->
+    <textarea class="example-code" readonly>
+        <div class="rvt-input-wrap">
+            <label for="filled">Label</label>
+            <textarea id="filled">Entry&lt;/textarea>
+            <span class="helper-text">Helper text goes here</span>
+        </div>
+    </textarea>
+    <!-- End Example -->
+</div>
+
+<hr/>
+
+<div class="component-container">
+    <h5 id="rvtInput">Custom Text Inputs</h5>
+    <p></p>
+
+    <form>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Currency Field" [formControl]="currencyInput" [advicentRivetCurrencyInput] />
+            <mat-hint *ngIf="currencyInput.errors?.invalidFormat">Invalid Format</mat-hint>
+            <mat-hint *ngIf="currencyInput.errors?.tooLarge">Greater than max value
+                {{currencyInput.errors.tooLarge.maxValue}}</mat-hint>
+        </mat-form-field>
+    </form>
+
+    <!-- Example -->
+    <textarea class="example-code" readonly>
+        <form>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Currency Field" [formControl]="currencyInput" [advicentRivetCurrencyInput] />
+            </mat-form-field>
+        </form>
+    </textarea>
+    <!-- End Example -->
+
+    <form>
+        <mat-form-field class="example-full-width">
+            <input matInput placeholder="Percentage Field" [formControl]="percentageInput" advicentRivetPercentageInput
+                [advicentRivetPercentageFractionSize]="2" />
+            <mat-hint *ngIf="percentageInput.errors?.invalidFormat">Invalid Format</mat-hint>
+            <mat-hint *ngIf="percentageInput.errors?.tooLarge">Greater than max value
+                {{percentageInput.errors.tooLarge.maxValue}}</mat-hint>
+        </mat-form-field>
+    </form>
+
+    <!-- Example -->
+    <textarea class="example-code" readonly>
+        <form>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Percentage Field" [formControl]="percentageInput" advicentRivetPercentageInput
+                    [advicentRivetPercentageFractionSize]="2" />
+            </mat-form-field>
+        </form>    
+    </textarea>
+    <!-- End Example -->
+</div>
