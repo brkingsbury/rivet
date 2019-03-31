@@ -1,4 +1,5 @@
-import { AfterContentInit, Component, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
+import { AfterContentInit, Component, ElementRef, EventEmitter, HostListener, Input, Output } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'advicent-rivet-expansion-panel',
@@ -6,10 +7,9 @@ import { AfterContentInit, Component, ElementRef, EventEmitter, HostListener, Ou
   styleUrls: ['./expansion-panel.component.scss']
 })
 export class RivetExpansionPanelComponent implements AfterContentInit {
-  @Output()
-  addButtonCallback: EventEmitter<any> = new EventEmitter();
-  @Output()
-  deleteButtonCallback: EventEmitter<any> = new EventEmitter();
+  @Input() formGroup?: FormGroup;
+  @Output() addButtonCallback: EventEmitter<any> = new EventEmitter();
+  @Output() deleteButtonCallback: EventEmitter<any> = new EventEmitter();
 
   panelExpanded = false;
   defaultExpansionHeight: number;
@@ -28,9 +28,12 @@ export class RivetExpansionPanelComponent implements AfterContentInit {
     this.resizePanel();
   }
 
-  setExpandedState(expanded, event) {
-    this.panelExpanded = expanded;
-    this.resizePanel();
+  setExpandedState(expanded: boolean) {
+    if (this.isValid()) {
+      this.panelExpanded = expanded;
+      this.resizePanel();
+    }
+
     event.stopPropagation();
   }
 
@@ -49,6 +52,10 @@ export class RivetExpansionPanelComponent implements AfterContentInit {
     this.resizePanel();
   }
 
+  private isValid() {
+    return this.formGroup === undefined || this.formGroup.valid || this.formGroup.untouched;
+  }
+
   private resizePanel() {
     const expansion = this.element.nativeElement.querySelector('.expansion');
     if (this.panelExpanded) {
@@ -59,8 +66,6 @@ export class RivetExpansionPanelComponent implements AfterContentInit {
   }
 
   private initializeHeight() {
-    this.defaultExpansionHeight = this.element.nativeElement.querySelector(
-      '.top-panel'
-    ).offsetHeight;
+    this.defaultExpansionHeight = this.element.nativeElement.querySelector('.top-panel').offsetHeight;
   }
 }

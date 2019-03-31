@@ -1,25 +1,28 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, inject, TestBed } from '@angular/core/testing';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponentModule } from '../material-component-module';
 import { RivetExpansionPanelComponent } from './expansion-panel.component';
 
-describe('RivetExpansionPanelComponent', () => {
+fdescribe('RivetExpansionPanelComponent', () => {
   let component: RivetExpansionPanelComponent;
   let fixture: ComponentFixture<RivetExpansionPanelComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [BrowserAnimationsModule, MaterialComponentModule],
+      imports: [BrowserAnimationsModule, MaterialComponentModule, ReactiveFormsModule, FormsModule],
+      // providers: [FormBuilder, FormGroup],
       declarations: [RivetExpansionPanelComponent]
     }).compileComponents();
   }));
 
-  beforeEach(() => {
+  beforeEach(inject([FormBuilder], (fb: FormBuilder) => {
     fixture = TestBed.createComponent(RivetExpansionPanelComponent);
     component = fixture.componentInstance;
+    component.formGroup = fb.group({});
     fixture.detectChanges();
-  });
+  }));
 
   afterEach(() => {
     fixture.destroy();
@@ -27,9 +30,7 @@ describe('RivetExpansionPanelComponent', () => {
 
   it('should be toggleable', () => {
     expect(component.panelExpanded).toBe(false);
-    const toggleButton = fixture.debugElement.query(
-      By.css('.toggle-expansion-btn')
-    ).nativeElement;
+    const toggleButton = fixture.debugElement.query(By.css('.toggle-expansion-btn')).nativeElement;
     toggleButton.click();
     expect(component.panelExpanded).toBe(true);
     toggleButton.click();
@@ -37,25 +38,31 @@ describe('RivetExpansionPanelComponent', () => {
     toggleButton.click();
     expect(component.panelExpanded).toBe(true);
 
-    const closeButton = fixture.debugElement.query(
-      By.css('.bottom-button-bar .close-btn')
-    ).nativeElement;
+    const closeButton = fixture.debugElement.query(By.css('.bottom-button-bar .close-btn')).nativeElement;
     closeButton.click();
+    expect(component.panelExpanded).toBe(false);
+  });
+
+  it('should not be able to toggle to close if the form is invalid', () => {
+    component.formGroup.setErrors({ invalid: true });
+
+    const toggleButton = fixture.debugElement.query(By.css('.toggle-expansion-btn')).nativeElement;
+    toggleButton.click();
+
+    const closeButton = fixture.debugElement.query(By.css('.bottom-button-bar .close-btn')).nativeElement;
+    closeButton.click();
+
     expect(component.panelExpanded).toBe(false);
   });
 
   it('should dynamically change height', () => {
     // not expanded by default
     expect(component.panelHeight).toEqual(component.defaultExpansionHeight);
-    const toggleButton = fixture.debugElement.query(
-      By.css('.toggle-expansion-btn')
-    ).nativeElement;
+    const toggleButton = fixture.debugElement.query(By.css('.toggle-expansion-btn')).nativeElement;
 
     // expanded
     toggleButton.click();
-    expect(component.panelHeight).toBeGreaterThan(
-      component.defaultExpansionHeight
-    );
+    expect(component.panelHeight).toBeGreaterThan(component.defaultExpansionHeight);
 
     // not expanded
     toggleButton.click();
@@ -64,14 +71,10 @@ describe('RivetExpansionPanelComponent', () => {
 
   it('should call an add button callback', () => {
     spyOn(component.addButtonCallback, 'emit');
-    const toggleButton = fixture.debugElement.query(
-      By.css('.toggle-expansion-btn')
-    ).nativeElement;
+    const toggleButton = fixture.debugElement.query(By.css('.toggle-expansion-btn')).nativeElement;
     toggleButton.click();
 
-    const addButton = fixture.debugElement.query(
-      By.css('.bottom-button-bar .add-btn')
-    ).nativeElement;
+    const addButton = fixture.debugElement.query(By.css('.bottom-button-bar .add-btn')).nativeElement;
     addButton.click();
     expect(component.addButtonCallback.emit).toHaveBeenCalledWith();
   });
