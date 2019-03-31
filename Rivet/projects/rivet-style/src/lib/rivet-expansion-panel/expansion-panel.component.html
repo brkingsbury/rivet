@@ -18,7 +18,7 @@
         [ngClass]="
           panelExpanded ? 'rivet-icon-caret-up' : 'rivet-icon-caret-down'
         "
-        (click)="setExpandedState(!panelExpanded)"
+        (click)="setExpandedState(!panelExpanded, $event)"
       ></button>
       <ng-content select="[header-button-content]"></ng-content>
 
@@ -36,7 +36,7 @@
       </button>
       <button
         class="rvt-btn-standard close-btn"
-        (click)="setExpandedState(false)"
+        (click)="setExpandedState(false, $event)"
       >
         Close
       </button>
