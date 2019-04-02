@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-icons',
     templateUrl: './icons.component.html',
-    styleUrls: ['../design.component.scss']
+    styleUrls: ['../styles.component.scss']
 })
 export class IconsComponent implements OnInit {
     alert = false;

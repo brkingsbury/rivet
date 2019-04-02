@@ -26,14 +26,8 @@ body {
     font-family: $RvtFontFamily; //imported from typeStyles
     margin: 0;
     height: 100vh;
-}
-
-#center-container {
-    max-width: 120rem;
-    margin: 90px 0 0 250px;
-    padding: 0 30px;
-    @media(max-width: 768px){
-        margin: 90px 30px 0 30px;
+    * {
+        color: $rvt-neutral-900;
     }
 }
 
@@ -41,8 +35,13 @@ hr {
     margin: 5rem 0 6rem;
 }
 
+h1, h2, h3, h4, h5, h6, p, span {
+    margin: 0;
+    color: $rvt-neutral-900;
+}
+
 code {
-    background-color: #ebebec;
+    background-color: $rvt-neutral-100;
     font-family: 'Courier New', Courier, monospace;
     padding: 2px 4px;
 }

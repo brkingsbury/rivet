@@ -3,26 +3,39 @@
         <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/Polaris_Dialog_Specs.pdf" target="new"></a>
     </h5>
 
-    <p>
-        Dialogs can be used as alerts or for confirmation of certain high level actions. Within the <code>dialogRef</code>, set it to <code>autoFocus: false</code> to prevent the buttons from being focused on open.
+    <p>Dialogs can be used as alerts or for confirmation of certain high level actions. Within the
+        <code>dialogRef</code>, set it to <code>autoFocus: false</code> to prevent the buttons from being focused on
+        open.
     </p>
 
-    <button class="rvt-btn-primary" (click)="openDialog()">Test Dialog</button>
-
-    <br /><br />
+    <div class="example-component">
+        <button class="rvt-btn-primary" (click)="openDialog()">Test Dialog</button>
+    </div>
 
     <!-- Example -->
-    <span>Example dialog template:</span>
-    <textarea class="example-code">
-        <h5 mat-dialog-title>Title</h5>
-        <div mat-dialog-content>
-            <p>Content</p>
-        </div>
-        
-        <div mat-dialog-actions>
-            <button class="rvt-btn-primary">Action</button>
-            <button class="rvt-btn-standard" [mat-dialog-close]>Close</button>
-        </div>
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
+<h5 mat-dialog-title>Title</h5>
+<div mat-dialog-content>
+    <p>Content</p>
+</div>
+
+<div mat-dialog-actions>
+    <button class="rvt-btn-primary">Action</button>
+    <button class="rvt-btn-text" [mat-dialog-close]>Close</button>
+</div>
+    </textarea>
+
+    <p class="example-code-header">TypeScript</p>
+    <textarea class="example-code" readonly>
+constructor(public dialog: MatDialog) {}
+
+openDialog(): void {
+    const dialogRef = this.dialog.open(DialogComponentDialogComponent, {
+        width: '500px',
+        autoFocus: false
+    });
+}
     </textarea>
     <!-- End Example -->
 </div>

@@ -1,0 +1,44 @@
+<div class="component-container">
+    <h5 id="matInput">Text Inputs
+        <a class="rivet-icon-pdf" id="inputs" target="new" href="../../assets/Polaris_Input_Specs.pdf"
+            title="spec sheet"></a>
+    </h5>
+    <p>Inputs with labels are used for standalone inputs, where the labels refer to what the single input is asking for.
+        Inputs without labels are used for multiple/form inputs as the form itself will contain the labels.</p>
+
+    <div class="example-component">
+        <form>
+            <mat-form-field>
+                <input matInput placeholder="Label" value="Input Text">
+                <mat-hint>Helper Text</mat-hint>
+            </mat-form-field>
+    
+            <mat-form-field>
+                <input matInput placeholder="Label" value="">
+                <mat-hint>Helper Text</mat-hint>
+            </mat-form-field>
+    
+            <mat-form-field class="invalid">
+                <input matInput placeholder="Label" value="Invalid Input Text">
+                <mat-hint>This is invalid</mat-hint>
+            </mat-form-field>
+    
+            <mat-form-field class="mat-form-field">
+                <input matInput placeholder="Label" value="Disabled Input Text" disabled>
+                <mat-hint>This is disabled</mat-hint>
+            </mat-form-field>
+        </form>
+    </div>
+
+    <!-- Example -->
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
+<form>
+    <mat-form-field>
+        <input matInput placeholder="Label">
+        <mat-hint>Helper Text</mat-hint>
+    </mat-form-field>
+</form>
+    </textarea>
+    <!-- End Example -->
+</div>

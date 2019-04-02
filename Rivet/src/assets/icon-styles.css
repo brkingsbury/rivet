@@ -1,0 +1,48 @@
+* {
+    transition: fill 600ms ease;
+}
+
+svg:hover {
+    cursor: default;
+}
+
+svg:hover .bg-circle {
+    fill: #cbced5;
+}
+
+
+svg.component:hover .back .fill {
+    fill: #064A66
+}
+
+svg.component:hover .front .fill{
+    fill: #006398;
+}
+
+svg.changelog:hover .fill {
+    fill: #EC6F3E;
+}
+
+svg.changelog:hover .gray-fill {
+    fill: #6B7280;
+}
+
+svg.styles:hover .purple-fill {
+    fill: #433D73;
+}
+
+svg.styles:hover .gold-fill {
+    fill: #D49116;
+}
+
+svg.patterns:hover .blue-fill {
+    fill: #006398;
+}
+
+svg.patterns:hover .green-fill {
+    fill: #1F6549;
+}
+
+svg.patterns:hover .gy-fill {
+    fill: #2C8C66;
+}

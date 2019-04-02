@@ -1,0 +1,23 @@
+<?xml-stylesheet type="text/css" href="icon-styles.css" version="1.0" encoding="UTF-8"?>
+<svg class="styles" width="250px" height="250px" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>RivetIcon_Styles</title>
+    <desc>Created with Sketch.</desc>
+    <g id="RivetIcon_Styles" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-17">
+          <circle class="bg-circle" id="Oval" fill="#EBEBEC" fill-rule="nonzero" cx="125" cy="125" r="125"></circle>
+            <g id="Group-14" transform="translate(62.000000, 61.000000)" fill-rule="nonzero">
+                <rect class="purple-fill" id="Rectangle" fill-opacity="0.7" fill="#585096" x="0" y="7" width="100" height="100"></rect>
+                <rect id="Rectangle" stroke="#192239" stroke-width="3" x="7" y="0" width="100" height="100"></rect>
+            </g>
+            <g id="Group-15" transform="translate(82.000000, 81.000000)">
+                <rect id="Rectangle" stroke="#192239" stroke-width="3" fill="#FFFFFF" fill-rule="nonzero" x="7" y="0" width="100" height="100"></rect>
+                <rect class="gold-fill" id="Rectangle" fill-opacity="0.7" fill="#E7AA39" fill-rule="nonzero" x="0" y="7" width="100" height="100"></rect>
+                <rect id="Rectangle" stroke="#192239" stroke-width="3" fill-rule="nonzero" x="7" y="0" width="100" height="100"></rect>
+                <text id="Aa" font-family="NunitoSans-Light, Nunito Sans" font-size="65" font-weight="300" fill="#192239">
+                    <tspan x="16" y="71">Aa</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

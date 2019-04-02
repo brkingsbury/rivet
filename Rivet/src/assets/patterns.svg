@@ -1,0 +1,32 @@
+<?xml-stylesheet type="text/css" href="icon-styles.css" version="1.0" encoding="UTF-8"?>
+<svg class="patterns" width="250px" height="250px" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>RivetIcon_Patterns</title>
+    <desc>Created with Sketch.</desc>
+    <g id="RivetIcon_Patterns" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-18" fill-rule="nonzero">
+          <circle class="bg-circle" id="Oval" fill="#EBEBEC" cx="125" cy="125" r="125"></circle>
+            <g id="Group" transform="translate(59.000000, 59.000000)">
+                <rect class="blue-fill" id="Rectangle" fill-opacity="0.7" fill="#008BA9" x="0" y="4.55172414" width="36.4137931" height="36.4137931"></rect>
+              <rect class="blue-fill" id="Rectangle" fill-opacity="0.7" fill="#008BA9" x="45.5172414" y="4.55172414" width="36.4137931" height="36.4137931"></rect>
+              <rect class="blue-fill" id="Rectangle" fill-opacity="0.7" fill="#008BA9" x="91.0344828" y="4.55172414" width="36.4137931" height="36.4137931"></rect>
+                <rect class="green-fill" id="Rectangle" fill-opacity="0.7" fill="#2C8C66" x="18.2068966" y="50.0689655" width="36.4137931" height="36.4137931"></rect>
+              <rect class="gy-fill" id="Rectangle" fill-opacity="0.7" fill="#8DAD52" x="45.5172414" y="95.5862069" width="36.4137931" height="36.4137931"></rect>
+              <rect class="green-fill" id="Rectangle" fill-opacity="0.7" fill="#2C8C66" x="63.7241379" y="50.0689655" width="36.4137931" height="36.4137931"></rect>
+                <rect id="Rectangle" stroke="#192239" stroke-width="3" x="4.55172414" y="0" width="36.4137931" height="36.4137931"></rect>
+                <rect id="Rectangle" stroke="#192239" stroke-width="3" x="50.0689655" y="0" width="36.4137931" height="36.4137931"></rect>
+                <rect id="Rectangle" stroke="#192239" stroke-width="3" x="95.5862069" y="0" width="36.4137931" height="36.4137931"></rect>
+                <rect id="Rectangle" stroke="#192239" stroke-width="3" x="22.7586207" y="45.5172414" width="36.4137931" height="36.4137931"></rect>
+                <rect id="Rectangle" stroke="#192239" stroke-width="3" x="50.0689655" y="91.0344828" width="36.4137931" height="36.4137931"></rect>
+                <rect id="Rectangle" stroke="#192239" stroke-width="3" x="68.2758621" y="45.5172414" width="36.4137931" height="36.4137931"></rect>
+                <path d="M40.9655172,18.2068966 L50.0689655,18.2068966" id="Line" stroke="#192239" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M86.4827586,18.2068966 L95.5862069,18.2068966" id="Line" stroke="#192239" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M104.689655,63.7241379 L113.793103,63.7241379" id="Line" stroke="#192239" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M40.9655172,109.241379 L50.0689655,109.241379" id="Line" stroke="#192239" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M59.1724138,63.7241379 L68.2758621,63.7241379" id="Line" stroke="#192239" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M116.068966,63.7241379 L116.068966,36.4137931" id="Line-2" stroke="#192239" stroke-width="3" stroke-linecap="square"></path>
+                <path d="M40.5103448,109.241379 L40.5103448,81.9310345" id="Line-2" stroke="#192239" stroke-width="3" stroke-linecap="square"></path>
+            </g>
+        </g>
+    </g>
+</svg>

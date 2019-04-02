@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
     selector: 'app-colors',
     templateUrl: './colors.component.html',
-    styleUrls: ['../design.component.scss']
+    styleUrls: ['../styles.component.scss']
 })
 export class ColorsComponent implements OnInit {
     colors = [

@@ -1,3 +1,5 @@
+<h2 class="page-header">Components</h2>
+
 <div class="component-container">
     <h3>Material Components</h3>
     <p>Material components use Angular Material as the base and have style overrides to match Rivet styling.
@@ -24,6 +26,10 @@
 
 <hr/>
 
+<app-inputs id="input"></app-inputs>
+
+<hr/>
+
 <app-dropdown id="dropdown"></app-dropdown>
 
 <hr/>
@@ -40,45 +46,7 @@
 
 <hr/>
 
-<div class="component-container">
-    <h5 id="matInput">Text Inputs 
-        <a class="rivet-icon-pdf" id="inputs" target="new" href="../../assets/Polaris_Input_Specs.pdf" title="spec sheet"></a>
-    </h5>
-    <p>Inputs with labels are used for standalone inputs, where the labels refer to what the single input is asking for. Inputs without labels are used for multiple/form inputs as the form itself will contain the labels.</p>
-
-    <form>
-        <mat-form-field>
-            <input matInput placeholder="Label" value="Input Text">
-            <mat-hint>Helper Text</mat-hint>
-        </mat-form-field>
-
-        <mat-form-field>
-            <input matInput placeholder="Label" value="">
-            <mat-hint>Helper Text</mat-hint>
-        </mat-form-field>
-
-        <mat-form-field class="invalid">
-            <input matInput placeholder="Label" value="Invalid Input Text">
-            <mat-hint>This is invalid</mat-hint>
-        </mat-form-field>
-
-        <mat-form-field class="mat-form-field">
-            <input matInput placeholder="Label" value="Disabled Input Text" disabled>
-            <mat-hint>This is disabled</mat-hint>
-        </mat-form-field>
-    </form>
-
-    <!-- Example -->
-    <textarea class="example-code" readonly>
-        <form>
-            <mat-form-field>
-                <input matInput placeholder="Label">
-                <mat-hint>Helper Text</mat-hint>
-            </mat-form-field>
-        </form>
-    </textarea>
-    <!-- End Example -->
-</div>
+<app-text-areas id="textArea"></app-text-areas>
 
 <hr class="section-divider"/>
 
@@ -106,49 +74,6 @@
 <hr/>
 
 <div class="component-container">
-    <h5 id="txtArea">Text Areas 
-        <a class="rivet-icon-pdf" title="spec sheet" target="new" href="../../assets/Polaris_Input_Specs.pdf" target="new"></a>
-    </h5>
-    <p>Used when users need to enter large amounts of text such as comments/suggestions or messages.</p>
-
-    <form>
-        <div class="rvt-input-wrap">
-            <label for="empty">Label</label>
-            <textarea id="empty"></textarea>
-        </div>
-
-        <div class="rvt-input-wrap">
-            <label for="filled">Label</label>
-            <textarea id="filled">Entry</textarea>
-        </div>
-
-        <div class="rvt-input-wrap invalid">
-            <label for="invalid">Label</label>
-            <textarea id="invalid">Invalid Entry or maybe just a really long one</textarea>
-            <span class="helper-text">Reason for invalid</span>
-        </div>
-
-        <div class="rvt-input-wrap">
-            <label for="disabled">Label</label>
-            <textarea id="disabled" disabled>Disabled Entry</textarea>
-            <span class="helper-text">Reason for disabled</span>
-        </div>
-    </form>
-
-    <!-- Example -->
-    <textarea class="example-code" readonly>
-        <div class="rvt-input-wrap">
-            <label for="filled">Label</label>
-            <textarea id="filled">Entry&lt;/textarea>
-            <span class="helper-text">Helper text goes here</span>
-        </div>
-    </textarea>
-    <!-- End Example -->
-</div>
-
-<hr/>
-
-<div class="component-container">
     <h5 id="rvtInput">Custom Text Inputs</h5>
     <p></p>
 
@@ -162,7 +87,8 @@
     </form>
 
     <!-- Example -->
-    <textarea class="example-code" readonly>
+    <p class="example-code-header">HTML</p>
+<textarea class="example-code" readonly>
         <form>
             <mat-form-field class="example-full-width">
                 <input matInput placeholder="Currency Field" [formControl]="currencyInput" [advicentRivetCurrencyInput] />
@@ -182,7 +108,8 @@
     </form>
 
     <!-- Example -->
-    <textarea class="example-code" readonly>
+    <p class="example-code-header">HTML</p>
+<textarea class="example-code" readonly>
         <form>
             <mat-form-field class="example-full-width">
                 <input matInput placeholder="Percentage Field" [formControl]="percentageInput" advicentRivetPercentageInput

@@ -3,26 +3,42 @@
         <!-- <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/Polaris_Dialog_Specs.pdf" target="new"></a> -->
     </h5>
 
-    <p>Event pickers are just dialogs with an event-picker class applied in the config.<code>panelClass: 'event-picker'</code></p>
+    <p>Event pickers are just dialogs with an event-picker class applied in the
+        config.<code>panelClass: 'event-picker'</code></p>
 
-    <p>Within the popup template - add a <code>div class="left-col"</code> and <code>div class="right-col"</code> within the <code>mat-dialog-content</code> to split the content into 2 panels.</p>
-    <button class="rvt-btn-primary" (click)="openEventPicker()">Test Event Picker</button>
+    <p>Within the popup template - add a <code>div class="left-col"</code> and <code>div class="right-col"</code> within
+        the <code>mat-dialog-content</code> to split the content into 2 panels.</p>
 
-    <br /><br />
+    <div class="example-component">
+        <button class="rvt-btn-primary" (click)="openEventPicker()">Test Event Picker</button>
+    </div>
 
     <!-- Example -->
-    <span>Example event picker template:</span>
-    <textarea class="example-code">
-        <div mat-dialog-content>
-            <div class="left-col">
-                <h5 class="section-header">Start</h5>
-                <!-- Section content -->
-            </div>
-            <div class="right-col">
-                <h5 class="section-header">End</h5>
-                <!-- Section content -->
-            </div>
-        </div>
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
+<div mat-dialog-content>
+    <div class="left-col">
+        <h5 class="section-header">Start</h5>
+        <!-- Section content -->
+    </div>
+    <div class="right-col">
+        <h5 class="section-header">End</h5>
+        <!-- Section content -->
+    </div>
+</div>
+    </textarea>
+
+    <p class="example-code-header">TypeScript</p>
+    <textarea class="example-code" readonly>
+constructor(public dialog: MatDialog) {}
+
+openEventPicker(): void {
+    const dialogRef = this.dialog.open(EventPickerDialogComponent, {
+        width: 'auto',
+        autoFocus: false,
+        panelClass: 'event-picker'
+    });
+}
     </textarea>
     <!-- End Example -->
 </div>

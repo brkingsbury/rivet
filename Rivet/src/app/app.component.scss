@@ -1,15 +1,45 @@
 @import '../../projects/rivet-style/src/lib/styles/typeStyles.scss';
 @import '../../projects/rivet-style/src/lib/styles/rivetTheme.scss';
 
+
+* {
+    transition: all 800ms ease;
+    transition-property: color, background-color;
+}
+
+.dark-mode {
+    .mat-sidenav-content, .mat-sidenav, .nav-content-container {
+        background-color: $rvt-neutral-600;
+        color: $rvt-white;
+    }
+    .page-header {
+        background-color: $rvt-neutral-900;
+        color: $rvt-white;
+    }
+    textarea.example-code {
+        background-color: $rvt-neutral-900;
+        color: $rvt-white;
+    }
+}
+
 .test-btn {
     position: absolute;
-    top: 46px;
+    top: 0;
     z-index: 100;
     right: 0;
 }
 
+.mode-btn {
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    z-index: 100;
+}
+.site-sidenav{
+    position: fixed;
+}
 .mat-sidenav-container {
-    top: 46px;
+    top: 0;
     background-color: $rvt-white;
 }
 
@@ -17,8 +47,26 @@
     background: none;
     background-color: $rvt-white;
     padding: 0;
+    // height: 100vh;
     .component-container {
-        padding: 0 30px;
+        padding: 30px;
+    }
+    hr {
+        margin: 5px 0 !important;
+    }
+}
+
+.page-header {
+    height: 100px;
+    line-height: 100px;
+    padding: 0 30px;
+    background-color: $rvt-primary-color-dark;
+    color: $rvt-white;
+}
+
+.fancy {
+    *, *:hover {
+        cursor: url(/assets/arrow-cursor.png) 20 -20, auto !important;
     }
 }
 

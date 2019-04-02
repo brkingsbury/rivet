@@ -1,31 +1,21 @@
+<div class="nav-header">
+    <img src="../../assets/arrow.svg" (click)="toggleCursor()"/><a [routerLink]="['/home']" alt="home">Rivet</a>
+</div>
 <div class="nav-content-container">
-    <div class="nav-category expandable" [ngClass]="{'expanded': category.expanded}" *ngFor="let category of sideNavConfig.expandableObj">
+    <a class="nav-category expandable" routerLinkActive="expanded" [ngClass]="{'expanded': category.expanded}" *ngFor="let category of sideNavConfig.expandableObj">
         <span class="category-label">{{category.label}}</span>
         <h6 class="category-header expanding" (click)="expand(category)">
             <span class="rivet-icon-caret-right"></span>
             {{category.title}}
         </h6>
-        <div class="sub-nav-list" [hidden]="!category.expanded">
+        <div class="sub-nav-list">
             <a tabindex="0" class="list-link" 
                 *ngFor="let link of category.links" 
-                [ngClass]="{'active': activeLink == link.name}"
-                [routerLink]="link.path" 
+                [ngClass]="{'active': routerLink == link.section}"
+                [routerLink]="link.path"
                 [fragment]="link.section">
                 {{link.name}}
             </a>
         </div>
-    </div>
-    <!-- <div class="nav-category" *ngFor="let category of sideNavConfig.numberedObj">
-        <div class="num-circle">{{category.label}}</div>
-        <h6 class="category-header">{{category.title}}</h6>
-        <div class="sub-nav-list">
-            <a class="list-link" 
-                *ngFor="let link of category.links" 
-                [routerLink]="link.path"
-                [fragment]="link.section" 
-                routerLinkActive #rla="routerLinkActive">
-                {{link.name}}
-            </a>
-        </div>
-    </div> -->
+    </a>
 </div>

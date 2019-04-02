@@ -1,39 +1,33 @@
-<div class="center-container">
-    <a class="section" href="/components">
-        <i class="material-icons">view_compact</i>
-        <h3>Components</h3>
-        <a class="rvt-text-link" href="">Material</a>
-        <a class="rvt-text-link" href="/components/#rivet">Rivet</a>
-    </a>
-    <a class="section" href="/design">
-        <i class="material-icons">style</i>
-        <h3>Design</h3>
-        <a class="rvt-text-link" href="/design/#fonts">Font styles</a>
-        <a class="rvt-text-link" href="/design/#colors">Colors</a>
-    </a>
-    <a class="section" href="/accessibility">
-        <i class="material-icons">accessibility_new</i>
-        <h3>Accessibility</h3>
-        <a class="rvt-text-link">Contrast</a>
-        <a class="rvt-text-link">Keyboard Navigation</a>
-    </a>
-    <a class="section" href="/changelog">
-        <i class="material-icons">code</i>
-        <h3>Changelog</h3>
-        <a class="rvt-text-link">Versions</a>
-        <a class="rvt-text-link" href="/changelog/#roadmap">Roadmap</a>
-    </a>
+<div class="splash-logo">
+    <img src="../../assets/arrow.svg" alt="arrow logo" />
+    <div class="splash-text">
+        <h1 class="splash-header">Rivet</h1>
+        <span>v {{versions[0].version}}</span>
+    </div>
 </div>
 
-<hr />
+<div class="part-container">
+    <div class="part">
+        <object type="image/svg+xml" data="../../assets/components.svg" [routerLink]="['/components']">uh oh</object>
+`        <a [routerLink]="['/components']">Components</a>
+        <p>The bread and butter of Rivet. Reusable UI elements for easy implementation and seamless standardization.</p>
+    </div>
 
-<div class="latest-version">
-    <h3>Latest version</h3>
+    <div class="part">
+        <object type="image/svg+xml" data="../../assets/styles.svg" [routerLink]="['/styles']">uh oh</object>
+        <a [routerLink]="['/styles']">Styles</a>
+        <p>Design patterns and the reasoning behind design decisions can be found here.</p>
+    </div>
 
-    <h5>v{{versions[0].version}} - {{versions[0].date}}</h5>
-    <p>{{versions[0].note}}</p>
-    <ul *ngFor="let update of versions[0].updates">
-        {{update.category}}
-        <li *ngFor="let bullet of update.bullets">{{bullet}}</li>
-    </ul>
+    <div class="part">
+        <object type="image/svg+xml" data="../../assets/patterns.svg" [routerLink]="['/patterns']">uh oh</object>
+        <a [routerLink]="['/patterns']">Patterns</a>
+        <p>Rules and guidelines for how to make our UI easy to use for everyone on the web.</p>
+    </div>
+
+    <div class="part">
+        <object type="image/svg+xml" data="../../assets/changelog.svg" [routerLink]="['/changelog']">uh oh</object>
+        <a [routerLink]="['/changelog']">Changelog</a>
+        <p>Rivet is ever-evolving. Keep tabs on its status and scheduled releases here.</p>
+    </div>
 </div>

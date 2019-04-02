@@ -1,12 +1,16 @@
-<app-top-nav></app-top-nav>
-<button class="rvt-btn-standard test-btn" (click)="sidenav.toggle()">Test</button>
+<div class="style-wrapper" [ngClass]="{'fancy': difCursor, 'dark-mode': darkMode}">
+    <!-- <button class="rvt-btn-standard test-btn" (click)="sidenav.toggle()">Test</button> -->
+    <!-- <button class="rvt-btn-icon mode-btn" (click)="test()">
+        <span class="rivet-icon-retirement"></span>
+    </button> -->
 
-<mat-sidenav-container autosize>
-    <mat-sidenav #sidenav mode="side" opened>
-        <app-side-nav></app-side-nav>
-    </mat-sidenav>
+    <mat-sidenav-container autosize>
+        <mat-sidenav #sidenav mode="side" opened class="site-sidenav">
+            <app-side-nav (cursorStatus)="toggleCursor()"></app-side-nav>
+        </mat-sidenav>
 
-    <mat-sidenav-content>
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
-</mat-sidenav-container>
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

@@ -1,20 +1,4 @@
-<div class="component-container">
-    <h5 id="version">Versions</h5>
-
-    <div class="version-history">
-        <div *ngFor="let version of versions">
-            <h5>v{{version.version}} - {{version.date}}</h5>
-            <p>{{version.note}}</p>
-            <ul *ngFor="let update of version.updates">
-                {{update.category}}
-                <li *ngFor="let bullet of update.bullets">{{bullet}}</li>
-            </ul>
-            <hr />
-        </div>
-    </div>
-</div>
-
-<hr />
+<h2 class="page-header">Changelog</h2>
 
 <div class="component-container">
     <h5 id="roadmap">Roadmap</h5>
@@ -75,7 +59,10 @@
             <s>Radio Button - Rivet</s>
             <span class="rivet-icon-check"> completed v1.22</span>
         </li>
-        <li>Datepicker - Material*</li>
+        <li>
+            <s>Datepicker - Material</s>
+            <span class="rivet-icon-check"> completed v1.27</span>
+        </li>
         <li>Snackbar</li>
         <li>Menu/List Button - Material</li>
         <li>Tree</li>
@@ -85,4 +72,21 @@
         <li>Toggle Switch</li>
         <li>Slider</li>
     </ul>
+</div>
+
+<hr/>
+
+<div class="component-container">
+    <h5 id="version">Versions</h5>
+    <div class="version-history">
+        <div *ngFor="let version of versions">
+            <h5>{{version.version}}&nbsp;</h5><span>- {{version.date | date}}</span>
+            <h6 class="release-notes">{{version.note}}</h6>
+            <ul *ngFor="let update of version.updates">
+                {{update.category}}
+                <li *ngFor="let bullet of update.bullets">{{bullet}}</li>
+            </ul>
+            <hr />
+        </div>
+    </div>
 </div>

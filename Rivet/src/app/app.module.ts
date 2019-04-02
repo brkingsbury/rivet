@@ -4,39 +4,41 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialComponentModule, RivetStyleModule } from 'rivet-style';
-import { AccessibilityComponent } from './accessibility/accessibility.component';
 import { AppComponent } from './app.component';
-import { ChangelogComponent } from './changelog/changelog.component';
+
+import { AccessibilityComponent } from './patterns/accessibility/accessibility.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
+import { ChangelogComponent } from './changelog/changelog.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
+import { ColorsComponent } from './styles/colors/colors.component';
 import { ComponentsComponent } from './components/components.component';
+import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import { DialogComponent, DialogComponentDialogComponent } from './components/dialog/dialog.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { EventPickerComponent, EventPickerDialogComponent } from './components/event-picker/event-picker.component';
 import { ExpansionPanelComponent } from './components/expansion-panel/expansion-panel.component';
+import { FontStylesComponent } from './styles/font-styles/font-styles.component';
+import { HomeComponent } from './home/home.component';
+import { IconsComponent } from './styles/icons/icons.component';
+import { InputsComponent } from './components/inputs/inputs.component';
 import { LoadingComponent } from './components/loading/loading.component';
 import { NavComponent } from './components/nav/nav.component';
+import { PatternsComponent } from './patterns/patterns.component';
 import { RadioButtonsComponent } from './components/radio-buttons/radio-buttons.component';
+import { SideNavComponent } from './side-nav/side-nav.component';
+import { StylesComponent } from './styles/styles.component';
 import { TableBasicExampleComponent } from './components/tables/table-example';
 import { TablesComponent } from './components/tables/tables.component';
 import { TabsComponent } from './components/tabs/tabs.component';
-import { ColorsComponent } from './design/colors/colors.component';
-import { DesignComponent } from './design/design.component';
-import { FontStylesComponent } from './design/font-styles/font-styles.component';
-import { IconsComponent } from './design/icons/icons.component';
-import { PatternsComponent } from './design/patterns/patterns.component';
-import { HomeComponent } from './home/home.component';
-import { SideNavComponent } from './side-nav/side-nav.component';
 import { TestingComponent } from './testing/testing.component';
-import { TopNavComponent } from './top-nav/nav.component';
-import { EventPickerComponent, EventPickerDialogComponent } from './components/event-picker/event-picker.component';
-import { DatepickerComponent } from './components/datepicker/datepicker.component';
+import { TextAreasComponent } from './components/text-areas/text-areas.component';
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
-    { path: 'design', component: DesignComponent },
+    { path: 'styles', component: StylesComponent },
     { path: 'components', component: ComponentsComponent },
     { path: 'changelog', component: ChangelogComponent },
-    { path: 'accessibility', component: AccessibilityComponent },
+    { path: 'patterns', component: PatternsComponent },
     { path: 'testing', component: TestingComponent },
     { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
@@ -44,33 +46,34 @@ const appRoutes: Routes = [
 @NgModule({
     declarations: [
         AppComponent,
-        TopNavComponent,
-        DesignComponent,
-        ComponentsComponent,
-        HomeComponent,
         AccessibilityComponent,
+        ButtonsComponent,
         ChangelogComponent,
         CheckboxComponent,
-        ButtonsComponent,
         ColorsComponent,
-        IconsComponent,
-        FontStylesComponent,
-        TestingComponent,
-        DropdownComponent,
-        TabsComponent,
-        NavComponent,
+        ComponentsComponent,
+        DatepickerComponent,
         DialogComponent,
         DialogComponentDialogComponent,
-        ExpansionPanelComponent,
-        SideNavComponent,
-        TablesComponent,
-        TableBasicExampleComponent,
-        LoadingComponent,
-        PatternsComponent,
-        RadioButtonsComponent,
+        DropdownComponent,
         EventPickerComponent,
         EventPickerDialogComponent,
-        DatepickerComponent
+        ExpansionPanelComponent,
+        FontStylesComponent,
+        HomeComponent,
+        IconsComponent,
+        InputsComponent,
+        LoadingComponent,
+        NavComponent,
+        PatternsComponent,
+        RadioButtonsComponent,
+        SideNavComponent,
+        StylesComponent,
+        TablesComponent,
+        TableBasicExampleComponent,
+        TabsComponent,
+        TestingComponent,
+        TextAreasComponent
     ],
     entryComponents: [DialogComponent, DialogComponentDialogComponent, EventPickerComponent, EventPickerDialogComponent],
     imports: [

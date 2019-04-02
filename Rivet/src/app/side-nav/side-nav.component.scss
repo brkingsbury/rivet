@@ -1,16 +1,39 @@
 @import "../../styles.scss";
 
-.mat-sidenav-container {
-    top: 46px;
-    background-color: $rvt-white;
-    .mat-drawer-side.mat-sidenav {
-        border-right: 2px solid $rvt-neutral-100;
-    }
-}
 .mat-sidenav-content {
     background: none;
     background-color: $rvt-white;
     padding: 30px;
+    height: auto;
+}
+.nav-header {
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 250px;
+    background-color: #585096;
+    cursor: default;
+    text-align: center;
+    background: url('../../assets/pattern.jpg');
+    img {
+        position: relative;
+        top: 7px;
+        height: 30px; 
+        width: 30px;
+        cursor: default;
+        margin-right: 5px;
+    }
+    a {
+        line-height: 100px;
+        color: #fff;
+        margin: 0;
+        font-size: 22px;
+        font-family: $RvtFontFamily;
+        font-weight: 400;
+        cursor: pointer;
+        text-decoration: none;
+        padding-right: 20px;
+    }
 }
 .nav-content-container {
     width: 212px; // 250px - 36px padding - 2px border
@@ -22,7 +45,9 @@
         color: $rvt-neutral-900;
     }
     .nav-category {
+        display: block;
         margin-bottom: 30px;
+        text-decoration: none;
         &.expanded .category-header.expanding span:before {
             transform: rotate(90deg);
             transition: transform 400ms ease;
@@ -66,6 +91,7 @@
             }
         }
         .sub-nav-list {
+            display: none;
             position: relative;
             margin: 15px 0 0 11px;
             a {
@@ -87,6 +113,9 @@
                     border-color: $rvt-neutral-200;
                 }
             }
+        }
+        &.expanded .sub-nav-list {
+            display: block;
         }
         &.active {
             .num-circle {

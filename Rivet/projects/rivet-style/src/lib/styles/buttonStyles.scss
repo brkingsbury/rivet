@@ -6,9 +6,8 @@ button {
         border-radius: 2px;
         background: none;
         border: none;
-        padding: 10px 15px;
+        padding: 11px 15px;
         cursor: pointer;
-        outline: none;
         transition: background-color 200ms ease;
         line-height: 14px;
         &:disabled {
@@ -19,35 +18,25 @@ button {
     &.rvt-btn-primary-lg {
         font-weight: 600;
         background-color: $rvt-primary-color;
-        border: 1px solid $rvt-primary-color;
         color: $rvt-white;
         &:hover:not(:disabled),
         &:focus:not(:disabled) {
-            border: 2px solid $rvt-primary-color-dark;
-            padding: 9px 14px;
-        }
-        &:focus:not(:disabled):not(:active), &.loading:disabled {
-            outline: 1px solid $rvt-primary-color-dark;
-            outline-offset: 2px;
+            background-color: $rvt-primary-color-dark;
         }
         &:active:not(:disabled) {
-            background-color: $rvt-primary-color-dark;
-            border-color: $rvt-primary-color-dark;
+            background-color: $rvt-neutral-900;
         }
         &:disabled:not(.loading) {
             background-color: $rvt-neutral-200;
-            border: 1px solid $rvt-neutral-200;
             color: $rvt-white;
         }
     }
     &.rvt-btn-primary-lg {
         padding: 15px;
-        &:hover:not(:disabled), &:focus:not(:disabled) {
-            padding: 14px;
-        }
     }
     &.rvt-btn-secondary {
         border: 1px solid $rvt-primary-color;
+        padding: 10px 14px;
         color: $rvt-primary-color;
         &:hover:not(:disabled),
         &:focus:not(:disabled), 
@@ -55,51 +44,29 @@ button {
             background-color: transparentize($rvt-primary-color, 0.90);
         }
         &:active:not(:disabled) {
-            background-color: $rvt-primary-color;
-            color: $rvt-white;
+            background-color: transparentize($rvt-primary-color, 0.72);
         }
         &:disabled:not(.loading)  {
             border: 1px dashed $rvt-neutral-200;
             color: $rvt-neutral-200;
         }
     }
-    &.rvt-btn-standard {
-        border: 1px solid $rvt-neutral-600;
-        color: $rvt-neutral-600;
-        &:hover:not(:disabled),
-        &:focus:not(:disabled), 
-        &.loading:disabled {
-            background-color: transparentize($rvt-neutral-600, 0.90);
-        }
-        &:active:not(:disabled) {
-            background-color: $rvt-neutral-600;
-            color: $rvt-white;
-        }
-        &:disabled:not(.loading)  {
-            border: 1px dashed $rvt-neutral-200;
-            color: $rvt-neutral-200;
-        }
-    }
-    &.rvt-btn-text {
-        padding: 11px 15px;
+    &.rvt-btn-text, &.rvt-btn-icon {
         color: $rvt-neutral-600;
         &:hover:not(:disabled),
         &:focus:not(:disabled),
-        &:active:not(:disabled), 
         &.loading:disabled {
             background-color: transparentize($rvt-neutral-600, 0.90);
             color: $rvt-neutral-600;
         }
         &:active:not(:disabled) {
-            border: 2px solid $rvt-neutral-600;
-            padding: 9px 13px;
+            background-color: transparentize($rvt-neutral-600, 0.72);
         }
         &:disabled:not(.loading)  {
             color: $rvt-neutral-200;
         }
     }
     &.rvt-btn-icon {
-        padding: 9px 11px;
         line-height: 15px;
         [class*="rivet-icon-"] {
             display: inline-block;
@@ -108,21 +75,12 @@ button {
             fill: $rvt-neutral-600;
             vertical-align: top;
         }
-        &:hover:not(:disabled),
-        &:focus:not(:disabled), 
-        &.loading:disabled {
-            background-color: $rvt-neutral-100;
-        }
         &.loading:disabled {
             padding: 11px;
             line-height: 14px;
             .mat-spinner {
                 margin: 0 auto;
             }
-        }
-        &:active:not(:disabled) {
-            border: 2px solid $rvt-neutral-600;
-            padding: 7px 9px;
         }
         &:disabled:not(.loading)  {
             color: $rvt-neutral-200;
@@ -137,3 +95,22 @@ button {
     }
 }
 
+.dark-mode {
+    button {
+        &.rvt-btn-primary, &.rvt-btn-primary-lg {
+            background-color: $rvt-white;
+            color: $rvt-neutral-900;
+            &:hover:not(:disabled),
+            &:focus:not(:disabled) {
+                background-color: $rvt-neutral-100;
+            }
+            &:active:not(:disabled) {
+                background-color: $rvt-neutral-300;
+            }
+            &:disabled:not(.loading) {
+                background-color: $rvt-neutral-200;
+                color: $rvt-white;
+            }
+        }
+    }
+}

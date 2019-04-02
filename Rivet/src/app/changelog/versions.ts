@@ -30,6 +30,27 @@
 
 export const versions = [
     {
+        version: '0.1.29',
+        date: '4/02/2019',
+        note: 'Rivet restyle',
+        updates: [
+            {
+                category: 'Components',
+                bullets: [
+                    'Button styles updated to new pattern. rvt-btn-standard has been removed. Please use rvt-btn-secondary instead.',
+                ]
+            },
+            {
+                category: 'Library',
+                bullets: [
+                    'New and improved site!',
+                    'Components are now all under one page, but still organized by Material or Rivet',
+                    'Various improvements to enhance ease of use'
+                ]
+            }
+        ]
+    },
+    {
         version: '0.1.27',
         date: '3/25/2019',
         note: 'datepicker + eventpicker',
