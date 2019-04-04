@@ -37,7 +37,7 @@ export const versions = [
             {
                 category: 'Components',
                 bullets: [
-                    'Button styles updated to new pattern. rvt-btn-standard has been removed. Please use rvt-btn-secondary instead.',
+                    'Button styles updated to new pattern. rvt-btn-standard has been removed. Use rvt-btn-secondary/rvt-btn-text instead.',
                 ]
             },
             {
