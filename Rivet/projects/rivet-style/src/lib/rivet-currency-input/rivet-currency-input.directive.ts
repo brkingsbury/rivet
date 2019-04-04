@@ -31,7 +31,7 @@ export class RivetCurrencyInputDirective implements OnInit, ControlValueAccessor
     const control = this.controlDir.control;
     const validator = currencyValidator(this.advicentRivetCurrencyMaxValue);
     control.setValidators(control.validator ? [control.validator, validator] : validator);
-    control.updateValueAndValidity();
+    control.updateValueAndValidity({ emitEvent: false });
   }
 
   @HostListener('input', ['$event.target.value'])
