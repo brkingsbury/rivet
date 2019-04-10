@@ -1,4 +1,12 @@
-import { AfterViewInit, Component, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  EventEmitter,
+  HostListener,
+  Output,
+  ChangeDetectorRef
+} from '@angular/core';
 
 @Component({
   selector: 'advicent-rivet-expansion-panel',
@@ -15,11 +23,12 @@ export class RivetExpansionPanelComponent implements AfterViewInit {
   defaultExpansionHeight: number;
   panelHeight: number;
   isDeleting = false;
-  constructor(private element: ElementRef) {}
+  constructor(private element: ElementRef, private cd: ChangeDetectorRef) {}
 
   ngAfterViewInit() {
     this.initializeHeight();
     this.panelHeight = this.defaultExpansionHeight;
+    this.cd.detectChanges();
   }
 
   @HostListener('window:resize', ['$event'])
@@ -59,8 +68,6 @@ export class RivetExpansionPanelComponent implements AfterViewInit {
   }
 
   private initializeHeight() {
-    this.defaultExpansionHeight = this.element.nativeElement.querySelector(
-      '.top-panel'
-    ).offsetHeight;
+    this.defaultExpansionHeight = this.element.nativeElement.querySelector('.top-panel').offsetHeight;
   }
 }
