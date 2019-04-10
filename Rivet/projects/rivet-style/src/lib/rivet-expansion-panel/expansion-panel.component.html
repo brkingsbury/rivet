@@ -2,6 +2,7 @@
   class="rvt-line-expansion"
   [ngClass]="{ expanded: panelExpanded }"
   [ngStyle]="{ 'height.px': panelHeight }"
+  (keydown.enter)="$event.preventDefault()"
 >
   <div class="rvt-delete-overlay" *ngIf="isDeleting">
     <div class="overlay-content">
@@ -15,17 +16,12 @@
     <div class="top-button-bar">
       <button
         class="rvt-btn-icon toggle-expansion-btn"
-        [ngClass]="
-          panelExpanded ? 'rivet-icon-caret-up' : 'rivet-icon-caret-down'
-        "
+        [ngClass]="panelExpanded ? 'rivet-icon-caret-up' : 'rivet-icon-caret-down'"
         (click)="setExpandedState(!panelExpanded, $event)"
       ></button>
       <ng-content select="[header-button-content]"></ng-content>
 
-      <button
-        class="rvt-btn-icon rivet-icon-delete"
-        (click)="delete()"
-      ></button>
+      <button class="rvt-btn-icon rivet-icon-delete" (click)="delete()"></button>
     </div>
   </div>
   <div class="expansion">
@@ -34,10 +30,7 @@
       <button class="rvt-btn-primary add-btn" (click)="addButtonClicked()">
         <span class="rivet-icon-add">Add</span>
       </button>
-      <button
-        class="rvt-btn-standard close-btn"
-        (click)="setExpandedState(false, $event)"
-      >
+      <button class="rvt-btn-standard close-btn" (click)="setExpandedState(false, $event)">
         Close
       </button>
     </div>

@@ -1,11 +1,11 @@
-import { AfterContentInit, Component, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
+import { AfterViewInit, Component, ElementRef, EventEmitter, HostListener, Output } from '@angular/core';
 
 @Component({
   selector: 'advicent-rivet-expansion-panel',
   templateUrl: './expansion-panel.component.html',
   styleUrls: ['./expansion-panel.component.scss']
 })
-export class RivetExpansionPanelComponent implements AfterContentInit {
+export class RivetExpansionPanelComponent implements AfterViewInit {
   @Output()
   addButtonCallback: EventEmitter<any> = new EventEmitter();
   @Output()
@@ -17,7 +17,7 @@ export class RivetExpansionPanelComponent implements AfterContentInit {
   isDeleting = false;
   constructor(private element: ElementRef) {}
 
-  ngAfterContentInit() {
+  ngAfterViewInit() {
     this.initializeHeight();
     this.panelHeight = this.defaultExpansionHeight;
   }
