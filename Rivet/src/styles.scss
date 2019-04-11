@@ -1,4 +1,4 @@
-$rivet-icon-path: "rivet-style/lib/rivet-icons";
+$rivet-icon-path: 'rivet-style/lib/rivet-icons';
 
 @import 'rivetTheme';
 @import 'buttonStyles';
@@ -13,35 +13,42 @@ $rivet-icon-path: "rivet-style/lib/rivet-icons";
 @import 'tableStyles';
 @import 'loadingStyles';
 @import 'radioStyles';
-@import "app/app.component.scss"; // used to import any temporary styles before they are in style package
+@import 'app/app.component.scss'; // used to import any temporary styles before they are in style package
 
-@import '~@angular/material/theming';
+@include rvt-core(); // apply $rivet-theme to angular material. ONLY INCLUDE ONCE
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-size: 1.6rem;
-    font-family: $RvtFontFamily; //imported from typeStyles
-    margin: 0;
-    height: 100vh;
-    * {
-        color: $rvt-neutral-900;
-    }
+  font-size: 1.6rem;
+  font-family: $RvtFontFamily; //imported from typeStyles
+  margin: 0;
+  height: 100vh;
+  * {
+    color: $rvt-neutral-900;
+  }
 }
 
 hr {
-    margin: 5rem 0 6rem;
+  margin: 5rem 0 6rem;
 }
 
-h1, h2, h3, h4, h5, h6, p, span {
-    margin: 0;
-    color: $rvt-neutral-900;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+  color: $rvt-neutral-900;
 }
 
 code {
-    background-color: $rvt-neutral-100;
-    font-family: 'Courier New', Courier, monospace;
-    padding: 2px 4px;
+  background-color: $rvt-neutral-100;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 2px 4px;
 }

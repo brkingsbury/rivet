@@ -29,6 +29,20 @@
 
 export const versions = [
   {
+    version: '0.2.0',
+    date: '4/11/2019',
+    note: 'Theme override support',
+    updates: [
+      {
+        category: 'Design',
+        bullets: [
+          'Allows rvt color variables to be overridden for branding purposes.',
+          'Created rvt-core() mixin that sets the Angular Material Theme.'
+        ]
+      }
+    ]
+  },
+  {
     version: '0.1.31',
     date: '04/10/2018',
     note: 'Expansion panel fixes',
