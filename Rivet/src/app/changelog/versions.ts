@@ -29,6 +29,20 @@
 
 export const versions = [
   {
+    version: '0.2.4',
+    date: '4/16/2019',
+    note: 'Update the side navigation',
+    updates: [
+      {
+        category: 'Library',
+        bullets: [
+          'Removed custom text inputs from the side navigation',
+          'Rearrange the side navigation options to reflect what is on the page'
+        ]
+      }
+    ]
+  },
+  {
     version: '0.2.3',
     date: '4/16/2019',
     note: 'Migrate currency and percentage input directives out of Rivet and into NaviPlanWeb',
