@@ -1,61 +1,62 @@
 <h2 class="page-header">Components</h2>
 
 <div class="component-container">
-    <h3>Material Components</h3>
-    <p>Material components use Angular Material as the base and have style overrides to match Rivet styling.
-        Full documentation for how to use the components can be found
-        <a target="new" href="https://material.angular.io/components/categories">here</a>.
-    </p>
+  <h3>Material Components</h3>
+  <p>
+    Material components use Angular Material as the base and have style overrides to match Rivet styling. Full
+    documentation for how to use the components can be found
+    <a target="new" href="https://material.angular.io/components/categories">here</a>.
+  </p>
 </div>
 
-<hr/>
+<hr />
 
 <app-checkbox id="checkbox"></app-checkbox>
 
-<hr/>
+<hr />
 
 <app-datepicker id="datepicker"></app-datepicker>
 
-<hr/>
+<hr />
 
 <app-dialog id="dialog"></app-dialog>
 
-<hr/>
+<hr />
 
 <app-event-picker id="eventPicker"></app-event-picker>
 
-<hr/>
+<hr />
 
 <app-inputs id="input"></app-inputs>
 
-<hr/>
+<hr />
 
 <app-dropdown id="dropdown"></app-dropdown>
 
-<hr/>
+<hr />
 
 <app-radio-buttons id="radio"></app-radio-buttons>
 
-<hr/>
+<hr />
 
 <app-tables id="table"></app-tables>
 
-<hr/>
+<hr />
 
 <app-tabs id="tab"></app-tabs>
 
-<hr/>
+<hr />
 
 <app-text-areas id="textArea"></app-text-areas>
 
-<hr class="section-divider"/>
+<hr class="section-divider" />
 
 <div class="component-container">
-    <h3>Rivet Components</h3>
-    <p>Rivet components are custom built components for easy implementation and styling.</p>
+  <h3>Rivet Components</h3>
+  <p>Rivet components are custom built components for easy implementation and styling.</p>
 </div>
 
-<hr/>
+<hr />
 
 <app-buttons id="button"></app-buttons>
 
@@ -63,59 +64,10 @@
 
 <app-expansion-panel id="expansion"></app-expansion-panel>
 
-<hr/>
+<hr />
 
 <app-loading id="loading"></app-loading>
 
-<hr/>
+<hr />
 
 <app-nav id="nav"></app-nav>
-
-<hr/>
-
-<div class="component-container">
-    <h5 id="rvtInput">Custom Text Inputs</h5>
-    <p></p>
-
-    <form>
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Currency Field" [formControl]="currencyInput" [advicentRivetCurrencyInput] />
-            <mat-hint *ngIf="currencyInput.errors?.invalidFormat">Invalid Format</mat-hint>
-            <mat-hint *ngIf="currencyInput.errors?.tooLarge">Greater than max value
-                {{currencyInput.errors.tooLarge.maxValue}}</mat-hint>
-        </mat-form-field>
-    </form>
-
-    <!-- Example -->
-    <p class="example-code-header">HTML</p>
-<textarea class="example-code" readonly>
-        <form>
-            <mat-form-field class="example-full-width">
-                <input matInput placeholder="Currency Field" [formControl]="currencyInput" [advicentRivetCurrencyInput] />
-            </mat-form-field>
-        </form>
-    </textarea>
-    <!-- End Example -->
-
-    <form>
-        <mat-form-field class="example-full-width">
-            <input matInput placeholder="Percentage Field" [formControl]="percentageInput" advicentRivetPercentageInput
-                [advicentRivetPercentageFractionSize]="2" />
-            <mat-hint *ngIf="percentageInput.errors?.invalidFormat">Invalid Format</mat-hint>
-            <mat-hint *ngIf="percentageInput.errors?.tooLarge">Greater than max value
-                {{percentageInput.errors.tooLarge.maxValue}}</mat-hint>
-        </mat-form-field>
-    </form>
-
-    <!-- Example -->
-    <p class="example-code-header">HTML</p>
-<textarea class="example-code" readonly>
-        <form>
-            <mat-form-field class="example-full-width">
-                <input matInput placeholder="Percentage Field" [formControl]="percentageInput" advicentRivetPercentageInput
-                    [advicentRivetPercentageFractionSize]="2" />
-            </mat-form-field>
-        </form>    
-    </textarea>
-    <!-- End Example -->
-</div>

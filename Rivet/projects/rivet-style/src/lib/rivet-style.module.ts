@@ -4,9 +4,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialComponentModule } from './material-component-module';
 import { RivetCardComponent } from './rivet-card/rivet-card.component';
-import { RivetCurrencyInputDirective } from './rivet-currency-input/rivet-currency-input.directive';
 import { RivetExpansionPanelComponent } from './rivet-expansion-panel/expansion-panel.component';
-import { RivetPercentageInputDirective } from './rivet-percentage-input/rivet-percentage-input.directive';
 import { RivetStyleComponent } from './rivet-style.component';
 
 registerLocaleData(localeFrCA, 'fr-CA');
@@ -16,16 +14,12 @@ registerLocaleData(localeFrCA, 'fr-CA');
   declarations: [
     RivetStyleComponent,
     RivetCardComponent,
-    RivetExpansionPanelComponent,
-    RivetCurrencyInputDirective,
-    RivetPercentageInputDirective
+    RivetExpansionPanelComponent
   ],
   exports: [
     RivetStyleComponent,
     RivetCardComponent,
-    RivetExpansionPanelComponent,
-    RivetCurrencyInputDirective,
-    RivetPercentageInputDirective
+    RivetExpansionPanelComponent
   ]
 })
 export class RivetStyleModule {}
