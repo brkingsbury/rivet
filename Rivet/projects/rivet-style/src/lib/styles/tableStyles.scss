@@ -19,7 +19,7 @@
     button[class*="mat-paginator-navigation"] {
         width: auto;
         &:disabled .mat-button-wrapper:before {
-            color: $rvt-neutral-400;
+            color: $rvt-disabled-text-color;
         }
         .mat-button-wrapper:before {
             font-size: 15px;

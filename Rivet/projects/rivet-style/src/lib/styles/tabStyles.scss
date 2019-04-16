@@ -7,9 +7,11 @@
         .mat-tab-labels {
             &::after {
                 content: "";
+                display: block;
                 position: absolute;
                 width: 100%;
                 bottom: 0;
+                left: 0;
                 height: 4px;
                 background-color: $rvt-neutral-100;
                 z-index: 90;
@@ -45,9 +47,11 @@
                     .mat-tab-label-content {
                         &::after {
                             content: '';
+                            display: block;
                             position: absolute;
                             height: 4px;
                             width: 100%;
+                            left: 0;
                             bottom: 0;
                             background-color: $rvt-neutral-200;
                             z-index: 95;
@@ -59,7 +63,7 @@
                 font-weight: 600;
             }
             &.mat-tab-disabled .mat-tab-label-content {
-                color: $rvt-neutral-400;
+                color: $rvt-disabled-text-color;
             }
         }
     }
@@ -80,8 +84,10 @@
                 &::after {
                     content: '';
                     position: absolute;
+                    display: block;
                     height: 4px;
                     width: 100%;
+                    left: 0;
                     bottom: 0;
                     background-color: $rvt-neutral-100;
                 }
@@ -92,6 +98,7 @@
                     height: 23px;
                     width: 23px;
                     text-align: center;
+                    left: calc(50% - 12px);
                     line-height: 23px;
                     background-color: $rvt-white;
                     border: 1px solid $rvt-neutral-100;
@@ -110,7 +117,7 @@
             }
             &.mat-tab-disabled {
                 .mat-tab-label-content span.tab-number {
-                    color: $rvt-neutral-400;
+                    color: $rvt-disabled-text-color;
                 }
             }
         }
@@ -143,8 +150,10 @@
                     &::after {
                         content: '';
                         position: absolute;
+                        display: block;
                         height: 4px;
                         width: 100%;
+                        left: 0;
                         bottom: 0;
                         background-color: $rvt-neutral-200;
                     }

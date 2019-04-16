@@ -35,7 +35,7 @@ import { TextAreasComponent } from './components/text-areas/text-areas.component
 
 const appRoutes: Routes = [
     { path: 'home', component: HomeComponent },
-    { path: 'styles', component: StylesComponent },
+    { path: 'style', component: StylesComponent },
     { path: 'components', component: ComponentsComponent },
     { path: 'changelog', component: ChangelogComponent },
     { path: 'patterns', component: PatternsComponent },

@@ -36,6 +36,7 @@
     "@angular/platform-browser-dynamic": "^7.2.7",
     "@angular/router": "^7.2.7",
     "accounting": "^0.4.1",
+    "classlist.js": "^1.1.20150312",
     "core-js": "^2.6.5",
     "rivet-style": "file:dist/rivet-style",
     "rxjs": "^6.4.0",

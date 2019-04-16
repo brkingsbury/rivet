@@ -102,22 +102,22 @@ mat-checkbox.mat-checkbox {
     }
     &.mat-checkbox-disabled {
         .mat-checkbox-frame {
-            border: 1px dashed $rvt-neutral-400;
+            border: 1px dashed $rvt-disabled-color;
         }
         label .mat-checkbox-label {
-            color: $rvt-neutral-400;
+            color: $rvt-disabled-text-color;
         }
         &:hover, &.mat-checkbox-indeterminate, &.mat-checkbox-checked {
             .mat-checkbox-inner-container {
                 opacity: 1;
             }
             .mat-checkbox-frame {
-                border: 1px dashed $rvt-neutral-400;
+                border: 1px dashed $rvt-disabled-color;
             }
             .mat-checkbox-background {
                 background: none;
                 &::before {
-                    color: $rvt-neutral-400;
+                    color: $rvt-disabled-text-color;
                 }
             }
         }

@@ -38,156 +38,63 @@ $rivet-icon-path: '../rivet-icons' !default;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.rivet-icon-add:before {
-  content: "\61";
+@mixin config-icon-content($prefix, $content...) {
+    @each $i in $content {
+        .#{$prefix}#{nth($i, 1)}:before {
+            content: nth($i, 2);
+        }
+    }
 }
-.rivet-icon-exclamation1:before {
-  content: "\74";
-}
-.rivet-icon-arrange:before {
-  content: "\41";
-}
-.rivet-icon-amount:before {
-  content: "\42";
-}
-.rivet-icon-caret-down:before {
-  content: "\79";
-}
-.rivet-icon-caret-left:before {
-  content: "\7a";
-}
-.rivet-icon-caret-right:before {
-  content: "\78";
-}
-.rivet-icon-caret-up:before {
-  content: "\77";
-}
-.rivet-icon-bell:before {
-  content: "\43";
-}
-.rivet-icon-beginning:before {
-  content: "\44";
-}
-.rivet-icon-business-admin:before {
-  content: "\45";
-}
-.rivet-icon-calculator:before {
-  content: "\46";
-}
-.rivet-icon-chart:before {
-  content: "\47";
-}
-.rivet-icon-life-insurance:before {
-  content: "\68";
-}
-.rivet-icon-help:before {
-  content: "\66";
-}
-.rivet-icon-file:before {
-  content: "\70";
-}
-.rivet-icon-graph:before {
-  content: "\48";
-}
-.rivet-icon-family:before {
-  content: "\49";
-}
-.rivet-icon-education:before {
-  content: "\65";
-}
-.rivet-icon-end:before {
-  content: "\4a";
-}
-.rivet-icon-edit:before {
-  content: "\72";
-}
-.rivet-icon-disability-insurance:before {
-  content: "\64";
-}
-.rivet-icon-delete:before {
-  content: "\63";
-}
-.rivet-icon-datepicker:before {
-  content: "\62";
-}
-.rivet-icon-person:before {
-  content: "\6a";
-}
-.rivet-icon-check:before {
-  content: "\4b";
-}
-.rivet-icon-sync:before {
-  content: "\69";
-}
-.rivet-icon-locked:before {
-  content: "\4c";
-}
-.rivet-icon-long-term-care-insurance:before {
-  content: "\67";
-}
-.rivet-icon-purchase:before {
-  content: "\6b";
-}
-.rivet-icon-menu-close:before {
-  content: "\4d";
-}
-.rivet-icon-menu-hamburger:before {
-  content: "\4e";
-}
-.rivet-icon-more:before {
-  content: "\4f";
-}
-.rivet-icon-next:before {
-  content: "\50";
-}
-.rivet-icon-pdf:before {
-  content: "\51";
-}
-.rivet-icon-presentation:before {
-  content: "\52";
-}
-.rivet-icon-previous:before {
-  content: "\53";
-}
-.rivet-icon-resync:before {
-  content: "\6e";
-}
-.rivet-icon-reporteditor:before {
-  content: "\54";
-}
-.rivet-icon-worddoc:before {
-  content: "\55";
-}
-.rivet-icon-unlocked:before {
-  content: "\56";
-}
-.rivet-icon-subtract:before {
-  content: "\6d";
-}
-.rivet-icon-settings:before {
-  content: "\57";
-}
-.rivet-icon-search:before {
-  content: "\58";
-}
-.rivet-icon-retirement:before {
-  content: "\6f";
-}
-.rivet-icon-reset:before {
-  content: "\6c";
-}
-.rivet-icon-critical-illness:before {
-  content: "\59";
-}
-.rivet-icon-child:before {
-  content: "\71";
-}
-.rivet-icon-clock:before {
-  content: "\73";
-}
-.rivet-icon-estimate:before {
-  content: "\75";
-}
-.rivet-icon-exclamation2:before {
-  content: "\76";
-}
+@include config-icon-content('rivet-icon-',
+    'add'   "\61",
+    'exclamation1' "\74",
+    'arrange' "\41",
+    'amount' "\42",
+    'caret-down' "\79",
+    'caret-left' "\7a",
+    'caret-right' "\78",
+    'caret-up' "\77",
+    'bell' "\43",
+    'beginning' "\44",
+    'business-admin' "\45",
+    'calculator' "\46",
+    'chart' "\47",
+    'life-insurance' "\68",
+    'help' "\66",
+    'file' "\70",
+    'graph' "\48",
+    'family' "\49",
+    'education' "\65",
+    'end' "\4a",
+    'edit' "\72",
+    'disability-insurance' "\64",
+    'delete' "\63",
+    'datepicker' "\62",
+    'person' "\6a",
+    'check' "\4b",
+    'sync' "\69",
+    'locked' "\4c",
+    'long-term-care-insurance' "\67",
+    'purchase' "\6b",
+    'menu-close' "\4d",
+    'menu-hamburger' "\4e",
+    'more' "\4f",
+    'next' "\50",
+    'pdf' "\51",
+    'presentation' "\52",
+    'previous' "\53",
+    'resync' "\6e",
+    'reporteditor' "\54",
+    'worddoc' "\55",
+    'unlocked' "\56",
+    'subtract' "\6d",
+    'settings' "\57",
+    'search' "\58",
+    'retirement' "\6f",
+    'reset' "\6c",
+    'critical-illness' "\59",
+    'child' "\71",
+    'clock' "\73",
+    'estimate' "\75",
+    'exclamation2' "\76"
+);

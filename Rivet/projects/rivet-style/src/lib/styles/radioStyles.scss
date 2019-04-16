@@ -118,12 +118,12 @@
     }
     .mat-radio-button.mat-radio-disabled {
         .mat-radio-label {
-            color: $rvt-neutral-300;
+            color: $rvt-disabled-text-color;
             .mat-radio-container {
                 .mat-radio-outer-circle {
                     height: 18px;
                     width: 18px;
-                    border: 1px dashed $rvt-neutral-300;
+                    border: 1px dashed $rvt-disabled-color;
                 }
             }
         }

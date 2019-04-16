@@ -52,16 +52,16 @@ mat-form-field.mat-form-field {
     }
     &.mat-form-field-disabled {
         label.mat-form-field-label, label.mat-form-field-label.mat-form-field-empty{
-            color: $rvt-neutral-400;
+            color: $rvt-disabled-text-color;
         }
     }
     .mat-select {
         &.mat-select-disabled {
             .mat-select-placeholder {
-                color: $rvt-neutral-400;
+                color: $rvt-disabled-text-color;
             }
             .mat-select-arrow-wrapper .mat-select-arrow {
-                color: $rvt-neutral-300;
+                color: $rvt-disabled-text-color;
             }
         }
         .mat-select-arrow-wrapper {
@@ -109,16 +109,16 @@ mat-form-field.mat-form-field {
     }
     &.invalid, &.invalid.mat-focused {
         label.mat-form-field-label {
-            color: $rvt-warning-color;
+            color: $rvt-invalid-color;
         }
         .mat-form-field-underline {
-            background-color: $rvt-warning-color;
+            background-color: $rvt-invalid-color;
             .mat-form-field-ripple {
-                background-color: $rvt-warning-color;
+                background-color: $rvt-invalid-color;
             }
         }
         .mat-form-field-subscript-wrapper .mat-form-field-hint-wrapper .mat-hint {
-            color: $rvt-warning-color;
+            color: $rvt-invalid-color;
         }
     }
     &.readonly {

@@ -35,11 +35,11 @@ export class SideNavComponent implements OnInit {
                 ]
             },
             {
-                title: 'Styles',
+                title: 'Style',
                 links: [
-                    { name: 'Icons', path: '/styles', section: 'icon' },
-                    { name: 'Font Styles', path: '/styles', section: 'font' },
-                    { name: 'Colors', path: '/styles', section: 'color' }
+                    { name: 'Icons', path: '/style', section: 'icon' },
+                    { name: 'Font Styles', path: '/style', section: 'font' },
+                    { name: 'Color Variables', path: '/style', section: 'color' }
                 ]
             },
             {
@@ -56,33 +56,6 @@ export class SideNavComponent implements OnInit {
                 ]
             }
         ]
-        // numberedObj: [
-        //     {
-        //         label: '1',
-        //         title: 'Design',
-        //         path: '/design',
-        //         links: [
-        //             { name: 'Icons', path: '/design', section: 'icon' },
-        //             { name: 'Font Styles', path: '/design', section: 'font' },
-        //             { name: 'Colors', path: '/design', section: 'color' }
-        //         ]
-        //     },
-        //     {
-        //         label: '2',
-        //         title: 'Accessibility',
-        //         path: '/accessibility',
-        //         links: []
-        //     },
-        //     {
-        //         label: '3',
-        //         title: 'Changelog',
-        //         path: '/changelog',
-        //         links: [
-        //             { name: 'Versions', path: '/changelog', section: 'version' },
-        //             { name: 'Roadmap', path: '/changelog', section: 'roadmap' }
-        //         ]
-        //     }
-        // ]
     };
 
     expand(section) {

@@ -28,20 +28,46 @@
 // -------------------------------------------
 
 export const versions = [
-  {
-    version: '0.2.0',
-    date: '4/11/2019',
-    note: 'Theme override support',
-    updates: [
-      {
-        category: 'Design',
-        bullets: [
-          'Allows rvt color variables to be overridden for branding purposes.',
-          'Created rvt-core() mixin that sets the Angular Material Theme.'
+    {
+        version: '0.2.2',
+        date: '4/16/2019',
+        note: 'IE Bug fix, New Variables',
+        updates: [
+            {
+                category: 'Components',
+                bullets: [
+                    'Fixed style bugs for tabs in IE11',
+                    'Expansion panel tab focus fixed'
+                ]
+            },
+            {
+                category: 'Style',
+                bullets: [
+                    'New variables for base component styles: rvt-disabled-color, rvt-disabled-text-color, rvt-invalid-color'
+                ]
+            },
+            {
+                category: 'Library',
+                bullets: [
+                    'Uncommented code in polyfill.ts for proper Rivet functionality in IE'
+                ]
+            }
         ]
-      }
-    ]
-  },
+    },
+    {
+        version: '0.2.0',
+        date: '4/11/2019',
+        note: 'Theme override support',
+        updates: [
+            {
+                category: 'Design',
+                bullets: [
+                    'Allows rvt color variables to be overridden for branding purposes.',
+                    'Created rvt-core() mixin that sets the Angular Material Theme.'
+                ]
+            }
+        ]
+    },
   {
     version: '0.1.31',
     date: '04/10/2018',

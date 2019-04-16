@@ -7,69 +7,47 @@ body {
 }
 
 h1 {
-    font-family: $RvtFontFamily;
-    font-size: 56px;
-    font-weight: 200;
+    font: 200 56px $RvtFontFamily;
 }
 
 h2 {
-    font-family: $RvtFontFamily;
-    font-size: 48px;
-    font-weight: 200;
+    font: 200 48px $RvtFontFamily;
 }
 
 h3 {
-    font-family: $RvtFontFamily;
-    font-size: 38px;
-    font-weight: 300;
+    font: 300 38px $RvtFontFamily;
 }
 
 h4 {
-    font-family: $RvtFontFamily;
-    font-size: 28px;
-    font-weight: 400;
+    font: 400 28px $RvtFontFamily;
 }
 
 h5 {
-    font-family: $RvtFontFamily;
-    font-size: 22px;
-    font-weight: 600;
+    font: 600 22px $RvtFontFamily;
 }
 
 h6 {
-    font-family: $RvtFontFamily;
-    font-size: 16px;
-    font-weight: 400;
+    font: 400 16px $RvtFontFamily;
 }
 
 p {
-    font-family: $RvtFontFamily;
-    font-size: 14px;
-    font-weight: 400;
+    font: 400 14px $RvtFontFamily;
 }
 
 label {
-    font-family: $RvtFontFamily;
-    font-size: 12px;
-    font-weight: 400;
+    font: 400 12px $RvtFontFamily;
 }
 
 input, textarea {
-    font-family: $RvtFontFamily;
-    font-size: 16px;
-    font-weight: 400;
+    font: 400 16px $RvtFontFamily;
 }
 
 button {
-    font-family: $RvtFontFamily;
-    font-size: 14px;
-    font-weight: 400;
+    font: 400 14px $RvtFontFamily;
 }
 
 a {
-    font-family: $RvtFontFamily;
-    font-size: 14px;
-    font-weight: 400;
+    font: 400 14px $RvtFontFamily;
     text-decoration: none;
     &:hover {
         text-decoration: underline;
