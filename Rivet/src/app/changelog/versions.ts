@@ -29,6 +29,20 @@
 
 export const versions = [
   {
+    version: '0.2.5',
+    date: '4/18/2019',
+    note: 'Expansion panel validation',
+    updates: [
+      {
+        category: 'Components',
+        bullets: [
+          'Expansion panel: Add optional form input for validation',
+          'Expansion panel: Small styling fix on Close button'
+        ]
+      }
+    ]
+  },
+  {
     version: '0.2.4',
     date: '4/16/2019',
     note: 'Update the side navigation',

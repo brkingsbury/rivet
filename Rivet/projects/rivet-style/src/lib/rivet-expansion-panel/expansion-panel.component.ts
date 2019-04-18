@@ -5,8 +5,10 @@ import {
   EventEmitter,
   HostListener,
   Output,
-  ChangeDetectorRef
+  ChangeDetectorRef,
+  Input
 } from '@angular/core';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'advicent-rivet-expansion-panel',
@@ -14,10 +16,9 @@ import {
   styleUrls: ['./expansion-panel.component.scss']
 })
 export class RivetExpansionPanelComponent implements AfterViewInit {
-  @Output()
-  addButtonCallback: EventEmitter<any> = new EventEmitter();
-  @Output()
-  deleteButtonCallback: EventEmitter<any> = new EventEmitter();
+  @Input() formGroup?: FormGroup;
+  @Output() addButtonCallback: EventEmitter<any> = new EventEmitter(); // TODO - make this only show optionally
+  @Output() deleteButtonCallback: EventEmitter<any> = new EventEmitter();
 
   panelExpanded = false;
   defaultExpansionHeight: number;
@@ -38,8 +39,10 @@ export class RivetExpansionPanelComponent implements AfterViewInit {
   }
 
   setExpandedState(expanded, event) {
-    this.panelExpanded = expanded;
-    this.resizePanel();
+    if (!this.panelExpanded || this.isValid()) {
+      this.panelExpanded = expanded;
+      this.resizePanel();
+    }
     event.stopPropagation();
   }
 
@@ -69,5 +72,13 @@ export class RivetExpansionPanelComponent implements AfterViewInit {
 
   private initializeHeight() {
     this.defaultExpansionHeight = this.element.nativeElement.querySelector('.top-panel').offsetHeight;
+  }
+
+  private isValid() {
+    return (
+      this.formGroup === undefined ||
+      this.formGroup.get('expandedFields').valid ||
+      this.formGroup.get('expandedFields').untouched
+    );
   }
 }
