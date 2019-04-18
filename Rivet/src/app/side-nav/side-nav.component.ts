@@ -17,7 +17,6 @@ export class SideNavComponent implements OnInit {
           { name: 'Datepicker', path: '/components', section: 'datepicker' },
           { name: 'Dialog', path: '/components', section: 'dialog' },
           { name: 'Dropdowns', path: '/components', section: 'dropdown' },
-          { name: 'Event Picker', path: '/components', section: 'eventPicker' },
           { name: 'Inputs', path: '/components', section: 'input' },
           { name: 'Radio Buttons', path: '/components', section: 'radio' },
           { name: 'Tables', path: '/components', section: 'table' },

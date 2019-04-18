@@ -29,6 +29,17 @@
 
 export const versions = [
   {
+    version: '0.2.6',
+    date: '4/18/2019',
+    note: 'Migrate event picker out of Rivet and into NaviPlanWeb',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Migrate event picker component out of Rivet', 'Update side navigation and example component']
+      }
+    ]
+  },
+  {
     version: '0.2.5',
     date: '4/18/2019',
     note: 'Expansion panel validation',
