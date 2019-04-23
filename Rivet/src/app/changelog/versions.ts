@@ -29,6 +29,17 @@
 
 export const versions = [
   {
+    version: '0.2.7',
+    date: '4/22/2019',
+    note: 'Expansion panel add button configurability',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Expansion panel: Make add button optional']
+      }
+    ]
+  },
+  {
     version: '0.2.6',
     date: '4/18/2019',
     note: 'Migrate event picker out of Rivet and into NaviPlanWeb',

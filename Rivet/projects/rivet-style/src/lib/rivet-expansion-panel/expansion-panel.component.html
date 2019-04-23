@@ -27,7 +27,7 @@
   <div class="expansion" [ngStyle]="{ visibility: panelExpanded ? 'visible' : 'hidden' }">
     <ng-content select="[expansion-content]"></ng-content>
     <div class="bottom-button-bar">
-      <button class="rvt-btn-primary add-btn" (click)="addButtonClicked()">
+      <button *ngIf="showAddButton" class="rvt-btn-primary add-btn" (click)="addButtonClicked()">
         <span class="rivet-icon-add">Add</span>
       </button>
       <button class="rvt-btn-secondary close-btn" (click)="setExpandedState(false, $event)">

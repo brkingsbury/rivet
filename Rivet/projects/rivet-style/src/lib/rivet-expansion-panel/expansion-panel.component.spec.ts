@@ -4,25 +4,64 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponentModule } from '../material-component-module';
 import { RivetExpansionPanelComponent } from './expansion-panel.component';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { Component, ViewChild } from '@angular/core';
 
 describe('RivetExpansionPanelComponent', () => {
+  @Component({
+    template: `
+      <advicent-rivet-expansion-panel (addButtonCallback)="(addButtonCallback)">
+        <div header-content>Header content</div>
+        <div expansion-content>Expansion content</div>
+      </advicent-rivet-expansion-panel>
+    `
+  })
+  class WrapperComponent {
+    @ViewChild(RivetExpansionPanelComponent) expansionPanel: RivetExpansionPanelComponent;
+  }
+  @Component({
+    template: `
+      <advicent-rivet-expansion-panel>
+        <div header-content>Header content</div>
+        <div expansion-content>Expansion content</div>
+      </advicent-rivet-expansion-panel>
+    `
+  })
+  class WrapperNoCallbackComponent {
+    @ViewChild(RivetExpansionPanelComponent) expansionPanel: RivetExpansionPanelComponent;
+    public addButtonCallback = () => {};
+  }
   let component: RivetExpansionPanelComponent;
   let fixture: ComponentFixture<RivetExpansionPanelComponent>;
+
+  let wrapperFixture: ComponentFixture<WrapperComponent>;
+  let wrapperComponent: WrapperComponent;
+
+  let wrapperNoCallbackFixture: ComponentFixture<WrapperNoCallbackComponent>;
+  let wrapperNoCallbackComponent: WrapperNoCallbackComponent;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [BrowserAnimationsModule, MaterialComponentModule],
-      declarations: [RivetExpansionPanelComponent]
+      declarations: [RivetExpansionPanelComponent, WrapperComponent, WrapperNoCallbackComponent]
     }).compileComponents();
   }));
 
   beforeEach(() => {
+    wrapperFixture = TestBed.createComponent(WrapperComponent);
+    wrapperComponent = wrapperFixture.componentInstance;
+    wrapperNoCallbackFixture = TestBed.createComponent(WrapperNoCallbackComponent);
+    wrapperNoCallbackComponent = wrapperNoCallbackFixture.componentInstance;
     fixture = TestBed.createComponent(RivetExpansionPanelComponent);
     component = fixture.componentInstance;
+
+    wrapperFixture.detectChanges();
+    wrapperNoCallbackFixture.detectChanges();
     fixture.detectChanges();
   });
 
   afterEach(() => {
+    wrapperFixture.destroy();
+    wrapperNoCallbackFixture.destroy();
     fixture.destroy();
   });
 
@@ -106,13 +145,29 @@ describe('RivetExpansionPanelComponent', () => {
     });
   }));
 
-  it('should call an add button callback', () => {
-    spyOn(component.addButtonCallback, 'emit');
-    const toggleButton = fixture.debugElement.query(By.css('.toggle-expansion-btn')).nativeElement;
-    toggleButton.click();
+  describe('add button callback', () => {
+    it('should not show add button if callback is not set', () => {
+      const expansionPanel = wrapperNoCallbackFixture.debugElement.componentInstance.expansionPanel;
+      spyOn(expansionPanel.addButtonCallback, 'emit').and.callThrough();
 
-    const addButton = fixture.debugElement.query(By.css('.bottom-button-bar .add-btn')).nativeElement;
-    addButton.click();
-    expect(component.addButtonCallback.emit).toHaveBeenCalledWith();
+      const toggleButton = expansionPanel.element.nativeElement.querySelector('.toggle-expansion-btn');
+      toggleButton.click();
+
+      const addButton = expansionPanel.element.nativeElement.querySelector('.bottom-button-bar .add-btn');
+
+      expect(addButton).toBeNull();
+    });
+    it('should call an add button callback on click (if there is one)', () => {
+      const expansionPanel = wrapperFixture.debugElement.componentInstance.expansionPanel;
+      spyOn(expansionPanel.addButtonCallback, 'emit').and.callThrough();
+
+      const toggleButton = expansionPanel.element.nativeElement.querySelector('.toggle-expansion-btn');
+      toggleButton.click();
+
+      const addButton = expansionPanel.element.nativeElement.querySelector('.bottom-button-bar .add-btn');
+
+      addButton.click();
+      expect(expansionPanel.addButtonCallback.emit).toHaveBeenCalledWith();
+    });
   });
 });

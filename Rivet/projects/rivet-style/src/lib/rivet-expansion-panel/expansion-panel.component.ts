@@ -6,7 +6,8 @@ import {
   HostListener,
   Output,
   ChangeDetectorRef,
-  Input
+  Input,
+  OnInit
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
@@ -15,16 +16,21 @@ import { FormGroup } from '@angular/forms';
   templateUrl: './expansion-panel.component.html',
   styleUrls: ['./expansion-panel.component.scss']
 })
-export class RivetExpansionPanelComponent implements AfterViewInit {
+export class RivetExpansionPanelComponent implements OnInit, AfterViewInit {
   @Input() formGroup?: FormGroup;
-  @Output() addButtonCallback: EventEmitter<any> = new EventEmitter(); // TODO - make this only show optionally
+  @Output() addButtonCallback?: EventEmitter<any> = new EventEmitter();
   @Output() deleteButtonCallback: EventEmitter<any> = new EventEmitter();
 
-  panelExpanded = false;
   defaultExpansionHeight: number;
-  panelHeight: number;
   isDeleting = false;
+  panelExpanded = false;
+  panelHeight: number;
+  showAddButton = false;
   constructor(private element: ElementRef, private cd: ChangeDetectorRef) {}
+
+  ngOnInit() {
+    this.showAddButton = this.addButtonCallback.observers.length > 0;
+  }
 
   ngAfterViewInit() {
     this.initializeHeight();
