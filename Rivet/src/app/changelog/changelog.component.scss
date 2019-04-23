@@ -1,43 +1,43 @@
-@import "../../styles.scss";
+@import '../../styles.scss';
 
 .version-history {
-    h5 {
-        margin-top: 15px;
-        display: inline-block;
+  h5 {
+    margin-top: 15px;
+    display: inline-block;
+  }
+  span {
+    display: inline-block;
+    font-size: 22px;
+    color: $rvt-neutral-400;
+  }
+  .release-notes {
+    margin-top: 15px;
+    font-weight: 600;
+  }
+  hr {
+    margin: 15px 0 5px 0;
+    max-width: 50%;
+  }
+  div:last-child hr {
+    display: none;
+  }
+  ul {
+    padding-inline-start: 0;
+    font-size: 14px;
+    font-weight: 600;
+    li {
+      margin-left: 20px;
+      font-weight: 400;
     }
-    span {
-        display: inline-block;
-        font-size: 22px;
-        color: $rvt-neutral-400;
-    }
-    .release-notes {
-        margin-top: 15px;
-        font-weight: 600;
-    }
-    hr {
-        margin: 15px 0 5px 0;
-        max-width: 50%;
-    }
-    div:last-child hr{
-        display: none;
-    }
-    ul {
-        padding-inline-start: 0;
-        font-size: 14px;
-        font-weight: 600;
-        li {
-            margin-left: 20px;
-            font-weight: 400;
-        }
-    }
+  }
 }
 
 s {
-    color: $rvt-neutral-400;
+  color: $rvt-neutral-400;
 }
 
 .rivet-icon-check {
-    margin-left: 10px;
-    color: $rvt-good-color;
-    font-size: 12px;
+  margin-left: 10px;
+  color: $rvt-good-color;
+  font-size: 12px;
 }

@@ -11,7 +11,7 @@ export class ComponentsComponent implements OnInit {
   currencyInput = new FormControl(35);
   percentageInput = new FormControl(0.35);
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
 

@@ -1,160 +1,163 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
-
 .mat-radio-group {
-    .mat-radio-button:not(.mat-radio-disabled){
-        label.mat-radio-label {
-            font-family: $RvtFontFamily;
-            font-size: 14px;
-            color: $rvt-neutral-900;
-            .mat-radio-container {
-                height: 18px;
-                width: 18px;
-                margin-left: 1px; // extra space for the border expanding
-                .mat-radio-outer-circle {
-                    height: 18px;
-                    width: 18px;
-                    border-color: $rvt-neutral-900;
-                    transition: none;
-                    border-width: 1px;
-                }
-                .mat-radio-inner-circle {
-                    height: 12px;
-                    width: 12px;
-                    background-color: $rvt-primary-color;
-                    left: 3px;
-                    top: 3px;
-                }
-                .mat-radio-ripple.mat-ripple {
-                    display: none;
-                }
-            }
-            &:hover, &:focus{
-                .mat-radio-container {
-                    .mat-radio-outer-circle {
-                        height: 20px;
-                        width: 20px;
-                        border-width: 2px;
-                        left: -1px;
-                        top: -1px;
-                    }
-                }
-            }
+  .mat-radio-button:not(.mat-radio-disabled) {
+    label.mat-radio-label {
+      font-family: $RvtFontFamily;
+      font-size: 14px;
+      color: $rvt-neutral-900;
+      .mat-radio-container {
+        height: 18px;
+        width: 18px;
+        margin-left: 1px; // extra space for the border expanding
+        .mat-radio-outer-circle {
+          height: 18px;
+          width: 18px;
+          border-color: $rvt-neutral-900;
+          transition: none;
+          border-width: 1px;
         }
-        &.small-radio.mat-radio-button{
-            .mat-radio-label {
-                .mat-radio-container {
-                    height: 16px;
-                    width: 16px;
-                    .mat-radio-outer-circle {
-                        height: 16px;
-                        width: 16px;
-                    }
-                    .mat-radio-inner-circle {
-                        height: 10px;
-                        width: 10px;
-                    }
-                }
-                .mat-radio-label-content {
-                    font-size: 12px;
-                }
-                &:hover, &:focus{
-                    .mat-radio-container {
-                        .mat-radio-outer-circle {
-                            height: 18px;
-                            width: 18px;
-                            border-width: 2px;
-                            left: -1px;
-                            top: -1px;
-                        }
-                    }
-                }
-            }
-            &.cdk-focused, &.cdk-keyboard-focused {
-                .mat-radio-label .mat-radio-container .mat-radio-outer-circle {
-                    height: 18px;
-                    width: 18px;
-                    border-width: 2px;
-                    left: -1px;
-                    top: -1px;
-                }
-            }
+        .mat-radio-inner-circle {
+          height: 12px;
+          width: 12px;
+          background-color: $rvt-primary-color;
+          left: 3px;
+          top: 3px;
         }
-        &.mat-radio-checked {
-            .mat-radio-container {
-                .mat-radio-inner-circle {
-                    background-color: $rvt-primary-color;                    
-                    transform: scale(1);
-                }
-                .mat-radio-outer-circle {
-                    border-color: $rvt-primary-color;
-                }
-            }
-            .mat-radio-label {
-                &:hover, &:focus {
-                    .mat-radio-container {
-                        .mat-radio-outer-circle {
-                            height: 20px;
-                            width: 20px;
-                            border-width: 2px;
-                            left: -1px;
-                            top: -1px;
-                            border-color: $rvt-primary-color-dark;
-                        }
-                    }
-                }
-            }
+        .mat-radio-ripple.mat-ripple {
+          display: none;
         }
-        &.cdk-focused, &.cdk-keyboard-focused {
-            .mat-radio-label .mat-radio-container .mat-radio-outer-circle {
-                height: 20px;
-                width: 20px;
-                border-width: 2px;
-                left: -1px;
-                top: -1px;
-            }
+      }
+      &:hover,
+      &:focus {
+        .mat-radio-container {
+          .mat-radio-outer-circle {
+            height: 20px;
+            width: 20px;
+            border-width: 2px;
+            left: -1px;
+            top: -1px;
+          }
         }
+      }
     }
-    .mat-radio-button.mat-radio-disabled {
-        .mat-radio-label {
-            color: $rvt-disabled-text-color;
-            .mat-radio-container {
-                .mat-radio-outer-circle {
-                    height: 18px;
-                    width: 18px;
-                    border: 1px dashed $rvt-disabled-color;
-                }
+    &.small-radio.mat-radio-button {
+      .mat-radio-label {
+        .mat-radio-container {
+          height: 16px;
+          width: 16px;
+          .mat-radio-outer-circle {
+            height: 16px;
+            width: 16px;
+          }
+          .mat-radio-inner-circle {
+            height: 10px;
+            width: 10px;
+          }
+        }
+        .mat-radio-label-content {
+          font-size: 12px;
+        }
+        &:hover,
+        &:focus {
+          .mat-radio-container {
+            .mat-radio-outer-circle {
+              height: 18px;
+              width: 18px;
+              border-width: 2px;
+              left: -1px;
+              top: -1px;
             }
+          }
         }
-        &.mat-radio-checked {
-            .mat-radio-inner-circle {
-                transform: scale(1);
-                height: 12px;
-                width: 12px;
-                background-color: $rvt-neutral-300;
-                left: 3px;
-                top: 3px;
+      }
+      &.cdk-focused,
+      &.cdk-keyboard-focused {
+        .mat-radio-label .mat-radio-container .mat-radio-outer-circle {
+          height: 18px;
+          width: 18px;
+          border-width: 2px;
+          left: -1px;
+          top: -1px;
+        }
+      }
+    }
+    &.mat-radio-checked {
+      .mat-radio-container {
+        .mat-radio-inner-circle {
+          background-color: $rvt-primary-color;
+          transform: scale(1);
+        }
+        .mat-radio-outer-circle {
+          border-color: $rvt-primary-color;
+        }
+      }
+      .mat-radio-label {
+        &:hover,
+        &:focus {
+          .mat-radio-container {
+            .mat-radio-outer-circle {
+              height: 20px;
+              width: 20px;
+              border-width: 2px;
+              left: -1px;
+              top: -1px;
+              border-color: $rvt-primary-color-dark;
             }
-
+          }
         }
+      }
     }
-    &.read-only .mat-radio-button.mat-radio-disabled {
-        .mat-radio-label .mat-radio-container .mat-radio-outer-circle{
-            border: none;
-        }
-        &.mat-radio-checked .mat-radio-inner-circle {
-            background-color: $rvt-neutral-900;
-        }
+    &.cdk-focused,
+    &.cdk-keyboard-focused {
+      .mat-radio-label .mat-radio-container .mat-radio-outer-circle {
+        height: 20px;
+        width: 20px;
+        border-width: 2px;
+        left: -1px;
+        top: -1px;
+      }
     }
-    &.label-above .mat-radio-button {
-        .mat-radio-label {
-            display: flex;
-            flex-direction: column-reverse;
-            margin-left: 8px;
-            .mat-radio-label-content {
-                padding: 0;
-            }
+  }
+  .mat-radio-button.mat-radio-disabled {
+    .mat-radio-label {
+      color: $rvt-disabled-text-color;
+      .mat-radio-container {
+        .mat-radio-outer-circle {
+          height: 18px;
+          width: 18px;
+          border: 1px dashed $rvt-disabled-color;
         }
+      }
     }
+    &.mat-radio-checked {
+      .mat-radio-inner-circle {
+        transform: scale(1);
+        height: 12px;
+        width: 12px;
+        background-color: $rvt-neutral-300;
+        left: 3px;
+        top: 3px;
+      }
+    }
+  }
+  &.read-only .mat-radio-button.mat-radio-disabled {
+    .mat-radio-label .mat-radio-container .mat-radio-outer-circle {
+      border: none;
+    }
+    &.mat-radio-checked .mat-radio-inner-circle {
+      background-color: $rvt-neutral-900;
+    }
+  }
+  &.label-above .mat-radio-button {
+    .mat-radio-label {
+      display: flex;
+      flex-direction: column-reverse;
+      margin-left: 8px;
+      .mat-radio-label-content {
+        padding: 0;
+      }
+    }
+  }
 }

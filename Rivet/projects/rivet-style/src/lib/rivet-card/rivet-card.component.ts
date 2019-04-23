@@ -9,9 +9,7 @@ export class RivetCardComponent implements OnInit {
   @Input() header: string;
   @Input() footer: string;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

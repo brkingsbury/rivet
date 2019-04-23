@@ -1,46 +1,55 @@
 <div class="component-container">
-    <h5>Loading</h5>
-    <p>For indeterminate loading states, <code>mat-spinner</code> is used along with <code>aria-label="loading"</code> for
-        screen readers.</p>
+  <h5>Loading</h5>
+  <p>
+    For indeterminate loading states, <code>mat-spinner</code> is used along with <code>aria-label="loading"</code> for
+    screen readers.
+  </p>
 
-    <h6>Loading Section</h6>
-    <p>Loading sections are used within larger page sections. To add text, simply include <code>span class="loading-text"</code>.</p>
-    
-    <div class="example-component">
-        <button class="rvt-btn-secondary" (click)="isLoading = !isLoading">Test Loading</button>
-        <div class="loading-section" [ngClass]="{'loading': isLoading}">
-            <span class="loading-text">Loading...</span>
-            <mat-spinner></mat-spinner>
-        </div>
+  <h6>Loading Section</h6>
+  <p>
+    Loading sections are used within larger page sections. To add text, simply include
+    <code>span class="loading-text"</code>.
+  </p>
+
+  <div class="example-component">
+    <button class="rvt-btn-secondary" (click)="isLoading = !isLoading">Test Loading</button>
+    <div class="loading-section" [ngClass]="{ loading: isLoading }">
+      <span class="loading-text">Loading...</span>
+      <mat-spinner></mat-spinner>
     </div>
+  </div>
 
-    <!-- Example -->
-    <p class="example-code-header">HTML</p>
-<textarea class="example-code" readonly>
+  <!-- Example -->
+  <p class="example-code-header">HTML</p>
+  <textarea class="example-code" readonly>
         <div class="loading-section" [ngClass]="{'loading': isLoading}">
             <span class="loading-text">Loading...</span>
             <mat-spinner aria-label="loading"></mat-spinner>
         </div>
-    </textarea>
-    <!-- End Example-->
+    </textarea
+  >
+  <!-- End Example-->
 
-    <h6>Loading Buttons</h6>
-    <p>Buttons in a loading state need to be disabled and include the class <code>loading</code> to apply the correct
-        styles as well as prevent interaction while loading</p>
+  <h6>Loading Buttons</h6>
+  <p>
+    Buttons in a loading state need to be disabled and include the class <code>loading</code> to apply the correct
+    styles as well as prevent interaction while loading
+  </p>
 
-    <div class="example-component">
-        <button class="rvt-btn-secondary" (click)="startLoad()" [ngClass]="{'loading': btnLoading}" [disabled]="btnLoading">
-            Start load
-            <mat-spinner *ngIf="btnLoading"></mat-spinner>
-        </button>
-    </div>
+  <div class="example-component">
+    <button class="rvt-btn-secondary" (click)="startLoad()" [ngClass]="{ loading: btnLoading }" [disabled]="btnLoading">
+      Start load
+      <mat-spinner *ngIf="btnLoading"></mat-spinner>
+    </button>
+  </div>
 
-    <!-- Example -->
-    <p class="example-code-header">HTML</p>
-<textarea class="example-code" readonly>
+  <!-- Example -->
+  <p class="example-code-header">HTML</p>
+  <textarea class="example-code" readonly>
     <button class="rvt-btn-secondary" (click)="startLoad()" [ngClass]="{'loading': btnLoading}" [disabled]="btnLoading">
         Start load
         <mat-spinner *ngIf="btnLoading" aria-label="loading"></mat-spinner>
     </button>
-    </textarea>
+    </textarea
+  >
 </div>

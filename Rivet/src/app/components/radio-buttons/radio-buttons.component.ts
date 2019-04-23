@@ -6,15 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../components.component.scss']
 })
 export class RadioButtonsComponent implements OnInit {
-    default = true;
-    isDis = false;
-    isRo = false;
-    isSmall = false;
-    isAbove = false;
+  default = true;
+  isDis = false;
+  isRo = false;
+  isSmall = false;
+  isAbove = false;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

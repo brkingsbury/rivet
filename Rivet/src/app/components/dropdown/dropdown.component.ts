@@ -3,28 +3,18 @@ import { MatSelect, MatFormFieldModule, MatInputModule, MatFormFieldControl } fr
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
-    selector: 'app-dropdown',
-    templateUrl: './dropdown.component.html',
-    styleUrls: ['../components.component.scss']
+  selector: 'app-dropdown',
+  templateUrl: './dropdown.component.html',
+  styleUrls: ['../components.component.scss']
 })
-
 @NgModule({
-    imports: [
-        MatSelect,
-        MatFormFieldModule,
-        MatInputModule,
-        FormsModule,
-        ReactiveFormsModule
-    ]
+  imports: [MatSelect, MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule]
 })
-
 export class DropdownComponent implements OnInit {
-    dropChoices = ['One', 'Two', 'Three'];
-    selected = 'Two';
+  dropChoices = ['One', 'Two', 'Three'];
+  selected = 'Two';
 
-    constructor() { }
+  constructor() {}
 
-    ngOnInit() {
-    }
-
+  ngOnInit() {}
 }

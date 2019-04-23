@@ -1,18 +1,25 @@
 <div class="component-container">
-    <h5>Tables + Pagination
-        <a class="rivet-icon-pdf" target="new" title="Spec Sheet"
-            href="../../../assets/specs/Polaris_Table_Pagination_Specs.pdf"></a>
-    </h5>
-    <p>Tables are used to list out data with multiple properties. Tables should not use the default material
-        <code>class="mat-elevation-x"</code></p>
+  <h5>
+    Tables + Pagination
+    <a
+      class="rivet-icon-pdf"
+      target="new"
+      title="Spec Sheet"
+      href="../../../assets/specs/Polaris_Table_Pagination_Specs.pdf"
+    ></a>
+  </h5>
+  <p>
+    Tables are used to list out data with multiple properties. Tables should not use the default material
+    <code>class="mat-elevation-x"</code>
+  </p>
 
-    <div class="example-component">
-        <app-table-basic-example></app-table-basic-example>
-    </div>
+  <div class="example-component">
+    <app-table-basic-example></app-table-basic-example>
+  </div>
 
-    <!-- Example -->
-    <p class="example-code-header">HTML</p>
-    <textarea class="example-code large" readonly>
+  <!-- Example -->
+  <p class="example-code-header">HTML</p>
+  <textarea class="example-code large" readonly>
 <table mat-table [dataSource]="dataSource">
     <ng-container matColumnDef="position">
         <th mat-header-cell *matHeaderCellDef> No. </th>
@@ -33,21 +40,22 @@
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
     <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-    </textarea>
-    <!-- End Example -->
+    </textarea
+  >
+  <!-- End Example -->
 
+  <h6>Pagination</h6>
+  <p>Pagination is used when tables become too long to display on 1 page.</p>
 
-    <h6>Pagination</h6>
-    <p>Pagination is used when tables become too long to display on 1 page.</p>
+  <div class="example-component">
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
+  </div>
 
-    <div class="example-component">
-        <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-    </div>
-
-    <!-- Example -->
-    <p class="example-code-header">HTML</p>
-    <textarea class="example-code" readonly>
+  <!-- Example -->
+  <p class="example-code-header">HTML</p>
+  <textarea class="example-code" readonly>
 <mat-paginator [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>
-    </textarea>
-    <!-- End Example -->
+    </textarea
+  >
+  <!-- End Example -->
 </div>

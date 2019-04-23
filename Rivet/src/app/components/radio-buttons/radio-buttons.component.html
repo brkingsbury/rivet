@@ -1,98 +1,128 @@
 <div class="component-container">
-    <h5>Radio Buttons
-        <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_Radio_Specs.pdf" target="new"></a>
-    </h5>
-    <p>Radio buttons are used when there can only be one choice from a list of options</p>
-    <p>There are 3 styling alternatives for radio-buttons. <code>class="small-radio"</code>,
-        <code>class="read-only"</code> and <code>class="label-above"</code>.</p>
+  <h5>
+    Radio Buttons
+    <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_Radio_Specs.pdf" target="new"></a>
+  </h5>
+  <p>Radio buttons are used when there can only be one choice from a list of options</p>
+  <p>
+    There are 3 styling alternatives for radio-buttons. <code>class="small-radio"</code>,
+    <code>class="read-only"</code> and <code>class="label-above"</code>.
+  </p>
 
-    <p>There is also 1 attribute for radio-buttons, disabled. Readonly is only to be used along with disabled, but
-        disabled can be used by itself.</p>
+  <p>
+    There is also 1 attribute for radio-buttons, disabled. Readonly is only to be used along with disabled, but disabled
+    can be used by itself.
+  </p>
 
-    <div class="controls">
-        <mat-radio-group disableRipple>
-            <mat-radio-button value="1" disableRipple [checked]="default"
-                (change)="default = true; isSmall = false; isAbove = false; isDis = false; isRo = false">Default
-            </mat-radio-button>
-            <mat-radio-button value="2" disableRipple [checked]="isSmall"
-                (change)="isSmall = !isSmall; default = false; isAbove = false; isDis = false; isRo = false">Small Radio
-            </mat-radio-button>
-            <mat-radio-button value="3" disableRipple [checked]="isAbove"
-                (change)="isAbove = !isAbove; default = false; isSmall = false; isDis = false; isRo = false">Label Above
-            </mat-radio-button>
-            <mat-radio-button value="4" disableRipple [checked]="isRo"
-                (change)="isRo = !isRo; default = false; isAbove = false; isDis = false; isSmall = false">Read Only
-            </mat-radio-button>
-            <mat-radio-button value="5" disableRipple [checked]="isDis"
-                (change)="isDis = !isDis; default = false; isAbove = false; isSmall = false; isRo = false">Disabled
-            </mat-radio-button>
-        </mat-radio-group>
-    </div>
-    
+  <div class="controls">
+    <mat-radio-group disableRipple>
+      <mat-radio-button
+        value="1"
+        disableRipple
+        [checked]="default"
+        (change)="default = true; isSmall = false; isAbove = false; isDis = false; isRo = false"
+        >Default
+      </mat-radio-button>
+      <mat-radio-button
+        value="2"
+        disableRipple
+        [checked]="isSmall"
+        (change)="isSmall = !isSmall; default = false; isAbove = false; isDis = false; isRo = false"
+        >Small Radio
+      </mat-radio-button>
+      <mat-radio-button
+        value="3"
+        disableRipple
+        [checked]="isAbove"
+        (change)="isAbove = !isAbove; default = false; isSmall = false; isDis = false; isRo = false"
+        >Label Above
+      </mat-radio-button>
+      <mat-radio-button
+        value="4"
+        disableRipple
+        [checked]="isRo"
+        (change)="isRo = !isRo; default = false; isAbove = false; isDis = false; isSmall = false"
+        >Read Only
+      </mat-radio-button>
+      <mat-radio-button
+        value="5"
+        disableRipple
+        [checked]="isDis"
+        (change)="isDis = !isDis; default = false; isAbove = false; isSmall = false; isRo = false"
+        >Disabled
+      </mat-radio-button>
+    </mat-radio-group>
+  </div>
 
-    <div class="example-component">
-        <mat-radio-group disableRipple [ngClass]="{'read-only': isRo, 'label-above': isAbove}">
-            <mat-radio-button value="a" disableRipple [ngClass]="{'small-radio': isSmall }" [disabled]="isDis || isRo"
-                [checked]="true">Option 1</mat-radio-button>
-            <mat-radio-button value="b" disableRipple [ngClass]="{'small-radio': isSmall }" [disabled]="isDis || isRo">
-                Option 2</mat-radio-button>
-        </mat-radio-group>
-    </div>
+  <div class="example-component">
+    <mat-radio-group disableRipple [ngClass]="{ 'read-only': isRo, 'label-above': isAbove }">
+      <mat-radio-button
+        value="a"
+        disableRipple
+        [ngClass]="{ 'small-radio': isSmall }"
+        [disabled]="isDis || isRo"
+        [checked]="true"
+        >Option 1</mat-radio-button
+      >
+      <mat-radio-button value="b" disableRipple [ngClass]="{ 'small-radio': isSmall }" [disabled]="isDis || isRo">
+        Option 2</mat-radio-button
+      >
+    </mat-radio-group>
+  </div>
 
-    <!-- Example code-->
-    <div *ngIf="!isDis && !isRo && !isAbove && !isSmall">
-        <p class="example-code-header">HTML</p>
-        <textarea class="example-code" readonly>
+  <!-- Example code-->
+  <div *ngIf="!isDis && !isRo && !isAbove && !isSmall">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
 <mat-radio-group disableRipple>
     <mat-radio-button value="1" disableRipple>Option 1</mat-radio-button>
     <mat-radio-button value="2" disableRipple>Option 2</mat-radio-button>
 </mat-radio-group>
-        </textarea>
-    </div>
+        </textarea
+    >
+  </div>
 
-
-    <div *ngIf="isDis">
-        <p class="example-code-header">HTML</p>
-        <textarea class="example-code" readonly>
+  <div *ngIf="isDis">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
 <mat-radio-group disableRipple>
     <mat-radio-button value="3" disableRipple disabled>Disabled</mat-radio-button>
     <mat-radio-button value="4" disableRipple disabled checked="true">Disabled Selected</mat-radio-button>
 </mat-radio-group>
-        </textarea>
-    </div>
+        </textarea
+    >
+  </div>
 
-
-    <div *ngIf="isRo">
-        <p class="example-code-header">HTML</p>
-        <textarea class="example-code" readonly>
+  <div *ngIf="isRo">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
 <mat-radio-group disableRipple class="read-only">
     <mat-radio-button value="5" disableRipple disabled>Read-only</mat-radio-button>
     <mat-radio-button value="6" disableRipple disabled checked="true">Read-only selected</mat-radio-button>
 </mat-radio-group>
-        </textarea>
-    </div>
+        </textarea
+    >
+  </div>
 
-
-    <div *ngIf="isAbove">
-        <p class="example-code-header">HTML</p>
-        <textarea class="example-code" readonly>
+  <div *ngIf="isAbove">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
 <mat-radio-group disableRipple class="label-above">
     <mat-radio-button value="3" disableRipple disabled>Disabled</mat-radio-button>
     <mat-radio-button value="4" disableRipple disabled checked="true">Disabled Selected</mat-radio-button>
 </mat-radio-group>
-        </textarea>
-    </div>
+        </textarea
+    >
+  </div>
 
-
-    <div *ngIf="isSmall">
-        <p class="example-code-header">HTML</p>
-        <textarea class="example-code" readonly>
+  <div *ngIf="isSmall">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
 <mat-radio-group disableRipple>
     <mat-radio-button value="1" disableRipple class="small-radio">Small</mat-radio-button>
     <mat-radio-button value="2" disableRipple class="small-radio">Small selected</mat-radio-button>
 </mat-radio-group>
-        </textarea>
-    </div>
-
-
+        </textarea
+    >
+  </div>
 </div>

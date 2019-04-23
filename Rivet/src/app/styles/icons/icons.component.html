@@ -1,15 +1,24 @@
 <div class="component-container">
-    <h5>Icons 
-        <a class="rivet-icon-pdf" target="new" href="../../../assets/Polaris_Icon_Specs.pdf" title="Spec Sheet"></a>
-    </h5>
-    <p>For standalone icons, simply give a <code>span</code> the class of <code>rivet-icon-(icon-name)</code> and style according to the design using font-size.</p>
-    <p class="hint">Click an icon below to copy the class name to your clipboard.</p>
+  <h5>
+    Icons
+    <a class="rivet-icon-pdf" target="new" href="../../../assets/Polaris_Icon_Specs.pdf" title="Spec Sheet"></a>
+  </h5>
+  <p>
+    For standalone icons, simply give a <code>span</code> the class of <code>rivet-icon-(icon-name)</code> and style
+    according to the design using font-size.
+  </p>
+  <p class="hint">Click an icon below to copy the class name to your clipboard.</p>
 
-    <div class='icon-container'>
-        <button class="rvt-btn-icon" *ngFor="let ico of icons; let i = index" title="rivet-icon-{{ico}}" (click)="copyText(icoInput, i)">
-            <span class="rivet-icon-{{ico}}"></span>
-            <input type="text" value="rivet-icon-{{ico}}" #icoInput readonly/>
-            <span class="note" [hidden]="alert != icoInput">copied to clipboard!</span>
-        </button>
-    </div>
+  <div class="icon-container">
+    <button
+      class="rvt-btn-icon"
+      *ngFor="let ico of icons; let i = index"
+      title="rivet-icon-{{ ico }}"
+      (click)="copyText(icoInput, i)"
+    >
+      <span class="rivet-icon-{{ ico }}"></span>
+      <input type="text" value="rivet-icon-{{ ico }}" #icoInput readonly />
+      <span class="note" [hidden]="alert != icoInput">copied to clipboard!</span>
+    </button>
+  </div>
 </div>

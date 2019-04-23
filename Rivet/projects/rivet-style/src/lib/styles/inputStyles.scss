@@ -2,164 +2,165 @@
 @import './rivetTheme.scss';
 
 form {
-    mat-form-field {
-        * {
-            font-family: $RvtFontFamily; // Imported from typeStyles
-        }
-        &.mat-form-field {
-            font-family: $RvtFontFamily;
-            font-size: 16px;
-            font-weight: 400;
-        }
-        input {
-            font-family: $RvtFontFamily;
-            font-size: 16px;
-            font-weight: 400;
-            color: $rvt-neutral-900;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            &.mat-input-element:disabled {
-                color: $rvt-neutral-400;
-            }
-        }
-        .mat-form-field-label-wrapper label.mat-form-field-label {
-            font-family: $RvtFontFamily;
-            font-size: 16px;
-            font-weight: 400;
-            color: $rvt-neutral-400;
-        }
-        .mat-form-field-underline {
-            background-color: $rvt-neutral-400;
-        }
-        &.mat-focused {
-            .mat-form-field-label-wrapper label.mat-form-field-label {
-                color: $rvt-neutral-400;
-                &.mat-form-field-empty {
-                    color: $rvt-neutral-400;
-                }
-            }
-            .mat-form-field-underline {
-                background-color: $rvt-neutral-900;
-                height: 2px;
-            }
-        }
-        &:hover:not(.mat-form-field-disabled) {
-            .mat-form-field-underline,
-            .mat-form-field-ripple {
-                height: 2px;
-            }
-        }
-        &.invalid {
-            .mat-form-field-label-wrapper label.mat-form-field-label,
-            .mat-form-field-hint-wrapper mat-hint {
-                color: $rvt-warning-color;
-            }
-            input {
-                color: $rvt-neutral-900;
-            }
-            .mat-form-field-underline {
-                background-color: $rvt-warning-color;
-            }
-            &.mat-focused .mat-form-field-underline {
-                background-color: $rvt-warning-color;
-                .mat-form-field-ripple {
-                    background-color: $rvt-warning-color;
-                }
-            }
-        }
-        &.mat-form-field-invalid {
-            .mat-form-field-label-wrapper label.mat-form-field-label {
-                color: $rvt-warning-color;
-            }
-            input {
-                color: $rvt-neutral-900;
-            }
-            .mat-form-field-underline {
-                background-color: $rvt-warning-color;
-            }
-        }
-        .mat-form-field-hint-wrapper mat-hint {
-            font-family: $RvtFontFamily;
-            font-size: 12px;
-            font-weight: 400;
-        }
-        .mat-form-field-label-wrapper label.mat-form-field-label {
-            &.mat-form-field-empty {
-                color: $rvt-neutral-900;
-            }
-        }
+  mat-form-field {
+    * {
+      font-family: $RvtFontFamily; // Imported from typeStyles
     }
-    .rvt-input-wrap {
-        position: relative;
-        padding-bottom: 18px;
-        label {
-            display: block;
-            font-family: $RvtFontFamily;
-            font-size: 12px;
-            font-weight: 400;
-            color: $rvt-neutral-400;
-        }
-        textarea {
-            display: block;
-            font-family: $RvtFontFamily;
-            font-size: 16px;
-            font-weight: 400;
-            padding: 3px;
-            border: 1px solid $rvt-neutral-400;
-            min-height: 22px;
-            min-width: 120px;
-            color: $rvt-neutral-900;
-            overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
-            &:hover:not(:disabled),
-            &:focus:not(:disabled),
-            &:active:not(:disabled) {
-                outline: 1px solid $rvt-neutral-400;
-            }
-            &:focus:not(:disabled),
-            &:active:not(:disabled) {
-                outline-offset: 0;
-                border-color: $rvt-primary-color;
-                outline-color: $rvt-primary-color;
-            }
-            &:disabled {
-                border: 1px dashed $rvt-neutral-400;
-                color: $rvt-neutral-400;
-                outline: none;
-                background: none;
-            }
-        }
-        &.invalid {
-            label, .helper-text {
-                color: $rvt-warning-color;
-            }
-            textarea {
-                border-color: $rvt-warning-color;
-                outline-color: $rvt-warning-color;
-                &:hover:not(:disabled),
-                &:focus:not(:disabled),
-                &:active:not(:disabled) {
-                    outline: 1px solid $rvt-warning-color;
-                }
-                &:focus:not(:disabled),
-                &:active:not(:disabled) {
-                    outline-offset: 0;
-                    border-color: $rvt-warning-color;
-                }
-            }
-        }
-        .helper-text {
-            position: absolute;
-            font-family: $RvtFontFamily;
-            font-size: 12px;
-            font-weight: 400;
-            bottom: 0;
-            color: $rvt-neutral-400;
-        }
+    &.mat-form-field {
+      font-family: $RvtFontFamily;
+      font-size: 16px;
+      font-weight: 400;
     }
+    input {
+      font-family: $RvtFontFamily;
+      font-size: 16px;
+      font-weight: 400;
+      color: $rvt-neutral-900;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      &.mat-input-element:disabled {
+        color: $rvt-neutral-400;
+      }
+    }
+    .mat-form-field-label-wrapper label.mat-form-field-label {
+      font-family: $RvtFontFamily;
+      font-size: 16px;
+      font-weight: 400;
+      color: $rvt-neutral-400;
+    }
+    .mat-form-field-underline {
+      background-color: $rvt-neutral-400;
+    }
+    &.mat-focused {
+      .mat-form-field-label-wrapper label.mat-form-field-label {
+        color: $rvt-neutral-400;
+        &.mat-form-field-empty {
+          color: $rvt-neutral-400;
+        }
+      }
+      .mat-form-field-underline {
+        background-color: $rvt-neutral-900;
+        height: 2px;
+      }
+    }
+    &:hover:not(.mat-form-field-disabled) {
+      .mat-form-field-underline,
+      .mat-form-field-ripple {
+        height: 2px;
+      }
+    }
+    &.invalid {
+      .mat-form-field-label-wrapper label.mat-form-field-label,
+      .mat-form-field-hint-wrapper mat-hint {
+        color: $rvt-warning-color;
+      }
+      input {
+        color: $rvt-neutral-900;
+      }
+      .mat-form-field-underline {
+        background-color: $rvt-warning-color;
+      }
+      &.mat-focused .mat-form-field-underline {
+        background-color: $rvt-warning-color;
+        .mat-form-field-ripple {
+          background-color: $rvt-warning-color;
+        }
+      }
+    }
+    &.mat-form-field-invalid {
+      .mat-form-field-label-wrapper label.mat-form-field-label {
+        color: $rvt-warning-color;
+      }
+      input {
+        color: $rvt-neutral-900;
+      }
+      .mat-form-field-underline {
+        background-color: $rvt-warning-color;
+      }
+    }
+    .mat-form-field-hint-wrapper mat-hint {
+      font-family: $RvtFontFamily;
+      font-size: 12px;
+      font-weight: 400;
+    }
+    .mat-form-field-label-wrapper label.mat-form-field-label {
+      &.mat-form-field-empty {
+        color: $rvt-neutral-900;
+      }
+    }
+  }
+  .rvt-input-wrap {
+    position: relative;
+    padding-bottom: 18px;
+    label {
+      display: block;
+      font-family: $RvtFontFamily;
+      font-size: 12px;
+      font-weight: 400;
+      color: $rvt-neutral-400;
+    }
+    textarea {
+      display: block;
+      font-family: $RvtFontFamily;
+      font-size: 16px;
+      font-weight: 400;
+      padding: 3px;
+      border: 1px solid $rvt-neutral-400;
+      min-height: 22px;
+      min-width: 120px;
+      color: $rvt-neutral-900;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &:hover:not(:disabled),
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        outline: 1px solid $rvt-neutral-400;
+      }
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        outline-offset: 0;
+        border-color: $rvt-primary-color;
+        outline-color: $rvt-primary-color;
+      }
+      &:disabled {
+        border: 1px dashed $rvt-neutral-400;
+        color: $rvt-neutral-400;
+        outline: none;
+        background: none;
+      }
+    }
+    &.invalid {
+      label,
+      .helper-text {
+        color: $rvt-warning-color;
+      }
+      textarea {
+        border-color: $rvt-warning-color;
+        outline-color: $rvt-warning-color;
+        &:hover:not(:disabled),
+        &:focus:not(:disabled),
+        &:active:not(:disabled) {
+          outline: 1px solid $rvt-warning-color;
+        }
+        &:focus:not(:disabled),
+        &:active:not(:disabled) {
+          outline-offset: 0;
+          border-color: $rvt-warning-color;
+        }
+      }
+    }
+    .helper-text {
+      position: absolute;
+      font-family: $RvtFontFamily;
+      font-size: 12px;
+      font-weight: 400;
+      bottom: 0;
+      color: $rvt-neutral-400;
+    }
+  }
 }
 
 .rvt-input-wrap {
-    display: inline-block;
+  display: inline-block;
 }

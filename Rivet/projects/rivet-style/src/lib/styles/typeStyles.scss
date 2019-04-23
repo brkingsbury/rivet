@@ -3,60 +3,61 @@
 $RvtFontFamily: 'Nunito Sans', Arial, sans-serif;
 
 body {
-    font-family: $RvtFontFamily;
+  font-family: $RvtFontFamily;
 }
 
 h1 {
-    font: 200 56px $RvtFontFamily;
+  font: 200 56px $RvtFontFamily;
 }
 
 h2 {
-    font: 200 48px $RvtFontFamily;
+  font: 200 48px $RvtFontFamily;
 }
 
 h3 {
-    font: 300 38px $RvtFontFamily;
+  font: 300 38px $RvtFontFamily;
 }
 
 h4 {
-    font: 400 28px $RvtFontFamily;
+  font: 400 28px $RvtFontFamily;
 }
 
 h5 {
-    font: 600 22px $RvtFontFamily;
+  font: 600 22px $RvtFontFamily;
 }
 
 h6 {
-    font: 400 16px $RvtFontFamily;
+  font: 400 16px $RvtFontFamily;
 }
 
 p {
-    font: 400 14px $RvtFontFamily;
+  font: 400 14px $RvtFontFamily;
 }
 
 label {
-    font: 400 12px $RvtFontFamily;
+  font: 400 12px $RvtFontFamily;
 }
 
-input, textarea {
-    font: 400 16px $RvtFontFamily;
+input,
+textarea {
+  font: 400 16px $RvtFontFamily;
 }
 
 button {
-    font: 400 14px $RvtFontFamily;
+  font: 400 14px $RvtFontFamily;
 }
 
 a {
-    font: 400 14px $RvtFontFamily;
-    text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
-    &:focus:not(:active) {
-        outline-offset: 1px;
-    }
+  font: 400 14px $RvtFontFamily;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:focus:not(:active) {
+    outline-offset: 1px;
+  }
 }
 
 span {
-    font-family: $RvtFontFamily;
+  font-family: $RvtFontFamily;
 }

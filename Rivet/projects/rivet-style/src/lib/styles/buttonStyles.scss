@@ -2,115 +2,118 @@
 @import './rivetTheme.scss';
 
 button {
-    &[class*="rvt-btn"] {                        // Styles for all Rivet Buttons
-        border-radius: 2px;
-        background: none;
-        border: none;
-        padding: 11px 15px;
-        cursor: pointer;
-        transition: background-color 200ms ease;
-        line-height: 14px;
-        &:disabled {
-            cursor: default;
-        }
+  &[class*='rvt-btn'] {
+    // Styles for all Rivet Buttons
+    border-radius: 2px;
+    background: none;
+    border: none;
+    padding: 11px 15px;
+    cursor: pointer;
+    transition: background-color 200ms ease;
+    line-height: 14px;
+    &:disabled {
+      cursor: default;
     }
-    &.rvt-btn-primary,
-    &.rvt-btn-primary-lg {
-        font-weight: 600;
-        background-color: $rvt-primary-color;
-        color: $rvt-white;
-        &:hover:not(:disabled),
-        &:focus:not(:disabled) {
-            background-color: $rvt-primary-color-dark;
-        }
-        &:active:not(:disabled) {
-            background-color: $rvt-neutral-900;
-        }
-        &:disabled:not(.loading) {
-            background-color: $rvt-neutral-200;
-            color: $rvt-white;
-        }
+  }
+  &.rvt-btn-primary,
+  &.rvt-btn-primary-lg {
+    font-weight: 600;
+    background-color: $rvt-primary-color;
+    color: $rvt-white;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      background-color: $rvt-primary-color-dark;
     }
-    &.rvt-btn-primary-lg {
-        padding: 15px;
+    &:active:not(:disabled) {
+      background-color: $rvt-neutral-900;
     }
-    &.rvt-btn-secondary {
-        border: 1px solid $rvt-primary-color;
-        padding: 10px 14px;
-        color: $rvt-primary-color;
-        &:hover:not(:disabled),
-        &:focus:not(:disabled), 
-        &.loading:disabled {
-            background-color: transparentize($rvt-primary-color, 0.90);
-        }
-        &:active:not(:disabled) {
-            background-color: transparentize($rvt-primary-color, 0.72);
-        }
-        &:disabled:not(.loading)  {
-            border: 1px dashed $rvt-neutral-200;
-            color: $rvt-neutral-200;
-        }
+    &:disabled:not(.loading) {
+      background-color: $rvt-neutral-200;
+      color: $rvt-white;
     }
-    &.rvt-btn-text, &.rvt-btn-icon {
-        color: $rvt-neutral-600;
-        &:hover:not(:disabled),
-        &:focus:not(:disabled),
-        &.loading:disabled {
-            background-color: transparentize($rvt-neutral-600, 0.90);
-            color: $rvt-neutral-600;
-        }
-        &:active:not(:disabled) {
-            background-color: transparentize($rvt-neutral-600, 0.72);
-        }
-        &:disabled:not(.loading)  {
-            color: $rvt-neutral-200;
-        }
+  }
+  &.rvt-btn-primary-lg {
+    padding: 15px;
+  }
+  &.rvt-btn-secondary {
+    border: 1px solid $rvt-primary-color;
+    padding: 10px 14px;
+    color: $rvt-primary-color;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled),
+    &.loading:disabled {
+      background-color: transparentize($rvt-primary-color, 0.9);
     }
-    &.rvt-btn-icon {
-        line-height: 15px;
-        [class*="rivet-icon-"] {
-            display: inline-block;
-            height: 14px;
-            width: 14px;
-            fill: $rvt-neutral-600;
-            vertical-align: top;
-        }
-        &.loading:disabled {
-            padding: 11px;
-            line-height: 14px;
-            .mat-spinner {
-                margin: 0 auto;
-            }
-        }
-        &:disabled:not(.loading)  {
-            color: $rvt-neutral-200;
-            svg {
-                fill: $rvt-neutral-200;
-            }
-        }
-        span:not([class*="rivet-icon-"]) {
-            margin-left: 8px;
-            vertical-align: middle;
-        }
+    &:active:not(:disabled) {
+      background-color: transparentize($rvt-primary-color, 0.72);
     }
+    &:disabled:not(.loading) {
+      border: 1px dashed $rvt-neutral-200;
+      color: $rvt-neutral-200;
+    }
+  }
+  &.rvt-btn-text,
+  &.rvt-btn-icon {
+    color: $rvt-neutral-600;
+    &:hover:not(:disabled),
+    &:focus:not(:disabled),
+    &.loading:disabled {
+      background-color: transparentize($rvt-neutral-600, 0.9);
+      color: $rvt-neutral-600;
+    }
+    &:active:not(:disabled) {
+      background-color: transparentize($rvt-neutral-600, 0.72);
+    }
+    &:disabled:not(.loading) {
+      color: $rvt-neutral-200;
+    }
+  }
+  &.rvt-btn-icon {
+    line-height: 15px;
+    [class*='rivet-icon-'] {
+      display: inline-block;
+      height: 14px;
+      width: 14px;
+      fill: $rvt-neutral-600;
+      vertical-align: top;
+    }
+    &.loading:disabled {
+      padding: 11px;
+      line-height: 14px;
+      .mat-spinner {
+        margin: 0 auto;
+      }
+    }
+    &:disabled:not(.loading) {
+      color: $rvt-neutral-200;
+      svg {
+        fill: $rvt-neutral-200;
+      }
+    }
+    span:not([class*='rivet-icon-']) {
+      margin-left: 8px;
+      vertical-align: middle;
+    }
+  }
 }
 
 .dark-mode {
-    button {
-        &.rvt-btn-primary, &.rvt-btn-primary-lg {
-            background-color: $rvt-white;
-            color: $rvt-neutral-900;
-            &:hover:not(:disabled),
-            &:focus:not(:disabled) {
-                background-color: $rvt-neutral-100;
-            }
-            &:active:not(:disabled) {
-                background-color: $rvt-neutral-300;
-            }
-            &:disabled:not(.loading) {
-                background-color: $rvt-neutral-200;
-                color: $rvt-white;
-            }
-        }
+  button {
+    &.rvt-btn-primary,
+    &.rvt-btn-primary-lg {
+      background-color: $rvt-white;
+      color: $rvt-neutral-900;
+      &:hover:not(:disabled),
+      &:focus:not(:disabled) {
+        background-color: $rvt-neutral-100;
+      }
+      &:active:not(:disabled) {
+        background-color: $rvt-neutral-300;
+      }
+      &:disabled:not(.loading) {
+        background-color: $rvt-neutral-200;
+        color: $rvt-white;
+      }
     }
+  }
 }

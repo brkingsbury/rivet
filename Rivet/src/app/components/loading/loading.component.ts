@@ -6,17 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../components.component.scss']
 })
 export class LoadingComponent implements OnInit {
+  isLoading = false;
+  btnLoading = false;
 
-    isLoading = false;
-    btnLoading = false;
+  startLoad() {
+    this.btnLoading = true;
+    setTimeout(() => {
+      this.btnLoading = false;
+    }, 5000);
+  }
 
-    startLoad() {
-        this.btnLoading = true;
-        setTimeout(() => {this.btnLoading = false; }, 5000);
-    }
-
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
-
 }

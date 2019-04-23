@@ -3,7 +3,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponentModule } from '../material-component-module';
 import { RivetCardComponent } from './rivet-card.component';
 
-
 describe('RivetCardComponent', () => {
   let component: RivetCardComponent;
   let fixture: ComponentFixture<RivetCardComponent>;
@@ -11,9 +10,8 @@ describe('RivetCardComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [BrowserAnimationsModule, MaterialComponentModule],
-      declarations: [ RivetCardComponent ]
-    })
-    .compileComponents();
+      declarations: [RivetCardComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

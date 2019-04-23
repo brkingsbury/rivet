@@ -3,7 +3,8 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'advicent-rivet-style',
   template: ``,
-  styleUrls: ['./styles/typeStyles.scss',
+  styleUrls: [
+    './styles/typeStyles.scss',
     './styles/rivetTheme.scss',
     './styles/buttonStyles.scss',
     './styles/inputStyles.scss',
@@ -14,13 +15,11 @@ import { Component, OnInit } from '@angular/core';
     './styles/dialogStyles.scss',
     './styles/tableStyles.scss',
     './styles/loadingStyles.scss',
-    './styles/radioStyles.scss']
+    './styles/radioStyles.scss'
+  ]
 })
 export class RivetStyleComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

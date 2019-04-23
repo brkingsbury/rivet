@@ -9,10 +9,7 @@ describe('ComponentsComponent', () => {
     });
   });
 
-  it('should be created', inject(
-    [ComponentsComponent],
-    (component: ComponentsComponent) => {
-      expect(component).toBeTruthy();
-    }
-  ));
+  it('should be created', inject([ComponentsComponent], (component: ComponentsComponent) => {
+    expect(component).toBeTruthy();
+  }));
 });

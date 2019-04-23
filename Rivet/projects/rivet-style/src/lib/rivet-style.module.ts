@@ -11,15 +11,7 @@ registerLocaleData(localeFrCA, 'fr-CA');
 
 @NgModule({
   imports: [CommonModule, MaterialComponentModule, FormsModule, ReactiveFormsModule],
-  declarations: [
-    RivetStyleComponent,
-    RivetCardComponent,
-    RivetExpansionPanelComponent
-  ],
-  exports: [
-    RivetStyleComponent,
-    RivetCardComponent,
-    RivetExpansionPanelComponent
-  ]
+  declarations: [RivetStyleComponent, RivetCardComponent, RivetExpansionPanelComponent],
+  exports: [RivetStyleComponent, RivetCardComponent, RivetExpansionPanelComponent]
 })
 export class RivetStyleModule {}

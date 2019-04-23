@@ -8,9 +8,8 @@ describe('RivetStyleComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ RivetStyleComponent ]
-    })
-    .compileComponents();
+      declarations: [RivetStyleComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {

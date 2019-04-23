@@ -6,15 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../components.component.scss']
 })
 export class CheckboxComponent implements OnInit {
-    isDisabled = false;
-    isRo = false;
-    isSmall = false;
-    isAbove = false;
-    isIn = false;
+  isDisabled = false;
+  isRo = false;
+  isSmall = false;
+  isAbove = false;
+  isIn = false;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -1,83 +1,104 @@
 <div class="component-container">
-    <h5>Checkboxes
-        <a class="rivet-icon-pdf" title="spec sheet" href="../../assets/specs/Polaris_Checkbox_Specs.pdf" target="new"></a>
-    </h5>
-    <p>Checkboxes allow users to select one or more items from a set, or to turn on an option.</p>
-    <p>There are 3 styling alternatives for checkboxes. <code>class="small-checkbox"</code>,
-        <code>class="read-only"</code> and <code>class="label-above"</code>.</p>
-    <p>There is also 1 attribute for checkboxes, <code>disabled</code>. Readonly is only to be used along with disabled,
-        but disabled can be used by itself.</p>
-    <!-- START CONTROLS -->
-    <div class="controls">
-        <p>Input states:</p>
+  <h5>
+    Checkboxes
+    <a class="rivet-icon-pdf" title="spec sheet" href="../../assets/specs/Polaris_Checkbox_Specs.pdf" target="new"></a>
+  </h5>
+  <p>Checkboxes allow users to select one or more items from a set, or to turn on an option.</p>
+  <p>
+    There are 3 styling alternatives for checkboxes. <code>class="small-checkbox"</code>,
+    <code>class="read-only"</code> and <code>class="label-above"</code>.
+  </p>
+  <p>
+    There is also 1 attribute for checkboxes, <code>disabled</code>. Readonly is only to be used along with disabled,
+    but disabled can be used by itself.
+  </p>
+  <!-- START CONTROLS -->
+  <div class="controls">
+    <p>Input states:</p>
 
-        <mat-checkbox [checked]="isDisabled"
-            (change)="isDisabled = !isDisabled; isRo = false; isSmall = false; isAbove = false">Disable Checkbox
-        </mat-checkbox>
+    <mat-checkbox
+      [checked]="isDisabled"
+      (change)="isDisabled = !isDisabled; isRo = false; isSmall = false; isAbove = false"
+      >Disable Checkbox
+    </mat-checkbox>
 
-        <mat-checkbox [checked]="isIn"
-            (change)="isIn = !isIn; isAbove = false; isDisabled = false; isSmall = false; isRo = false">Indeterminate
-        </mat-checkbox>
+    <mat-checkbox
+      [checked]="isIn"
+      (change)="isIn = !isIn; isAbove = false; isDisabled = false; isSmall = false; isRo = false"
+      >Indeterminate
+    </mat-checkbox>
 
-        <mat-checkbox [checked]="isSmall"
-            (change)="isSmall = !isSmall; isRo = false; isDisabled = false; isAbove = false">Small Checkbox
-        </mat-checkbox>
+    <mat-checkbox [checked]="isSmall" (change)="isSmall = !isSmall; isRo = false; isDisabled = false; isAbove = false"
+      >Small Checkbox
+    </mat-checkbox>
 
-        <mat-checkbox [checked]="isRo" (change)="isRo = !isRo; isDisabled = true; isSmall = false; isAbove = false">
-            Read-only checkbox</mat-checkbox>
+    <mat-checkbox [checked]="isRo" (change)="isRo = !isRo; isDisabled = true; isSmall = false; isAbove = false">
+      Read-only checkbox</mat-checkbox
+    >
 
-        <mat-checkbox [checked]="isAbove"
-            (change)="isAbove = !isAbove; isDisabled = false; isSmall = false; isRo = false">Label above checkbox
-        </mat-checkbox>
-    </div>
+    <mat-checkbox [checked]="isAbove" (change)="isAbove = !isAbove; isDisabled = false; isSmall = false; isRo = false"
+      >Label above checkbox
+    </mat-checkbox>
+  </div>
 
-    <!-- END CONTROLS -->
-    <div class="example-component">
-        <mat-checkbox [ngClass]="{'small-checkbox': isSmall, 'label-above': isAbove, 'read-only': isRo}" disableRipple
-            [disabled]="isDisabled" [indeterminate]="isIn">Label</mat-checkbox>
-    </div>
+  <!-- END CONTROLS -->
+  <div class="example-component">
+    <mat-checkbox
+      [ngClass]="{ 'small-checkbox': isSmall, 'label-above': isAbove, 'read-only': isRo }"
+      disableRipple
+      [disabled]="isDisabled"
+      [indeterminate]="isIn"
+      >Label</mat-checkbox
+    >
+  </div>
 
-    <!-- Example -->
-    <div *ngIf="isIn">
-        <p class="example-code-header">HTML</p>
-        <textarea class="example-code" readonly>
+  <!-- Example -->
+  <div *ngIf="isIn">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
 <mat-checkbox [indeterminate]="true">Label</mat-checkbox>
-        </textarea>
-    </div>
+        </textarea
+    >
+  </div>
 
-    <div *ngIf="!isDisabled && !isSmall && !isDisabled && !isRo && !isAbove && !isIn">
-        <p class="example-code-header">HTML</p>
-        <textarea class="example-code" readonly>
+  <div *ngIf="!isDisabled && !isSmall && !isDisabled && !isRo && !isAbove && !isIn">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
 <mat-checkbox>Label</mat-checkbox>
-        </textarea>
-    </div>
+        </textarea
+    >
+  </div>
 
-    <div *ngIf="isSmall">
-        <p class="example-code-header">HTML</p>
-        <textarea class="example-code" readonly>
+  <div *ngIf="isSmall">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
 <mat-checkbox class="small-checkbox">Label</mat-checkbox>    
-        </textarea>
-    </div>
+        </textarea
+    >
+  </div>
 
-    <div *ngIf="isDisabled && !isRo">
-        <p class="example-code-header">HTML</p>
-        <textarea class="example-code" readonly>
+  <div *ngIf="isDisabled && !isRo">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
 <mat-checkbox [disabled]="true">Label</mat-checkbox>  
-        </textarea>
-    </div>
+        </textarea
+    >
+  </div>
 
-    <div *ngIf="isRo && isDisabled">
-        <p class="example-code-header">HTML</p>
-        <textarea class="example-code" readonly>
+  <div *ngIf="isRo && isDisabled">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
 <mat-checkbox [disabled]="true" class="read-only">Label</mat-checkbox>
-        </textarea>
-    </div>
+        </textarea
+    >
+  </div>
 
-    <div *ngIf="isAbove">
-        <p class="example-code-header">HTML</p>
-        <textarea class="example-code" readonly>
+  <div *ngIf="isAbove">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
 <mat-checkbox class="label-above">Label</mat-checkbox>
-        </textarea>
-    </div>
-    <!-- End Example-->
+        </textarea
+    >
+  </div>
+  <!-- End Example-->
 </div>

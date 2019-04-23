@@ -2,86 +2,85 @@
 @import './rivetTheme.scss';
 
 .cdk-overlay-container {
-        font-family: $RvtFontFamily;
-    .cdk-overlay-backdrop {
-        background: transparentize($rvt-neutral-600, 0.29);
+  font-family: $RvtFontFamily;
+  .cdk-overlay-backdrop {
+    background: transparentize($rvt-neutral-600, 0.29);
+  }
+  .mat-dialog-container {
+    position: relative;
+    border-radius: 0;
+    box-shadow: none;
+    background: $rvt-white;
+    padding: 20px 10px 10px 20px;
+    h5.mat-dialog-title {
+      margin: 0 0 20px 0;
+      padding: 0;
+      position: relative;
+      font-family: $RvtFontFamily;
+      &:after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        bottom: 0;
+        left: -20px;
+        width: calc(100% + 30px);
+        background-color: $rvt-neutral-100;
+      }
     }
+    .mat-dialog-content {
+      margin: 0 0 30px 0;
+      padding: 0;
+      overflow: visible;
+      height: auto;
+      p {
+        margin: 0;
+      }
+    }
+    .mat-dialog-actions {
+      margin: 10px 0 0 0;
+      padding: 0;
+      min-height: 0;
+      justify-content: flex-end;
+      button {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .event-picker {
     .mat-dialog-container {
-        position: relative;
-        border-radius: 0;
-        box-shadow: none;
-        background: $rvt-white;
-        padding: 20px 10px 10px 20px;
-        h5.mat-dialog-title{
-            margin: 0 0 20px 0;
-            padding: 0;
-            position: relative;
-            font-family: $RvtFontFamily;
-            &:after {
-                content: '';
-                position: absolute;
-                height: 2px;
-                bottom: 0;
-                left: -20px;
-                width: calc(100% + 30px);
-                background-color: $rvt-neutral-100;
-            }
+      padding: 0;
+      overflow: hidden;
+      .mat-dialog-title {
+        padding: 15px 15px 5px 15px;
+        border-bottom: 3px solid $rvt-neutral-100;
+        margin: 0;
+      }
+      .mat-dialog-content {
+        margin: 15px;
+        display: flex;
+        .left-col,
+        .right-col {
+          min-width: 200px;
+          padding: 0 30px;
+          .section-header {
+            margin: 5px 0;
+          }
         }
-        .mat-dialog-content {
-            margin: 0 0 30px 0;
-            padding: 0;
-            overflow: visible;
-            height: auto;
-            p {
-                margin: 0;
-            }
+        .left-col {
+          border-right: 1px solid $rvt-neutral-100;
         }
-        .mat-dialog-actions {
-            margin: 10px 0 0 0;
-            padding: 0;
-            min-height: 0;
-            justify-content: flex-end;
-            button {
-                margin-left: 10px;
-            }
+        .mat-radio-button {
+          display: block;
         }
+      }
+      .mat-dialog-actions {
+        border-top: 3px solid $rvt-neutral-100;
+        padding: 15px;
+        .close-btn {
+          margin-right: 0;
+        }
+      }
     }
-
-    .event-picker {
-        .mat-dialog-container {
-            padding: 0;
-            overflow: hidden;
-            .mat-dialog-title {
-                padding: 15px 15px 5px 15px;
-                border-bottom: 3px solid $rvt-neutral-100;
-                margin: 0;
-            }
-            .mat-dialog-content {
-                margin: 15px;
-                display: flex;
-                .left-col,
-                .right-col {
-                    min-width: 200px;
-                    padding: 0 30px;
-                    .section-header {
-                        margin: 5px 0;
-                    }
-                }
-                .left-col {
-                    border-right: 1px solid $rvt-neutral-100;
-                }
-                .mat-radio-button {
-                    display: block;
-                }
-            }
-            .mat-dialog-actions {
-                border-top: 3px solid $rvt-neutral-100;
-                padding: 15px;
-                .close-btn {
-                    margin-right: 0;
-                }
-            }
-        }
-    }
-
+  }
 }

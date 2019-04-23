@@ -7,10 +7,9 @@ import { versions } from '../changelog/versions';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-    versions = versions;
+  versions = versions;
 
-  constructor() { }
+  constructor() {}
 
   ngOnInit() {}
-
 }

@@ -20,54 +20,50 @@ $rvt-neutral-400: #6b7280 !default;
 $rvt-neutral-600: #394059 !default;
 $rvt-neutral-900: #192239 !default;
 
-
 //-------- Component Color Variables
 $rvt-topnav-background: $rvt-neutral-100 !default;
 $rvt-overlay-color: $rvt-neutral-400 !default;
 $rvt-sidenav-background: $rvt-white !default;
 
 //---------- Branding Color Variables
-$rvt-disabled-color: #Bcc0c9 !default;
+$rvt-disabled-color: #bcc0c9 !default;
 $rvt-disabled-text-color: $rvt-disabled-color !default;
 
 $rvt-invalid-color: $rvt-warning-color !default;
 
-
 //---------------------- ! All #'s (50-900) must be defined !
 
 $rivet-primary: (
-    50: $rvt-neutral-50,
-    100: $rvt-neutral-100,
-    200: $rvt-neutral-200,
-    300: $rvt-neutral-300,
-    400: $rvt-neutral-400,
-    500: $rvt-neutral-400,
-    600: $rvt-neutral-600,
-    700: $rvt-neutral-600,
-    800: $rvt-neutral-600,
-    900: $rvt-neutral-900,
-
-    A100: $rvt-accent-color,
-    A200: $rvt-primary-color-light,
-    A400: $rvt-primary-color,
-    A700: $rvt-primary-color-dark,
-    contrast:
-        (
-        50: $rvt-neutral-900,
-        100: $rvt-neutral-900,
-        200: $rvt-neutral-900,
-        300: $rvt-neutral-900,
-        400: $rvt-white,
-        500: $rvt-white,
-        600: $rvt-white,
-        700: $rvt-white,
-        800: $rvt-neutral-900,
-        900: $rvt-white,
-        A100: $rvt-neutral-900,
-        A200: $rvt-neutral-900,
-        A400: $rvt-white,
-        A700: $rvt-white
-        )
+  50: $rvt-neutral-50,
+  100: $rvt-neutral-100,
+  200: $rvt-neutral-200,
+  300: $rvt-neutral-300,
+  400: $rvt-neutral-400,
+  500: $rvt-neutral-400,
+  600: $rvt-neutral-600,
+  700: $rvt-neutral-600,
+  800: $rvt-neutral-600,
+  900: $rvt-neutral-900,
+  A100: $rvt-accent-color,
+  A200: $rvt-primary-color-light,
+  A400: $rvt-primary-color,
+  A700: $rvt-primary-color-dark,
+  contrast: (
+    50: $rvt-neutral-900,
+    100: $rvt-neutral-900,
+    200: $rvt-neutral-900,
+    300: $rvt-neutral-900,
+    400: $rvt-white,
+    500: $rvt-white,
+    600: $rvt-white,
+    700: $rvt-white,
+    800: $rvt-neutral-900,
+    900: $rvt-white,
+    A100: $rvt-neutral-900,
+    A200: $rvt-neutral-900,
+    A400: $rvt-white,
+    A700: $rvt-white
+  )
 );
 
 $rvt-primary: mat-palette($rivet-primary, A400, 300, 900);
