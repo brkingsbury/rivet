@@ -15,7 +15,8 @@ import { Component, OnInit } from '@angular/core';
     './styles/dialogStyles.scss',
     './styles/tableStyles.scss',
     './styles/loadingStyles.scss',
-    './styles/radioStyles.scss'
+    './styles/radioStyles.scss',
+    './styles/overlayStyles.scss'
   ]
 })
 export class RivetStyleComponent implements OnInit {

@@ -13,6 +13,7 @@ $rivet-icon-path: 'rivet-style/lib/rivet-icons';
 @import 'tableStyles';
 @import 'loadingStyles';
 @import 'radioStyles';
+@import 'overlayStyles';
 @import 'app/app.component.scss'; // used to import any temporary styles before they are in style package
 
 @include rvt-core(); // apply $rivet-theme to angular material. ONLY INCLUDE ONCE

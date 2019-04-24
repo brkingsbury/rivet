@@ -29,6 +29,17 @@
 
 export const versions = [
   {
+    version: '0.2.8',
+    date: '4/24/2019',
+    note: 'Delete overlay styling',
+    updates: [
+      {
+        category: 'Style',
+        bullets: ['Moved delete overlay styling into a shared overlay stylesheet']
+      }
+    ]
+  },
+  {
     version: '0.2.7',
     date: '4/22/2019',
     note: 'Expansion panel add button configurability',
