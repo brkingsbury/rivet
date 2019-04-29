@@ -29,6 +29,21 @@
 
 export const versions = [
   {
+    version: '0.2.9',
+    date: '4/29/2019',
+    note: 'Update to color variables + bug fixes',
+    updates: [
+      {
+        category: 'Components',
+        bullets: [
+            'Radio & Checkbox styles updated',
+            'Disabled & Invalid color variables added to components',
+            'Component styles cleaned up'
+        ]
+      }
+    ]
+  },
+  {
     version: '0.2.8',
     date: '4/24/2019',
     note: 'Delete overlay styling',

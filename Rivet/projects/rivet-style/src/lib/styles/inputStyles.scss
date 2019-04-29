@@ -19,7 +19,16 @@ form {
       overflow: hidden;
       text-overflow: ellipsis;
       &.mat-input-element:disabled {
-        color: $rvt-neutral-400;
+        color: $rvt-disabled-text-color;
+      }
+    }
+    &.mat-form-field-disabled {
+      .mat-form-field-underline {
+        background: none;
+        border-bottom: 2px dashed $rvt-disabled-color;
+      }
+      .mat-form-field-ripple {
+        display: none;
       }
     }
     .mat-form-field-label-wrapper label.mat-form-field-label {
@@ -49,33 +58,26 @@ form {
         height: 2px;
       }
     }
-    &.invalid {
+    &.invalid,
+    &.mat-form-field-invalid {
       .mat-form-field-label-wrapper label.mat-form-field-label,
       .mat-form-field-hint-wrapper mat-hint {
-        color: $rvt-warning-color;
+        color: $rvt-invalid-color;
       }
       input {
         color: $rvt-neutral-900;
       }
       .mat-form-field-underline {
-        background-color: $rvt-warning-color;
-      }
-      &.mat-focused .mat-form-field-underline {
-        background-color: $rvt-warning-color;
+        background-color: $rvt-invalid-color;
         .mat-form-field-ripple {
-          background-color: $rvt-warning-color;
+          background-color: $rvt-invalid-color;
         }
       }
-    }
-    &.mat-form-field-invalid {
-      .mat-form-field-label-wrapper label.mat-form-field-label {
-        color: $rvt-warning-color;
-      }
-      input {
-        color: $rvt-neutral-900;
-      }
-      .mat-form-field-underline {
-        background-color: $rvt-warning-color;
+      &.mat-focused .mat-form-field-underline {
+        background-color: $rvt-invalid-color;
+        .mat-form-field-ripple {
+          background-color: $rvt-invalid-color;
+        }
       }
     }
     .mat-form-field-hint-wrapper mat-hint {
@@ -124,8 +126,8 @@ form {
         outline-color: $rvt-primary-color;
       }
       &:disabled {
-        border: 1px dashed $rvt-neutral-400;
-        color: $rvt-neutral-400;
+        border: 1px dashed $rvt-disabled-color;
+        color: $rvt-disabled-text-color;
         outline: none;
         background: none;
       }
@@ -133,20 +135,20 @@ form {
     &.invalid {
       label,
       .helper-text {
-        color: $rvt-warning-color;
+        color: $rvt-invalid-color;
       }
       textarea {
-        border-color: $rvt-warning-color;
-        outline-color: $rvt-warning-color;
+        border-color: $rvt-invalid-color;
+        outline-color: $rvt-invalid-color;
         &:hover:not(:disabled),
         &:focus:not(:disabled),
         &:active:not(:disabled) {
-          outline: 1px solid $rvt-warning-color;
+          outline: 1px solid $rvt-invalid-color;
         }
         &:focus:not(:disabled),
         &:active:not(:disabled) {
           outline-offset: 0;
-          border-color: $rvt-warning-color;
+          border-color: $rvt-invalid-color;
         }
       }
     }

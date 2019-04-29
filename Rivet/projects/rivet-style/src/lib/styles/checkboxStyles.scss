@@ -7,23 +7,28 @@ mat-checkbox.mat-checkbox {
     font-size: 14px;
     color: $rvt-neutral-900;
   }
+
   .mat-checkbox-inner-container,
   &.mat-checkbox-indeterminate .mat-checkbox-inner-container {
     height: 18px;
     width: 18px;
+
     .mat-checkbox-ripple.mat-ripple {
       display: none;
     }
+
     .mat-checkbox-frame {
       border: 1px solid $rvt-neutral-900;
       border-radius: 2px;
       z-index: 100;
     }
   }
+
   .mat-checkbox-background svg,
   .mat-checkbox-ripple.mat-ripple {
     display: none;
   }
+
   &:hover,
   &.cdk-focused,
   &.cdk-keyboard-focused {
@@ -31,20 +36,27 @@ mat-checkbox.mat-checkbox {
       border-width: 2px;
     }
   }
+
   &.mat-checkbox-checked,
   &.mat-checkbox-indeterminate {
     .mat-checkbox-frame {
-      border-color: $rvt-primary-color;
+      border: none;
     }
-    &:hover {
-      .mat-checkbox-frame {
-        border-width: 2px;
-        border-color: $rvt-primary-color-dark;
+
+    &:hover,
+    &.cdk-focused,
+    &.cdk-keyboard-focused {
+      .mat-checkbox-background {
+        border: none;
+        background-color: $rvt-primary-color-dark;
       }
     }
+
     .mat-checkbox-background {
       background-color: $rvt-primary-color;
+      transition: background-color 400ms ease;
       padding: 4px;
+
       &::before {
         font-family: 'rivet-icons';
         content: '\4b';
@@ -53,27 +65,28 @@ mat-checkbox.mat-checkbox {
         color: $rvt-white;
       }
     }
-    &.cdk-focused,
-    &.cdk-keyboard-focused {
-      .mat-checkbox-frame {
-        outline: 1px solid $rvt-primary-color-dark;
-        outline-offset: 1px;
-        border-color: $rvt-primary-color-dark;
-      }
+  }
+
+  &.cdk-keyboard-focused {
+    .mat-checkbox-frame {
+      outline: 2px solid highlight;
     }
   }
+
   &.mat-checkbox-indeterminate {
     &:not(:hover),
     &:not(.cdk-focused),
     &:not(.cdk-keyboard-focused) {
       border-color: $rvt-primary-color;
     }
+
     &.cdk-focused,
     &.cdk-keyboard-focused {
       .mat-checkbox-frame {
         border-width: 2px;
       }
     }
+
     .mat-checkbox-background {
       &::before {
         font-family: 'rivet-icons';
@@ -82,69 +95,86 @@ mat-checkbox.mat-checkbox {
         color: $rvt-white;
         font-weight: 400;
       }
+
       svg {
         display: none;
       }
     }
   }
+
   &.small-checkbox {
     label .mat-checkbox-label {
       font-size: 12px;
     }
+
     .mat-checkbox-inner-container,
     &.mat-checkbox-indeterminate .mat-checkbox-inner-container {
       height: 16px;
       width: 16px;
+
       .mat-checkbox-background::before {
         font-size: 8px;
       }
     }
   }
+
   &.label-above {
     display: flex;
+
     label.mat-checkbox-layout {
       flex-direction: column-reverse;
+
       .mat-checkbox-inner-container {
         margin: 0 auto;
       }
     }
   }
+
   &.mat-checkbox-disabled {
     .mat-checkbox-frame {
       border: 1px dashed $rvt-disabled-color;
     }
+
     label .mat-checkbox-label {
       color: $rvt-disabled-text-color;
     }
+
     &:hover,
     &.mat-checkbox-indeterminate,
     &.mat-checkbox-checked {
       .mat-checkbox-inner-container {
         opacity: 1;
       }
+
       .mat-checkbox-frame {
         border: 1px dashed $rvt-disabled-color;
       }
+
       .mat-checkbox-background {
         background: none;
+
         &::before {
           color: $rvt-disabled-text-color;
         }
       }
     }
+
     &.read-only {
       .mat-checkbox-frame {
         border: none;
       }
+
       label .mat-checkbox-label {
         color: $rvt-neutral-900;
       }
+
       &:hover,
       &.mat-checkbox-indeterminate,
       &.mat-checkbox-checked {
         .mat-checkbox-frame {
           border: none;
         }
+
         .mat-checkbox-background {
           &::before {
             color: $rvt-neutral-900;
