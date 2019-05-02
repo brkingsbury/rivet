@@ -1,17 +1,6 @@
 @import '../../styles.scss';
 @import '../app.component.scss';
 
-.dark-mode {
-  p.example-code-header {
-    background-color: $rvt-neutral-900;
-    color: $rvt-white;
-  }
-  textarea.example-code {
-    background-color: $rvt-neutral-600;
-    color: $rvt-white;
-  }
-}
-
 .example-component {
   position: relative;
   margin-top: 30px;
@@ -23,12 +12,11 @@
 .example-code {
   box-sizing: border-box;
   background-color: $rvt-neutral-50;
-
   margin: 0;
   border: none;
   border-bottom: 10px solid $rvt-neutral-50;
   width: 100%;
-  min-height: 150px;
+  min-height: 200px;
   overflow: auto;
   padding: 10px;
   font-family: 'Courier New', monospace;
@@ -46,6 +34,10 @@
   font-family: $RvtFontFamily;
   font-size: 12px;
   font-weight: 600;
+}
+
+.component-container.deprecated {
+  opacity: 0.5;
 }
 
 button {
@@ -79,6 +71,7 @@ hr.half {
 h6 {
   margin: 30px 0 5px 0;
 }
+
 p {
   margin-bottom: 10px;
 }

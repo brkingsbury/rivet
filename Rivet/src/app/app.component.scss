@@ -1,25 +1,68 @@
 @import '../../projects/rivet-style/src/lib/styles/typeStyles.scss';
 @import '../../projects/rivet-style/src/lib/styles/rivetTheme.scss';
 
-* {
-  transition: all 800ms ease;
-  transition-property: color, background-color;
+.style-wrapper {
+  height: 100%;
 }
 
 .dark-mode {
-  .mat-sidenav-content,
-  .mat-sidenav,
-  .nav-content-container {
-    background-color: $rvt-neutral-600;
-    color: $rvt-white;
-  }
-  .page-header {
-    background-color: $rvt-neutral-900;
-    color: $rvt-white;
-  }
-  textarea.example-code {
-    background-color: $rvt-neutral-900;
-    color: $rvt-white;
+  .mat-sidenav-container {
+    .mat-sidenav-content,
+    .mat-sidenav,
+    .nav-content-container {
+      background-color: $rvt-neutral-600;
+      color: $rvt-white;
+      border-color: $rvt-neutral-900;
+    }
+    hr {
+      background-color: $rvt-neutral-900;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    span,
+    a {
+      color: $rvt-white;
+    }
+    code {
+      background-color: $rvt-neutral-400;
+      color: $rvt-white;
+    }
+    .icon-container {
+      button,
+      span:before,
+      input {
+        color: $rvt-white;
+      }
+      button {
+        &.rvt-btn-icon {
+          &:hover {
+            background-color: $rvt-neutral-900;
+          }
+          &:active {
+            background-color: $rvt-primary-color-dark;
+          }
+        }
+      }
+    }
+    .page-header {
+      background-color: $rvt-neutral-900;
+      color: $rvt-white;
+    }
+    .example-component {
+      border-color: $rvt-neutral-900;
+    }
+    .example-code-header {
+      background-color: $rvt-neutral-900;
+    }
+    textarea.example-code {
+      background-color: $rvt-neutral-400;
+      color: $rvt-white;
+    }
   }
 }
 
@@ -48,7 +91,6 @@
   background: none;
   background-color: $rvt-white;
   padding: 0;
-  // height: 100vh;
   .component-container {
     padding: 30px;
   }
@@ -63,6 +105,10 @@
   padding: 0 30px;
   background-color: $rvt-primary-color-dark;
   color: $rvt-white;
+}
+
+.content-container {
+  padding: 30px;
 }
 
 .fancy {

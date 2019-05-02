@@ -1,3 +1,5 @@
+<h2 class="page-header">Navigation</h2>
+
 <div class="component-container">
   <h5>Navigation</h5>
 
@@ -21,7 +23,7 @@
     <div class="library-container nav">
       <div class="top-nav-container">
         <div class="logo-container">
-          <img src="../../assets/rivet-logo.svg" class="logo" />
+          <img src="../../assets/rivet-logo.svg" class="logo" alt="logo"/>
         </div>
         <nav mat-tab-nav-bar disableRipple>
           <a
@@ -44,7 +46,7 @@
   <textarea class="example-code large">
         <div class="top-nav-container">
             <div class="logo-container">
-                <img src="../../assets/rivet-logo.svg" class="logo">
+                <img src="../../assets/rivet-logo.svg" class="logo" alt="logo">
             </div>
             <nav mat-tab-nav-bar disableRipple>
                 <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive #rla="routerLinkActive"
@@ -163,7 +165,8 @@
 
   <!-- Example -->
   <p class="example-code-header">TypeScript</p>
-  <textarea class="example-code large">
+  <label for="example"></label>
+  <textarea id="example" class="example-code large">
             sideNavConfig = {
                 expandableObj: [
                     {

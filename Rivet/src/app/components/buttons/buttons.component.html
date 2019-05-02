@@ -1,6 +1,8 @@
+<h2 class="page-header">Buttons</h2>
+
+
 <div class="component-container">
-  <h5>
-    Buttons
+  <h5>Buttons
     <a class="rivet-icon-pdf" title="spec sheet" href="../../assets/specs/Polaris_Buttons_Specs.pdf" target="new"></a>
   </h5>
 
@@ -65,11 +67,11 @@
   <h6>Icon Buttons</h6>
   <p>Used for one click actions such as Delete and Edit, and do not need a text label</p>
   <div class="example-component">
-    <button class="rvt-btn-icon">
+    <button class="rvt-btn-icon" aria-label="Add">
       <span class="rivet-icon-add" alt="add"></span>
     </button>
 
-    <button class="rvt-btn-icon" disabled>
+    <button class="rvt-btn-icon" aria-label="Add" disabled>
       <span class="rivet-icon-add" alt="add"></span>
     </button>
   </div>
@@ -115,27 +117,22 @@
   </p>
 
   <div class="example-component">
-    <button class="rvt-btn-standard loading" disabled>
+    <button class="rvt-btn-primary loading" aria-label="Loading" disabled>
       Loading
       <mat-spinner></mat-spinner>
     </button>
 
-    <button class="rvt-btn-primary loading" disabled>
+    <button class="rvt-btn-secondary loading" aria-label="Loading" disabled>
       Loading
       <mat-spinner></mat-spinner>
     </button>
 
-    <button class="rvt-btn-secondary loading" disabled>
+    <button class="rvt-btn-text loading" aria-label="Loading" disabled>
       Loading
       <mat-spinner></mat-spinner>
     </button>
 
-    <button class="rvt-btn-text loading" disabled>
-      Loading
-      <mat-spinner></mat-spinner>
-    </button>
-
-    <button class="rvt-btn-icon loading" disabled>
+    <button class="rvt-btn-icon loading" aria-label="Loading" disabled>
       <span class="rivet-icon-add"></span>
       <mat-spinner></mat-spinner>
     </button>
@@ -148,7 +145,6 @@
     Loading
     <mat-spinner></mat-spinner>
 </button>
-    </textarea
-  >
+    </textarea>
   <!-- End Example -->
 </div>

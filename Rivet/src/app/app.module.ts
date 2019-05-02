@@ -30,13 +30,32 @@ import { FontStylesComponent } from './styles/font-styles/font-styles.component'
 import { IconsComponent } from './styles/icons/icons.component';
 import { StylesComponent } from './styles/styles.component';
 import { TestingComponent } from './testing/testing.component';
+import { PerformanceComponent } from './patterns/performance/performance.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'style', component: StylesComponent },
+  { path: 'style/icon', component: IconsComponent },
+  { path: 'style/font', component: FontStylesComponent },
+  { path: 'style/color', component: ColorsComponent },
   { path: 'components', component: ComponentsComponent },
+  { path: 'components/checkbox', component: CheckboxComponent } ,
+  { path: 'components/datepicker', component: DatepickerComponent } ,
+  { path: 'components/dialog', component: DialogComponent } ,
+  { path: 'components/dropdown', component: DropdownComponent } ,
+  { path: 'components/input', component: InputsComponent } ,
+  { path: 'components/radio', component: RadioButtonsComponent } ,
+  { path: 'components/table', component: TablesComponent } ,
+  { path: 'components/tab', component: TabsComponent } ,
+  { path: 'components/textarea', component: TextAreasComponent } ,
+  { path: 'components/button', component: ButtonsComponent } ,
+  { path: 'components/loading', component: LoadingComponent } ,
+  { path: 'components/nav', component: NavComponent } ,
+  { path: 'components/expansion', component: ExpansionPanelComponent } ,
   { path: 'changelog', component: ChangelogComponent },
   { path: 'patterns', component: PatternsComponent },
+  { path: 'patterns/a11y', component: AccessibilityComponent },
+  { path: 'patterns/performance', component: PerformanceComponent },
   { path: 'testing', component: TestingComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
@@ -69,7 +88,8 @@ const appRoutes: Routes = [
     TableBasicExampleComponent,
     TabsComponent,
     TestingComponent,
-    TextAreasComponent
+    TextAreasComponent,
+    PerformanceComponent
   ],
   entryComponents: [DialogComponent, DialogComponentDialogComponent],
   imports: [

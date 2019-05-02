@@ -1,0 +1,11 @@
+.content-container {
+    .img-block {
+        display: inline-block;
+        margin: 15px;
+        .example-img {
+            width: auto;
+            height: 150px;
+            display: block;
+        }
+    }
+}
