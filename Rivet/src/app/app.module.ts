@@ -31,6 +31,7 @@ import { IconsComponent } from './styles/icons/icons.component';
 import { StylesComponent } from './styles/styles.component';
 import { TestingComponent } from './testing/testing.component';
 import { PerformanceComponent } from './patterns/performance/performance.component';
+import { SliderComponent } from './components/slider/slider.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -52,6 +53,7 @@ const appRoutes: Routes = [
   { path: 'components/loading', component: LoadingComponent } ,
   { path: 'components/nav', component: NavComponent } ,
   { path: 'components/expansion', component: ExpansionPanelComponent } ,
+  { path: 'components/slider', component: SliderComponent } ,
   { path: 'changelog', component: ChangelogComponent },
   { path: 'patterns', component: PatternsComponent },
   { path: 'patterns/a11y', component: AccessibilityComponent },
@@ -89,7 +91,8 @@ const appRoutes: Routes = [
     TabsComponent,
     TestingComponent,
     TextAreasComponent,
-    PerformanceComponent
+    PerformanceComponent,
+    SliderComponent
   ],
   entryComponents: [DialogComponent, DialogComponentDialogComponent],
   imports: [

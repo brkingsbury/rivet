@@ -66,9 +66,42 @@ $rivet-primary: (
   )
 );
 
+$rivet-data: (
+    50: $rvt-neutral-50,
+    100: $rvt-neutral-100,
+    200: $rvt-neutral-200,
+    300: $rvt-neutral-300,
+    400: $rvt-neutral-400,
+    500: $rvt-neutral-400,
+    600: $rvt-neutral-600,
+    700: $rvt-neutral-600,
+    800: $rvt-neutral-600,
+    900: $rvt-neutral-900,
+    A100: $rvt-good-color,
+    A200: $rvt-good-color,
+    A400: $rvt-insufficient-color,
+    A700: $rvt-warning-color,
+    contrast: (
+      50: $rvt-neutral-900,
+      100: $rvt-neutral-900,
+      200: $rvt-neutral-900,
+      300: $rvt-neutral-900,
+      400: $rvt-white,
+      500: $rvt-white,
+      600: $rvt-white,
+      700: $rvt-white,
+      800: $rvt-neutral-900,
+      900: $rvt-white,
+      A100: $rvt-neutral-900,
+      A200: $rvt-neutral-900,
+      A400: $rvt-neutral-900,
+      A700: $rvt-white
+    )
+);
+
 $rvt-primary: mat-palette($rivet-primary, A400, 300, 900);
 $rvt-accent: mat-palette($rivet-primary, A100);
-$rvt-warn: mat-palette($rivet-primary, 800);
+$rvt-warn: mat-palette($rivet-data, A700);
 $rivet-theme: mat-light-theme($rvt-primary, $rvt-accent, $rvt-warn);
 
 //------- Create Theme

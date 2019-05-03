@@ -29,6 +29,26 @@
 
 export const versions = [
   {
+    version: '0.2.10',
+    date: '5/3/2019',
+    note: 'New checkboxes and slider. Library parts split into separate pages.',
+    updates: [
+      {
+        category: 'Components',
+        bullets: [
+          'New Rivet version of checkboxes, material version is being deprecated',
+          'Slider has been added to library'
+        ]
+      },
+      {
+          category: 'Library',
+          bullets: [
+              'Split up parts into separate pages to improve performance and navigation'
+          ]
+      }
+    ]
+  },
+  {
     version: '0.2.9',
     date: '4/29/2019',
     note: 'Update to color variables + bug fixes',
@@ -36,9 +56,9 @@ export const versions = [
       {
         category: 'Components',
         bullets: [
-            'Radio & Checkbox styles updated',
-            'Disabled & Invalid color variables added to components',
-            'Component styles cleaned up'
+          'Radio & Checkbox styles updated',
+          'Disabled & Invalid color variables added to components',
+          'Component styles cleaned up'
         ]
       }
     ]

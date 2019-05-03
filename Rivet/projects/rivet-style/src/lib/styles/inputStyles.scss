@@ -59,8 +59,10 @@ form {
       }
     }
     &.invalid,
+    &.ng-invalid,
     &.mat-form-field-invalid {
       .mat-form-field-label-wrapper label.mat-form-field-label,
+      .mat-form-field-label-wrapper label.mat-form-field-empty,
       .mat-form-field-hint-wrapper mat-hint {
         color: $rvt-invalid-color;
       }
@@ -91,6 +93,7 @@ form {
       }
     }
   }
+  // Rivet Text Areas
   .rvt-input-wrap {
     position: relative;
     padding-bottom: 18px;
@@ -106,7 +109,7 @@ form {
       font-family: $RvtFontFamily;
       font-size: 16px;
       font-weight: 400;
-      padding: 3px;
+      padding: 4px;
       border: 1px solid $rvt-neutral-400;
       min-height: 22px;
       min-width: 120px;
@@ -117,18 +120,16 @@ form {
       &:hover:not(:disabled),
       &:focus:not(:disabled),
       &:active:not(:disabled) {
-        outline: 1px solid $rvt-neutral-400;
+        border-width: 2px;
+        padding: 3px;
       }
       &:focus:not(:disabled),
       &:active:not(:disabled) {
-        outline-offset: 0;
         border-color: $rvt-primary-color;
-        outline-color: $rvt-primary-color;
       }
       &:disabled {
         border: 1px dashed $rvt-disabled-color;
         color: $rvt-disabled-text-color;
-        outline: none;
         background: none;
       }
     }
@@ -139,15 +140,8 @@ form {
       }
       textarea {
         border-color: $rvt-invalid-color;
-        outline-color: $rvt-invalid-color;
-        &:hover:not(:disabled),
         &:focus:not(:disabled),
         &:active:not(:disabled) {
-          outline: 1px solid $rvt-invalid-color;
-        }
-        &:focus:not(:disabled),
-        &:active:not(:disabled) {
-          outline-offset: 0;
           border-color: $rvt-invalid-color;
         }
       }
