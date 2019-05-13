@@ -14,9 +14,9 @@
   <div class="icon-container">
     <button
       class="rvt-btn-icon"
-      *ngFor="let ico of icons; let i = index"
+      *ngFor="let ico of icons"
       title="rivet-icon-{{ ico }}"
-      (click)="copyText(icoInput, i)"
+      (click)="copyText(icoInput)"
     >
       <span class="rivet-icon-{{ ico }}"></span>
       <input type="text" value="rivet-icon-{{ ico }}" #icoInput readonly />

@@ -44,7 +44,8 @@ export class SideNavComponent implements OnInit {
         links: [
           { name: 'Overview', path: '/patterns' },
           { name: 'Accessibility', path: '/patterns/a11y' },
-          { name: 'Performance', path: '/patterns/performance' }
+          { name: 'Performance', path: '/patterns/performance' },
+          { name: 'Structure', path: '/patterns/structure' }
         ]
       },
       {

@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../components.component.scss', '../../side-nav/side-nav.component.scss']
 })
 export class NavComponent implements OnInit {
+    isTs = false;
+
   sideNavConfig = {
     expandableObj: [
       {

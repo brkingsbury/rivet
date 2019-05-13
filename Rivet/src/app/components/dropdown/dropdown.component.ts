@@ -11,6 +11,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   imports: [MatSelect, MatFormFieldModule, MatInputModule, FormsModule, ReactiveFormsModule]
 })
 export class DropdownComponent implements OnInit {
+  isTsA = false;
+  isTsB = false;
   dropChoices = ['One', 'Two', 'Three'];
   selected = 'Two';
 

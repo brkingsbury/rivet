@@ -1,23 +1,35 @@
 <h2 class="page-header">Dialog</h2>
 
 <div class="component-container">
-  <h5>
-    Material Dialog
-    <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_Dialog_Specs.pdf" target="new"></a>
-  </h5>
+    <h5>
+        Material Dialog
+        <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_Dialog_Specs.pdf"
+            target="new"></a>
+    </h5>
 
-  <p>
-    Dialogs can be used as alerts or for confirmation of certain high level actions. Within the <code>dialogRef</code>,
-    set it to <code>autoFocus: false</code> to prevent the buttons from being focused on open.
-  </p>
+    <p>
+        Dialogs can be used as alerts or for confirmation of certain high level actions. Within the
+        <code>dialogRef</code>,
+        set it to <code>autoFocus: false</code> to prevent the buttons from being focused on open.
+    </p>
 
-  <div class="example-component">
-    <button class="rvt-btn-primary" (click)="openDialog()">Test Dialog</button>
-  </div>
+    <div class="example-component">
+        <button class="rvt-btn-primary" (click)="openDialog()">Test Dialog</button>
+    </div>
 
-  <!-- Example -->
-  <p class="example-code-header">HTML</p>
-  <textarea class="example-code" readonly>
+    <!-- Example -->
+    <div class="example-code-header-container">
+        <a class="example-code-header" (click)="isTs = false; isTemp = false" [ngClass]="{'active': !isTs && !isTemp}">HTML</a>
+        <a class="example-code-header" (click)="isTemp = true; isTs = false" [ngClass]="{'active': isTemp}">HTML - Dialog Template</a>
+        <a class="example-code-header" (click)="isTs = true; isTemp = false" [ngClass]="{'active': isTs}">Typescript</a>
+    </div>
+
+    <textarea class="example-code" readonly *ngIf="!isTemp && !isTs">
+<button class="rvt-btn-primary" (click)="openDialog()">Test Dialog</button>
+    </textarea>
+
+
+    <textarea class="example-code" readonly *ngIf="isTemp && !isTs">
 <h5 mat-dialog-title>Title</h5>
 <div mat-dialog-content>
     <p>Content</p>
@@ -27,11 +39,10 @@
     <button class="rvt-btn-primary">Action</button>
     <button class="rvt-btn-text" [mat-dialog-close]>Close</button>
 </div>
-    </textarea
-  >
+    </textarea>
 
-  <p class="example-code-header">TypeScript</p>
-  <textarea class="example-code" readonly>
+
+    <textarea class="example-code" readonly *ngIf="!isTemp && isTs">
 constructor(public dialog: MatDialog) {}
 
 openDialog(): void {
@@ -40,7 +51,6 @@ openDialog(): void {
         autoFocus: false
     });
 }
-    </textarea
-  >
-  <!-- End Example -->
+    </textarea>
+    <!-- End Example -->
 </div>

@@ -19,6 +19,8 @@ export class DialogComponentDialogComponent {
   styleUrls: ['../components.component.scss']
 })
 export class DialogComponent {
+    isTemp = false;
+    isTs = false;
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {

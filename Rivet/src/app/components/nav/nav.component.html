@@ -1,49 +1,40 @@
 <h2 class="page-header">Navigation</h2>
 
 <div class="component-container">
-  <h5>Navigation</h5>
+    <h5>Navigation</h5>
 
-  <p></p>
+    <p></p>
 
-  <h6>
-    Top Nav
-    <a
-      class="rivet-icon-pdf"
-      title="spec sheet"
-      href="../../../assets/specs/Polaris_TopMenu_Specs.pdf"
-      target="new"
-    ></a>
-  </h6>
-  <p>
-    Top nav uses a container with the class <code>top-nav-container</code>. The tabs use the material nav component with
-    <code>mat-top-nav-bar</code> to handle the logic for active route.
-  </p>
+    <h6>
+        Top Nav
+        <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_TopMenu_Specs.pdf"
+            target="new"></a>
+    </h6>
+    <p>
+        Top nav uses a container with the class <code>top-nav-container</code>. The tabs use the material nav component
+        with
+        <code>mat-top-nav-bar</code> to handle the logic for active route.
+    </p>
 
-  <div class="example-component">
-    <div class="library-container nav">
-      <div class="top-nav-container">
-        <div class="logo-container">
-          <img src="../../assets/rivet-logo.svg" class="logo" alt="logo"/>
+    <div class="example-component">
+        <div class="library-container nav">
+            <div class="top-nav-container">
+                <div class="logo-container">
+                    <img src="../../assets/rivet-logo.svg" class="logo" alt="logo" />
+                </div>
+                <nav mat-tab-nav-bar disableRipple>
+                    <a mat-tab-link *ngFor="let link of navLinks" [routerLink]="link.path" routerLinkActive
+                        #rla="routerLinkActive" [active]="rla.isActive">
+                        {{ link.label }}
+                    </a>
+                </nav>
+            </div>
         </div>
-        <nav mat-tab-nav-bar disableRipple>
-          <a
-            mat-tab-link
-            *ngFor="let link of navLinks"
-            [routerLink]="link.path"
-            routerLinkActive
-            #rla="routerLinkActive"
-            [active]="rla.isActive"
-          >
-            {{ link.label }}
-          </a>
-        </nav>
-      </div>
     </div>
-  </div>
 
-  <!-- Example -->
-  <p class="example-code-header">HTML</p>
-  <textarea class="example-code large">
+    <!-- Example -->
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code large">
         <div class="top-nav-container">
             <div class="logo-container">
                 <img src="../../assets/rivet-logo.svg" class="logo" alt="logo">
@@ -55,170 +46,161 @@
                 </a>
             </nav>
         </div>
-    </textarea
-  >
-  <!-- End Example -->
+    </textarea>
+    <!-- End Example -->
 
-  <h6>
-    Side Nav
-    <a
-      class="rivet-icon-pdf"
-      title="spec sheet"
-      href="../../../assets/specs/Polaris_SideMenu_Specs.pdf"
-      target="new"
-    ></a>
-  </h6>
-  <p>
-    Side nav used the <code>mat-sidenav</code> component as the main container for the router view and the side nav.
-    This includes a container with the class <code>nav-content-container</code> for styling
-  </p>
-  <p>
-    Expandable menus use the class <code>expandable</code> on the <code>nav-category</code> and also include a label and
-    header.
-  </p>
-  <p>Numbered menus include the</p>
+    <h6>
+        Side Nav
+        <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_SideMenu_Specs.pdf"
+            target="new"></a>
+    </h6>
+    <p>
+        Side nav used the <code>mat-sidenav</code> component as the main container for the router view and the side nav.
+        This includes a container with the class <code>nav-content-container</code> for styling
+    </p>
+    <p>
+        Expandable menus use the class <code>expandable</code> on the <code>nav-category</code> and also include a label
+        and
+        header.
+    </p>
+    <p>Numbered menus include the</p>
 
-  <div class="example-component">
-    <mat-sidenav-container autosize>
-      <mat-sidenav #sidenav mode="side" opened>
+    <div class="example-component">
+        <mat-sidenav-container autosize>
+            <mat-sidenav #sidenav mode="side" opened>
+                <div class="nav-content-container">
+                    <div class="nav-category expandable" [ngClass]="{ expanded: category.expanded }"
+                        *ngFor="let category of sideNavConfig.expandableObj">
+                        <span class="category-label">{{ category.label }}</span>
+                        <h6 class="category-header expanding" (click)="expand(category)">
+                            <span class="rivet-icon-caret-right"></span>
+                            {{ category.title }}
+                        </h6>
+                        <div class="sub-nav-list" [hidden]="!category.expanded">
+                            <a tabindex="0" class="list-link" *ngFor="let link of category.links">
+                                {{ link.name }}
+                            </a>
+                        </div>
+                    </div>
+                    <div class="nav-category" *ngFor="let category of sideNavConfig.numberedObj">
+                        <div class="num-circle">{{ category.label }}</div>
+                        <h6 class="category-header">{{ category.title }}</h6>
+                        <div class="sub-nav-list">
+                            <a class="list-link" *ngFor="let link of category.links">
+                                {{ link.name }}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </mat-sidenav>
+
+            <mat-sidenav-content>
+                <p>this is content</p>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+    <!--   ||||||||||||||||||||||||||  -->
+
+    <!-- Example -->
+    <div class="example-code-header-container">
+        <a class="example-code-header" (click)="isTs = false" [ngClass]="{'active': !isTs}">HTML</a>
+        <a class="example-code-header" (click)="isTs = true" [ngClass]="{'active': isTs}">Typescript</a>
+    </div>
+    <textarea class="example-code large" *ngIf="!isTs">
+<mat-sidenav-container autosize>
+    <mat-sidenav #sidenav mode="side" opened>
         <div class="nav-content-container">
-          <div
-            class="nav-category expandable"
-            [ngClass]="{ expanded: category.expanded }"
-            *ngFor="let category of sideNavConfig.expandableObj"
-          >
-            <span class="category-label">{{ category.label }}</span>
-            <h6 class="category-header expanding" (click)="expand(category)">
-              <span class="rivet-icon-caret-right"></span>
-              {{ category.title }}
-            </h6>
-            <div class="sub-nav-list" [hidden]="!category.expanded">
-              <a tabindex="0" class="list-link" *ngFor="let link of category.links">
-                {{ link.name }}
-              </a>
+            <div class="nav-category expandable" [ngClass]="{'expanded': category.expanded}" *ngFor="let category of sideNavConfig.expandableObj">
+                <span class="category-label">
+                    {category.label}
+                </span>
+                <h6 class="category-header expanding" (click)="expand(category)">
+                    <span class="rivet-icon-caret-right"></span>
+                    {category.title}
+                </h6>
+                <div class="sub-nav-list" [hidden]="!category.expanded">
+                    <a tabindex="0" class="list-link" 
+                        *ngFor="let link of category.links" 
+                        [ngClass]="{'active': activeLink == link.name}"
+                        [routerLink]="link.path" 
+                        [fragment]="link.section">
+                        {link.name}
+                    </a>
+                </div>
             </div>
-          </div>
-          <div class="nav-category" *ngFor="let category of sideNavConfig.numberedObj">
-            <div class="num-circle">{{ category.label }}</div>
-            <h6 class="category-header">{{ category.title }}</h6>
-            <div class="sub-nav-list">
-              <a class="list-link" *ngFor="let link of category.links">
-                {{ link.name }}
-              </a>
+            <div class="nav-category" *ngFor="let category of sideNavConfig.numberedObj">
+                <div class="num-circle">{category.label}</div>
+                <h6 class="category-header">{category.title}</h6>
+                <div class="sub-nav-list">
+                    <a class="list-link" 
+                        *ngFor="let link of category.links" 
+                        [routerLink]="link.path"
+                        [fragment]="link.section" 
+                        routerLinkActive #rla="routerLinkActive">
+                        {link.name}
+                    </a>
+                </div>
             </div>
-          </div>
         </div>
-      </mat-sidenav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+    </textarea>
 
-      <mat-sidenav-content>
-        <p>this is content</p>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
-  </div>
-
-  <!-- Example -->
-  <p class="example-code-header">HTML</p>
-  <textarea class="example-code large">
-    <mat-sidenav-container autosize>
-        <mat-sidenav #sidenav mode="side" opened>
-            <div class="nav-content-container">
-                <div class="nav-category expandable" [ngClass]="{'expanded': category.expanded}" *ngFor="let category of sideNavConfig.expandableObj">
-                    <span class="category-label">
-                        {category.label}
-                    </span>
-                    <h6 class="category-header expanding" (click)="expand(category)">
-                        <span class="rivet-icon-caret-right"></span>
-                        {category.title}
-                    </h6>
-                    <div class="sub-nav-list" [hidden]="!category.expanded">
-                        <a tabindex="0" class="list-link" 
-                            *ngFor="let link of category.links" 
-                            [ngClass]="{'active': activeLink == link.name}"
-                            [routerLink]="link.path" 
-                            [fragment]="link.section">
-                            {link.name}
-                        </a>
-                    </div>
-                </div>
-                <div class="nav-category" *ngFor="let category of sideNavConfig.numberedObj">
-                    <div class="num-circle">{category.label}</div>
-                    <h6 class="category-header">{category.title}</h6>
-                    <div class="sub-nav-list">
-                        <a class="list-link" 
-                            *ngFor="let link of category.links" 
-                            [routerLink]="link.path"
-                            [fragment]="link.section" 
-                            routerLinkActive #rla="routerLinkActive">
-                            {link.name}
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </mat-sidenav>
-        <mat-sidenav-content>
-            <router-outlet></router-outlet>
-        </mat-sidenav-content>
-    </mat-sidenav-container>
-    </textarea
-  >
-  <!-- End Example -->
-
-  <!-- Example -->
-  <p class="example-code-header">TypeScript</p>
-  <label for="example"></label>
-  <textarea id="example" class="example-code large">
-            sideNavConfig = {
-                expandableObj: [
-                    {
-                        title: 'Material Components',
-                        links: [
-                            { name: 'Checkboxes', path: '/components', section: 'checkbox' },
-                            { name: 'Dialog', path: '/components', section: 'dialog' },
-                            { name: 'Dropdowns', path: '/components', section: 'dropdown' },
-                            { name: 'Tables', path: '/components', section: 'table' },
-                            { name: 'Tabs', path: '/components', section: 'tab' },
-                            { name: 'Text Inputs', path: '/components', section: 'matInput' }
-                        ]
-                    },
-                    {
-                        title: 'Rivet Components',
-                        links: [
-                            { name: 'Buttons', path: '/components', section: 'button' },
-                            { name: 'Expansion Panel', path: '/components', section: 'expansion' },
-                            { name: 'Navigation', path: '/components', section: 'nav' },
-                            { name: 'Text Areas', path: '/components', section: 'txtArea' },
-                            { name: 'Custom Text Inputs', path: '/components', section: 'rvtInput' }
-                        ]
-                    }
-                ],
-                numberedObj: [
-                    {
-                        label: '1',
-                        title: 'Design',
-                        path: '/design',
-                        links: [
-                            { name: 'Icons', path: '/design', section: 'icon' },
-                            { name: 'Font Styles', path: '/design', section: 'font' },
-                            { name: 'Colors', path: '/design', section: 'color' }
-                        ]
-                    },
-                    {
-                        label: '2',
-                        title: 'Accessibility',
-                        path: '/accessibility',
-                        links: []
-                    },
-                    {
-                        label: '3',
-                        title: 'Changelog',
-                        path: '/changelog',
-                        links: [
-                            { name: 'Versions', path: '/changelog', section: 'version' },
-                            { name: 'Roadmap', path: '/changelog', section: 'roadmap' }
-                        ]
-                    }
-                ]
-            };
-    </textarea
-  >
+    <textarea id="example" class="example-code large" *ngIf="isTs">
+sideNavConfig = {
+    expandableObj: [
+        {
+            title: 'Material Components',
+            links: [
+                { name: 'Checkboxes', path: '/components', section: 'checkbox' },
+                { name: 'Dialog', path: '/components', section: 'dialog' },
+                { name: 'Dropdowns', path: '/components', section: 'dropdown' },
+                { name: 'Tables', path: '/components', section: 'table' },
+                { name: 'Tabs', path: '/components', section: 'tab' },
+                { name: 'Text Inputs', path: '/components', section: 'matInput' }
+            ]
+        },
+        {
+            title: 'Rivet Components',
+            links: [
+                { name: 'Buttons', path: '/components', section: 'button' },
+                { name: 'Expansion Panel', path: '/components', section: 'expansion' },
+                { name: 'Navigation', path: '/components', section: 'nav' },
+                { name: 'Text Areas', path: '/components', section: 'txtArea' },
+                { name: 'Custom Text Inputs', path: '/components', section: 'rvtInput' }
+            ]
+        }
+    ],
+    numberedObj: [
+        {
+            label: '1',
+            title: 'Design',
+            path: '/design',
+            links: [
+                { name: 'Icons', path: '/design', section: 'icon' },
+                { name: 'Font Styles', path: '/design', section: 'font' },
+                { name: 'Colors', path: '/design', section: 'color' }
+            ]
+        },
+        {
+            label: '2',
+            title: 'Accessibility',
+            path: '/accessibility',
+            links: []
+        },
+        {
+            label: '3',
+            title: 'Changelog',
+            path: '/changelog',
+            links: [
+                { name: 'Versions', path: '/changelog', section: 'version' },
+                { name: 'Roadmap', path: '/changelog', section: 'roadmap' }
+            ]
+        }
+    ]
+};
+    </textarea>
 </div>

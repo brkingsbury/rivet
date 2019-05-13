@@ -32,6 +32,7 @@ import { StylesComponent } from './styles/styles.component';
 import { TestingComponent } from './testing/testing.component';
 import { PerformanceComponent } from './patterns/performance/performance.component';
 import { SliderComponent } from './components/slider/slider.component';
+import { StructureComponent } from './patterns/structure/structure.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
   { path: 'patterns', component: PatternsComponent },
   { path: 'patterns/a11y', component: AccessibilityComponent },
   { path: 'patterns/performance', component: PerformanceComponent },
+  { path: 'patterns/structure', component: StructureComponent },
   { path: 'testing', component: TestingComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' }
 ];
@@ -92,7 +94,8 @@ const appRoutes: Routes = [
     TestingComponent,
     TextAreasComponent,
     PerformanceComponent,
-    SliderComponent
+    SliderComponent,
+    StructureComponent
   ],
   entryComponents: [DialogComponent, DialogComponentDialogComponent],
   imports: [

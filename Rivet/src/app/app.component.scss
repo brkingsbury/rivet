@@ -66,6 +66,10 @@
   }
 }
 
+p:not(.example-code-header) {
+    max-width: 1200px;
+}
+
 .test-btn {
   position: absolute;
   top: 0;

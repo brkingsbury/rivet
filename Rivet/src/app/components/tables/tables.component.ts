@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['../components.component.scss']
 })
 export class TablesComponent implements OnInit {
+    isTs = false;
+    isTemp = false;
   constructor() {}
 
   ngOnInit() {}
