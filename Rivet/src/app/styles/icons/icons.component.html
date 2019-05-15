@@ -9,15 +9,14 @@
     For standalone icons, simply give a <code>span</code> the class of <code>rivet-icon-(icon-name)</code> and style
     according to the design using font-size.
   </p>
-  <p class="hint">Click an icon below to copy the class name to your clipboard.</p>
 
   <div class="icon-container">
+    <p class="hint">Click an icon below to copy the class name to your clipboard.</p>
     <button
       class="rvt-btn-icon"
       *ngFor="let ico of icons"
       title="rivet-icon-{{ ico }}"
-      (click)="copyText(icoInput)"
-    >
+      (click)="copyText(icoInput)">
       <span class="rivet-icon-{{ ico }}"></span>
       <input type="text" value="rivet-icon-{{ ico }}" #icoInput readonly />
       <span class="note" [hidden]="alert != icoInput">copied to clipboard!</span>

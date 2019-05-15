@@ -13,7 +13,7 @@ export class SideNavComponent implements OnInit {
       {
         title: 'Components',
         links: [
-          { name: 'Overview', path: '/components' },
+        //   { name: 'Overview', path: '/components' },
           { name: 'Buttons', path: '/components/button' },
           { name: 'Inputs', path: '/components/input' },
           { name: 'Dropdowns', path: '/components/dropdown' },
@@ -33,7 +33,7 @@ export class SideNavComponent implements OnInit {
       {
         title: 'Style',
         links: [
-          { name: 'Overview', path: '/style' },
+        //   { name: 'Overview', path: '/style' },
           { name: 'Icons', path: '/style/icon' },
           { name: 'Font Styles', path: '/style/font' },
           { name: 'Color Variables', path: '/style/color' }
@@ -42,7 +42,7 @@ export class SideNavComponent implements OnInit {
       {
         title: 'Patterns',
         links: [
-          { name: 'Overview', path: '/patterns' },
+        //   { name: 'Overview', path: '/patterns' },
           { name: 'Accessibility', path: '/patterns/a11y' },
           { name: 'Performance', path: '/patterns/performance' },
           { name: 'Structure', path: '/patterns/structure' }
