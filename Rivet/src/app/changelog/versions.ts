@@ -29,6 +29,21 @@
 
 export const versions = [
   {
+    version: '0.2.12',
+    date: '5/30/2019',
+    note: 'Update tab and input styles',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Update to tabs and inputs to account for material overrides']
+      },
+      {
+        category: 'Library',
+        bullets: ['Split up parts into separate pages to improve performance and navigation']
+      }
+    ]
+  },
+  {
     version: '0.2.10',
     date: '5/3/2019',
     note: 'New checkboxes and slider. Library parts split into separate pages.',
@@ -41,10 +56,8 @@ export const versions = [
         ]
       },
       {
-          category: 'Library',
-          bullets: [
-              'Split up parts into separate pages to improve performance and navigation'
-          ]
+        category: 'Library',
+        bullets: ['Split up parts into separate pages to improve performance and navigation']
       }
     ]
   },

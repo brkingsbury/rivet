@@ -57,15 +57,15 @@
   }
 }
 
-table.mat-table {
+table.mat-table, mat-table {
   width: 100%; // to take up 100% width of container
   * {
     font-family: $RvtFontFamily;
     color: $rvt-neutral-900;
   }
-  tr.mat-header-row {
+  tr.mat-header-row, mat-header-row {
     height: auto;
-    th.mat-header-cell {
+    th.mat-header-cell, mat-header-cell {
       font-size: 14px;
       font-weight: 600;
       padding: 15px 15px 5px 0;
@@ -75,9 +75,9 @@ table.mat-table {
       }
     }
   }
-  tr.mat-row {
+  tr.mat-row, mat-row {
     height: auto;
-    td.mat-cell {
+    td.mat-cell, mat-cell {
       font-size: 14px;
       padding: 15px 15px 15px 0;
       border: none;
