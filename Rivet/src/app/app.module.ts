@@ -33,6 +33,7 @@ import { TestingComponent } from './testing/testing.component';
 import { PerformanceComponent } from './patterns/performance/performance.component';
 import { SliderComponent } from './components/slider/slider.component';
 import { StructureComponent } from './patterns/structure/structure.component';
+import { PersonaComponent } from './styles/persona/persona.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -40,6 +41,7 @@ const appRoutes: Routes = [
   { path: 'style/icon', component: IconsComponent },
   { path: 'style/font', component: FontStylesComponent },
   { path: 'style/color', component: ColorsComponent },
+  { path: 'style/persona', component: PersonaComponent },
   { path: 'components', component: ComponentsComponent },
   { path: 'components/checkbox', component: CheckboxComponent } ,
   { path: 'components/datepicker', component: DatepickerComponent } ,
@@ -95,7 +97,8 @@ const appRoutes: Routes = [
     TextAreasComponent,
     PerformanceComponent,
     SliderComponent,
-    StructureComponent
+    StructureComponent,
+    PersonaComponent
   ],
   entryComponents: [DialogComponent, DialogComponentDialogComponent],
   imports: [
