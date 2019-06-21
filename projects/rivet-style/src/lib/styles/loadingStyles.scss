@@ -1,0 +1,87 @@
+@import '../../lib/styles/typeStyles.scss';
+@import './rivetTheme.scss';
+
+.mat-spinner.mat-progress-spinner {
+  svg circle {
+    stroke: $rvt-neutral-400;
+  }
+}
+
+button.loading:disabled {
+  position: relative;
+  color: transparent;
+  .mat-spinner {
+    position: absolute;
+    top: calc(50% - 6px);
+    left: calc(50% - 7px);
+    max-height: 14px;
+    max-width: 14px;
+    svg {
+      max-height: 14px;
+      max-width: 14px;
+    }
+  }
+  &.rvt-btn-primary {
+    .mat-spinner svg circle {
+      stroke: $rvt-white;
+    }
+  }
+  &.rvt-btn-secondary {
+    .mat-spinner svg circle {
+      stroke: $rvt-primary-color;
+    }
+  }
+  &.rvt-btn-standard,
+  &.rvt-btn-text,
+  &.rvt-btn-icon {
+    color: transparent;
+    .mat-spinner svg circle {
+      stroke: $rvt-neutral-600;
+    }
+  }
+  &.rvt-btn-icon .mat-spinner {
+    margin-left: 0;
+  }
+}
+
+.loading-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 0;
+  overflow: hidden;
+  transition: height 400ms ease;
+  &:not(.loading) {
+    transition-delay: 200ms;
+  }
+  * {
+    opacity: 0;
+  }
+  .loading-text {
+    font-family: $RvtFontFamily;
+    font-size: 18px;
+    font-weight: 600;
+    color: $rvt-neutral-400;
+    margin-bottom: 10px;
+  }
+  .mat-spinner.mat-progress-spinner {
+    max-height: 45px;
+    max-width: 45px;
+    svg {
+      max-height: 45px;
+      max-width: 45px;
+      circle {
+        stroke: $rvt-neutral-400;
+      }
+    }
+  }
+  &.loading {
+    height: 80px;
+    transition-delay: 0;
+    * {
+      opacity: 1;
+      transition: opacity 400ms ease;
+      transition-delay: 250ms;
+    }
+  }
+}

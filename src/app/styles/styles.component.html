@@ -1,0 +1,54 @@
+<h2 class="page-header">Styles</h2>
+
+<div class="info">
+    <h5>Design Tokens</h5>
+
+    <div class="section">
+
+        <h6>Neutrals</h6>
+        <div class="color-layout">
+            <span *ngFor="let color of neutrals" class="color-block"
+                [ngStyle]="{'background-color': color}">{{color}}</span>
+            <span class="color-block" style="background-color: white; border: 1px solid #CBCED5">#FFFFFF</span>
+        </div>
+        <h6>Primary</h6>
+        <div class="color-layout">
+            <span *ngFor="let color of primary" class="color-block"
+                [ngStyle]="{'background-color': color}">{{color}}</span>
+        </div>
+
+        <h6>Accent</h6>
+        <div class="color-layout">
+            <span *ngFor="let color of accent" class="color-block"
+                [ngStyle]="{'background-color': color}">{{color}}</span>
+        </div>
+
+        <h6>Data</h6>
+        <div class="color-layout">
+            <span *ngFor="let color of data" class="color-block"
+                [ngStyle]="{'background-color': color}">{{color}}</span>
+        </div>
+    </div>
+
+    <!-- <div class="section">
+        <h4>Nunito Sans (200, 300, 400, 600)</h4>
+        <button class="rvt-btn-secondary rvt-btn-icon">
+            <span>Sketch File</span>
+            <span class="rivet-icon-pdf"></span>
+        </button>
+    </div>
+
+    <div class="section">
+        <div class="icon-layout">
+            <span class="rivet-icon-help"></span>
+            <span class="rivet-icon-datepicker"></span>
+            <span class="rivet-icon-settings"></span>
+            <span class="rivet-icon-edit"></span>
+            <span class="rivet-icon-add"></span>
+        </div>
+        <button class="rvt-btn-icon">
+            <span>Sketch File</span>
+            <span class="rivet-icon-pdf"></span>
+        </button>
+    </div> -->
+</div>

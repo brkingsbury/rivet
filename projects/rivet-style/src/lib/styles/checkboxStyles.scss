@@ -1,0 +1,369 @@
+@import '../../lib/styles/typeStyles.scss';
+@import './rivetTheme.scss';
+
+// ---------- These Styles will be eventually deprecated --
+mat-checkbox.mat-checkbox {
+  label .mat-checkbox-label {
+    font-family: $RvtFontFamily;
+    font-size: 14px;
+    color: $rvt-neutral-900;
+  }
+
+  .mat-checkbox-inner-container,
+  &.mat-checkbox-indeterminate .mat-checkbox-inner-container {
+    height: 18px;
+    width: 18px;
+
+    .mat-checkbox-ripple.mat-ripple {
+      display: none;
+    }
+
+    .mat-checkbox-frame {
+      border: 1px solid $rvt-neutral-900;
+      border-radius: 2px;
+      z-index: 100;
+    }
+  }
+
+  .mat-checkbox-background svg,
+  .mat-checkbox-ripple.mat-ripple {
+    display: none;
+  }
+
+  &:hover,
+  &.cdk-focused,
+  &.cdk-keyboard-focused {
+    .mat-checkbox-frame {
+      border-width: 2px;
+    }
+  }
+
+  &.mat-checkbox-checked,
+  &.mat-checkbox-indeterminate {
+    .mat-checkbox-frame {
+      border: none;
+    }
+
+    &:hover,
+    &.cdk-focused,
+    &.cdk-keyboard-focused {
+      .mat-checkbox-background {
+        border: none;
+        background-color: $rvt-primary-color-dark;
+      }
+    }
+
+    .mat-checkbox-background {
+      background-color: $rvt-primary-color;
+      transition: background-color 400ms ease;
+      padding: 4px;
+
+      &::before {
+        font-family: 'rivet-icons';
+        content: '\4b';
+        font-size: 10px;
+        font-weight: 600;
+        color: $rvt-white;
+      }
+    }
+  }
+
+  &.cdk-keyboard-focused {
+    .mat-checkbox-frame {
+      outline: 2px solid highlight;
+    }
+  }
+
+  &.mat-checkbox-indeterminate {
+    &:not(:hover),
+    &:not(.cdk-focused),
+    &:not(.cdk-keyboard-focused) {
+      border-color: $rvt-primary-color;
+    }
+
+    &.cdk-focused,
+    &.cdk-keyboard-focused {
+      .mat-checkbox-frame {
+        border-width: 2px;
+      }
+    }
+
+    .mat-checkbox-background {
+      &::before {
+        font-family: 'rivet-icons';
+        content: '\6d';
+        font-size: 10px;
+        color: $rvt-white;
+        font-weight: 400;
+      }
+
+      svg {
+        display: none;
+      }
+    }
+  }
+
+  &.small-checkbox {
+    label .mat-checkbox-label {
+      font-size: 12px;
+    }
+
+    .mat-checkbox-inner-container,
+    &.mat-checkbox-indeterminate .mat-checkbox-inner-container {
+      height: 16px;
+      width: 16px;
+
+      .mat-checkbox-background::before {
+        font-size: 8px;
+      }
+    }
+  }
+
+  &.label-above {
+    display: flex;
+
+    label.mat-checkbox-layout {
+      flex-direction: column-reverse;
+
+      .mat-checkbox-inner-container {
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &.mat-checkbox-disabled {
+    .mat-checkbox-frame {
+      border: 1px dashed $rvt-disabled-color;
+    }
+
+    label .mat-checkbox-label {
+      color: $rvt-disabled-text-color;
+    }
+
+    &:hover,
+    &.mat-checkbox-indeterminate,
+    &.mat-checkbox-checked {
+      .mat-checkbox-inner-container {
+        opacity: 1;
+      }
+
+      .mat-checkbox-frame {
+        border: 1px dashed $rvt-disabled-color;
+      }
+
+      .mat-checkbox-background {
+        background: none;
+
+        &::before {
+          color: $rvt-disabled-text-color;
+        }
+      }
+    }
+
+    &.read-only {
+      .mat-checkbox-frame {
+        border: none;
+      }
+
+      label .mat-checkbox-label {
+        color: $rvt-neutral-900;
+      }
+
+      &:hover,
+      &.mat-checkbox-indeterminate,
+      &.mat-checkbox-checked {
+        .mat-checkbox-frame {
+          border: none;
+        }
+
+        .mat-checkbox-background {
+          &::before {
+            color: $rvt-neutral-900;
+          }
+        }
+      }
+    }
+  }
+}
+// -------- End Deprecated Styles ---
+
+$CheckboxSize: 18px;
+
+.rvt-checkbox {
+  input[type='checkbox'] {
+    opacity: 0;
+    position: absolute;
+    z-index: 100;
+    height: $CheckboxSize;
+    width: $CheckboxSize;
+    margin: 3px 0 0 3px;
+    cursor: pointer;
+
+    + label {
+      position: relative;
+      display: inline-block;
+      padding-left: 25px;
+      font: 400 14px $RvtFontFamily;
+      color: $rvt-neutral-900;
+      cursor: pointer;
+
+      &:before {
+        content: '';
+        position: absolute;
+        display: inline-block;
+        height: calc(#{$CheckboxSize} - 2px);
+        width: calc(#{$CheckboxSize} - 2px);
+        border: 1px solid $rvt-neutral-900;
+        left: 3px;
+        top: 1px;
+        border-radius: 2px;
+      }
+
+      &:after {
+        content: none;
+        position: absolute;
+        display: inline-block;
+        left: 7px;
+        top: 4px;
+      }
+    }
+
+    &:checked + label {
+      &:before {
+        background-color: $rvt-primary-color;
+        border: none;
+        height: $CheckboxSize;
+        width: $CheckboxSize;
+      }
+
+      &:after {
+        font: 600 10px 'rivet-icons';
+        content: '\4b';
+        color: $rvt-white;
+      }
+    }
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      &:not(:checked) + label:before {
+        border-width: 2px;
+        height: calc(#{$CheckboxSize} - 4px);
+        width: calc(#{$CheckboxSize} - 4px);
+      }
+
+      &:checked + label:before {
+        background-color: $rvt-primary-color-dark;
+        transition: background-color 400ms ease;
+      }
+    }
+
+    &:focus + label:before {
+      outline: 2px solid highlight; // Fallback
+      outline: 2px solid -webkit-focus-ring-color; // Chrome
+    }
+
+    &:-moz-focusring + label:before {
+      // Firefox
+      outline: 1px dotted #192239;
+      outline-offset: 1px;
+    }
+
+    &:disabled {
+      cursor: default;
+      + label {
+        color: $rvt-disabled-text-color;
+        cursor: default;
+
+        &:before {
+          cursor: default;
+          background: none;
+          border: 1px dashed $rvt-disabled-color;
+        }
+      }
+
+      &:checked + label {
+        &:before {
+          cursor: default;
+          background: none;
+          border: 1px dashed $rvt-disabled-color;
+          height: calc(#{$CheckboxSize} - 2px);
+          width: calc(#{$CheckboxSize} - 2px);
+        }
+
+        &:after {
+          color: $rvt-disabled-text-color;
+        }
+      }
+    }
+    &:disabled.read-only {
+      + label {
+        color: $rvt-neutral-900;
+        &:before {
+          border: none;
+        }
+      }
+      &:checked {
+        + label {
+          &:after {
+            color: $rvt-neutral-900;
+          }
+        }
+      }
+    }
+  }
+
+  &.small-checkbox {
+    input[type='checkbox'] {
+      &:hover:not(:disabled):not(:checked) + label:before,
+      &:focus:not(:disabled):not(:checked) + label:before {
+        height: calc(#{$CheckboxSize} - 6px);
+        width: calc(#{$CheckboxSize} - 6px);
+      }
+      &:checked + label:before {
+        height: calc(#{$CheckboxSize} - 2px);
+        width: calc(#{$CheckboxSize} - 2px);
+      }
+      + label {
+        font-size: 12px;
+        &:before {
+          height: calc(#{$CheckboxSize} - 4px);
+          width: calc(#{$CheckboxSize} - 4px);
+        }
+        &:after {
+          font-size: 8px;
+        }
+      }
+    }
+  }
+  &.label-above {
+    input[type='checkbox'] + label {
+      padding-left: 0;
+      display: inline-flex;
+      flex-direction: column-reverse;
+      &:before,
+      &:after {
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        left: 0;
+      }
+      &:after {
+        position: absolute;
+        top: 24px;
+        left: calc(50% - 5px);
+      }
+    }
+  }
+}
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  .rvt-checkbox input[type='checkbox']:focus + label:before {
+    outline: 1px dotted #192239; // IE
+  }
+}
+
+@supports (display: -ms-grid) {
+  .rvt-checkbox input[type='checkbox']:focus + label:before {
+    outline: 1px dashed #192239; //Edge
+  }
+}

@@ -1,0 +1,30 @@
+<h2 class="page-header">Datepicker</h2>
+
+<div class="component-container">
+  <h5>
+    Material Datepicker
+    <!-- <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_Dialog_Specs.pdf" target="new"></a> -->
+  </h5>
+
+  <p>Datepickers are used for every date field to give users multiple options to enter the date.</p>
+
+  <div class="example-component">
+    <mat-form-field>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date" />
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+  </div>
+
+  <!-- Example -->
+  <p class="example-code-header">HTML</p>
+  <textarea class="example-code" readonly>
+<mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+    </textarea
+  >
+  <!-- End Example -->
+</div>

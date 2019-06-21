@@ -1,0 +1,26 @@
+<?xml-stylesheet type="text/css" href="icon-styles.css" version="1.0" encoding="UTF-8"?>
+<svg class="changelog" width="250px" height="250px" viewBox="0 0 250 250" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>RivetIcon_Changelog</title>
+    <desc>Created with Sketch.</desc>
+    <g id="RivetIcon_Changelog" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group-27">
+            <circle class="bg-circle" id="Oval" fill="#EBEBEC" fill-rule="nonzero" cx="125" cy="125" r="125"></circle>
+            <rect class="fill" id="Rectangle" fill-opacity="0.6" fill="#F69943" fill-rule="nonzero" x="83" y="86" width="79" height="106"></rect>
+            <path class="gray-fill" d="M101.283465,83.3412438 L107.79615,73.0608151 L116.130088,73.0608151 C116.130088,67.0478043 120.196475,62.175 125.214799,62.175 C130.236716,62.175 134.18456,67.0478043 134.18456,73.0608151 L143.05733,73.0608151 L148.675554,83.4266664 L101.283465,83.3412438 Z" id="Stroke-352" fill="#ADB3BE"></path>
+            <path d="M104.196039,80.1662438 L110.708724,69.8858151 L119.042662,69.8858151 C119.042662,63.8728043 123.109049,59 128.127373,59 C133.14929,59 137.097134,63.8728043 137.097134,69.8858151 L145.969904,69.8858151 L151.588128,80.2516664" id="Stroke-352" stroke="#192239" stroke-width="3"></path>
+            <polyline id="Stroke-354" stroke="#192239" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="101.663366 104.251143 108.035955 110.843542 124.624802 93.6958763"></polyline>
+            <path d="M130.789106,104.170103 L152.90278,104.170103" id="Stroke-356" stroke="#192239" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polyline id="Stroke-355" stroke="#192239" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="101.663366 135.019184 108.035955 141.611583 124.624802 124.463918"></polyline>
+            <path d="M130.789106,138.865979 L152.90278,138.865979" id="Stroke-357" stroke="#192239" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polyline id="Stroke-355" stroke="#192239" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" points="101.663366 165.787225 108.035955 172.379625 124.624802 155.231959"></polyline>
+            <path d="M130.789106,169.634021 L152.90278,169.634021" id="Stroke-357" stroke="#192239" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"></path>
+            <polygon id="Path-2" stroke="#192239" stroke-width="3" fill-rule="nonzero" points="89 80.6030928 166.879698 80.6030928 166.879698 186 89 186"></polygon>
+        </g>
+        <g id="Group-24" transform="translate(89.000000, 62.000000)">
+            <g id="Group-20" transform="translate(12.663366, 34.695876)"></g>
+            <g id="Group-23" transform="translate(12.663366, 65.463918)"></g>
+            <g id="Group-23" transform="translate(12.663366, 96.231959)"></g>
+        </g>
+    </g>
+</svg>

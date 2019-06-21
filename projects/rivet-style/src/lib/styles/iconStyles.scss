@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+$rivet-icon-path: '../rivet-icons' !default;
+
+@font-face {
+  font-family: 'rivet-icons';
+  src: url('#{$rivet-icon-path}/rivet-icons.eot?#iefix') format('embedded-opentype'),
+    url('#{$rivet-icon-path}/rivet-icons.woff') format('woff'),
+    url('#{$rivet-icon-path}/rivet-icons.ttf') format('truetype'),
+    url('#{$rivet-icon-path}/rivet-icons.svg#rivet-icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[data-icon]:before {
+  font-family: 'rivet-icons' !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^='rivet-icon-']:before,
+[class*=' rivet-icon-']:before {
+  font-family: 'rivet-icons' !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin config-icon-content($prefix, $content...) {
+  @each $i in $content {
+    .#{$prefix}#{nth($i, 1)}:before {
+      content: nth($i, 2);
+    }
+  }
+}
+@include config-icon-content(
+  'rivet-icon-',
+  'add' '\61',
+  'exclamation1' '\74',
+  'arrange' '\41',
+  'amount' '\42',
+  'caret-down' '\79',
+  'caret-left' '\7a',
+  'caret-right' '\78',
+  'caret-up' '\77',
+  'bell' '\43',
+  'beginning' '\44',
+  'business-admin' '\45',
+  'calculator' '\46',
+  'chart' '\47',
+  'life-insurance' '\68',
+  'help' '\66',
+  'file' '\70',
+  'graph' '\48',
+  'family' '\49',
+  'education' '\65',
+  'end' '\4a',
+  'edit' '\72',
+  'disability-insurance' '\64',
+  'delete' '\63',
+  'datepicker' '\62',
+  'person' '\6a',
+  'check' '\4b',
+  'sync' '\69',
+  'locked' '\4c',
+  'long-term-care-insurance' '\67',
+  'purchase' '\6b',
+  'menu-close' '\4d',
+  'menu-hamburger' '\4e',
+  'more' '\4f',
+  'next' '\50',
+  'pdf' '\51',
+  'presentation' '\52',
+  'previous' '\53',
+  'resync' '\6e',
+  'reporteditor' '\54',
+  'worddoc' '\55',
+  'unlocked' '\56',
+  'subtract' '\6d',
+  'settings' '\57',
+  'search' '\58',
+  'retirement' '\6f',
+  'reset' '\6c',
+  'critical-illness' '\59',
+  'child' '\71',
+  'clock' '\73',
+  'estimate' '\75',
+  'exclamation2' '\76'
+);

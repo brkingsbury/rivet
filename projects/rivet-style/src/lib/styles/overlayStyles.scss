@@ -1,0 +1,25 @@
+@import './rivetTheme.scss';
+.rvt-delete-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: transparentize($rvt-neutral-200, 0.1);
+  z-index: 100;
+  .overlay-content {
+    margin: 10px 0 0 0;
+    text-align: right;
+    * {
+      display: inline-block;
+    }
+    button {
+      margin-right: 10px;
+    }
+    .overlay-text {
+      margin-right: 15px;
+      font-weight: 600;
+      color: $rvt-neutral-900;
+    }
+  }
+}

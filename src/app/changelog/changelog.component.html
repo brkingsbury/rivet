@@ -1,0 +1,99 @@
+<h2 class="page-header">Changelog</h2>
+
+<div class="component-container">
+  <h5 id="roadmap">Roadmap</h5>
+  <p>
+    This list is a rough estimate for upcoming tasks in the UX backlog. If there are components that your team will need
+    sooner please let the UX team know.
+  </p>
+  <p>
+    Next to each component is the best guess for if it will be a Rivet component or a material component. Ones marked
+    with an * are verified.
+  </p>
+  <ul>
+    <li>
+      <s>Dropdowns - Material*</s>
+      <span class="rivet-icon-check"> completed v1.8</span>
+    </li>
+    <li>
+      <s>Tabs</s>
+      <span class="rivet-icon-check"> completed v1.10</span>
+    </li>
+    <li>
+      <s>Top Nav</s>
+      <span class="rivet-icon-check"> completed v1.10</span>
+    </li>
+    <li>
+      <s>Expansion panel - Material</s>
+      <span class="rivet-icon-check"> completed v1.13</span>
+    </li>
+    <li>
+      <s>Dialog - Material</s>
+      <span class="rivet-icon-check"> completed v1.13</span>
+    </li>
+    <li>
+      <s>Progress Spinner/Loading Pulsar - Material</s>
+      <span class="rivet-icon-check"> completed v1.16</span>
+    </li>
+    <li>
+      <s>Side Nav</s>
+      <span class="rivet-icon-check"> completed v1.16</span>
+    </li>
+    <li>
+      <s>Tables - Material</s>
+      <span class="rivet-icon-check"> completed v1.16</span>
+    </li>
+    <li>
+      <s>Pagination - Material</s>
+      <span class="rivet-icon-check"> completed v1.16</span>
+    </li>
+    <li>
+      <s>Delete Overlay - Sub component of expandable line item</s>
+      <span class="rivet-icon-check"> completed v1.19</span>
+    </li>
+    <li>
+      <s>Divider - Rivet</s>
+      <span class="rivet-icon-check"> completed v1.19</span>
+    </li>
+    <li>
+      <s>Color Variables</s>
+      <span class="rivet-icon-check"> completed v1.20</span>
+    </li>
+    <li>
+      <s>Radio Button - Rivet</s>
+      <span class="rivet-icon-check"> completed v1.22</span>
+    </li>
+    <li>
+      <s>Datepicker - Material</s>
+      <span class="rivet-icon-check"> completed v1.27</span>
+    </li>
+    <li>Snackbar</li>
+    <li>Menu/List Button - Material</li>
+    <li>Tree</li>
+    <li>Accordion - Material</li>
+    <li>Tooltip - Material</li>
+    <li>Number Selector - Rivet</li>
+    <li>Toggle Switch</li>
+    <li>Slider</li>
+  </ul>
+</div>
+
+<hr />
+
+<div class="component-container">
+  <h5 id="version">Versions</h5>
+  <div class="version-history">
+    <div *ngFor="let version of versions">
+      <h5>{{ version.version }}&nbsp;</h5>
+      <span>- {{ version.date | date }}</span>
+      <h6 class="release-notes">{{ version.note }}</h6>
+      <ul *ngFor="let update of version.updates">
+        {{
+          update.category
+        }}
+        <li *ngFor="let bullet of update.bullets">{{ bullet }}</li>
+      </ul>
+      <hr />
+    </div>
+  </div>
+</div>
