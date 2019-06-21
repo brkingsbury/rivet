@@ -1,0 +1,14 @@
+<div class="nav-container">
+    <div class="logo-container">
+        <img src="../../assets/rivet-logo.svg" class="logo">
+    </div>
+    <nav mat-tab-nav-bar disableRipple>
+        <a mat-tab-link 
+        *ngFor="let link of navLinks"
+        [routerLink]="link.path"
+        routerLinkActive #rla="routerLinkActive"
+        [active]="rla.isActive">
+            {{link.label}}
+        </a>
+    </nav>
+</div>

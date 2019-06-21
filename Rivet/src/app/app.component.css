@@ -1,0 +1,9 @@
+.content {
+  padding: 20px 0;
+}
+mat-drawer.sidenav {
+  padding-right: 10px;
+}
+.sidenav-content {
+  padding: 10px;
+}

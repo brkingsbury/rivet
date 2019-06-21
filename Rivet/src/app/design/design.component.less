@@ -1,0 +1,79 @@
+@import "../../styles.less";
+
+a {
+    .TypeSubheading;
+}
+
+.font-content {
+    padding: 30px;
+    transition: all 600ms ease;
+    &.reversedColors {
+        background-color: #3C3A59;
+        th, td:not(.TypeCaption):not(.TypeLabel){
+            color: #fff;
+        }
+    }
+}
+
+table {
+    th {
+        color: #aaa;
+        text-align: left;
+        .TypeTitle;
+    }
+    tr {
+        .TypeBody;
+        height: 80px;
+        &.header-row {
+            border-bottom: 1px solid #aaa;
+        }
+    }
+    .style {
+        width: 200px;
+    }
+    .name {
+        width: 200px;
+    }
+}
+
+.TypeDisplay4, .TypeDisplay3, .TypeDisplay2, .TypeDisplay1, .TypeHeadlineBold, .TypeHeadline, .TypeTitle, .TypeSubheading, .TypeBody2, .TypeBody, .TypeHperlink, .TypeButton {
+    color: #192239; // ToDo Switch to color variable
+    &.TypeReverse {
+        color: #FFF;
+    }
+}
+
+.TypeCaption, .TypeLabel {
+    color: #ADB3BE;
+}
+.gridContainer {
+    [class*="col-"] p{
+        background-color: #eee;
+    }
+}
+
+.color-square {
+    width: 200px;
+    display: inline-block;
+    vertical-align: top;
+    margin-bottom: 30px;
+    .square {
+        height: 75px;
+        width: 75px;
+    }
+    h5 {
+        margin: 5px 0 0;
+    }
+    span {
+        .TypeCaption;
+        text-transform: uppercase;
+    }
+    p {
+        margin: 5px 0 0;
+    }
+
+    .square.white {
+        background-color: white;
+        border: 1px solid #adb3be;
+    }
+}
