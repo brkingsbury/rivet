@@ -29,6 +29,17 @@
 
 export const versions = [
   {
+    version: '0.2.14',
+    date: '7/16/2019',
+    note: 'Added icons',
+    updates: [
+      {
+        category: 'Styles',
+        bullets: ['Added following icons: moveup, movedown, star, auditsearch, reassignclients and templates']
+      }
+    ]
+  },
+  {
     version: '0.2.12',
     date: '5/30/2019',
     note: 'Update tab and input styles',

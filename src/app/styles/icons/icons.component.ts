@@ -58,7 +58,13 @@ export class IconsComponent implements OnInit {
     'child',
     'clock',
     'estimate',
-    'exclamation2'
+    'exclamation2',
+    'movedown',
+    'moveup',
+    'star',
+    'auditsearch',
+    'reassignclients',
+    'templates'
   ];
 
   copyText(icoInput) {
