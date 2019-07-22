@@ -11,8 +11,8 @@ import {
   styleUrls: ['../components.component.scss']
 })
 export class InputsComponent implements OnInit {
-  private nameValidation = [Validators.minLength(2)];
-  private uniqueValidation;
+  public nameValidation = [Validators.minLength(2)];
+  public uniqueValidation;
   private JSON = JSON;
   constructor(private auth: AuthService) {
     this.uniqueValidation = LoginAsyncValidator(auth);
