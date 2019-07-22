@@ -1,0 +1,15 @@
+@import '../styles/rivetTheme.scss';
+:host {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  padding: 3px 0 0 0;
+  font-size: 12px;
+  user-select: none;
+  color: $rvt-neutral-400;
+  .invalid.dirty.nonvacant > &,
+  .invalid.pristine.untouched.nonvacant > & {
+    color: $rvt-warning-color;
+  }
+}

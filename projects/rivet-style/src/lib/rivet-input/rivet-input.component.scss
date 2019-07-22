@@ -1,0 +1,73 @@
+@import '../styles/typeStyles.scss';
+@import '../styles/rivetTheme.scss';
+
+:host {
+  display: inline-block;
+  position: relative;
+  height: 42px;
+  min-width: 280px;
+  font-size: 16px;
+  margin: 0 30px 30px 0;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $rvt-neutral-400;
+  }
+  &.valid:after {
+    background-color: $rvt-neutral-400;
+  }
+  &.invalid.dirty.nonvacant:after,
+  &.invalid.pristine.untouched.nonvacant:after {
+    background-color: $rvt-warning-color;
+  }
+  &:focus-within:after,
+  &:hover:after {
+    height: 2px;
+  }
+  &:focus-within:after {
+    background-color: $rvt-primary-color-dark;
+  }
+  &[disabled]:after {
+    background-color: transparent;
+    height: 1px;
+    background-image: repeating-linear-gradient(
+      90deg,
+      $rvt-neutral-300,
+      $rvt-neutral-300 1px,
+      transparent 1px,
+      transparent 4px
+    );
+    background-size: 4px;
+    &[readonly]:after {
+      display: none;
+    }
+  }
+  input {
+    color: $rvt-neutral-900;
+    font: 400 16px 'Nunito Sans', Arial, sans-serif;
+    background-color: transparent;
+    line-height: 20px;
+    height: 20px;
+    width: 100%;
+    padding: 18px 0 4px 0;
+    border: none;
+    outline: none;
+    &:disabled {
+      background-color: transparent;
+    }
+  }
+  i {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 20px;
+  }
+}

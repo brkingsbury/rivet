@@ -34,6 +34,10 @@ import { PerformanceComponent } from './patterns/performance/performance.compone
 import { SliderComponent } from './components/slider/slider.component';
 import { StructureComponent } from './patterns/structure/structure.component';
 import { PersonaComponent } from './styles/persona/persona.component';
+import { RivetInputComponent } from '../../projects/rivet-style/src/lib/rivet-input/rivet-input.component';
+import { RivetHelperComponent } from '../../projects/rivet-style/src/lib/rivet-input-helper/rivet-input-helper.component';
+import { RivetLabelComponent } from '../../projects/rivet-style/src/lib/rivet-input-label/rivet-input-label.component';
+import { AuthService } from '../../projects/rivet-style/src/lib/rivet-services/unique-name-validator';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -43,20 +47,20 @@ const appRoutes: Routes = [
   { path: 'style/color', component: ColorsComponent },
   { path: 'style/persona', component: PersonaComponent },
   { path: 'components', component: ComponentsComponent },
-  { path: 'components/checkbox', component: CheckboxComponent } ,
-  { path: 'components/datepicker', component: DatepickerComponent } ,
-  { path: 'components/dialog', component: DialogComponent } ,
-  { path: 'components/dropdown', component: DropdownComponent } ,
-  { path: 'components/input', component: InputsComponent } ,
-  { path: 'components/radio', component: RadioButtonsComponent } ,
-  { path: 'components/table', component: TablesComponent } ,
-  { path: 'components/tab', component: TabsComponent } ,
-  { path: 'components/textarea', component: TextAreasComponent } ,
-  { path: 'components/button', component: ButtonsComponent } ,
-  { path: 'components/loading', component: LoadingComponent } ,
-  { path: 'components/nav', component: NavComponent } ,
-  { path: 'components/expansion', component: ExpansionPanelComponent } ,
-  { path: 'components/slider', component: SliderComponent } ,
+  { path: 'components/checkbox', component: CheckboxComponent },
+  { path: 'components/datepicker', component: DatepickerComponent },
+  { path: 'components/dialog', component: DialogComponent },
+  { path: 'components/dropdown', component: DropdownComponent },
+  { path: 'components/input', component: InputsComponent },
+  { path: 'components/radio', component: RadioButtonsComponent },
+  { path: 'components/table', component: TablesComponent },
+  { path: 'components/tab', component: TabsComponent },
+  { path: 'components/textarea', component: TextAreasComponent },
+  { path: 'components/button', component: ButtonsComponent },
+  { path: 'components/loading', component: LoadingComponent },
+  { path: 'components/nav', component: NavComponent },
+  { path: 'components/expansion', component: ExpansionPanelComponent },
+  { path: 'components/slider', component: SliderComponent },
   { path: 'changelog', component: ChangelogComponent },
   { path: 'patterns', component: PatternsComponent },
   { path: 'patterns/a11y', component: AccessibilityComponent },
@@ -98,7 +102,10 @@ const appRoutes: Routes = [
     PerformanceComponent,
     SliderComponent,
     StructureComponent,
-    PersonaComponent
+    PersonaComponent,
+    RivetInputComponent,
+    RivetHelperComponent,
+    RivetLabelComponent
   ],
   entryComponents: [DialogComponent, DialogComponentDialogComponent],
   imports: [
@@ -114,7 +121,7 @@ const appRoutes: Routes = [
     BrowserAnimationsModule,
     MatExpansionModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
