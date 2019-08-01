@@ -29,6 +29,25 @@
 
 export const versions = [
   {
+    version: '0.3.3',
+    date: '8/1/2019',
+    note: 'Hammerjs added, new icon, fixed styles',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: ['Added Hammerjs dependency to Rivet package']
+      },
+      {
+        category: 'Components',
+        bullets: ['Fixed buttons not having a set font causing browser defaults', 'Fixed icon button resizing']
+      },
+      {
+        category: 'Styles',
+        bullets: ['Added logout icon to icon font']
+      }
+    ]
+  },
+  {
     version: '0.2.14',
     date: '7/16/2019',
     note: 'Added icons',

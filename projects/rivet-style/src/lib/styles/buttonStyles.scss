@@ -4,6 +4,7 @@
 // Styles for all Rivet Buttons
 @mixin buttonStyle {
   font-family: $RvtFontFamily;
+  font-size: 14px;
   border-radius: 2px;
   background: none;
   border: none;
@@ -97,7 +98,6 @@ button {
   }
   &.rvt-btn-icon {
     @include buttonStyle;
-    line-height: 15px;
     [class*='rivet-icon-'] {
       display: inline-block;
       height: 14px;
