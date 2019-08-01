@@ -29,7 +29,7 @@
 
 export const versions = [
   {
-    version: '0.3.3',
+    version: '0.3.4',
     date: '8/1/2019',
     note: 'Hammerjs added, new icon, fixed styles',
     updates: [
