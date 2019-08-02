@@ -1,13 +1,13 @@
 import {
   AfterViewInit,
+  ChangeDetectorRef,
   Component,
   ElementRef,
   EventEmitter,
   HostListener,
-  Output,
-  ChangeDetectorRef,
   Input,
-  OnInit
+  OnInit,
+  Output
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
@@ -19,17 +19,19 @@ import { FormGroup } from '@angular/forms';
 export class RivetExpansionPanelComponent implements OnInit, AfterViewInit {
   @Input() formGroup?: FormGroup;
   @Output() addButtonCallback?: EventEmitter<any> = new EventEmitter();
-  @Output() deleteButtonCallback: EventEmitter<any> = new EventEmitter();
+  @Output() deleteButtonCallback?: EventEmitter<any> = new EventEmitter();
 
   defaultExpansionHeight: number;
   isDeleting = false;
   panelExpanded = false;
   panelHeight: number;
   showAddButton = false;
+  showDeleteButton = false;
   constructor(private element: ElementRef, private cd: ChangeDetectorRef) {}
 
   ngOnInit() {
     this.showAddButton = this.addButtonCallback.observers.length > 0;
+    this.showDeleteButton = this.deleteButtonCallback.observers.length > 0;
   }
 
   ngAfterViewInit() {

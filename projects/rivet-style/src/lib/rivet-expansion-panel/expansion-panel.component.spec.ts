@@ -1,15 +1,18 @@
-import { async, ComponentFixture, TestBed, fakeAsync, tick } from '@angular/core/testing';
+import { Component, ViewChild } from '@angular/core';
+import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponentModule } from '../material-component-module';
 import { RivetExpansionPanelComponent } from './expansion-panel.component';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Component, ViewChild } from '@angular/core';
 
 describe('RivetExpansionPanelComponent', () => {
   @Component({
     template: `
-      <advicent-rivet-expansion-panel (addButtonCallback)="(addButtonCallback)">
+      <advicent-rivet-expansion-panel
+        (addButtonCallback)="(addButtonCallback)"
+        (deleteButtonCallback)="(deleteButtonCallback)"
+      >
         <div header-content>Header content</div>
         <div expansion-content>Expansion content</div>
       </advicent-rivet-expansion-panel>
@@ -29,6 +32,7 @@ describe('RivetExpansionPanelComponent', () => {
   class WrapperNoCallbackComponent {
     @ViewChild(RivetExpansionPanelComponent) expansionPanel: RivetExpansionPanelComponent;
     public addButtonCallback = () => {};
+    public deleteButtonCallback = () => {};
   }
   let component: RivetExpansionPanelComponent;
   let fixture: ComponentFixture<RivetExpansionPanelComponent>;
@@ -168,6 +172,25 @@ describe('RivetExpansionPanelComponent', () => {
 
       addButton.click();
       expect(expansionPanel.addButtonCallback.emit).toHaveBeenCalledWith();
+    });
+  });
+
+  describe('delete button callback', () => {
+    it('should not show delete button if callback is not set', () => {
+      const expansionPanel = wrapperNoCallbackFixture.debugElement.componentInstance.expansionPanel;
+      spyOn(expansionPanel.deleteButtonCallback, 'emit').and.callThrough();
+
+      const deleteButton = expansionPanel.element.nativeElement.querySelector('.rivet-icon-delete');
+
+      expect(deleteButton).toBeNull();
+    });
+    it('should call a delete button callback on click (if there is one)', () => {
+      const expansionPanel = wrapperFixture.debugElement.componentInstance.expansionPanel;
+      spyOn(expansionPanel.deleteButtonCallback, 'emit').and.callThrough();
+
+      const deleteButton = expansionPanel.element.nativeElement.querySelector('.rivet-icon-delete');
+
+      expect(deleteButton).not.toBeNull();
     });
   });
 });

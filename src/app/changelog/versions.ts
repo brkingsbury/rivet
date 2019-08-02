@@ -29,6 +29,23 @@
 
 export const versions = [
   {
+    version: '0.3.5',
+    date: '8/1/2019',
+    note: 'Expansion panel configurations, import dependency',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: [
+          'Import Hammerjs dependency to app-module so projects that utilize Rivet do not need to import Hammerjs when needed'
+        ]
+      },
+      {
+        category: 'Components',
+        bullets: ['Does not show delete button for the expansion panels if not delete callbacks where passed in']
+      }
+    ]
+  },
+  {
     version: '0.3.4',
     date: '8/1/2019',
     note: 'Hammerjs added, new icon, fixed styles',

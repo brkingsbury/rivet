@@ -2,6 +2,7 @@ import { CommonModule, registerLocaleData } from '@angular/common';
 import localeFrCA from '@angular/common/locales/fr-CA';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import 'hammerjs';
 import { MaterialComponentModule } from './material-component-module';
 import { RivetExpansionPanelComponent } from './rivet-expansion-panel/expansion-panel.component';
 import { RivetStyleComponent } from './rivet-style.component';

@@ -21,7 +21,7 @@
       ></button>
       <ng-content select="[header-button-content]"></ng-content>
 
-      <button class="rvt-btn-icon rivet-icon-delete" (click)="delete()"></button>
+      <button *ngIf="showDeleteButton" class="rvt-btn-icon rivet-icon-delete" (click)="delete()"></button>
     </div>
   </div>
   <div class="expansion" [ngStyle]="{ visibility: panelExpanded ? 'visible' : 'hidden' }">
