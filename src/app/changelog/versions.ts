@@ -31,7 +31,7 @@ export const versions = [
   {
     version: '0.3.5',
     date: '8/1/2019',
-    note: 'Expansion panel configurations, import dependency',
+    note: 'Updated expansion panel configurations, import needed dependency',
     updates: [
       {
         category: 'Rivet package',
@@ -41,7 +41,7 @@ export const versions = [
       },
       {
         category: 'Components',
-        bullets: ['Does not show delete button for the expansion panels if not delete callbacks where passed in']
+        bullets: ['Expansion panels dos not show the delete button if no delete callbacks where passed in']
       }
     ]
   },
