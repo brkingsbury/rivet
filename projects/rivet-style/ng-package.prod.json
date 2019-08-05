@@ -3,5 +3,6 @@
   "dest": "../../dist/rivet-style",
   "lib": {
     "entryFile": "src/public_api.ts"
-  }
+  },
+  "whitelistedNonPeerDependencies": ["hammerjs"]
 }

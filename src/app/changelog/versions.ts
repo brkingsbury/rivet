@@ -29,6 +29,20 @@
 
 export const versions = [
   {
+    version: '0.3.6',
+    date: '8/2/2019',
+    note: 'Updated Hammerjs to be a dependency of Rivet-Style and added it as a bundled dependency.',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: [
+          'Moved Hammerjs to dependency from peer dependency.',
+          'Added Hammerjs as a bundled dependency to Rivet-Style package.'
+        ]
+      }
+    ]
+  },
+  {
     version: '0.3.5',
     date: '8/1/2019',
     note: 'Updated expansion panel configurations, import needed dependency',
