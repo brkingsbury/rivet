@@ -29,6 +29,17 @@
 
 export const versions = [
   {
+    version: '0.3.7',
+    date: '8/22/2019',
+    note: 'Disabled ViewEncapsulation for Rivet expansion panel component.',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: ['Disabled ViewEncapsulation for Rivet expansion panel component.']
+      }
+    ]
+  },
+  {
     version: '0.3.6',
     date: '8/2/2019',
     note: 'Updated Hammerjs to be a dependency of Rivet-Style and added it as a bundled dependency.',

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'advicent-rivet-style',
@@ -17,7 +17,8 @@ import { Component, OnInit } from '@angular/core';
     './styles/loadingStyles.scss',
     './styles/radioStyles.scss',
     './styles/overlayStyles.scss'
-  ]
+  ],
+  encapsulation: ViewEncapsulation.None
 })
 export class RivetStyleComponent implements OnInit {
   constructor() {}

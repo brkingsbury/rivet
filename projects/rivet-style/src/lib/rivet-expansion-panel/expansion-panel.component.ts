@@ -1,20 +1,11 @@
-import {
-  AfterViewInit,
-  ChangeDetectorRef,
-  Component,
-  ElementRef,
-  EventEmitter,
-  HostListener,
-  Input,
-  OnInit,
-  Output
-} from '@angular/core';
+import { AfterViewInit, ChangeDetectorRef, Component, ElementRef, EventEmitter, HostListener, Input, OnInit, Output, ViewEncapsulation } from '@angular/core';
 import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'advicent-rivet-expansion-panel',
   templateUrl: './expansion-panel.component.html',
-  styleUrls: ['./expansion-panel.component.scss']
+  styleUrls: ['./expansion-panel.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class RivetExpansionPanelComponent implements OnInit, AfterViewInit {
   @Input() formGroup?: FormGroup;
