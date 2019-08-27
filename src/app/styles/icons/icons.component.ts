@@ -65,7 +65,9 @@ export class IconsComponent implements OnInit {
     'auditsearch',
     'reassignclients',
     'templates',
-    'logout'
+    'logout',
+    'up-outlinearrow',
+    'down-outlinearrow'
   ];
 
   copyText(icoInput) {

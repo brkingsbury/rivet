@@ -28,6 +28,25 @@
 // -------------------------------------------
 
 export const versions = [
+{
+    version: '0.3.8',
+    date: '8/27/2019',
+    note: 'New Icons, Updated styles',
+    updates: [
+        {
+        category: 'Components',
+        bullets: ['Updated table styles']
+        },
+        {
+            category: 'Styles',
+            bullets: [
+                'Added new icons: up-outlinearrow , down-outlinearrow',
+                'Added 700 font weight to Nunito Sans font',
+                'Updated Persona with elevation guidelines'
+            ]
+        }
+    ]
+    },
   {
     version: '0.3.7',
     date: '8/22/2019',

@@ -26,7 +26,8 @@ export class ColorsComponent implements OnInit {
   chartColors = [
     { name: 'Green', var: '$rvt-good-color', color: '#26A54A', info: 'Good' },
     { name: 'Yellow', var: '$rvt-insufficient-color', color: '#F3E31D', info: 'Insufficient' },
-    { name: 'Red', var: '$rvt-bad-color', color: '#C72929', info: 'Bad' }
+    { name: 'Red', var: '$rvt-bad-color', color: '#C72929', info: 'Bad, Negative' },
+    { name: 'Invalid', var: '$rvt-warning-color', color: '#C72929', info: 'Warning Messages, Invalid'}
   ];
 
   constructor() {}

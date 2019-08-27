@@ -1,13 +1,15 @@
-<main class="a11y">
+<section class="a11y">
     <header>
         <h2 class="page-header">Accessibility</h2>
     </header>
     <section class="content-container">
         <header>
             <h5>Guidelines</h5>
-            <p>In order to make our products easier to use for everyone, we follow accessibility recommendations from
+            <p>In order to make our products easier to use for everyone, we follow accessibility recommendations
+                from
                 the
-                Web Content Accessibility Guidelines 2.1 - AA [<a href="https://www.w3.org/TR/WCAG21/" target="new">WCAG
+                Web Content Accessibility Guidelines 2.1 - AA [<a href="https://www.w3.org/TR/WCAG21/"
+                   target="new">WCAG
                     2.1</a>]. </p>
         </header>
         <header>
@@ -16,31 +18,40 @@
                 text must have a minimum contrast ratio of 4.5:1.</p>
         </header>
         <section class="a11y-contrast">
-            <img src="../../../assets/contrast_sm.jpg" alt="Example of a passing contrast color" />
-            <img src="../../../assets/contrast_sm2.jpg" alt="Example of a failing contrast color" />
+            <img src="../../../assets/contrast_sm.jpg"
+                 alt="Example of a passing contrast color" />
+            <img src="../../../assets/contrast_sm2.jpg"
+                 alt="Example of a failing contrast color" />
             <p>Color contrast can be tested at
-                <a target="new" href="http://www.accessible-colors.com">accessible-colors.com</a></p>
+                <a target="new"
+                   href="http://www.accessible-colors.com">accessible-colors.com</a></p>
         </section>
 
         <header>
             <h5>Focus states</h5>
-            <p>For focus states we use our hover state styling with the addition of the browser default outline in order
+            <p>For focus states we use our hover state styling with the addition of the browser default outline in
+                order
                 to
                 draw attention to the component for keyboard users.</p>
         </header>
 
         <div class='img-block'>
-            <img class='example-img' src='../../../assets/btn_hover.gif' alt="Hover effect on button" />
+            <img class='example-img'
+                 src='../../../assets/btn_hover.gif'
+                 alt="Hover effect on button" />
             <p>Hover style</p>
         </div>
         <div class='img-block'>
-            <img class='example-img' src='../../../assets/btn_focus.gif' alt="Focus effect on button" />
+            <img class='example-img'
+                 src='../../../assets/btn_focus.gif'
+                 alt="Focus effect on button" />
             <p>Focus style</p>
         </div>
 
         <header>
             <h5>ARIA Tags</h5>
-            <p>For custom components, created with non standard elements, we use ARIA tags to enable screen-readers to
+            <p>For custom components, created with non standard elements, we use ARIA tags to enable screen-readers
+                to
                 understand what the component is.</p>
         </header>
 
@@ -49,4 +60,55 @@
             <p>To verify that we are following accessibility standards, we need to test our work properly.</p>
         </header>
     </section>
-</main>
+
+    <section class="content-container">
+        <header>
+            <h5>Keyboard Navigation</h5>
+        </header>
+        <p>All functionality that is accomplished with a mouse, should also be achievable using only a keyboard.</p>
+        <ul>
+            <li>
+                To advance through elements of the page, users should be able to use the <code>TAB</code> key.
+            </li>
+            <li>
+                Users should also be able to reverse through elements using <code> SHIFT + TAB </code>
+            </li>
+            <li>
+                To select an element (such as a button, link, or tab), the user can hit the <code>ENTER</code> key.
+            </li>
+            <li>
+                To escape an element (such as dialogs, modals, and dropdowns) users can use the <code>ESC</code> key.
+            </li>
+            <li>
+                Within certain elements that contain extra functionality (like dropdowns and datepickers), users should be able to navigate around using the arrow keys and select options using <code>SPACE</code>
+            </li>
+            <li>
+                When navigating within components (such as dialogs), focus should remain within the component until the user closes/exits the component. No background elements should be focusable while the user is in the component.
+            </li>
+        </ul>
+    </section>
+
+    <!-- <section class="content-container">
+        <header>
+            <h5>Screen Reader Support</h5>
+        </header>
+        <h6>Icons - Alt text/ aria tags</h6>
+        <p></p>
+    </section>
+
+    <section class="content-container">
+        <header>
+            <h5>Mobile</h5>
+        </header>
+        <h6>Icon Touch Targets</h6>
+        <p>Minimum touch target size shoudl be (36px - 44px ((AAA)) ) </p>
+    </section>
+
+    <section class="content-container">
+        <header>
+            <h5>Page Structure</h5>
+        </header>
+        <h6>Headers</h6>
+        <p>Each page should start with an <code>H1</code> tag and only 1 should be used throughout the whole page. </p>
+    </section> -->
+</section>
