@@ -5,13 +5,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import 'hammerjs';
 import { MaterialComponentModule } from './material-component-module';
 import { RivetExpansionPanelComponent } from './rivet-expansion-panel/expansion-panel.component';
+import { RivetInputComponent } from './rivet-input/rivet-input.component';
+import { RivetHelperComponent } from './rivet-input-helper/rivet-input-helper.component';
+import { RivetLabelComponent } from './rivet-input-label/rivet-input-label.component';
 import { RivetStyleComponent } from './rivet-style.component';
 
 registerLocaleData(localeFrCA, 'fr-CA');
 
 @NgModule({
   imports: [CommonModule, MaterialComponentModule, FormsModule, ReactiveFormsModule],
-  declarations: [RivetStyleComponent, RivetExpansionPanelComponent],
-  exports: [RivetStyleComponent, RivetExpansionPanelComponent]
+  declarations: [RivetStyleComponent, RivetExpansionPanelComponent, RivetInputComponent, RivetHelperComponent, RivetLabelComponent],
+  exports: [RivetStyleComponent, RivetExpansionPanelComponent, RivetInputComponent, RivetHelperComponent, RivetLabelComponent]
 })
 export class RivetStyleModule {}
