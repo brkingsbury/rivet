@@ -1,0 +1,105 @@
+<h2 class="page-header">Snackbar</h2>
+
+<div class="component-container">
+    <h5>
+        Material Snackbar - with Template
+        <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/"
+            target="new"></a>
+    </h5>
+
+    <p>
+        In order to have more control over the parts within the snackbar, it is advised to use the separate template for the snackbar structure.
+    </p>
+
+    <div class="example-component">
+        <button mat-button (click)="openSnackBar2()" aria-label="Show an example snack-bar">
+            Test Snackbar
+        </button>
+    </div>
+
+    <!-- Example -->
+    <div class="example-code-header-container">
+        <a class="example-code-header" (click)="isTs2 = false; isTemp2 = false" [ngClass]="{'active': !isTs2 && !isTemp2}">HTML</a>
+        <a class="example-code-header" (click)="isTemp2 = true; isTs2 = false" [ngClass]="{'active': isTemp2}">HTML - Snackbar Template</a>
+        <a class="example-code-header" (click)="isTs2 = true; isTemp2 = false" [ngClass]="{'active': isTs2}">Typescript</a>
+    </div>
+
+    <textarea class="example-code" readonly *ngIf="!isTemp2 && !isTs2">
+<button mat-button (click)="openSnackBar2()" aria-label="Show an example snack-bar">
+    Test Snackbar
+</button>
+    </textarea>
+
+
+    <textarea class="example-code" readonly *ngIf="isTemp2 && !isTs2">
+<p class="snackbar-text">Example snackbar content</p>
+<div class="snackbar-content">
+    <p class="snackbar-text">Example snackbar content</p>
+    
+    <button class="rvt-btn-primary snackbar-action" (click)="closeSnack()">Close</button>
+</div>
+    </textarea>
+
+
+    <textarea class="example-code" readonly *ngIf="!isTemp2 && isTs2">
+constructor(private _snackBar: MatSnackBar) {}
+
+openSnackBar2() {
+    this._snackBar.openFromComponent(Snackbar2Component, {});
+}
+    </textarea>
+    <!-- End Example -->
+</div>
+
+
+<div class="component-container deprecated">
+    <h5>
+        Material Snackbar
+    </h5>
+    <p>
+        While this version of the snackbar is not deprecated, it is better to use the template to create the snackbar.
+    </p>
+
+    <div class="example-component">
+        <button mat-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+            Test Snackbar
+        </button>
+    </div>
+
+    <!-- Example -->
+    <div class="example-code-header-container">
+        <a class="example-code-header" (click)="isTs = false; isTemp = false" [ngClass]="{'active': !isTs && !isTemp}">HTML</a>
+        <!-- <a class="example-code-header" (click)="isTemp = true; isTs = false" [ngClass]="{'active': isTemp}">HTML - Dialog Template</a> -->
+        <a class="example-code-header" (click)="isTs = true; isTemp = false" [ngClass]="{'active': isTs}">Typescript</a>
+    </div>
+
+    <textarea class="example-code" readonly *ngIf="!isTemp && !isTs">
+<button mat-button (click)="openSnackBar()" aria-label="Show an example snack-bar">
+    Test Snackbar
+</button>
+    </textarea>
+
+
+    <textarea class="example-code" readonly *ngIf="isTemp && !isTs">
+<h5 mat-dialog-title>Title</h5>
+<div mat-dialog-content>
+    <p>Content</p>
+</div>
+
+<div mat-dialog-actions>
+    <button class="rvt-btn-primary">Action</button>
+    <button class="rvt-btn-text" [mat-dialog-close]>Close</button>
+</div>
+    </textarea>
+
+
+    <textarea class="example-code" readonly *ngIf="!isTemp && isTs">
+constructor(private _snackBar: MatSnackBar) {}
+
+openSnackBar(message: string, action: string) {
+    this._snackBar.open('I am a snackbar', 'Close Me', {});
+}
+    </textarea>
+    <!-- End Example -->
+</div>
+

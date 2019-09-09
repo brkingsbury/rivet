@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-// import { RouterState } from '@angular/routerState';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+    @ViewChild('content') content: ElementRef;
   difCursor = false;
   hasNav = false;
   darkMode = false;
@@ -16,6 +16,14 @@ export class AppComponent implements OnInit {
   }
   test() {
     this.darkMode = !this.darkMode;
+  }
+  skip() {
+    this.content.nativeElement.focus();
+  }
+  onKeyup(event) {
+      if (event.keyCode === 13 || event.keyCode === 32) {
+          this.skip();
+      }
   }
 
   ngOnInit() {}

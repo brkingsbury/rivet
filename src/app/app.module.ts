@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { ChangelogComponent } from './changelog/changelog.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
-import { ComponentsComponent } from './components/components.component';
+import { ComponentsComponent, ComplianceComponent, ComplianceDialogComponent } from './components/components.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import { DialogComponent, DialogComponentDialogComponent } from './components/dialog/dialog.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
@@ -38,6 +38,7 @@ import { RivetInputComponent } from '../../projects/rivet-style/src/lib/rivet-in
 import { RivetHelperComponent } from '../../projects/rivet-style/src/lib/rivet-input-helper/rivet-input-helper.component';
 import { RivetLabelComponent } from '../../projects/rivet-style/src/lib/rivet-input-label/rivet-input-label.component';
 import { AuthService } from '../../projects/rivet-style/src/lib/rivet-services/unique-name-validator';
+import { SnackbarComponent, Snackbar2Component } from './components/snackbar/snackbar.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -61,6 +62,7 @@ const appRoutes: Routes = [
   { path: 'components/nav', component: NavComponent },
   { path: 'components/expansion', component: ExpansionPanelComponent },
   { path: 'components/slider', component: SliderComponent },
+  { path: 'components/snackbar', component: SnackbarComponent },
   { path: 'changelog', component: ChangelogComponent },
   { path: 'patterns', component: PatternsComponent },
   { path: 'patterns/a11y', component: AccessibilityComponent },
@@ -103,11 +105,12 @@ const appRoutes: Routes = [
     SliderComponent,
     StructureComponent,
     PersonaComponent,
-    RivetInputComponent,
-    RivetHelperComponent,
-    RivetLabelComponent
+    SnackbarComponent,
+    Snackbar2Component,
+    ComplianceComponent,
+    ComplianceDialogComponent
   ],
-  entryComponents: [DialogComponent, DialogComponentDialogComponent],
+  entryComponents: [DialogComponent, DialogComponentDialogComponent, Snackbar2Component, ComplianceDialogComponent],
   imports: [
     BrowserAnimationsModule,
     RivetStyleModule,

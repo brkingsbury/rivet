@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { MatDialog } from '@angular/material';
 
 @Component({
   selector: 'app-components',
@@ -19,3 +20,23 @@ export class ComponentsComponent implements OnInit {
     this.currencyInput.disable();
   }
 }
+
+@Component({
+  selector: 'app-compliance-marker',
+  templateUrl: './compliance-marker-template.html'
+})
+export class ComplianceComponent {
+    constructor(public dialog: MatDialog) {}
+    openAADialog(): void {
+        const dialogRef = this.dialog.open(ComplianceDialogComponent, {
+          width: '600px',
+          autoFocus: false
+        });
+      }
+}
+
+@Component({
+  selector: 'app-compliance-dialog',
+  templateUrl: './compliance-marker-dialog-template.html'
+})
+export class ComplianceDialogComponent {}

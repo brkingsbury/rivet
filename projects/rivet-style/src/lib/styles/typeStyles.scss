@@ -45,7 +45,7 @@ textarea {
 
 a {
   font: 400 14px $RvtFontFamily;
-  text-decoration: none;
+  text-decoration: underline;
   &:hover {
     text-decoration: underline;
   }

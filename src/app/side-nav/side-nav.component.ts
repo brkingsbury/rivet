@@ -23,6 +23,7 @@ export class SideNavComponent implements OnInit {
           { name: 'Dialog', path: '/components/dialog' },
           { name: 'Tables', path: '/components/table' },
           { name: 'Tabs', path: '/components/tab' },
+          { name: 'Snackbar', path: '/components/snackbar' },
           { name: 'Text Areas', path: '/components/textarea' },
           { name: 'Slider', path: '/components/slider' },
           { name: 'Expansion Panel', path: '/components/expansion' },

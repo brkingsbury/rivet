@@ -1,0 +1,47 @@
+@import '../../lib/styles/typeStyles.scss';
+@import './rivetTheme.scss';
+
+.cdk-overlay-container {
+    .mat-snack-bar-container {
+        background: $rvt-neutral-100;
+        box-shadow: none;
+        font-family: $RvtFontFamily;
+        padding: 20px;
+        border-radius: 2px;
+        .snackbar-content {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            p.snackbar-text {
+                display: inline-block;
+                color: $rvt-neutral-900
+            }
+            button.snackbar-action {
+                background: $rvt-neutral-600;
+                border-radius: 2px;
+                &:focus {
+                    outline: 2px solid #4D90FE;
+                }
+                span {
+                    color: $rvt-white;
+                }
+            }
+        }
+        .mat-simple-snackbar{
+            color: $rvt-neutral-900;
+        }
+        .mat-simple-snackbar-action {
+            button.mat-button {
+                background: $rvt-neutral-600;
+                border-radius: 2px;
+                &:focus {
+                    outline: 2px solid #4D90FE;
+                }
+                span {
+                    color: $rvt-white;
+                }
+            }
+        }
+    }
+}
