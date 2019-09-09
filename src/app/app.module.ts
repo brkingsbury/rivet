@@ -108,7 +108,10 @@ const appRoutes: Routes = [
     SnackbarComponent,
     Snackbar2Component,
     ComplianceComponent,
-    ComplianceDialogComponent
+    ComplianceDialogComponent,
+    RivetInputComponent,
+    RivetHelperComponent,
+    RivetLabelComponent
   ],
   entryComponents: [DialogComponent, DialogComponentDialogComponent, Snackbar2Component, ComplianceDialogComponent],
   imports: [
