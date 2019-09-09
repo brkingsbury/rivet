@@ -22,6 +22,8 @@ export class Snackbar2Component {
 export class SnackbarComponent implements OnInit {
     isTemp = false;
     isTs = false;
+    isTemp2 = false;
+    isTs2 = false;
     constructor(private _snackBar: MatSnackBar) { }
 
     openSnackBar(message: string, action: string) {

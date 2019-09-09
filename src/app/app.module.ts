@@ -34,9 +34,6 @@ import { PerformanceComponent } from './patterns/performance/performance.compone
 import { SliderComponent } from './components/slider/slider.component';
 import { StructureComponent } from './patterns/structure/structure.component';
 import { PersonaComponent } from './styles/persona/persona.component';
-import { RivetInputComponent } from '../../projects/rivet-style/src/lib/rivet-input/rivet-input.component';
-import { RivetHelperComponent } from '../../projects/rivet-style/src/lib/rivet-input-helper/rivet-input-helper.component';
-import { RivetLabelComponent } from '../../projects/rivet-style/src/lib/rivet-input-label/rivet-input-label.component';
 import { AuthService } from '../../projects/rivet-style/src/lib/rivet-services/unique-name-validator';
 import { SnackbarComponent, Snackbar2Component } from './components/snackbar/snackbar.component';
 
@@ -108,10 +105,7 @@ const appRoutes: Routes = [
     SnackbarComponent,
     Snackbar2Component,
     ComplianceComponent,
-    ComplianceDialogComponent,
-    RivetInputComponent,
-    RivetHelperComponent,
-    RivetLabelComponent
+    ComplianceDialogComponent
   ],
   entryComponents: [DialogComponent, DialogComponentDialogComponent, Snackbar2Component, ComplianceDialogComponent],
   imports: [
