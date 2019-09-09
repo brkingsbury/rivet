@@ -30,7 +30,7 @@
 export const versions = [
     {
         version: '0.3.10',
-        date: '9/06/2019',
+        date: '9/09/2019',
         note: 'Library updates, Snackbar added',
         updates: [
             {
