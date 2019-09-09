@@ -20,11 +20,17 @@ export class ComponentsComponent implements OnInit {
     this.currencyInput.disable();
   }
 }
+@Component({
+    selector: 'app-compliance-dialog',
+    templateUrl: './compliance-marker-dialog-template.html'
+  })
+  export class ComplianceDialogComponent {}
 
 @Component({
   selector: 'app-compliance-marker',
   templateUrl: './compliance-marker-template.html'
 })
+
 export class ComplianceComponent {
     constructor(public dialog: MatDialog) {}
     openAADialog(): void {
@@ -35,8 +41,4 @@ export class ComplianceComponent {
       }
 }
 
-@Component({
-  selector: 'app-compliance-dialog',
-  templateUrl: './compliance-marker-dialog-template.html'
-})
-export class ComplianceDialogComponent {}
+
