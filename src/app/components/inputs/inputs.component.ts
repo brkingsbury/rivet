@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { Validators, FormGroup } from '@angular/forms';
-import {
-  AuthService,
-  LoginAsyncValidator
-} from '../../../../projects/rivet-style/src/lib/rivet-services/unique-name-validator';
+// import { Validators, FormGroup } from '@angular/forms';
+// import {
+//   AuthService,
+//   LoginAsyncValidator
+// } from '../../../../projects/rivet-style/src/lib/rivet-services/unique-name-validator';
 
 @Component({
   selector: 'app-inputs',
@@ -11,11 +11,11 @@ import {
   styleUrls: ['../components.component.scss']
 })
 export class InputsComponent implements OnInit {
-  public nameValidation = [Validators.minLength(2)];
-  public uniqueValidation;
-  private JSON = JSON;
-  constructor(private auth: AuthService) {
-    this.uniqueValidation = LoginAsyncValidator(auth);
-  }
+//   public nameValidation = [Validators.minLength(2)];
+//   public uniqueValidation;
+//   private JSON = JSON;
+//   constructor(private auth: AuthService) {
+//     this.uniqueValidation = LoginAsyncValidator(auth);
+//   }
   ngOnInit() {}
 }

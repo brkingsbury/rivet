@@ -1,17 +1,18 @@
-<h2 class="page-header">Inputs</h2>
+<h2 class="page-header">
+    Inputs
+    <a class="rivet-icon-pdf" title="spec sheet" href="../../assets/specs/Polaris_Input_Specs.pdf"
+    target="new"></a>
+    <!-- <a class="sketch" title="sketch file" href="" target="new">
+        <img src="../../assets/sketch.svg"/>
+    </a> -->
+    <!-- <app-compliance-marker></app-compliance-marker> -->
+</h2>
 
 <!-- Test Inputs -->
 
 <div class="component-container">
   <h5 id="matInput">
-    Rivet Text Inputs
-    <a
-      class="rivet-icon-pdf"
-      id="inputs"
-      target="new"
-      href="../../assets/specs/Polaris_Input_Specs.pdf"
-      title="spec sheet"
-    ></a>
+    Material Text Inputs
   </h5>
   <p>
     Inputs with labels are used for standalone inputs, where the labels refer to what the single input is asking for.
@@ -19,6 +20,95 @@
   </p>
 
   <div class="example-component">
+    <form>
+      <mat-form-field>
+        <input matInput placeholder="Label" value="Input Text" />
+        <mat-hint>Helper Text</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Label" value="" />
+        <mat-hint>Helper Text</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="invalid">
+        <input matInput placeholder="Label" value="Invalid Input Text" />
+        <mat-hint>This is invalid</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field class="mat-form-field">
+        <input matInput placeholder="Label" value="Disabled Input Text" disabled />
+        <mat-hint>This is disabled</mat-hint>
+      </mat-form-field>
+    </form>
+  </div>
+
+  <!-- Example -->
+  <p class="example-code-header">HTML</p>
+  <textarea class="example-code" readonly>
+<form>
+    <mat-form-field>
+        <input matInput placeholder="Label">
+        <mat-hint>Helper Text</mat-hint>
+    </mat-form-field>
+</form>
+    </textarea
+  >
+  <!-- End Example -->
+</div>
+
+
+<!-- <div class="component-container">
+    <h5 id="matInput">
+      Rivet Text Inputs
+      <a
+        class="rivet-icon-pdf"
+        id="inputs"
+        target="new"
+        href="../../assets/specs/Polaris_Input_Specs.pdf"
+        title="spec sheet"
+      ></a>
+    </h5>
+    <p>
+      Inputs with labels are used for standalone inputs, where the labels refer to what the single input is asking for.
+      Inputs without labels are used for multiple/form inputs as the form itself will contain the labels.
+    </p>
+    <div class="example-component">
+        <form>
+            <advicent-rivet-input
+              name="TestSimple"
+              type="text"
+            >
+              <advicent-rivet-helper>Helper Text</advicent-rivet-helper>
+            </advicent-rivet-input>
+      
+            <advicent-rivet-input
+              name="TestPass"
+              type="password"
+            >
+              <advicent-rivet-label>Password</advicent-rivet-label>
+              <advicent-rivet-helper>Helper Text</advicent-rivet-helper>
+            </advicent-rivet-input>
+      
+            <advicent-rivet-input name="Disabled" disabled value="Can't Change This">
+              <advicent-rivet-label>Disabled</advicent-rivet-label>
+              <advicent-rivet-helper>Helper Text</advicent-rivet-helper>
+            </advicent-rivet-input>
+      
+            <advicent-rivet-input name="Readonly" readonly value="Read-Only Data">
+              <advicent-rivet-label>Read-Only</advicent-rivet-label>
+              <advicent-rivet-helper>Helper Text</advicent-rivet-helper>
+            </advicent-rivet-input>
+      
+            <advicent-rivet-input name="Icon" icon="datepicker">
+              <advicent-rivet-label>With Icon</advicent-rivet-label>
+              <advicent-rivet-helper>Helper Text</advicent-rivet-helper>
+            </advicent-rivet-input>
+          </form>
+    </div>
+  </div> -->
+
+  <!-- <div class="example-component">
     <form>
       <advicent-rivet-input
         [validators]="nameValidation"
@@ -79,55 +169,55 @@
         </advicent-rivet-helper>
       </advicent-rivet-input>
     </form>
-  </div>
+  </div> -->
 
   <!-- Example -->
-  <p class="example-code-header">HTML</p>
+  <!-- <p class="example-code-header">HTML</p>
   <textarea class="example-code" readonly>
-<form>
+<form> -->
 
   <!-- Basic Implementation: -->
-  <advicent-rivet-input name="TestSimple">
+  <!-- <advicent-rivet-input name="TestSimple">
     <advicent-rivet-helper>Helper Text</advicent-rivet-helper>
-  </advicent-rivet-input>
+  </advicent-rivet-input> -->
 
   <!-- Passes most HTML input attributes to the input: -->
   <!-- name, type, value, autocomplete, autofocus, disabled, form, list, readonly, required, and tabindex -->
-  <advicent-rivet-input name="TestPass" type="password">
+  <!-- <advicent-rivet-input name="TestPass" type="password">
     <advicent-rivet-label>Password</advicent-rivet-label>
     <advicent-rivet-helper>Helper Text</advicent-rivet-helper>
-  </advicent-rivet-input>
+  </advicent-rivet-input> -->
 
   <!-- Disabled: -->
-  <advicent-rivet-input name="Disabled" type="text" disabled value="Can't Change This">
+  <!-- <advicent-rivet-input name="Disabled" type="text" disabled value="Can't Change This">
     <advicent-rivet-label>Disabled</advicent-rivet-label>
     <advicent-rivet-helper>Helper Text</advicent-rivet-helper>
-  </advicent-rivet-input>
+  </advicent-rivet-input> -->
 
   <!-- ReadOnly: -->
-  <advicent-rivet-input name="ReadOnly" type="text" readonly value="Read-Only Data">
+  <!-- <advicent-rivet-input name="ReadOnly" type="text" readonly value="Read-Only Data">
     <advicent-rivet-label>Read-Only</advicent-rivet-label>
     <advicent-rivet-helper>Helper Text</advicent-rivet-helper>
-  </advicent-rivet-input>
+  </advicent-rivet-input> -->
 
   <!-- The 'icon' attribute takes the name of any existing Rivet icon: -->
   <!-- (see /style/icon ) -->
-  <advicent-rivet-input name="Icon" type="text" icon="datepicker">
+  <!-- <advicent-rivet-input name="Icon" type="text" icon="datepicker">
     <advicent-rivet-label>With Icon</advicent-rivet-label>
     <advicent-rivet-helper>Helper Text</advicent-rivet-helper>
-  </advicent-rivet-input>
+  </advicent-rivet-input> -->
 
   <!-- Validation: -->
   <!-- [validators] takes an array of Angular Validator objects -->
   <!-- [ruleset] takes a ruleset object, to be passed to a service for conversion to validators (Service WIP) -->
   <!-- For helper text, errors can be accessed through the control.errors object -->
-  <advicent-rivet-input [validators]="nameValidation" [ruleset]="\'this service is a mockup\'" name="Error" value="no" #EIInv>
+  <!-- <advicent-rivet-input [validators]="nameValidation" [ruleset]="\'this service is a mockup\'" name="Error" value="no" #EIInv>
     <advicent-rivet-label>Invalid Input</advicent-rivet-label>
     <advicent-rivet-helper *ngIf="EIInv.errors && EIInv.errors.minlength">Error Message</advicent-rivet-helper>
-  </advicent-rivet-input>
+  </advicent-rivet-input> -->
 
-</form>
+<!-- </form>
     </textarea
-  >
+  > -->
   <!-- End Example -->
-</div>
+<!-- </div> -->
