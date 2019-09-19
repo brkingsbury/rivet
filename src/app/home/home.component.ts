@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { versions } from '../changelog/versions';
+import { versions } from '../changelog/versions/versions.component';
 
 @Component({
   selector: 'app-home',

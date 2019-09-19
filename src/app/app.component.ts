@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   difCursor = false;
   hasNav = false;
   darkMode = false;
+  keyYes = false;
 
   toggleCursor() {
     this.difCursor = !this.difCursor;
@@ -24,6 +25,16 @@ export class AppComponent implements OnInit {
       if (event.keyCode === 13 || event.keyCode === 32) {
           this.skip();
       }
+  }
+
+  onKeydown(event) {
+      if (event.keyCode === 9) {
+          this.keyYes = true;
+      }
+  }
+
+  endFocus() {
+      this.keyYes = false;
   }
 
   ngOnInit() {}

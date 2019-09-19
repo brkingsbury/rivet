@@ -36,6 +36,8 @@ import { StructureComponent } from './patterns/structure/structure.component';
 import { PersonaComponent } from './styles/persona/persona.component';
 import { AuthService } from '../../projects/rivet-style/src/lib/rivet-services/unique-name-validator';
 import { SnackbarComponent, Snackbar2Component } from './components/snackbar/snackbar.component';
+import { LinksComponent } from './components/links/links.component';
+import { VersionsComponent } from './changelog/versions/versions.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -60,7 +62,9 @@ const appRoutes: Routes = [
   { path: 'components/expansion', component: ExpansionPanelComponent },
   { path: 'components/slider', component: SliderComponent },
   { path: 'components/snackbar', component: SnackbarComponent },
-  { path: 'changelog', component: ChangelogComponent },
+  { path: 'components/link', component: LinksComponent },
+  { path: 'changelog/roadmap', component: ChangelogComponent },
+  { path: 'changelog/versions' , component: VersionsComponent },
   { path: 'patterns', component: PatternsComponent },
   { path: 'patterns/a11y', component: AccessibilityComponent },
   { path: 'patterns/performance', component: PerformanceComponent },
@@ -105,7 +109,9 @@ const appRoutes: Routes = [
     SnackbarComponent,
     Snackbar2Component,
     ComplianceComponent,
-    ComplianceDialogComponent
+    ComplianceDialogComponent,
+    LinksComponent,
+    VersionsComponent
   ],
   entryComponents: [DialogComponent, DialogComponentDialogComponent, Snackbar2Component, ComplianceDialogComponent],
   imports: [

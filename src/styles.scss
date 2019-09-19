@@ -54,3 +54,16 @@ code {
   font-family: 'Courier New', Courier, monospace;
   padding: 2px 4px;
 }
+
+// Keyboard only focus styles until implemented in style module
+body div:not(.keyFocus) {
+    button[class^="rvt-btn"]:focus, button:active:focus {
+        outline: none;
+    }  
+}
+.keyFocus {
+    button[class^="rvt-btn"]:not(:active):focus {
+        @include keyboard-focus-style;
+    }
+}
+

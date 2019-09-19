@@ -1,0 +1,19 @@
+<h2 class="page-header">Version History</h2>
+
+<div class="component-container">
+    <h5 id="version">Latest version</h5>
+    <div class="version-history">
+      <div *ngFor="let version of versions">
+        <h5>{{ version.version }}&nbsp;</h5>
+        <span>- {{ version.date | date }}</span>
+        <h6 class="release-notes">{{ version.note }}</h6>
+        <ul *ngFor="let update of version.updates">
+          {{
+            update.category
+          }}
+          <li *ngFor="let bullet of update.bullets">{{ bullet }}</li>
+        </ul>
+        <hr />
+      </div>
+    </div>
+  </div>

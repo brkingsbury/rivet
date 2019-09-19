@@ -1,4 +1,5 @@
-<div class="style-wrapper" [ngClass]="{ fancy: difCursor, 'dark-mode': darkMode }">
+<a #main class="skip-link" tabindex="0" (click)="skip()" (keyup)="onKeyup($event)">Skip Navigation</a>
+<div class="style-wrapper" [ngClass]="{ fancy: difCursor, 'dark-mode': darkMode, 'keyFocus': keyYes }" (keydown)="onKeydown($event)" (click)="endFocus()">
   <!-- <button class="rvt-btn-standard test-btn" (click)="sidenav.toggle()">Test</button> -->
   <!-- <button class="rvt-btn-icon mode-btn" (click)="test()">
         <span class="rivet-icon-retirement"></span>
@@ -10,7 +11,9 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <router-outlet></router-outlet>
+        <div #content tabindex="1">
+            <router-outlet></router-outlet>
+        </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

@@ -2,7 +2,7 @@
   <img src="../../assets/arrow.svg" alt="arrow logo" />
   <div class="splash-text">
     <h1 class="splash-header">Rivet</h1>
-    <span>v {{ versions[0].version }}</span>
+    <a [routerLink]="['/changelog/versions']">v {{ versions[0].version }}</a>
   </div>
 </div>
 
@@ -27,7 +27,7 @@
 
   <div class="part">
     <object type="image/svg+xml" data="../../assets/changelog.svg" [routerLink]="['/changelog']">uh oh</object>
-    <a tabindex="1" [routerLink]="['/changelog']">Changelog</a>
+    <a tabindex="1" [routerLink]="['/changelog/roadmap']">Changelog</a>
     <p>Rivet is ever-evolving. Keep tabs on its status and scheduled releases here.</p>
   </div>
 </div>

@@ -1,7 +1,19 @@
-<h2 class="page-header">Changelog</h2>
+<h2 class="page-header">Roadmap</h2>
 
 <div class="component-container">
-  <h5 id="roadmap">Roadmap</h5>
+    <h5>Planned updates</h5>
+    <ul>
+        Improvements
+        <li>Keyboard only focus styles</li>
+    </ul>
+    <ul>
+        Bug Fixes
+        <li>Fix anchor tag (link) styles in Tabs.</li>
+    </ul>
+</div>
+
+<div class="component-container">
+    <h5>Planned components</h5>
   <p>
     This list is a rough estimate for upcoming tasks in the UX backlog. If there are components that your team will need
     sooner please let the UX team know.
@@ -79,24 +91,4 @@
     <li>Toggle Switch</li>
     <li>Slider</li>
   </ul>
-</div>
-
-<hr />
-
-<div class="component-container">
-  <h5 id="version">Versions</h5>
-  <div class="version-history">
-    <div *ngFor="let version of versions">
-      <h5>{{ version.version }}&nbsp;</h5>
-      <span>- {{ version.date | date }}</span>
-      <h6 class="release-notes">{{ version.note }}</h6>
-      <ul *ngFor="let update of version.updates">
-        {{
-          update.category
-        }}
-        <li *ngFor="let bullet of update.bullets">{{ bullet }}</li>
-      </ul>
-      <hr />
-    </div>
-  </div>
 </div>

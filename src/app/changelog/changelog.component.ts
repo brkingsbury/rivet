@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { versions } from './versions';
 
 @Component({
   selector: 'app-changelog',
@@ -7,8 +6,6 @@ import { versions } from './versions';
   styleUrls: ['./changelog.component.scss']
 })
 export class ChangelogComponent implements OnInit {
-  versions = versions;
-
   constructor() {}
 
   ngOnInit() {}

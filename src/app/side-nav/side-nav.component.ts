@@ -15,6 +15,7 @@ export class SideNavComponent implements OnInit {
         links: [
         //   { name: 'Overview', path: '/components' },
           { name: 'Buttons', path: '/components/button' },
+          { name: 'Links', path: '/components/link' },
           { name: 'Inputs', path: '/components/input' },
           { name: 'Dropdowns', path: '/components/dropdown' },
           { name: 'Radio Button', path: '/components/radio' },
@@ -52,7 +53,10 @@ export class SideNavComponent implements OnInit {
       },
       {
         title: 'Changelog',
-        links: [{ name: 'Roadmap', path: '/changelog' }, { name: 'Versions', path: '/changelog' }]
+        links: [
+            { name: 'Roadmap', path: '/changelog/roadmap' },
+            { name: 'Versions', path: '/changelog/versions' }
+        ]
       }
     ]
   };
