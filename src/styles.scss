@@ -55,6 +55,13 @@ code {
   padding: 2px 4px;
 }
 
+// Used until keyboard style is included in style module
+@mixin keyboard-focus-style {
+    outline: 2px solid #4D90FE;
+    outline-offset: 2px;
+}
+//--------
+
 // Keyboard only focus styles until implemented in style module
 body div:not(.keyFocus) {
     button[class^="rvt-btn"]:focus, button:active:focus {
