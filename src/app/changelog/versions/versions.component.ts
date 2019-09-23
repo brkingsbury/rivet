@@ -32,6 +32,22 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
     {
+        version: '0.3.11',
+        date: '9/23/2019',
+        note: 'Icon font builder added, build process updated',
+        updates: [
+            {
+                category: 'Rivet package',
+                bullets: [
+                    'Add icon-font-generator as a dependency',
+                    'Moved all icon svgs to rivet-icon folder',
+                    'Added Handlebars template to facilitate icon style build',
+                    'Added "build_icons" step to build_lib script'
+                ]
+            }
+        ]
+    },
+    {
         version: '0.3.10',
         date: '9/09/2019',
         note: 'Library updates, Snackbar added',
