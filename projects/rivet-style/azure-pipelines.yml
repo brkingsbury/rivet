@@ -1,0 +1,55 @@
+name: $(BuildDefinitionName)_$(SourceBranchName)_$(Date:yyyyMMdd)$(Rev:.r)
+
+trigger:
+  batch: true
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - projects/rivet-style/*
+    - package.json
+    - angular.json
+
+stages:
+- stage: 'Build'
+  displayName: 'Build - Test - Publish'
+  jobs:
+  - job: Build
+    pool:
+      name: Hosted VS2017
+      demands: npm
+      
+    steps:
+    - task: Npm@1
+      displayName: 'npm install (rivet-style)'
+      inputs:
+        workingDir: '$(System.DefaultWorkingDirectory)/projects/rivet-style'
+        verbose: false
+
+    - task: Npm@1
+      displayName: 'npm install (style guide)'
+      inputs:
+        workingDir: '$(System.DefaultWorkingDirectory)'
+        verbose: false
+      
+    - script: 'npm run-script lint'
+      workingDirectory: '$(System.DefaultWorkingDirectory)'
+      displayName: 'ng lint'
+      
+    - script: 'npm run-script build_lib'
+      workingDirectory: '$(System.DefaultWorkingDirectory)'
+      displayName: 'ng build'
+  
+    - script: 'npm run-script test-package-prod'
+      workingDirectory: '$(System.DefaultWorkingDirectory)'
+      displayName: 'ng test'
+  
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Rivet-Style Artifacts'
+      inputs:
+        PathtoPublish: '$(System.DefaultWorkingDirectory)\dist\rivet-style'
+        ArtifactName: 'rivet-style'
+
+#- stage: 'Deploy'
+  # TODO when certian features are implemented
