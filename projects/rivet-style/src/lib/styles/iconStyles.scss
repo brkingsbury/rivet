@@ -1,41 +1,46 @@
-@charset "UTF-8";
+// This SASS file is generaged by the icon-font-generator library based on rivet-style/src/lib/rivet-icons/sass-template.hbs
+// The .hbs extension is a Handlebars template, which is a templating language utilized by the icon-font-generator library
+// The library loads svg icons from rivet-style/src/lib/rivet-icons/svgs and compiles them to font files in rivet-style/src/lib/rivet-icons
+// Icon fonts rebuild on calling the build_lib command using 'npm run-script build_lib'
+// To rebuild the icon font independently run build_icons with 'npm run-script build_icons'
 
 $rivet-icon-path: '../rivet-icons' !default;
 
 @font-face {
-  font-family: 'rivet-icons';
-  src: url('#{$rivet-icon-path}/rivet-icons.eot?#iefix') format('embedded-opentype'),
-    url('#{$rivet-icon-path}/rivet-icons.woff') format('woff'),
-    url('#{$rivet-icon-path}/rivet-icons.ttf') format('truetype'),
-    url('#{$rivet-icon-path}/rivet-icons.svg#rivet-icons') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'rivet-icons';
+    src: url("#{$rivet-icon-path}/rivet-icons.eot?e20c6ac5b5d62215255435df9efa3833?#iefix") format("embedded-opentype"),
+url("#{$rivet-icon-path}/rivet-icons.woff2?e20c6ac5b5d62215255435df9efa3833") format("woff2"),
+url("#{$rivet-icon-path}/rivet-icons.woff?e20c6ac5b5d62215255435df9efa3833") format("woff"),
+url("#{$rivet-icon-path}/rivet-icons.ttf?e20c6ac5b5d62215255435df9efa3833") format("truetype"),
+url("#{$rivet-icon-path}/rivet-icons.svg?e20c6ac5b5d62215255435df9efa3833#rivet-icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
 }
 
 [data-icon]:before {
-  font-family: 'rivet-icons' !important;
-  content: attr(data-icon);
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'rivet-icons' !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 [class^='rivet-icon-']:before,
 [class*=' rivet-icon-']:before {
-  font-family: 'rivet-icons' !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  font-variant: normal !important;
-  text-transform: none !important;
-  speak: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font-family: 'rivet-icons' !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @mixin config-icon-content($prefix, $content...) {
@@ -47,64 +52,72 @@ $rivet-icon-path: '../rivet-icons' !default;
 }
 @include config-icon-content(
   'rivet-icon-',
-  'add' '\61',
-  'exclamation1' '\74',
-  'arrange' '\41',
-  'amount' '\42',
-  'caret-down' '\79',
-  'caret-left' '\7a',
-  'caret-right' '\78',
-  'caret-up' '\77',
-  'bell' '\43',
-  'beginning' '\44',
-  'business-admin' '\45',
-  'calculator' '\46',
-  'chart' '\47',
-  'life-insurance' '\68',
-  'help' '\66',
-  'file' '\70',
-  'graph' '\48',
-  'family' '\49',
-  'education' '\65',
-  'end' '\4a',
-  'edit' '\72',
-  'disability-insurance' '\64',
-  'delete' '\63',
-  'datepicker' '\62',
-  'person' '\6a',
-  'check' '\4b',
-  'sync' '\69',
-  'locked' '\4c',
-  'long-term-care-insurance' '\67',
-  'purchase' '\6b',
-  'menu-close' '\4d',
-  'menu-hamburger' '\4e',
-  'more' '\4f',
-  'next' '\50',
-  'pdf' '\51',
-  'presentation' '\52',
-  'previous' '\53',
-  'resync' '\6e',
-  'reporteditor' '\54',
-  'worddoc' '\55',
-  'unlocked' '\56',
-  'subtract' '\6d',
-  'settings' '\57',
-  'search' '\58',
-  'retirement' '\6f',
-  'reset' '\6c',
-  'critical-illness' '\59',
-  'child' '\71',
-  'clock' '\73',
-  'estimate' '\75',
-  'exclamation2' '\76',
-  'move-up' '\36',
-  'move-down' '\37',
-  'star' '\38',
-  'auditsearch' '\39',
-  'reassignclients' '\21',
-  'templates' '\40',
-  'logout' '\23',
-  'up-outlinearrow' '\24',
-  'down-outlinearrow' '\25'
+  'add' '\f101',
+  'admin' '\f102',
+  'amount' '\f103',
+  'arrange' '\f104',
+  'auditsearch' '\f105',
+  'beginning' '\f106',
+  'bell' '\f107',
+  'business-admin' '\f108',
+  'calculator' '\f109',
+  'caret-down' '\f10a',
+  'caret-left' '\f10b',
+  'caret-right' '\f10c',
+  'caret-up' '\f10d',
+  'chart' '\f10e',
+  'check' '\f10f',
+  'child' '\f110',
+  'clock' '\f111',
+  'copy' '\f112',
+  'critical-illness' '\f113',
+  'datepicker' '\f114',
+  'delete' '\f115',
+  'disability-insurance' '\f116',
+  'down-outlinearrow' '\f117',
+  'edit' '\f118',
+  'education' '\f119',
+  'end' '\f11a',
+  'estimate' '\f11b',
+  'exclamation1' '\f11c',
+  'exclamation2' '\f11d',
+  'family' '\f11e',
+  'file' '\f11f',
+  'flower' '\f120',
+  'graph' '\f121',
+  'help' '\f122',
+  'import' '\f123',
+  'life-insurance' '\f124',
+  'locked' '\f125',
+  'logout' '\f126',
+  'long-term-care-insurance' '\f127',
+  'menu-close' '\f128',
+  'menu-hamburger' '\f129',
+  'more' '\f12a',
+  'move-down' '\f12b',
+  'move-up' '\f12c',
+  'new-window' '\f12d',
+  'next' '\f12e',
+  'pdf' '\f12f',
+  'person' '\f130',
+  'presentation' '\f131',
+  'previous' '\f132',
+  'purchase' '\f133',
+  'reassignclients' '\f134',
+  'reporteditor' '\f135',
+  'reset' '\f136',
+  'resync' '\f137',
+  'retirement' '\f138',
+  'search' '\f139',
+  'settings' '\f13a',
+  'star' '\f13b',
+  'subtract' '\f13c',
+  'sync' '\f13d',
+  'table' '\f13e',
+  'templates' '\f13f',
+  'text' '\f140',
+  'transfers' '\f141',
+  'unlocked' '\f142',
+  'up-outlinearrow' '\f143',
+  'worddoc' '\f144'
 );

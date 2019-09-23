@@ -1,0 +1,58 @@
+// This SASS file is generaged by the icon-font-generator library based on rivet-style/src/lib/rivet-icons/sass-template.hbs
+// The .hbs extension is a Handlebars template, which is a templating language utilized by the icon-font-generator library
+// The library loads svg icons from rivet-style/src/lib/rivet-icons/svgs and compiles them to font files in rivet-style/src/lib/rivet-icons
+// Icon fonts rebuild on calling the build_lib command using 'npm run-script build_lib'
+// To rebuild the icon font independently run build_icons with 'npm run-script build_icons'
+
+$rivet-icon-path: '../rivet-icons' !default;
+
+@font-face {
+    font-family: '{{fontName}}';
+    src: {{{src}}};
+    font-weight: normal;
+    font-style: normal;
+}
+
+[data-icon]:before {
+    font-family: 'rivet-icons' !important;
+    content: attr(data-icon);
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+[class^='rivet-icon-']:before,
+[class*=' rivet-icon-']:before {
+    font-family: 'rivet-icons' !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal !important;
+    text-transform: none !important;
+    speak: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin config-icon-content($prefix, $content...) {
+  @each $i in $content {
+    .#{$prefix}#{nth($i, 1)}:before {
+      content: nth($i, 2);
+    }
+  }
+}
+@include config-icon-content(
+  '{{classPrefix}}',
+{{#each codepoints}}
+{{#if @last}}
+  '{{@key}}' '\\{{this}}'
+{{else}}
+  '{{@key}}' '\\{{this}}',
+{{/if}}
+{{/each}}
+);
