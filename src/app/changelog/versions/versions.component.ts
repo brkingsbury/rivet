@@ -31,7 +31,7 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
-    version: '0.3.12',
+    version: '0.3.13',
     date: '9/23/2019',
     note: 'Icon font builder added, build process updated',
     updates: [
