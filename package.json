@@ -11,7 +11,7 @@
     "test-package-prod": "ng test rivet-style --watch=false --browsers=ChromeHeadless --code-coverage",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build_lib": "npm run-script build_icons && npm run build_lib_prod && npm run copy_lib_assets",
+    "build_lib": "npm run build_lib_prod && npm run copy_lib_assets",
     "build_lib_prod": "ng build --prod rivet-style",
     "copy_lib_assets": "npm run copy_lib_icons && npm run copy_lib_styles",
     "copy_lib_icons": "cpx projects/rivet-style/src/lib/rivet-icons/* dist/rivet-style/lib/rivet-icons/",
