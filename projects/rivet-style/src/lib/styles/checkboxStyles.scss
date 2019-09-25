@@ -60,7 +60,7 @@ mat-checkbox.mat-checkbox {
 
       &::before {
         font-family: 'rivet-icons';
-        content: '\4b';
+        content: '\f10f';
         font-size: 10px;
         font-weight: 600;
         color: $rvt-white;
@@ -91,7 +91,7 @@ mat-checkbox.mat-checkbox {
     .mat-checkbox-background {
       &::before {
         font-family: 'rivet-icons';
-        content: '\6d';
+        content: '\f13c';
         font-size: 10px;
         color: $rvt-white;
         font-weight: 400;
@@ -238,7 +238,7 @@ $CheckboxSize: 18px;
 
       &:after {
         font: 600 10px 'rivet-icons';
-        content: '\4b';
+        content: '\f10f';
         color: $rvt-white;
       }
     }

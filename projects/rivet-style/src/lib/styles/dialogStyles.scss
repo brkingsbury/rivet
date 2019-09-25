@@ -12,11 +12,11 @@
     box-shadow: none;
     background: $rvt-white;
     padding: 20px 10px 10px 20px;
-    h5.mat-dialog-title {
+    .mat-dialog-title {
       margin: 0 0 20px 0;
       padding: 0;
       position: relative;
-      font-family: $RvtFontFamily;
+      font: 700 24px $RvtFontFamily;
       &:after {
         content: '';
         position: absolute;
