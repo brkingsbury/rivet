@@ -27,7 +27,7 @@ export class RivetAccordionGroupComponent implements AfterViewInit, OnDestroy {
     this.panelCollection.forEach(function(panel, i) {
       panel.panelEmitter
         .pipe(
-          takeUntil(this.unsubscribe),
+          takeUntil(component.unsubscribe),
           tap(() => component.closeOtherPanels(i))
         )
         .subscribe();

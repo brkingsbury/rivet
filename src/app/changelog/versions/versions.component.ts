@@ -31,6 +31,21 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.3.16',
+    date: '10/7/2019',
+    note: 'Added mini expansion panel and accordion group',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: [
+          'Added advicent-rivet-mini-expansion-panel',
+          'Added advicent-rivet-accordion-group',
+          'both components can be found under components/mini expansion panel'
+        ]
+      }
+    ]
+  },
+  {
     version: '0.3.13',
     date: '9/23/2019',
     note: 'Icon font builder added, build process updated',
