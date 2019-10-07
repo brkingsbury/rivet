@@ -13,7 +13,7 @@ export class SideNavComponent implements OnInit {
       {
         title: 'Components',
         links: [
-        //   { name: 'Overview', path: '/components' },
+          //   { name: 'Overview', path: '/components' },
           { name: 'Buttons', path: '/components/button' },
           { name: 'Links', path: '/components/link' },
           { name: 'Inputs', path: '/components/input' },
@@ -28,6 +28,7 @@ export class SideNavComponent implements OnInit {
           { name: 'Text Areas', path: '/components/textarea' },
           { name: 'Slider', path: '/components/slider' },
           { name: 'Expansion Panel', path: '/components/expansion' },
+          { name: 'Mini Expansion Panel', path: '/components/miniexpansion' },
           { name: 'Loading', path: '/components/loading' },
           { name: 'Navigation', path: '/components/nav' }
         ]
@@ -35,7 +36,7 @@ export class SideNavComponent implements OnInit {
       {
         title: 'Style',
         links: [
-        //   { name: 'Overview', path: '/style' },
+          //   { name: 'Overview', path: '/style' },
           { name: 'Persona', path: '/style/persona' },
           { name: 'Icons', path: '/style/icon' },
           { name: 'Font Styles', path: '/style/font' },
@@ -45,7 +46,7 @@ export class SideNavComponent implements OnInit {
       {
         title: 'Patterns',
         links: [
-        //   { name: 'Overview', path: '/patterns' },
+          //   { name: 'Overview', path: '/patterns' },
           { name: 'Accessibility', path: '/patterns/a11y' },
           { name: 'Performance', path: '/patterns/performance' },
           { name: 'Structure', path: '/patterns/structure' }
@@ -53,10 +54,7 @@ export class SideNavComponent implements OnInit {
       },
       {
         title: 'Changelog',
-        links: [
-            { name: 'Roadmap', path: '/changelog/roadmap' },
-            { name: 'Versions', path: '/changelog/versions' }
-        ]
+        links: [{ name: 'Roadmap', path: '/changelog/roadmap' }, { name: 'Versions', path: '/changelog/versions' }]
       }
     ]
   };

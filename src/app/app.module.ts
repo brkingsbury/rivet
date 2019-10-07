@@ -38,6 +38,7 @@ import { AuthService } from '../../projects/rivet-style/src/lib/rivet-services/u
 import { SnackbarComponent, Snackbar2Component } from './components/snackbar/snackbar.component';
 import { LinksComponent } from './components/links/links.component';
 import { VersionsComponent } from './changelog/versions/versions.component';
+import { MiniExpansionPanelComponent } from './components/mini-expansion/mini-expansion.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -60,11 +61,12 @@ const appRoutes: Routes = [
   { path: 'components/loading', component: LoadingComponent },
   { path: 'components/nav', component: NavComponent },
   { path: 'components/expansion', component: ExpansionPanelComponent },
+  { path: 'components/miniexpansion', component: MiniExpansionPanelComponent },
   { path: 'components/slider', component: SliderComponent },
   { path: 'components/snackbar', component: SnackbarComponent },
   { path: 'components/link', component: LinksComponent },
   { path: 'changelog/roadmap', component: ChangelogComponent },
-  { path: 'changelog/versions' , component: VersionsComponent },
+  { path: 'changelog/versions', component: VersionsComponent },
   { path: 'patterns', component: PatternsComponent },
   { path: 'patterns/a11y', component: AccessibilityComponent },
   { path: 'patterns/performance', component: PerformanceComponent },
@@ -111,7 +113,8 @@ const appRoutes: Routes = [
     ComplianceComponent,
     ComplianceDialogComponent,
     LinksComponent,
-    VersionsComponent
+    VersionsComponent,
+    MiniExpansionPanelComponent
   ],
   entryComponents: [DialogComponent, DialogComponentDialogComponent, Snackbar2Component, ComplianceDialogComponent],
   imports: [

@@ -6,18 +6,18 @@
 }
 
 .skip-link {
-    z-index: 110;
-    position: fixed;
-    color: transparent;
-    top: -30px;
-    background: transparent;
-    font-size: 16px;
-    &:focus {
-        color: white;
-        top: 5px;
-        left: 65px;
-        transition: color 100ms ease;
-    }
+  z-index: 110;
+  position: fixed;
+  color: transparent;
+  top: -30px;
+  background: transparent;
+  font-size: 16px;
+  &:focus {
+    color: white;
+    top: 5px;
+    left: 65px;
+    transition: color 100ms ease;
+  }
 }
 
 .dark-mode {
@@ -82,7 +82,7 @@
 }
 
 p:not(.example-code-header) {
-    max-width: 1200px;
+  max-width: 1200px;
 }
 
 .test-btn {
@@ -125,22 +125,22 @@ p:not(.example-code-header) {
   background-color: $rvt-primary-color-dark;
   color: $rvt-white;
   a {
+    text-decoration: none;
+    margin-left: 15px;
+    &:first-of-type {
+      margin-left: 30px;
+    }
+    &.rivet-icon-pdf {
+      color: $rvt-white;
+      font-size: 24px;
+    }
+    &.sketch img {
+      height: 24px;
+      width: 24px;
+    }
+    &:hover {
       text-decoration: none;
-      margin-left: 15px;
-      &:first-of-type {
-          margin-left: 30px;
-      }
-      &.rivet-icon-pdf {
-        color: $rvt-white;
-        font-size: 24px;
-      }
-      &.sketch img{
-        height: 24px;
-        width: 24px;
-      }
-      &:hover {
-          text-decoration: none;
-      }
+    }
   }
   button.compliant {
     margin-left: 15px;
@@ -158,16 +158,15 @@ p:not(.example-code-header) {
     cursor: pointer;
     position: relative;
     &:hover:after {
-        position: absolute;
-        left: -4px;
-        top: -4px;
-        height: 33px;
-        width: 33px;
-        content: "";
-        border: 1px solid $rvt-white;
-        border-radius: 50%;
-        background: transparent;
-
+      position: absolute;
+      left: -4px;
+      top: -4px;
+      height: 33px;
+      width: 33px;
+      content: '';
+      border: 1px solid $rvt-white;
+      border-radius: 50%;
+      background: transparent;
     }
   }
 }
@@ -175,7 +174,7 @@ p:not(.example-code-header) {
 .content-container {
   padding: 30px;
   header {
-      margin: 15px 0 5px 0;
+    margin: 15px 0 5px 0;
   }
 }
 
@@ -184,6 +183,14 @@ p:not(.example-code-header) {
   *:hover {
     cursor: url(/assets/arrow-cursor.png) 20 -20, auto !important;
   }
+}
+
+.rivet-mini-expansion-head {
+  font-size: 14px;
+  font-weight: 700;
+}
+.rivet-mini-expansion-body {
+  font-size: 12px;
 }
 
 // ----------------------------------------

@@ -1,0 +1,17 @@
+.rivet-mini-expansion-head {
+  background-color: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  display: flex;
+  [class*='rivet-icon-caret-'] {
+    margin-right: 10px;
+    margin-top: -0.2em;
+    &:before {
+      vertical-align: middle;
+    }
+  }
+}
+.rivet-mini-expansion-body {
+  width: 100%;
+}
