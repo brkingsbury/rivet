@@ -32,7 +32,7 @@ stages:
             inputs:
               buildType: specific
               project: "7ccd9df0-f3af-4e61-a990-cc93bc7e1095"
-              pipeline: 7
+              pipeline: 132
               specificBuildWithTriggering: true
               artifactName: "rivet-style"
               downloadPath: '$(System.DefaultWorkingDirectory)\dist'
