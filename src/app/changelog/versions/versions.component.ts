@@ -31,6 +31,21 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.3.17',
+    date: '10/9/2019',
+    note: 'Updated table styles and color variables',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Fixed table hover styles', 'Added required input styles']
+      },
+      {
+        category: 'Styles',
+        bullets: ['Added data color variables']
+      }
+    ]
+  },
+  {
     version: '0.3.16',
     date: '10/7/2019',
     note: 'Added mini expansion panel and accordion group',

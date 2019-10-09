@@ -22,8 +22,18 @@ table.mat-table tr {
 
 .color-container {
   max-width: 900px;
+  border-collapse: collapse;
+  margin-bottom: 45px;
 
-  .square {
+  .swatch {
+     width: 80px; 
+  }
+
+  .table-header {
+      white-space: nowrap;
+  }
+
+  .circle {
     height: 50px;
     width: 50px;
     border-radius: 50%;

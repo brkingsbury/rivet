@@ -36,6 +36,9 @@ form {
       font-size: 16px;
       font-weight: 400;
       color: $rvt-neutral-400;
+      .mat-placeholder-required {
+          color: $rvt-neutral-400;
+      }
     }
     .mat-form-field-underline {
       background-color: $rvt-neutral-400;

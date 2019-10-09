@@ -1,65 +1,36 @@
 <h2 class="page-header">
     Colors
     <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_Color_11-18.pdf" target="new"></a>
-</h2>
-
-
-<div class="component-container">
-  <p>
-    In order to use the theme colors, make sure to import the Rivet theme (rivetTheme.scss) into your project. Material
-    components and Rivet components already have these colors applied. For any other use, set
-    <code>color= <i>reference</i></code> or <code>background-color= <i>reference</i></code> within the page styles.
-  </p>
-  <table class="color-container mat-table">
-    <tr class="mat-header-row">
-      <th class="mat-header-cell">Swatch</th>
-      <th class="style mat-header-cell">Name</th>
-      <th class="ref mat-header-cell">Variable</th>
-      <th class="mat-header-cell">Use</th>
-    </tr>
-    <tr *ngFor="let color of colors" class="mat-row">
-      <td class="mat-cell">
-        <div class="square" [ngStyle]="{ background: color.color }"></div>
-      </td>
-      <td class="mat-cell">
-        {{ color.name }} <span>({{ color.color }})</span>
-      </td>
-      <td class="ref mat-cell">
-        <code>{{ color.var }}</code>
-      </td>
-      <td class="mat-cell">{{ color.info }}</td>
-    </tr>
-    <tr class="mat-row">
-      <td class="mat-cell">
-        <div class="square white"></div>
-      </td>
-      <td class="mat-cell">White <span>(#FFFFFF)</span></td>
-      <td class="ref mat-cell"><code>$rvt-white</code></td>
-      <td class="mat-cell">Reverse Text, Page Background</td>
-    </tr>
-    <tr *ngFor="let color of grayColors" class="mat-row">
-      <td class="mat-cell">
-        <div class="square" [ngStyle]="{ background: color.color }"></div>
-      </td>
-      <td class="mat-cell">
-        {{ color.name }} <span>({{ color.color }})</span>
-      </td>
-      <td class="ref mat-cell">
-        <code>{{ color.var }}</code>
-      </td>
-      <td class="mat-cell">{{ color.info }}</td>
-    </tr>
-    <tr *ngFor="let color of chartColors" class="mat-row">
-      <td class="mat-cell">
-        <div class="square" [ngStyle]="{ background: color.color }"></div>
-      </td>
-      <td class="mat-cell">
-        {{ color.name }} <span>({{ color.color }})</span>
-      </td>
-      <td class="ref ma-cell">
-        <code>{{ color.var }}</code>
-      </td>
-      <td class="mat-cell">{{ color.info }}</td>
-    </tr>
-  </table>
-</div>
+  </h2>
+  
+  <div class="component-container">
+    <p>
+      In order to use the theme colors, make sure to import the Rivet theme (rivetTheme.scss) into your project. Material
+      components and Rivet components already have these colors applied. For any other use, set
+      <code>color= <i>reference</i></code> or <code>background-color= <i>reference</i></code> within the page styles.
+    </p>
+    <table class="mat-table color-container" *ngFor="let group of colorVariables.colorGroup">
+      <tr class="mat-header-row table-header">
+        {{ group.title }}
+      </tr>
+      <tr class="mat-header-row">
+        <th class="mat-header-cell">Swatch</th>
+        <th class="mat-header-cell">Name</th>
+        <th class="mat-header-cell">Variable</th>
+        <th class="mat-header-cell">Use</th>
+      </tr>
+      <tr *ngFor="let color of group.colors" class="mat-row">
+        <td class="mat-cell swatch">
+          <div class="circle" [ngStyle]="{ background: color.color }"></div>
+        </td>
+        <td class="mat-cell">
+          {{ color.name }} <span>({{ color.color }})</span>
+        </td>
+        <td class="ref mat-cell">
+          <code>{{ color.var }}</code>
+        </td>
+        <td class="mat-cell">{{ color.info }}</td>
+      </tr>
+    </table>
+  </div>
+  

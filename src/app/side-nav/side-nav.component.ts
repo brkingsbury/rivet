@@ -39,8 +39,8 @@ export class SideNavComponent implements OnInit {
           //   { name: 'Overview', path: '/style' },
           { name: 'Persona', path: '/style/persona' },
           { name: 'Icons', path: '/style/icon' },
-          { name: 'Font Styles', path: '/style/font' },
-          { name: 'Color Variables', path: '/style/color' }
+          { name: 'Type', path: '/style/font' },
+          { name: 'Colors', path: '/style/color' }
         ]
       },
       {

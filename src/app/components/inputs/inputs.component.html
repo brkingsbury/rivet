@@ -3,7 +3,7 @@
     <a class="rivet-icon-pdf" title="spec sheet" href="../../assets/specs/Polaris_Input_Specs.pdf"
     target="new"></a>
     <!-- <a class="sketch" title="sketch file" href="" target="new">
-        <img src="../../assets/sketch.svg"/>
+        <img src="../../assets/sketch.svg" alt="sketch file icon"/>
     </a> -->
     <!-- <app-compliance-marker></app-compliance-marker> -->
 </h2>
@@ -28,7 +28,12 @@
 
       <mat-form-field>
         <input matInput placeholder="Label" value="" />
-        <mat-hint>Helper Text</mat-hint>
+        <mat-hint>Empty Example</mat-hint>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput placeholder="Label" value="Input Text" required/>
+        <mat-hint>This input is required</mat-hint>
       </mat-form-field>
 
       <mat-form-field class="invalid">

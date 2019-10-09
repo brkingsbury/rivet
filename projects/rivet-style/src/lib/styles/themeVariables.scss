@@ -22,12 +22,27 @@ $rvt-neutral-900: #192239 !default;
 $rvt-topnav-background: $rvt-neutral-100 !default;
 $rvt-overlay-color: $rvt-neutral-400 !default;
 $rvt-sidenav-background: $rvt-white !default;
+$rvt-bg-color: $rvt-white !default;
 
 //---------- Branding Color Variables
 $rvt-disabled-color: #bcc0c9 !default;
 $rvt-disabled-text-color: $rvt-disabled-color !default;
 
 $rvt-invalid-color: $rvt-warning-color !default;
+
+//----------- Data Color Variables
+$rvt-data-good: #2C8C66;
+$rvt-data-good-light: #8DAD52;
+$rvt-data-warn: #FAC155;
+$rvt-data-wanr-dark: #EC6F3E;
+$rvt-data-bad: #DD4141;
+$rvt-data-accent-1: #3379CB;
+$rvt-data-accent-1-dark: #064A66;
+$rvt-data-accent-2: #F69943;
+$rvt-data-accent-3: #008BA9;
+$rvt-data-accent-3-dark: #006398;
+$rvt-data-accent-4: #AC3E82;
+$rvt-data-accent-4-dark: #504F8E;
 
 //---------------------- ! All #'s (50-900) must be defined !
 
@@ -80,19 +95,19 @@ $rivet-data: (
   A400: $rvt-insufficient-color,
   A700: $rvt-warning-color,
   contrast: (
-    50: $rvt-neutral-900,
-    100: $rvt-neutral-900,
-    200: $rvt-neutral-900,
-    300: $rvt-neutral-900,
+    50: $rvt-white,
+    100: $rvt-white,
+    200: $rvt-white,
+    300: $rvt-white,
     400: $rvt-white,
     500: $rvt-white,
     600: $rvt-white,
     700: $rvt-white,
-    800: $rvt-neutral-900,
+    800: $rvt-white,
     900: $rvt-white,
-    A100: $rvt-neutral-900,
-    A200: $rvt-neutral-900,
-    A400: $rvt-neutral-900,
+    A100: $rvt-white,
+    A200: $rvt-white,
+    A400: $rvt-white,
     A700: $rvt-white
   )
 );
