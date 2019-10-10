@@ -1,83 +1,101 @@
 <h2 class="page-header">Expansion Panel</h2>
 
 <div class="component-container">
-    <h5>
-        Expandable Line Item (styles to be updated)
-        <a class="rivet-icon-pdf" target="new" title="Spec Sheet"
-            href="../../../assets/specs/Polaris_ExpandableLineItem.pdf"></a>
-    </h5>
+  <h5>
+    Expandable Line Item (styles to be updated)
+    <a
+      class="rivet-icon-pdf"
+      target="new"
+      title="Spec Sheet"
+      href="../../../assets/specs/Polaris_ExpandableLineItem.pdf"
+    ></a>
+  </h5>
 
-    <p>Used in table like lists that have additional information or sub-items to add</p>
+  <p>Used in table like lists that have additional information or sub-items to add.</p>
+  <p>Input bindings:</p>
+  <p>
+    <code>formGroup</code>: FormGroup - must contain a nested form group called 'expandedFields' otherwise will have a
+    null pointer exception. (optional)
+  </p>
+  <p>
+    <code>hideExpansionContent</code>: boolean - defaulted to false, will hide the expand button and the expansion
+    section. (optional)
+  </p>
+  <p>
+    <code>addButtonCallback</code>: EventEmitter - event to emit on click, will hide the add button if not set.
+    (optional)
+  </p>
+  <p>
+    <code>deleteButtonCallback</code>: EventEmitter - event to emit on click, while hide the delete button if not set.
+    (optional)
+  </p>
+  <div class="example-component">
+    <advicent-rivet-expansion-panel>
+      <div header-content>
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+      </div>
+      <span header-button-content> </span>
+      <div expansion-content>
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+        <br />
+        <br />
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+        <br /><br />
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+      </div>
+    </advicent-rivet-expansion-panel>
+    <advicent-rivet-expansion-panel>
+      <div header-content>
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+      </div>
+      <span header-button-content> </span>
+      <div expansion-content>
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+      </div>
+    </advicent-rivet-expansion-panel>
+  </div>
 
-    <div class="example-component">
-        <advicent-rivet-expansion-panel>
-            <div header-content>
-                <mat-form-field>
-                    <input matInput placeholder="Label" />
-                    <mat-hint>Helper Text</mat-hint>
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput placeholder="Label" />
-                    <mat-hint>Helper Text</mat-hint>
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput placeholder="Label" />
-                    <mat-hint>Helper Text</mat-hint>
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput placeholder="Label" />
-                    <mat-hint>Helper Text</mat-hint>
-                </mat-form-field>
-            </div>
-            <span header-button-content>
-            </span>
-            <div expansion-content>
-                <mat-form-field>
-                    <input matInput placeholder="Label" />
-                    <mat-hint>Helper Text</mat-hint>
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput placeholder="Label" />
-                    <mat-hint>Helper Text</mat-hint>
-                </mat-form-field>
-                <br />
-                <br />
-                <mat-form-field>
-                    <input matInput placeholder="Label" />
-                    <mat-hint>Helper Text</mat-hint>
-                </mat-form-field>
-                <br /><br />
-                <mat-form-field>
-                    <input matInput placeholder="Label" />
-                    <mat-hint>Helper Text</mat-hint>
-                </mat-form-field>
-            </div>
-        </advicent-rivet-expansion-panel>
-        <advicent-rivet-expansion-panel>
-            <div header-content>
-                <mat-form-field>
-                    <input matInput placeholder="Label" />
-                    <mat-hint>Helper Text</mat-hint>
-                </mat-form-field>
-                <mat-form-field>
-                    <input matInput placeholder="Label" />
-                    <mat-hint>Helper Text</mat-hint>
-                </mat-form-field>
-            </div>
-            <span header-button-content>
-            </span>
-            <div expansion-content>
-                <mat-form-field>
-                    <input matInput placeholder="Label" />
-                    <mat-hint>Helper Text</mat-hint>
-                </mat-form-field>
-            </div>
-        </advicent-rivet-expansion-panel>
-    </div>
-
-    <!-- Example -->
-    <p class="example-code-header">HTML</p>
-    <textarea class="example-code large">
+  <!-- Example -->
+  <p class="example-code-header">HTML</p>
+  <textarea class="example-code large">
 <advicent-rivet-expansion-panel>
     <div header-content>
         <mat-form-field>
@@ -99,5 +117,6 @@
         </mat-form-field>
     </div>
 </advicent-rivet-expansion-panel>
-    </textarea>
+    </textarea
+  >
 </div>

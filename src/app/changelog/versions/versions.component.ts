@@ -31,6 +31,19 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.3.18',
+    date: '10/9/2019',
+    note: 'Configurable expansion panel',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: [
+          'Added an optional input binding that allows you to hide the expanded button and section, defaulted to show.'
+        ]
+      }
+    ]
+  },
+  {
     version: '0.3.17',
     date: '10/9/2019',
     note: 'Updated table styles and color variables',

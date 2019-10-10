@@ -6,11 +6,16 @@ import {
   EventEmitter,
   HostListener,
   Input,
+  OnChanges,
+  OnDestroy,
   OnInit,
   Output,
+  SimpleChanges,
   ViewEncapsulation
 } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'advicent-rivet-expansion-panel',
@@ -18,8 +23,9 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./expansion-panel.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class RivetExpansionPanelComponent implements OnInit, AfterViewInit {
+export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestroy, AfterViewInit {
   @Input() formGroup?: FormGroup;
+  @Input() hideExpansionContent = false;
   @Output() addButtonCallback?: EventEmitter<any> = new EventEmitter();
   @Output() deleteButtonCallback?: EventEmitter<any> = new EventEmitter();
 
@@ -29,11 +35,33 @@ export class RivetExpansionPanelComponent implements OnInit, AfterViewInit {
   panelHeight: number;
   showAddButton = false;
   showDeleteButton = false;
+
+  private onChanges: Subject<SimpleChanges> = new Subject();
+  private unsubscribe: Subject<void> = new Subject();
+
   constructor(private element: ElementRef, private cd: ChangeDetectorRef) {}
+
+  ngOnDestroy() {
+    this.unsubscribe.next();
+    this.unsubscribe.complete();
+  }
+
+  ngOnChanges(changes: SimpleChanges) {
+    this.onChanges.next(changes);
+  }
 
   ngOnInit() {
     this.showAddButton = this.addButtonCallback.observers.length > 0;
     this.showDeleteButton = this.deleteButtonCallback.observers.length > 0;
+
+    this.onChanges.pipe(takeUntil(this.unsubscribe)).subscribe((changes: SimpleChanges) => {
+      if (!changes.hideExpansionContent) {
+        return;
+      }
+
+      this.panelExpanded = !changes.hideExpansionContent.currentValue;
+      this.resizePanel();
+    });
   }
 
   ngAfterViewInit() {

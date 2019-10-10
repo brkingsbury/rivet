@@ -34,6 +34,39 @@ describe('RivetExpansionPanelComponent', () => {
     public addButtonCallback = () => {};
     public deleteButtonCallback = () => {};
   }
+
+  @Component({
+    template: `
+      <advicent-rivet-expansion-panel
+        [hideExpansionContent]="true"
+        (addButtonCallback)="(addButtonCallback)"
+        (deleteButtonCallback)="(deleteButtonCallback)"
+      >
+        <div header-content>Header content</div>
+        <div expansion-content>Expansion content</div>
+      </advicent-rivet-expansion-panel>
+    `
+  })
+  class WrapperHasNoExpansionContentComponent {
+    @ViewChild(RivetExpansionPanelComponent) expansionPanel: RivetExpansionPanelComponent;
+  }
+
+  @Component({
+    template: `
+      <advicent-rivet-expansion-panel
+        [hideExpansionContent]="false"
+        (addButtonCallback)="(addButtonCallback)"
+        (deleteButtonCallback)="(deleteButtonCallback)"
+      >
+        <div header-content>Header content</div>
+        <div expansion-content>Expansion content</div>
+      </advicent-rivet-expansion-panel>
+    `
+  })
+  class WrapperHasExpansionContentComponent {
+    @ViewChild(RivetExpansionPanelComponent) expansionPanel: RivetExpansionPanelComponent;
+  }
+
   let component: RivetExpansionPanelComponent;
   let fixture: ComponentFixture<RivetExpansionPanelComponent>;
 
@@ -43,10 +76,22 @@ describe('RivetExpansionPanelComponent', () => {
   let wrapperNoCallbackFixture: ComponentFixture<WrapperNoCallbackComponent>;
   let wrapperNoCallbackComponent: WrapperNoCallbackComponent;
 
+  let wrapperHasNoExpansionContentFixture: ComponentFixture<WrapperHasNoExpansionContentComponent>;
+  let wrapperHasNoExpansionContentComponent: WrapperHasNoExpansionContentComponent;
+
+  let wrapperHasExpansionContentFixture: ComponentFixture<WrapperHasExpansionContentComponent>;
+  let wrapperHasExpansionContentComponent: WrapperHasExpansionContentComponent;
+
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [BrowserAnimationsModule, MaterialComponentModule],
-      declarations: [RivetExpansionPanelComponent, WrapperComponent, WrapperNoCallbackComponent]
+      declarations: [
+        RivetExpansionPanelComponent,
+        WrapperComponent,
+        WrapperNoCallbackComponent,
+        WrapperHasNoExpansionContentComponent,
+        WrapperHasExpansionContentComponent
+      ]
     }).compileComponents();
   }));
 
@@ -55,17 +100,25 @@ describe('RivetExpansionPanelComponent', () => {
     wrapperComponent = wrapperFixture.componentInstance;
     wrapperNoCallbackFixture = TestBed.createComponent(WrapperNoCallbackComponent);
     wrapperNoCallbackComponent = wrapperNoCallbackFixture.componentInstance;
+    wrapperHasNoExpansionContentFixture = TestBed.createComponent(WrapperHasNoExpansionContentComponent);
+    wrapperHasNoExpansionContentComponent = wrapperHasNoExpansionContentFixture.componentInstance;
+    wrapperHasExpansionContentFixture = TestBed.createComponent(WrapperHasExpansionContentComponent);
+    wrapperHasExpansionContentComponent = wrapperHasExpansionContentFixture.componentInstance;
     fixture = TestBed.createComponent(RivetExpansionPanelComponent);
     component = fixture.componentInstance;
 
     wrapperFixture.detectChanges();
     wrapperNoCallbackFixture.detectChanges();
+    wrapperHasNoExpansionContentFixture.detectChanges();
+    wrapperHasExpansionContentFixture.detectChanges();
     fixture.detectChanges();
   });
 
   afterEach(() => {
     wrapperFixture.destroy();
     wrapperNoCallbackFixture.destroy();
+    wrapperHasNoExpansionContentFixture.destroy();
+    wrapperHasExpansionContentFixture.destroy();
     fixture.destroy();
   });
 
@@ -191,6 +244,27 @@ describe('RivetExpansionPanelComponent', () => {
       const deleteButton = expansionPanel.element.nativeElement.querySelector('.rivet-icon-delete');
 
       expect(deleteButton).not.toBeNull();
+    });
+  });
+
+  describe('toggle expansion button', () => {
+    it('should show expansion button by default', () => {
+      const expansionPanel = wrapperFixture.debugElement.componentInstance.expansionPanel;
+      const expansionButton = expansionPanel.element.nativeElement.querySelector('.toggle-expansion-btn');
+
+      expect(expansionButton).not.toBeNull();
+    });
+    it('should show expansion button if passing true', () => {
+      const expansionPanel = wrapperHasExpansionContentFixture.debugElement.componentInstance.expansionPanel;
+      const expansionButton = expansionPanel.element.nativeElement.querySelector('.toggle-expansion-btn');
+
+      expect(expansionButton).not.toBeNull();
+    });
+    it('should not show expansion button if passing false', () => {
+      const expansionPanel = wrapperHasNoExpansionContentFixture.debugElement.componentInstance.expansionPanel;
+      const expansionButton = expansionPanel.element.nativeElement.querySelector('.toggle-expansion-btn');
+
+      expect(expansionButton).toBeNull();
     });
   });
 });
