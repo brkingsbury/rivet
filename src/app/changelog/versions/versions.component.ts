@@ -31,15 +31,27 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.3.20',
+    date: '10/11/2019',
+    note: 'More expansion panel updates',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: [
+          'Delay the automatic opening of the expansion panel when the flag is set.' +
+            ' Does not affect default behavior only on hideExpansionContent.'
+        ]
+      }
+    ]
+  },
+  {
     version: '0.3.19',
     date: '10/9/2019',
     note: 'More expansion panel fixes and checkbox styles',
     updates: [
       {
         category: 'Rivet package',
-        bullets: [
-          'Add input to prevent the expansion panel from collapsing.'
-        ]
+        bullets: ['Add input to prevent the expansion panel from collapsing.']
       },
       {
         category: 'Styles',

@@ -1,6 +1,6 @@
 {
   "name": "rivet-style",
-  "version": "0.3.19",
+  "version": "0.3.20",
   "dependencies": {
     "hammerjs": "^2.0.8"
   },

@@ -60,8 +60,16 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
         return;
       }
 
-      this.panelExpanded = !changes.hideExpansionContent.currentValue;
-      this.resizePanel();
+      const expand = !changes.hideExpansionContent.currentValue;
+
+      if (expand) {
+        setTimeout(() => {
+          this.cd.markForCheck();
+          this.expandPanel(expand);
+        }, 500);
+      } else {
+        this.expandPanel(expand);
+      }
     });
   }
 
@@ -77,10 +85,14 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
     this.resizePanel();
   }
 
+  expandPanel(expanded) {
+    this.panelExpanded = expanded;
+    this.resizePanel();
+  }
+
   setExpandedState(expanded, event) {
     if (!this.panelExpanded || (this.isValid() && !this.preventExpansion)) {
-      this.panelExpanded = expanded;
-      this.resizePanel();
+      this.expandPanel(expanded);
     }
     event.stopPropagation();
   }
