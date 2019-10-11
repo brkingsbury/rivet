@@ -31,6 +31,23 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.3.19',
+    date: '10/9/2019',
+    note: 'More expansion panel fixes and checkbox styles',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: [
+          'Add input to prevent the expansion panel from collapsing.'
+        ]
+      },
+      {
+        category: 'Styles',
+        bullets: ['Adjust font styles in labels above checkboxes']
+      }
+    ]
+  },
+  {
     version: '0.3.18',
     date: '10/9/2019',
     note: 'Configurable expansion panel',

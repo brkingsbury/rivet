@@ -25,6 +25,7 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestroy, AfterViewInit {
   @Input() formGroup?: FormGroup;
+  @Input() preventExpansion = false;
   @Input() hideExpansionContent = false;
   @Output() addButtonCallback?: EventEmitter<any> = new EventEmitter();
   @Output() deleteButtonCallback?: EventEmitter<any> = new EventEmitter();
@@ -77,7 +78,7 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
   }
 
   setExpandedState(expanded, event) {
-    if (!this.panelExpanded || this.isValid()) {
+    if (!this.panelExpanded || (this.isValid() && !this.preventExpansion)) {
       this.panelExpanded = expanded;
       this.resizePanel();
     }
@@ -115,8 +116,8 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
   private isValid() {
     return (
       this.formGroup === undefined ||
-      this.formGroup.get('expandedFields').valid ||
-      this.formGroup.get('expandedFields').untouched
+      (!this.formGroup.contains('expandedFields') ||
+        (this.formGroup.get('expandedFields').valid || this.formGroup.get('expandedFields').untouched))
     );
   }
 }
