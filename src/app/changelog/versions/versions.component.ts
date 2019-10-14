@@ -31,6 +31,21 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.4.0',
+    date: '10/14/2019',
+    note: 'New radio button, fixed pagination bug',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Added Rivet radio button, Fixed icon references for table pagination']
+      },
+      {
+        category: 'Documentation',
+        bullets: ['Updated checkbox documentation to include attributes']
+      }
+    ]
+  },
+{
     version: '0.3.20',
     date: '10/11/2019',
     note: 'More expansion panel updates',

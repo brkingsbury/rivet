@@ -186,3 +186,121 @@
     }
   }
 }
+
+// -------- End Deprecated Styles ---
+
+$RadioSize: 17px;
+$RadioBorderWidth: 2px;
+
+.rvt-radio {
+  display: inline-block;
+  input[type='radio'] {
+    position: absolute;
+    height: 1px;
+    margin: -1px;
+    cursor: pointer;
+    z-index: 100;
+
+    &:hover:not(:disabled),
+    &:focus:not(:disabled) {
+      &:before {
+        border-width: $RadioBorderWidth;
+        height: calc(#{$RadioSize} - #{$RadioBorderWidth});
+        width: calc(#{$RadioSize} - #{$RadioBorderWidth});
+      }
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      display: inline-block;
+      height: $RadioSize;
+      width: $RadioSize;
+      border: 1px solid $rvt-neutral-900;
+      border-radius: 50%;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      left: calc(50% - 3px);
+      top: calc(50% + 3px);
+      height: 0;
+      width: 0;
+    }
+
+    + label {
+      position: relative;
+      padding-left: 25px;
+      font: 400 14px $RvtFontFamily;
+      cursor: pointer;
+      margin-right: 15px;
+    }
+
+    &:checked:after {
+      background: $rvt-primary-color;
+      height: calc(#{$RadioSize} - 5px);
+      width: calc(#{$RadioSize} - 5px);
+      border-radius: 50%;
+    }
+    &:disabled {
+      &:before {
+        border-color: $rvt-disabled-color;
+        border-style: dashed;
+        cursor: default;
+      }
+      &:checked:after {
+        background-color: $rvt-disabled-color;
+        cursor: default;
+      }
+      + label {
+        color: $rvt-disabled-text-color;
+        cursor: default;
+      }
+      &.read-only {
+        &:before {
+          border-color: transparent;
+        }
+        &:checked:after {
+          background-color: $rvt-neutral-900;
+        }
+        + label {
+          color: $rvt-neutral-900;
+        }
+      }
+    }
+    &.small-radio {
+      &:before {
+        height: calc(#{$RadioSize} - 2px);
+        width: calc(#{$RadioSize} - 2px);
+      }
+      &:hover:not(:disabled),
+      &:focus:not(:disabled) {
+        &:before {
+          height: calc(#{$RadioSize} - #{$RadioBorderWidth} - 2px);
+          width: calc(#{$RadioSize} - #{$RadioBorderWidth} - 2px);
+        }
+      }
+      &:checked:after {
+        height: calc(#{$RadioSize} - 7px);
+        width: calc(#{$RadioSize} - 7px);
+      }
+      + label {
+        font-size: 12px;
+      }
+    }
+  }
+  &.label-above {
+    display: inline-flex;
+    flex-direction: column-reverse;
+    margin-right: 15px;
+    input[type='radio'] {
+        position: relative;
+        margin: 0 auto;
+      + label {
+        padding-left: 0;
+        margin: 0;
+        font-size: 12px;
+      }
+    }
+  }
+}

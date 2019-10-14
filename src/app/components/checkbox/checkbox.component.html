@@ -1,108 +1,160 @@
 <h2 class="page-header">
-    Checkbox    
-    <a class="rivet-icon-pdf" title="spec sheet" href="../../assets/specs/Rivet_Checkbox_Specs_9-19.pdf"
-    target="new"></a>
-    <a class="sketch" title="sketch file" href="https://sketch.cloud/s/4xKMZ" target="new">
-        <img src="../../assets/sketch.svg"/>
-    </a>
-    <!-- <app-compliance-marker></app-compliance-marker> -->
+  Checkbox
+  <a class="rivet-icon-pdf" title="spec sheet" href="../../assets/specs/Rivet_Checkbox_Specs_9-19.pdf" target="new"></a>
+  <a class="sketch" title="sketch file" href="https://sketch.cloud/s/4xKMZ" target="new">
+    <img src="../../assets/sketch.svg" />
+  </a>
+  <!-- <app-compliance-marker></app-compliance-marker> -->
 </h2>
 
 <div class="component-container">
-    <h5>
-        Checkboxes
-    </h5>
-    <p>Checkboxes allow users to select one or more items from a set, or to turn on an option.</p>
-    <p>
-        There are 3 styling alternatives for checkboxes. <code>class="small-checkbox"</code> and
-        <code>class="label-above"</code> are applied to the container, and
-        <code>class="read-only"</code> is applied to the input.
-    </p>
-    <p>
-        There is also 1 attribute for checkboxes, <code>disabled</code>. Readonly is only to be used along with
-        disabled,
-        but disabled can be used by itself.
-    </p>
-    <!-- START CONTROLS -->
-    <div class="controls">
-        <p>Input states:</p>
-        <div class="rvt-checkbox">
-            <input type="checkbox" id="disCheck" [checked]="isDisabled"
-                (change)="isDisabled = !isDisabled; isRo = false; isSmall = false; isAbove = false" />
-            <label for="disCheck">Disable checkbox</label>
-        </div>
-
-        <!-- <div class="rvt-checkbox">
-            <input type="checkbox" id="indCheck" [checked]="isIn" 
-            (change)="isIn = !isIn; isAbove = false; isDisabled = false; isSmall = false; isRo = false"/>
-            <label for="indCheck">Indeterminate checkbox</label>
-        </div> -->
-
-        <div class="rvt-checkbox">
-            <input type="checkbox" id="smCheck" [checked]="isSmall"
-                (change)="isSmall = !isSmall; isRo = false; isDisabled = false; isAbove = false" />
-            <label for="smCheck">Small checkbox</label>
-        </div>
-
-        <div class="rvt-checkbox">
-            <input type="checkbox" id="roCheck" [checked]="isRo"
-                (change)="isRo = !isRo; isDisabled = true; isSmall = false; isAbove = false" />
-            <label for="roCheck">Read-only checkbox</label>
-        </div>
-
-        <div class="rvt-checkbox">
-            <input type="checkbox" id="abCheck" [checked]="isAbove"
-                (change)="isAbove = !isAbove; isDisabled = false; isSmall = false; isRo = false" />
-            <label for="abCheck">Label above checkbox</label>
-        </div>
+  <h5>
+    Checkboxes
+  </h5>
+  <p>Checkboxes allow users to select one or more items from a set, or to turn on an option.</p>
+  <p>
+    There are 3 styling alternatives for checkboxes. <code>class="small-checkbox"</code> and
+    <code>class="label-above"</code> are applied to the container, and <code>class="read-only"</code> is applied to the
+    input.
+  </p>
+  <p>
+    There is also 1 attribute for checkboxes, <code>disabled</code>. Readonly is only to be used along with disabled,
+    but disabled can be used by itself.
+  </p>
+  <!-- START CONTROLS -->
+  <div class="controls">
+    <p>Input states:</p>
+    <div class="rvt-checkbox">
+      <input
+        type="checkbox"
+        id="disCheck"
+        [checked]="isDisabled"
+        (change)="isDisabled = !isDisabled; isRo = false; isSmall = false; isAbove = false"
+      />
+      <label for="disCheck">Disable checkbox</label>
     </div>
 
-    <!-- END CONTROLS -->
-    <div class="example-component">
-        <div class="rvt-checkbox" [ngClass]="{'small-checkbox': isSmall, 'label-above': isAbove}">
-            <input type="checkbox" id="check1" [disabled]="isDisabled" [ngClass]="{'read-only': isRo}"
-                [disabled]="isDisabled" />
-            <label for="check1">Label</label>
-        </div>
+    <div class="rvt-checkbox">
+      <input
+        type="checkbox"
+        id="smCheck"
+        [checked]="isSmall"
+        (change)="isSmall = !isSmall; isRo = false; isDisabled = false; isAbove = false"
+      />
+      <label for="smCheck">Small checkbox</label>
     </div>
 
-    <!-- Example -->
-    <p class="example-code-header">HTML</p>
-    <textarea class="example-code" readonly>
+    <div class="rvt-checkbox">
+      <input
+        type="checkbox"
+        id="roCheck"
+        [checked]="isRo"
+        (change)="isRo = !isRo; isDisabled = true; isSmall = false; isAbove = false"
+      />
+      <label for="roCheck">Read-only checkbox</label>
+    </div>
+
+    <div class="rvt-checkbox">
+      <input
+        type="checkbox"
+        id="abCheck"
+        [checked]="isAbove"
+        (change)="isAbove = !isAbove; isDisabled = false; isSmall = false; isRo = false"
+      />
+      <label for="abCheck">Label above checkbox</label>
+    </div>
+  </div>
+
+  <!-- END CONTROLS -->
+  <div class="example-component">
+    <div class="rvt-checkbox" [ngClass]="{ 'small-checkbox': isSmall, 'label-above': isAbove }">
+      <input
+        type="checkbox"
+        id="check1"
+        [disabled]="isDisabled"
+        [ngClass]="{ 'read-only': isRo }"
+        [disabled]="isDisabled"
+      />
+      <label for="check1">Label</label>
+    </div>
+  </div>
+
+  <!-- Example -->
+    <div *ngIf="!isDisabled && !isRo && !isAbove && !isSmall">
+        <p class="example-code-header">HTML</p>
+        <textarea class="example-code" readonly>
 <div class="rvt-checkbox">
     <input type="checkbox" id="check1" />
     <label for="check1">Label</label>
 </div>
-    </textarea>
-
-    <div *ngIf="isAbove">
-        <p class="example-code-header">HTML</p>
-        <textarea class="example-code" readonly>
-<mat-checkbox class="label-above">Label</mat-checkbox>
         </textarea>
     </div>
-    <!-- End Example-->
-</div>
 
+  <div *ngIf="isAbove">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
+<div class="rvt-checkbox label-above">
+    <input type="checkbox" id="check1" />
+    <label for="check1">Label</label>
+</div>
+    </textarea>
+  </div>
+
+  <div *ngIf="isDisabled && !isRo">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
+<div class="rvt-checkbox">
+    <input type="checkbox" id="check1" disabled/>
+    <label for="check1">Label</label>
+</div>
+    </textarea>
+  </div>
+
+  <div *ngIf="isRo">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
+<div class="rvt-checkbox">
+    <input type="checkbox" id="check1" class="read-only" disabled/>
+    <label for="check1">Label</label>
+</div>
+    </textarea>
+  </div>
+
+  <div *ngIf="isSmall">
+    <p class="example-code-header">HTML</p>
+    <textarea class="example-code" readonly>
+<div class="rvt-checkbox small-checkbox">
+    <input type="checkbox" id="check1" />
+    <label for="check1">Label</label>
+</div>
+    </textarea>
+  </div>
+  <!-- End Example-->
+</div>
 
 <!-- DEPRECATED MATERIAL CHECKBOX -->
 
 <div class="component-container deprecated">
-    <h5>
-        Material Checkboxes - deprecated
-    </h5>
-    <p>This version is deprecated as of v0.2.10. For more documentation on this component see <a
-            href="https://material.angular.io/components/checkbox/overview" target="new">Angular Material -
-            Checkbox</a>.</p>
+  <h5>
+    Material Checkboxes - deprecated
+  </h5>
+  <p>
+    This version is deprecated as of v0.2.10. For more documentation on this component see
+    <a href="https://material.angular.io/components/checkbox/overview" target="new">Angular Material - Checkbox</a>.
+  </p>
 
-    <div class="example-component">
-        <mat-checkbox [ngClass]="{ 'small-checkbox': isSmall, 'label-above': isAbove, 'read-only': isRo }" disableRipple
-            [disabled]="isDisabled" [indeterminate]="isIn">Label</mat-checkbox>
-    </div>
+  <div class="example-component">
+    <mat-checkbox
+      [ngClass]="{ 'small-checkbox': isSmall, 'label-above': isAbove, 'read-only': isRo }"
+      disableRipple
+      [disabled]="isDisabled"
+      [indeterminate]="isIn"
+      >Label</mat-checkbox
+    >
+  </div>
 
-    <p class="example-code-header">HTML</p>
-    <textarea class="example-code" readonly>
+  <p class="example-code-header">HTML</p>
+  <textarea class="example-code" readonly>
 <mat-checkbox>Label</mat-checkbox>
     </textarea>
-
 </div>
