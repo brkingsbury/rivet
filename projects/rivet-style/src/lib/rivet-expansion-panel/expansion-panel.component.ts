@@ -66,7 +66,7 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
         setTimeout(() => {
           this.cd.markForCheck();
           this.expandPanel(expand);
-        }, 500);
+        }, 625);
       } else {
         this.expandPanel(expand);
       }

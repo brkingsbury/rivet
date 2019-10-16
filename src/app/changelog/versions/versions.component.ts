@@ -31,6 +31,21 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.4.1',
+    date: '10/15/2019',
+    note: 'Updating the rivet expansion delete overlay',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Rivet expansion delete overlay to overlay the expanded fields.']
+      },
+      {
+        category: 'Documentation',
+        bullets: ['Updated rivet expansion documentation to include attributes']
+      }
+    ]
+  },
+  {
     version: '0.4.0',
     date: '10/14/2019',
     note: 'New radio button, fixed pagination bug',
@@ -45,7 +60,7 @@ export const versions = [
       }
     ]
   },
-{
+  {
     version: '0.3.20',
     date: '10/11/2019',
     note: 'More expansion panel updates',
