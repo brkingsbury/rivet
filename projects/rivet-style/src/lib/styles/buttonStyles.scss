@@ -1,5 +1,5 @@
 @import '../../lib/styles/typeStyles.scss';
-@import './themeVariables.scss';
+@import './rivetTheme.scss';
 
 // Styles for all Rivet Buttons
 @mixin buttonStyle {
@@ -20,6 +20,7 @@
   &:focus,
   &:active:hover {
     line-height: 14px;
+    outline: none;
   }
 }
 
@@ -119,5 +120,11 @@ button {
       margin-left: 8px;
       vertical-align: middle;
     }
+  }
+}
+
+.key-focus {
+  button[class^='rvt-btn']:not(:active):focus {
+    @include keyboard-focus-style;
   }
 }

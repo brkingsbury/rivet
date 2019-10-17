@@ -133,8 +133,12 @@ p:not(.example-code-header) {
     &.rivet-icon-pdf {
       color: $rvt-white;
       font-size: 24px;
+      display: inline-block;
+      height: 24px;
+      width: 24px;
     }
-    &.sketch img {
+    &.sketch, &.sketch img {
+        display: inline-block;
       height: 24px;
       width: 24px;
     }
@@ -159,12 +163,12 @@ p:not(.example-code-header) {
     position: relative;
     &:hover:after {
       position: absolute;
-      left: -4px;
-      top: -4px;
+      left: -5px;
+      top: -5px;
       height: 33px;
       width: 33px;
       content: '';
-      border: 1px solid $rvt-white;
+      border: 2px solid $rvt-white;
       border-radius: 50%;
       background: transparent;
     }

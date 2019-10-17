@@ -263,17 +263,6 @@ $CheckboxSize: 18px;
       }
     }
 
-    &:focus + label:before {
-      outline: 2px solid highlight; // Fallback
-      outline: 2px solid -webkit-focus-ring-color; // Chrome
-    }
-
-    &:-moz-focusring + label:before {
-      // Firefox
-      outline: 1px dotted #192239;
-      outline-offset: 1px;
-    }
-
     &:disabled {
       cursor: default;
       + label {
@@ -362,15 +351,12 @@ $CheckboxSize: 18px;
     }
   }
 }
-
-@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
-  .rvt-checkbox input[type='checkbox']:focus + label:before {
-    outline: 1px dotted #192239; // IE
-  }
-}
-
-@supports (display: -ms-grid) {
-  .rvt-checkbox input[type='checkbox']:focus + label:before {
-    outline: 1px dashed #192239; //Edge
+.key-focus {
+  .rvt-checkbox input[type='checkbox'] {
+    outline: none;
+    &:focus + label:before,
+    &:active + label:before {
+      @include keyboard-focus-style;
+    }
   }
 }

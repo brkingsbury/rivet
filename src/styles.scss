@@ -38,6 +38,14 @@ hr {
   margin: 5rem 0 6rem;
 }
 
+section header h2 {
+    font-size: 40px;
+    color: $rvt-primary-color-dark;
+    &:not(:first-of-type) {
+        margin-top: 30px;
+    }
+}
+
 h1,
 h2,
 h3,
@@ -56,43 +64,10 @@ code {
   padding: 2px 4px;
 }
 
-// Used until keyboard style is included in style module
-@mixin keyboard-focus-style {
-  outline: 2px solid #4d90fe;
-  outline-offset: 2px;
-}
-
-//--------
-
-// Keyboard only focus styles until implemented in style module
-body div:not(.keyFocus) {
-  button[class^='rvt-btn']:focus,
-  button:active:focus {
-    outline: none;
-  }
-  .rvt-checkbox input[type='checkbox']:focus + label:before {
-    outline: none;
-  }
-  
-  .rvt-radio input[type='checkbox']:focus {
-    outline: none;
-  }
-}
-
-.keyFocus {
-  button[class^='rvt-btn']:not(:active):focus {
-    @include keyboard-focus-style;
-  }
-  .rvt-checkbox input[type='checkbox'] {
-      outline: none;
-      &:focus + label:before, &:active + label:before {
-        @include keyboard-focus-style;
-      }
-  }
-  .rvt-radio input[type='radio'] {
-      outline: none;
-      &:focus:before, &:active:before {
-        @include keyboard-focus-style;
-      }
-  }
+.key-focus {
+    button, a {
+        &:focus, &:focus:before {
+            @include keyboard-focus-style;
+        }
+    }
 }

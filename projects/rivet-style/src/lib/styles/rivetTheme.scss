@@ -11,3 +11,8 @@ $rivet-theme: mat-light-theme($rvt-primary, $rvt-accent, $rvt-warn);
   @include mat-core();
   @include angular-material-theme($rivet-theme);
 }
+
+@mixin keyboard-focus-style {
+    outline: 2px solid $rvt-keyboard-focus-color;
+    outline-offset: 2px;
+}

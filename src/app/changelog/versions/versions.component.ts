@@ -31,6 +31,21 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.4.2',
+    date: '10/17/2019',
+    note: 'Fixed radio styles for other browsers, compliance checks',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Updated radio styles to work in all browsers', 'Added keyboard focus styles into base components']
+      },
+      {
+        category: 'Library',
+        bullets: ['Checkboxes and radio buttons are now verified to be accessible']
+      }
+    ]
+  },
+  {
     version: '0.4.1',
     date: '10/15/2019',
     note: 'Updating the rivet expansion delete overlay',
@@ -52,7 +67,7 @@ export const versions = [
     updates: [
       {
         category: 'Components',
-        bullets: ['Added Rivet radio button, Fixed icon references for table pagination']
+        bullets: ['Added Rivet radio button', 'Fixed icon references for table pagination']
       },
       {
         category: 'Documentation',
