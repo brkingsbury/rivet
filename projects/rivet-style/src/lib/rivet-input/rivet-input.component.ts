@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, HostBinding, ViewChild, HostListener } from '@angular/core';
+import { Component, HostBinding, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { RulesetService } from '../rivet-services/ruleset.service';
 
@@ -46,10 +46,16 @@ export class RivetInputComponent implements OnInit {
     return this.control.dirty;
   }
   @HostBinding('class.vacant') get vacant() {
-    return this.control.value.trim() === '';
+    if (this.control && this.control.value) {
+      return (this.control.value + '').trim() === '';
+    }
+    return true;
   }
   @HostBinding('class.nonvacant') get nonvacant() {
-    return this.control.value.trim() !== '';
+    if (this.control && this.control.value) {
+      return (this.control.value + '').trim() !== '';
+    }
+    return false;
   }
   @HostBinding('class.pending') get pending() {
     return this.control.pending;
