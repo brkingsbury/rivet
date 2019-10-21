@@ -15,22 +15,22 @@ export class SideNavComponent implements OnInit {
         links: [
           //   { name: 'Overview', path: '/components' },
           { name: 'Buttons', path: '/components/button' },
-          { name: 'Links', path: '/components/link' },
-          { name: 'Inputs', path: '/components/input' },
-          { name: 'Dropdowns', path: '/components/dropdown' },
-          { name: 'Radio Button', path: '/components/radio' },
           { name: 'Checkbox', path: '/components/checkbox' },
           { name: 'Datepicker', path: '/components/datepicker' },
           { name: 'Dialog', path: '/components/dialog' },
+          { name: 'Dropdowns', path: '/components/dropdown' },
+          { name: 'Expansion Panel', path: '/components/expansion' },
+          { name: 'Inputs', path: '/components/input' },
+          { name: 'Links', path: '/components/link' },
+          { name: 'Loading', path: '/components/loading' },
+          { name: 'Mini Expansion Panel', path: '/components/miniexpansion' },
+          { name: 'Navigation', path: '/components/nav' },
+          { name: 'Radio Button', path: '/components/radio' },
+          { name: 'Snackbar', path: '/components/snackbar' },
+          { name: 'Slider', path: '/components/slider' },
           { name: 'Tables', path: '/components/table' },
           { name: 'Tabs', path: '/components/tab' },
-          { name: 'Snackbar', path: '/components/snackbar' },
-          { name: 'Text Areas', path: '/components/textarea' },
-          { name: 'Slider', path: '/components/slider' },
-          { name: 'Expansion Panel', path: '/components/expansion' },
-          { name: 'Mini Expansion Panel', path: '/components/miniexpansion' },
-          { name: 'Loading', path: '/components/loading' },
-          { name: 'Navigation', path: '/components/nav' }
+          { name: 'Text Areas', path: '/components/textarea' }
         ]
       },
       {

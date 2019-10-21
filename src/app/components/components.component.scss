@@ -28,24 +28,27 @@
     min-height: 350px;
   }
 }
-.example-code-header {
-  display: block;
-  background-color: $rvt-neutral-100;
-  margin: 0;
-  padding: 5px 5px 5px 15px;
-  font-family: $RvtFontFamily;
-  font-size: 12px;
-  font-weight: 600;
-}
 
-a.example-code-header {
-  background-color: $rvt-neutral-100;
-  line-height: 30px;
-  cursor: pointer;
-  padding: 7px 15px;
-  &.active {
-    background-color: $rvt-neutral-50;
-  }
+.example-code-header {
+    display: block;
+    width: 100%;
+    background-color: $rvt-neutral-100;
+    margin: 0;
+    label, p, a:not(.mat-tab-link) {
+        display: inline-block;
+        line-height: 30px;
+        padding: 5px 5px 5px 15px;
+        margin: 0;
+        font: 600 12px $RvtFontFamily;
+    }
+    a:not(.mat-tab-link) {
+        background-color: $rvt-neutral-100;
+        padding: 7px 15px;
+        cursor: pointer;
+        &.active {
+            background-color: $rvt-neutral-50;
+        }
+    }
 }
 
 .example-code-copy {
@@ -53,11 +56,6 @@ a.example-code-header {
   padding: 7px 15px;
   line-height: 13px;
   cursor: pointer;
-}
-
-.example-code-header-container {
-  background-color: $rvt-neutral-100;
-  height: 30px;
 }
 
 .component-container.deprecated {
