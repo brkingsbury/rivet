@@ -1,4 +1,4 @@
-<h2 class="page-header">
+<h1 class="page-header">
     Dialog
     <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_Dialog_Specs.pdf"
     target="new"></a>
@@ -6,28 +6,27 @@
         <img src="../../assets/sketch.svg"/>
     </a> -->
     <!-- <app-compliance-marker></app-compliance-marker> -->
-</h2>
+</h1>
 
-<div class="component-container">
-    <h5>
-        Material Dialog
-    </h5>
-
-    <p>
-        Dialogs can be used as alerts or for confirmation of certain high level actions. Within the
-        <code>dialogRef</code>,
-        set it to <code>autoFocus: false</code> to prevent the buttons from being focused on open.
-    </p>
+<section class="component-container">
+    <header>
+        <h2>Material Dialog</h2>
+        <p>
+            Dialogs can be used as alerts or for confirmation of certain high level actions. Within the
+            <code>dialogRef</code>,
+            set it to <code>autoFocus: false</code> to prevent the buttons from being focused on open.
+        </p>
+    </header>
 
     <div class="example-component">
         <button class="rvt-btn-primary" (click)="openDialog()">Test Dialog</button>
     </div>
 
     <!-- Example -->
-    <div class="example-code-header-container">
-        <a class="example-code-header" (click)="isTs = false; isTemp = false" [ngClass]="{'active': !isTs && !isTemp}">HTML</a>
-        <a class="example-code-header" (click)="isTemp = true; isTs = false" [ngClass]="{'active': isTemp}">HTML - Dialog Template</a>
-        <a class="example-code-header" (click)="isTs = true; isTemp = false" [ngClass]="{'active': isTs}">Typescript</a>
+    <div class="example-code-header">
+        <a (click)="isTs = false; isTemp = false" [ngClass]="{'active': !isTs && !isTemp}">HTML</a>
+        <a (click)="isTemp = true; isTs = false" [ngClass]="{'active': isTemp}">HTML - Dialog Template</a>
+        <a (click)="isTs = true; isTemp = false" [ngClass]="{'active': isTs}">Typescript</a>
     </div>
 
     <textarea class="example-code" readonly *ngIf="!isTemp && !isTs">
@@ -59,4 +58,4 @@ openDialog(): void {
 }
     </textarea>
     <!-- End Example -->
-</div>
+</section>

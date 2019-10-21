@@ -1,20 +1,18 @@
-<h2 class="page-header">Navigation</h2>
+<h1 class="page-header">Navigation</h1>
 
-<div class="component-container">
-    <h5>Navigation</h5>
-
-    <p></p>
-
-    <h6>
-        Top Nav
-        <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_TopMenu_Specs.pdf"
-            target="new"></a>
-    </h6>
-    <p>
-        Top nav uses a container with the class <code>top-nav-container</code>. The tabs use the material nav component
-        with
-        <code>mat-top-nav-bar</code> to handle the logic for active route.
-    </p>
+<section class="component-container">
+    <header>
+        <h2>
+            Top Nav
+            <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_TopMenu_Specs.pdf"
+                target="new"></a>
+        </h2>
+        <p>
+            Top nav uses a container with the class <code>top-nav-container</code>. The tabs use the material nav component
+            with
+            <code>mat-top-nav-bar</code> to handle the logic for active route.
+        </p>
+    </header>
 
     <div class="example-component">
         <div class="library-container nav">
@@ -33,7 +31,7 @@
     </div>
 
     <!-- Example -->
-    <p class="example-code-header">HTML</p>
+    <div class="example-code-header"><p>HTML</p></div>
     <textarea class="example-code large">
         <div class="top-nav-container">
             <div class="logo-container">
@@ -49,21 +47,22 @@
     </textarea>
     <!-- End Example -->
 
-    <h6>
-        Side Nav
-        <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_SideMenu_Specs.pdf"
-            target="new"></a>
-    </h6>
-    <p>
-        Side nav used the <code>mat-sidenav</code> component as the main container for the router view and the side nav.
-        This includes a container with the class <code>nav-content-container</code> for styling
-    </p>
+    <header>
+        <h2>
+            Side Nav
+            <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/Polaris_SideMenu_Specs.pdf"
+                target="new"></a>
+        </h2>
+        <p>
+            Side nav used the <code>mat-sidenav</code> component as the main container for the router view and the side nav.
+            This includes a container with the class <code>nav-content-container</code> for styling
+        </p>
+    </header>
     <p>
         Expandable menus use the class <code>expandable</code> on the <code>nav-category</code> and also include a label
         and
         header.
     </p>
-    <p>Numbered menus include the</p>
 
     <div class="example-component">
         <mat-sidenav-container autosize>
@@ -102,9 +101,9 @@
     <!--   ||||||||||||||||||||||||||  -->
 
     <!-- Example -->
-    <div class="example-code-header-container">
-        <a class="example-code-header" (click)="isTs = false" [ngClass]="{'active': !isTs}">HTML</a>
-        <a class="example-code-header" (click)="isTs = true" [ngClass]="{'active': isTs}">Typescript</a>
+    <div class="example-code-header">
+        <a (click)="isTs = false" [ngClass]="{'active': !isTs}">HTML</a>
+        <a (click)="isTs = true" [ngClass]="{'active': isTs}">Typescript</a>
     </div>
     <textarea class="example-code large" *ngIf="!isTs">
 <mat-sidenav-container autosize>
@@ -203,4 +202,4 @@ sideNavConfig = {
     ]
 };
     </textarea>
-</div>
+</section>

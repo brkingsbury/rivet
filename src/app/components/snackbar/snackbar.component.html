@@ -1,15 +1,16 @@
-<h2 class="page-header">Snackbar</h2>
+<h1 class="page-header">
+    Snackbar
+    <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/"
+        target="new"></a>
+</h1>
 
-<div class="component-container">
-    <h5>
-        Material Snackbar - with Template
-        <a class="rivet-icon-pdf" title="spec sheet" href="../../../assets/specs/"
-            target="new"></a>
-    </h5>
-
-    <p>
-        In order to have more control over the parts within the snackbar, it is advised to use the separate template for the snackbar structure.
-    </p>
+<section class="component-container">
+    <header>
+        <h2>Material Snackbar - with Template</h2>
+        <p>
+            In order to have more control over the parts within the snackbar, it is advised to use the separate template for the snackbar structure.
+        </p>
+    </header>
 
     <div class="example-component">
         <button class="rvt-btn-primary" (click)="openSnackBar2()" aria-label="Show an example snack-bar">
@@ -18,10 +19,10 @@
     </div>
 
     <!-- Example -->
-    <div class="example-code-header-container">
-        <a class="example-code-header" (click)="isTs2 = false; isTemp2 = false" [ngClass]="{'active': !isTs2 && !isTemp2}">HTML</a>
-        <a class="example-code-header" (click)="isTemp2 = true; isTs2 = false" [ngClass]="{'active': isTemp2}">HTML - Snackbar Template</a>
-        <a class="example-code-header" (click)="isTs2 = true; isTemp2 = false" [ngClass]="{'active': isTs2}">Typescript</a>
+    <div class="example-code-header">
+        <a (click)="isTs2 = false; isTemp2 = false" [ngClass]="{'active': !isTs2 && !isTemp2}">HTML</a>
+        <a (click)="isTemp2 = true; isTs2 = false" [ngClass]="{'active': isTemp2}">HTML - Snackbar Template</a>
+        <a (click)="isTs2 = true; isTemp2 = false" [ngClass]="{'active': isTs2}">Typescript</a>
     </div>
 
     <textarea class="example-code" readonly *ngIf="!isTemp2 && !isTs2">
@@ -49,16 +50,16 @@ openSnackBar2() {
 }
     </textarea>
     <!-- End Example -->
-</div>
+</section>
 
 
-<div class="component-container deprecated">
-    <h5>
-        Material Snackbar
-    </h5>
-    <p>
-        While this version of the snackbar is not deprecated, it is better to use the template to create the snackbar.
-    </p>
+<section class="component-container deprecated">
+    <header>
+        <h2>Material Snackbar</h2>
+        <p>
+            While this version of the snackbar is not deprecated, it is better to use the template to create the snackbar.
+        </p>
+    </header>
 
     <div class="example-component">
         <button class="rvt-btn-primary" (click)="openSnackBar('message', 'action')" aria-label="Show an example snack-bar">
@@ -67,10 +68,10 @@ openSnackBar2() {
     </div>
 
     <!-- Example -->
-    <div class="example-code-header-container">
-        <a class="example-code-header" (click)="isTs = false; isTemp = false" [ngClass]="{'active': !isTs && !isTemp}">HTML</a>
+    <div class="example-code-header">
+        <a (click)="isTs = false; isTemp = false" [ngClass]="{'active': !isTs && !isTemp}">HTML</a>
         <!-- <a class="example-code-header" (click)="isTemp = true; isTs = false" [ngClass]="{'active': isTemp}">HTML - Dialog Template</a> -->
-        <a class="example-code-header" (click)="isTs = true; isTemp = false" [ngClass]="{'active': isTs}">Typescript</a>
+        <a (click)="isTs = true; isTemp = false" [ngClass]="{'active': isTs}">Typescript</a>
     </div>
 
     <textarea class="example-code" readonly *ngIf="!isTemp && !isTs">
@@ -101,5 +102,5 @@ openSnackBar(message: string, action: string) {
 }
     </textarea>
     <!-- End Example -->
-</div>
+</section>
 

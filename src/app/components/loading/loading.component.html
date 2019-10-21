@@ -1,17 +1,21 @@
-<h2 class="page-header">Loading</h2>
+<h1 class="page-header">Loading</h1>
 
-<div class="component-container">
-  <h5>Material Loading</h5>
-  <p>
-    For indeterminate loading states, <code>mat-spinner</code> is used along with <code>aria-label="loading"</code> for
-    screen readers.
-  </p>
+<section class="component-container">
+  <header>
+      <h2>Material Loading</h2>
+      <p>
+        For indeterminate loading states, <code>mat-spinner</code> is used along with <code>aria-label="loading"</code> for
+        screen readers.
+      </p>
+  </header>
 
-  <h6>Loading Section</h6>
-  <p>
-    Loading sections are used within larger page sections. To add text, simply include
-    <code>span class="loading-text"</code>.
-  </p>
+  <header>
+      <h2>Loading Section</h2>
+      <p>
+        Loading sections are used within larger page sections. To add text, simply include
+        <code>span class="loading-text"</code>.
+      </p>
+  </header>
 
   <div class="example-component">
     <button class="rvt-btn-secondary" (click)="isLoading = !isLoading">Test Loading</button>
@@ -22,21 +26,22 @@
   </div>
 
   <!-- Example -->
-  <p class="example-code-header">HTML</p>
-  <textarea class="example-code" readonly>
-        <div class="loading-section" [ngClass]="{'loading': isLoading}">
-            <span class="loading-text">Loading...</span>
-            <mat-spinner aria-label="loading"></mat-spinner>
-        </div>
-    </textarea
-  >
+  <div class="example-code-header"><p>HTML</p></div>
+    <textarea class="example-code" readonly>
+<div class="loading-section" [ngClass]="{'loading': isLoading}">
+    <span class="loading-text">Loading...</span>
+    <mat-spinner aria-label="loading"></mat-spinner>
+</div>
+    </textarea>
   <!-- End Example-->
 
-  <h6>Loading Buttons</h6>
-  <p>
-    Buttons in a loading state need to be disabled and include the class <code>loading</code> to apply the correct
-    styles as well as prevent interaction while loading
-  </p>
+  <header>
+      <h2>Loading Buttons</h2>
+      <p>
+        Buttons in a loading state need to be disabled and include the class <code>loading</code> to apply the correct
+        styles as well as prevent interaction while loading
+      </p>
+  </header>
 
   <div class="example-component">
     <button class="rvt-btn-secondary" (click)="startLoad()" [ngClass]="{ loading: btnLoading }" [disabled]="btnLoading">
@@ -46,12 +51,11 @@
   </div>
 
   <!-- Example -->
-  <p class="example-code-header">HTML</p>
+  <div class="example-code-header"><p>HTML</p></div>
   <textarea class="example-code" readonly>
-    <button class="rvt-btn-secondary" (click)="startLoad()" [ngClass]="{'loading': btnLoading}" [disabled]="btnLoading">
-        Start load
-        <mat-spinner *ngIf="btnLoading" aria-label="loading"></mat-spinner>
-    </button>
-    </textarea
-  >
-</div>
+<button class="rvt-btn-secondary" (click)="startLoad()" [ngClass]="{'loading': btnLoading}" [disabled]="btnLoading">
+    Start load
+    <mat-spinner *ngIf="btnLoading" aria-label="loading"></mat-spinner>
+</button>
+    </textarea>
+</section>

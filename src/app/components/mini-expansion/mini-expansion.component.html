@@ -1,31 +1,33 @@
-<h2 class="page-header">
-  Links
+<h1 class="page-header">
+  Mini Expansion Panel
   <!-- <a class="rivet-icon-pdf" title="spec sheet" href=""
     target="new"></a> -->
   <!-- <a class="sketch" title="sketch file" href="" target="new">
         <img src="../../assets/sketch.svg"/>
     </a> -->
   <!-- <app-compliance-marker></app-compliance-marker> -->
-</h2>
+</h1>
 
-<!-- Test Inputs -->
+<section class="component-container">
+  <header>
+      <h2>
+        Mini Expansion Panel
+      </h2>
+      <p>
+        Used to collapse small sections of content, most commonly used in a help sidebar. Mini Expansion Panels are style
+        neutral, and are not view encapsulated, so you can override the styles to your own specification.
+      </p>
+  </header>
 
-<div class="component-container">
-  <h5>
-    Mini Expansion Panel
-  </h5>
+  <header>
+      <h2>Single Mini Expansion Panel</h2>
+      <p>
+        Click listener toggle is handled internally. Any content can be placed inside rivet-mini-expansion-head and
+        rivet-mini-expansion-body, as long as the parent wrapper contains those attributes (used to transclude content).
+      </p>
+  </header>
   <p>
-    Used to collapse small sections of content, most commonly used in a help sidebar. Mini Expansion Panels are style
-    neutral, and are not view encapsulated, so you can override the styles to your own specification.
-  </p>
-
-  <h6>Single Mini Expansion Panel</h6>
-  <p>
-    Click listener toggle is handled internally. Any content can be placed inside rivet-mini-expansion-head and
-    rivet-mini-expansion-body, as long as the parent wrapper contains those attributes (used to transclude content).
-  </p>
-  <p>
-    setting panelOpen to true will open the expansion panel by default
+    setting <code>panelOpen</code> to true will open the expansion panel by default
   </p>
   <div class="example-component">
     <advicent-rivet-mini-expansion-panel panelOpen="true">
@@ -35,7 +37,7 @@
   </div>
 
   <!-- Example -->
-  <p class="example-code-header">HTML</p>
+  <div class="example-code-header"><p>HTML</p></div>
   <textarea class="example-code" readonly>
 <advicent-rivet-mini-expansion-panel>
   <div rivet-mini-expansion-head>Header Component</div>
@@ -43,13 +45,15 @@
 </advicent-rivet-mini-expansion-panel>
   </textarea>
 
-  <h6>Multiple Mini Expansion Panels</h6>
+  <header>
+      <h2>Multiple Mini Expansion Panels</h2>
+      <p>
+        Mini Expansion Panels can be wrapped with advicent-rivet-accordion-group to group them in a way where only one will
+        be open at a time
+      </p>
+  </header>
   <p>
-    Mini Expansion Panels can be wrapped with advicent-rivet-accordion-group to group them in a way where only one will
-    be open at a time
-  </p>
-  <p>
-    You can also set panelOpen to true to set a default panel to be opened
+    You can also set <code>panelOpen</code> to true to set a default panel to be opened
   </p>
   <div class="example-component">
     <advicent-rivet-accordion-group>
@@ -69,7 +73,7 @@
   </div>
 
   <!-- Example -->
-  <p class="example-code-header">HTML</p>
+  <div class="example-code-header"><p>HTML</p></div>
   <textarea class="example-code" readonly>
 <advicent-rivet-accordion-group>
   <advicent-rivet-mini-expansion-panel panelOpen="true">
@@ -86,4 +90,4 @@
   </advicent-rivet-mini-expansion-panel>
 </advicent-rivet-accordion-group>
   </textarea>
-</div>
+</section>

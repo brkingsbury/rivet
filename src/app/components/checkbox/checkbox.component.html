@@ -80,8 +80,12 @@
   </div>
 
   <!-- Example -->
+  
+    <div class="example-code-header">
+        <p>HTML</p>
+    </div>
+
     <div *ngIf="!isDisabled && !isRo && !isAbove && !isSmall">
-        <p class="example-code-header">HTML</p>
         <textarea class="example-code" readonly>
 <div class="rvt-checkbox">
     <input type="checkbox" id="check1" />
@@ -91,7 +95,6 @@
     </div>
 
   <div *ngIf="isAbove">
-    <p class="example-code-header">HTML</p>
     <textarea class="example-code" readonly>
 <div class="rvt-checkbox label-above">
     <input type="checkbox" id="check1" />
@@ -101,7 +104,6 @@
   </div>
 
   <div *ngIf="isDisabled && !isRo">
-    <p class="example-code-header">HTML</p>
     <textarea class="example-code" readonly>
 <div class="rvt-checkbox">
     <input type="checkbox" id="check1" disabled/>
@@ -111,7 +113,6 @@
   </div>
 
   <div *ngIf="isRo">
-    <p class="example-code-header">HTML</p>
     <textarea class="example-code" readonly>
 <div class="rvt-checkbox">
     <input type="checkbox" id="check1" class="read-only" disabled/>
@@ -121,7 +122,6 @@
   </div>
 
   <div *ngIf="isSmall">
-    <p class="example-code-header">HTML</p>
     <textarea class="example-code" readonly>
 <div class="rvt-checkbox small-checkbox">
     <input type="checkbox" id="check1" />
@@ -152,9 +152,11 @@
       >Label</mat-checkbox
     >
   </div>
-
-  <p class="example-code-header">HTML</p>
-  <textarea class="example-code" readonly>
+  
+    <div class="example-code-header">
+        <label for="deprecatedCheck">HTML</label>
+    </div>
+  <textarea class="example-code" id="deprecatedCheck" readonly>
 <mat-checkbox>Label</mat-checkbox>
     </textarea>
 </section>

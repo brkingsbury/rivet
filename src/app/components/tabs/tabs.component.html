@@ -1,15 +1,15 @@
-<h2 class="page-header">Tabs</h2>
+<h1 class="page-header">
+    Tabs
+    <a class="rivet-icon-pdf" target="new" title="Spec Sheet"
+        href="../../../assets/specs/Polaris_Tabs_Specs.pdf"></a>
+</h1>
 
 
-<div class="component-container">
-    <h5>
-        Material Tabs
-        <a class="rivet-icon-pdf" target="new" title="Spec Sheet"
-            href="../../../assets/specs/Polaris_Tabs_Specs.pdf"></a>
-    </h5>
-
-    <h6>Content tabs</h6>
-    <p>These tabs are used for switching between content views and not switching between pages or routes.</p>
+<section class="component-container">
+    <header>
+        <h2>Content tabs</h2>
+        <p>These tabs are used for switching between content views and not switching between pages or routes.</p>
+    </header>
 
     <div class="example-component">
         <mat-tab-group disableRipple>
@@ -21,7 +21,9 @@
     </div>
 
     <!-- Example  -->
-    <p class="example-code-header">HTML</p>
+    <div class="example-code-header">
+        <p>HTML</p>
+    </div>
     <textarea class="example-code" readonly>
 <mat-tab-group disableRipple>
     <mat-tab label="First"> Content 1 </mat-tab>
@@ -32,8 +34,10 @@
     </textarea>
     <!-- End Example -->
 
-    <h6>Numbered Content tabs</h6>
-    <p>Used for switching through a flow in the content view.</p>
+    <header>
+        <h2>Numbered Content tabs</h2>
+        <p>Used for switching through a flow in the content view.</p>
+    </header>
 
     <div class="example-component">
         <mat-tab-group disableRipple class="numbered-tabs">
@@ -69,7 +73,7 @@
     </div>
 
     <!-- Example  -->
-    <p class="example-code-header">HTML</p>
+    <div class="example-code-header"><p>HTML</p></div>
     <textarea class="example-code" readonly>
 <mat-tab-group disableRipple class="numbered-tabs">
     <mat-tab>
@@ -104,12 +108,14 @@
     </textarea>
     <!-- End Example-->
 
-    <h6>Navigation tabs</h6>
-    <p>
-        For navigation, we use <code>mat-tab-nav-bar</code> due to its built in functionality with matching active state
-        to
-        the current router link.
-    </p>
+    <header>
+        <h2>Navigation tabs</h2>
+        <p>
+            For navigation, we use <code>mat-tab-nav-bar</code> due to its built in functionality with matching active state
+            to
+            the current router link.
+        </p>
+    </header>
 
     <div class="example-component">
         <div class="library-container">
@@ -131,7 +137,7 @@
 
     <!-- Example -->
 
-    <p class="example-code-header">HTML</p>
+    <div class="example-code-header"><p>HTML</p></div>
     <textarea class="example-code" readonly>
 <nav mat-tab-nav-bar disableRipple>
     <a mat-tab-link [routerLink]="link.path" routerLinkActive #rla="routerLinkActive"
@@ -149,4 +155,4 @@
 </nav>
     </textarea>
     <!-- End Example -->
-</div>
+</section>
