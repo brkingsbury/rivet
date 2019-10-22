@@ -31,6 +31,17 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.5.0',
+    date: '10/22/2019',
+    note: 'Add Rivet Tooltips',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Add all new Rivet tooltip directive', 'Use tooltips for mouseover or manually triggered events']
+      }
+    ]
+  },
+  {
     version: '0.4.2',
     date: '10/17/2019',
     note: 'Fixed radio styles for other browsers, compliance checks',

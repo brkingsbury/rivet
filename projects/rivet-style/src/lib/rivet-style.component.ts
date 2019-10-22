@@ -17,7 +17,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     './styles/loadingStyles.scss',
     './styles/radioStyles.scss',
     './styles/overlayStyles.scss',
-    './styles/snackbarStyles.scss'
+    './styles/snackbarStyles.scss',
+    './styles/tooltipStyles.scss'
   ],
   encapsulation: ViewEncapsulation.None
 })

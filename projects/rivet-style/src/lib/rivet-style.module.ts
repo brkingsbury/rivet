@@ -9,6 +9,7 @@ import { RivetInputComponent } from './rivet-input/rivet-input.component';
 import { RivetHelperComponent } from './rivet-input-helper/rivet-input-helper.component';
 import { RivetLabelComponent } from './rivet-input-label/rivet-input-label.component';
 import { RivetStyleComponent } from './rivet-style.component';
+import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
 import { RivetMiniExpansionPanelComponent } from './rivet-mini-expansion-panel/rivet-mini-expansion-panel.component';
 import { RivetAccordionGroupComponent } from './rivet-accordion-group/rivet-accordion-group.component';
 
@@ -22,6 +23,7 @@ registerLocaleData(localeFrCA, 'fr-CA');
     RivetInputComponent,
     RivetHelperComponent,
     RivetLabelComponent,
+    RvtTooltipDirective,
     RivetMiniExpansionPanelComponent,
     RivetAccordionGroupComponent
   ],
@@ -31,6 +33,7 @@ registerLocaleData(localeFrCA, 'fr-CA');
     RivetInputComponent,
     RivetHelperComponent,
     RivetLabelComponent,
+    RvtTooltipDirective,
     RivetMiniExpansionPanelComponent,
     RivetAccordionGroupComponent
   ]

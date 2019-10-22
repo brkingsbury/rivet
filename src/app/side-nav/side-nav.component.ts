@@ -30,7 +30,8 @@ export class SideNavComponent implements OnInit {
           { name: 'Slider', path: '/components/slider' },
           { name: 'Tables', path: '/components/table' },
           { name: 'Tabs', path: '/components/tab' },
-          { name: 'Text Areas', path: '/components/textarea' }
+          { name: 'Text Areas', path: '/components/textarea' },
+          { name: 'Tooltips', path: '/components/tooltip' }
         ]
       },
       {

@@ -1,0 +1,29 @@
+@import '../../lib/styles/typeStyles.scss';
+@import './rivetTheme.scss';
+
+.rivet-tooltip {
+  position: absolute;
+  color: #fff;
+  background-color: $rvt-primary-color-dark;
+  padding: 10px;
+  font-size: 14px;
+  z-index: 10;
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 20px;
+    height: 20px;
+    bottom: -7px;
+    left: calc(50% - 10px);
+    transform: rotate(45deg);
+    background-color: $rvt-primary-color-dark;
+  }
+  &.error-tooltip {
+    background-color: $rvt-warning-color;
+    &:after {
+      background-color: $rvt-warning-color;
+    }
+  }
+}

@@ -37,6 +37,7 @@ import { PersonaComponent } from './styles/persona/persona.component';
 import { AuthService } from '../../projects/rivet-style/src/lib/rivet-services/unique-name-validator';
 import { SnackbarComponent, Snackbar2Component } from './components/snackbar/snackbar.component';
 import { LinksComponent } from './components/links/links.component';
+import { TooltipsComponent } from './components/tooltips/tooltips.component';
 import { VersionsComponent } from './changelog/versions/versions.component';
 import { MiniExpansionPanelComponent } from './components/mini-expansion/mini-expansion.component';
 
@@ -65,6 +66,7 @@ const appRoutes: Routes = [
   { path: 'components/slider', component: SliderComponent },
   { path: 'components/snackbar', component: SnackbarComponent },
   { path: 'components/link', component: LinksComponent },
+  { path: 'components/tooltip', component: TooltipsComponent },
   { path: 'changelog/roadmap', component: ChangelogComponent },
   { path: 'changelog/versions', component: VersionsComponent },
   { path: 'patterns', component: PatternsComponent },
@@ -113,6 +115,7 @@ const appRoutes: Routes = [
     ComplianceComponent,
     ComplianceDialogComponent,
     LinksComponent,
+    TooltipsComponent,
     VersionsComponent,
     MiniExpansionPanelComponent
   ],
