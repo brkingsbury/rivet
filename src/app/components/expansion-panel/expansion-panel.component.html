@@ -1,27 +1,26 @@
 <h1 class="page-header">
-    Expansion Panel
-    <a
-      class="rivet-icon-pdf"
-      target="new"
-      title="Spec Sheet"
-      href="../../../assets/specs/Polaris_ExpandableLineItem.pdf"
-    ></a>
+  Expansion Panel
+  <a
+    class="rivet-icon-pdf"
+    target="new"
+    title="Spec Sheet"
+    href="../../../assets/specs/Polaris_ExpandableLineItem.pdf"
+  ></a>
 </h1>
 
 <section class="component-container">
   <header>
-      <h2>
-        Expandable Line Item
-      </h2>
-      <p>Used in table like lists that have additional information or sub-items to add.</p>
+    <h2>
+      Expandable Line Item
+    </h2>
+    <p>Used in table like lists that have additional information or sub-items to add.</p>
   </header>
 
   <p>Input bindings:</p>
   <p>
-    <code>formGroup</code>: FormGroup - must contain a nested form group called 'expandedFields' otherwise will have a
-    null pointer exception. (optional)
+    <code>preventCollapse</code>: boolean - defaulted to false, will lock the expansion state and disable the expansion
+    buttons. (optional)
   </p>
-  <p><code>preventExpansion</code>: boolean - defaulted to false, will lock the expansion state. (optional)</p>
   <p>
     <code>hideExpansionContent</code>: boolean - defaulted to false, will hide the expand button and the expansion
     section. Unhide has 500ms delay to allow for the view to update. (optional)

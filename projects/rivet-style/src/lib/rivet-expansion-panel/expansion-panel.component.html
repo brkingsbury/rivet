@@ -19,6 +19,7 @@
         class="rvt-btn-icon toggle-expansion-btn"
         [ngClass]="panelExpanded ? 'rivet-icon-caret-up' : 'rivet-icon-caret-down'"
         (click)="setExpandedState(!panelExpanded, $event)"
+        [disabled]="preventCollapse"
       ></button>
       <ng-content select="[header-button-content]"></ng-content>
 
@@ -31,7 +32,11 @@
       <button *ngIf="showAddButton" class="rvt-btn-primary add-btn" (click)="addButtonClicked()">
         <span class="rivet-icon-add">Add</span>
       </button>
-      <button class="rvt-btn-secondary close-btn" (click)="setExpandedState(false, $event)">
+      <button
+        class="rvt-btn-secondary close-btn"
+        (click)="setExpandedState(false, $event)"
+        [disabled]="preventCollapse"
+      >
         Close
       </button>
     </div>

@@ -13,7 +13,6 @@ import {
   SimpleChanges,
   ViewEncapsulation
 } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
@@ -24,8 +23,7 @@ import { takeUntil } from 'rxjs/operators';
   encapsulation: ViewEncapsulation.None
 })
 export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestroy, AfterViewInit {
-  @Input() formGroup?: FormGroup;
-  @Input() preventExpansion = false;
+  @Input() preventCollapse = false;
   @Input() hideExpansionContent = false;
   @Output() addButtonCallback?: EventEmitter<any> = new EventEmitter();
   @Output() deleteButtonCallback?: EventEmitter<any> = new EventEmitter();
@@ -91,7 +89,7 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
   }
 
   setExpandedState(expanded, event) {
-    if (!this.panelExpanded || (this.isValid() && !this.preventExpansion)) {
+    if (!this.panelExpanded || !this.preventCollapse) {
       this.expandPanel(expanded);
     }
     event.stopPropagation();
@@ -123,13 +121,5 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
 
   private initializeHeight() {
     this.defaultExpansionHeight = this.element.nativeElement.querySelector('.top-panel').offsetHeight;
-  }
-
-  private isValid() {
-    return (
-      this.formGroup === undefined ||
-      (!this.formGroup.contains('expandedFields') ||
-        (this.formGroup.get('expandedFields').valid || this.formGroup.get('expandedFields').untouched))
-    );
   }
 }

@@ -1,6 +1,5 @@
 import { Component, ViewChild } from '@angular/core';
 import { async, ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { By } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponentModule } from '../material-component-module';
@@ -136,51 +135,6 @@ describe('RivetExpansionPanelComponent', () => {
       const closeButton = fixture.debugElement.query(By.css('.bottom-button-bar .close-btn')).nativeElement;
       closeButton.click();
       expect(component.panelExpanded).toBe(false);
-    });
-    describe('with form group input', function() {
-      beforeEach(() => {
-        component.formGroup = new FormGroup({
-          otherFields: new FormGroup({ checkbox0: new FormControl(false, Validators.requiredTrue) }),
-          expandedFields: new FormGroup({
-            checkbox1: new FormControl(false, Validators.requiredTrue),
-            text: new FormControl('', Validators.required)
-          })
-        });
-      });
-      it('should collapse if expanded content is invalid but untouched', () => {
-        // sanity check
-        expect(component.formGroup.valid).toBe(false);
-        expect(component.formGroup.touched).toBe(false);
-
-        expect(component.panelExpanded).toBe(false);
-        const toggleButton = fixture.debugElement.query(By.css('.toggle-expansion-btn')).nativeElement;
-        toggleButton.click();
-        expect(component.panelExpanded).toBe(true);
-        toggleButton.click();
-        expect(component.panelExpanded).toBe(false);
-        toggleButton.click();
-        expect(component.panelExpanded).toBe(true);
-
-        const closeButton = fixture.debugElement.query(By.css('.bottom-button-bar .close-btn')).nativeElement;
-        closeButton.click();
-        expect(component.panelExpanded).toBe(false);
-      });
-      it('should not collapse if expanded content is invalid and touched', () => {
-        expect(component.panelExpanded).toBe(false);
-        const toggleButton = fixture.debugElement.query(By.css('.toggle-expansion-btn')).nativeElement;
-        toggleButton.click();
-        expect(component.panelExpanded).toBe(true);
-
-        component.formGroup.controls['expandedFields'].get('checkbox1').setValue(false);
-        component.formGroup.controls['expandedFields'].get('checkbox1').markAsTouched();
-
-        toggleButton.click();
-        expect(component.panelExpanded).toBe(true); // didn't close
-
-        const closeButton = fixture.debugElement.query(By.css('.bottom-button-bar .close-btn')).nativeElement;
-        closeButton.click();
-        expect(component.panelExpanded).toBe(true); // didn't close
-      });
     });
   });
 
