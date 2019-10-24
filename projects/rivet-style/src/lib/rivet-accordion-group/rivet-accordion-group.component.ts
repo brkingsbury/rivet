@@ -1,6 +1,6 @@
 import { Component, AfterViewInit, QueryList, ContentChildren, OnDestroy } from '@angular/core';
 import { RivetMiniExpansionPanelComponent } from '../rivet-mini-expansion-panel/rivet-mini-expansion-panel.component';
-import { Subject } from 'rxjs';
+import { noop, Subject } from 'rxjs';
 import { takeUntil, tap } from 'rxjs/operators';
 
 @Component({
@@ -9,23 +9,15 @@ import { takeUntil, tap } from 'rxjs/operators';
 })
 export class RivetAccordionGroupComponent implements AfterViewInit, OnDestroy {
   private unsubscribe: Subject<void> = new Subject();
-  panelCollection: Array<RivetMiniExpansionPanelComponent>;
+  private panelCollection: Array<RivetMiniExpansionPanelComponent>;
 
-  @ContentChildren(RivetMiniExpansionPanelComponent) childPanels!: QueryList<RivetMiniExpansionPanelComponent>;
+  @ContentChildren(RivetMiniExpansionPanelComponent) private childPanels!: QueryList<RivetMiniExpansionPanelComponent>;
 
-  closeOtherPanels(index) {
-    this.panelCollection.forEach(function(panel, i) {
-      if (index !== i) {
-        panel.panelOpen = false;
-      }
-    });
-  }
-
-  ngAfterViewInit() {
+  public ngAfterViewInit() {
     const component = this;
     this.panelCollection = this.childPanels.toArray();
-    this.panelCollection.forEach(function(panel, i) {
-      panel.panelEmitter
+    this.panelCollection.forEach((panel, i) => {
+      panel.panelOpenEvent
         .pipe(
           takeUntil(component.unsubscribe),
           tap(() => component.closeOtherPanels(i))
@@ -34,8 +26,12 @@ export class RivetAccordionGroupComponent implements AfterViewInit, OnDestroy {
     });
   }
 
-  ngOnDestroy() {
+  public ngOnDestroy() {
     this.unsubscribe.next();
     this.unsubscribe.complete();
+  }
+
+  private closeOtherPanels(index): void {
+    this.panelCollection.forEach((panel, i) => index !== i ? panel.closeExpansion() : noop());
   }
 }

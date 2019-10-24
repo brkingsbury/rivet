@@ -31,7 +31,7 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
-    version: '0.5.1',
+    version: '0.5.2',
     date: '10/22/2019',
     note: 'Update Expansion Panels',
     updates: [
