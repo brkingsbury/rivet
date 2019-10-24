@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   encapsulation: ViewEncapsulation.None
 })
 export class RivetMiniExpansionPanelComponent {
-  private _panelOpen: boolean = false;
+  private _panelOpen = false;
 
   @Input() public set panelOpen( panelOpen: boolean) {
     panelOpen ? this.openExpansion() : this.closeExpansion();
