@@ -188,8 +188,7 @@
 }
 
 // -------- End Deprecated Styles ---
-$RadioSize: 17px;
-$RadioBorderWidth: 2px;
+$RadioSize: 19px;
 
 .rvt-radio {
   display: inline-block;
@@ -201,48 +200,44 @@ $RadioBorderWidth: 2px;
 
     + label {
       position: relative;
-      padding-left: 25px;
       font: 400 14px $RvtFontFamily;
       color: $rvt-neutral-900;
       cursor: pointer;
       text-align: center;
 
       &:before {
-        content: '';
-        position: absolute;
-        display: block;
-        left: 0;
-        top: 0;
-        height: $RadioSize;
-        width: $RadioSize;
-        border: 1px solid $rvt-neutral-900;
-        border-radius: 50%;
-      }
-
-      &:after {
-        content: '';
-        position: absolute;
-        display: block;
-        left: 3px;
-        top: 3px;
-        border-radius: 50%;
-        height: calc(#{$RadioSize} - 5px);
-        width: calc(#{$RadioSize} - 5px);
-        background: transparent;
+        font-size: $RadioSize;
+        vertical-align: middle;
+        margin-top: -0.25em;
+        margin-right: 5px;
+        display: inline-block;
       }
     }
 
-    &:hover:not(:disabled),
-    &:focus:not(:disabled) {
+    &:not(:checked) {
+      // hover unchecked
+      &:hover:not(:disabled) + label:before {
+        @extend .inner-rivet-icon-radio-unchecked-h !optional;
+        color: $rvt-neutral-900;
+      }
+      // resting unchecked
       + label:before {
-        border-width: $RadioBorderWidth;
-        height: calc(#{$RadioSize} - #{$RadioBorderWidth});
-        width: calc(#{$RadioSize} - #{$RadioBorderWidth});
+        @extend .inner-rivet-icon-radio-unchecked !optional;
+        color: $rvt-neutral-900;
       }
     }
 
-    &:checked + label:after {
-      background: $rvt-primary-color;
+    &:checked {
+      // hover checked
+      &:hover:not(:disabled) + label:before {
+        @extend .inner-rivet-icon-radio-checked-h !optional;
+        color: $rvt-primary-color;
+      }
+      // resting unchecked
+      + label:before {
+        @extend .inner-rivet-icon-radio-checked !optional;
+        color: $rvt-primary-color;
+      }
     }
 
     &:disabled {
@@ -251,28 +246,22 @@ $RadioBorderWidth: 2px;
         cursor: default;
 
         &:before {
-          border-color: $rvt-disabled-color;
-          border-style: dashed;
+          color: $rvt-disabled-color;
           cursor: default;
         }
-      }
-
-      &:checked + label:after {
-        background-color: $rvt-disabled-color;
-        cursor: default;
       }
 
       &.read-only {
         + label {
           color: $rvt-neutral-900;
-
-          &:before {
-            border-color: transparent;
-          }
         }
-
-        &:checked + label:after {
-          background-color: $rvt-neutral-900;
+        &:not(:checked) + label:before {
+          color: $rvt-neutral-900;
+          content: '';
+        }
+        &:checked + label:before {
+          color: $rvt-neutral-900;
+          @extend .inner-rivet-icon-radio-read-only !optional;
         }
       }
     }
@@ -282,22 +271,8 @@ $RadioBorderWidth: 2px;
         font-size: 12px;
 
         &:before {
-          height: calc(#{$RadioSize} - 2px);
-          width: calc(#{$RadioSize} - 2px);
+          font-size: calc(#{$RadioSize} - 2px);
         }
-      }
-
-      &:hover:not(:disabled),
-      &:focus:not(:disabled) {
-        + label:before {
-          height: calc(#{$RadioSize} - #{$RadioBorderWidth} - 2px);
-          width: calc(#{$RadioSize} - #{$RadioBorderWidth} - 2px);
-        }
-      }
-
-      &:checked + label:after {
-        height: calc(#{$RadioSize} - 7px);
-        width: calc(#{$RadioSize} - 7px);
       }
     }
   }
@@ -308,18 +283,11 @@ $RadioBorderWidth: 2px;
     margin-right: 15px;
     font-size: 12px;
 
-    &:before,
-    &:after {
+    &:before {
       position: relative;
       display: block;
       margin: 0 auto;
       left: 0;
-    }
-
-    &:after {
-      position: absolute;
-      top: 19px;
-      left: calc(50% + 6px);
     }
   }
 }

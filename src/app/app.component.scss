@@ -137,8 +137,9 @@ p:not(.example-code-header) {
       height: 24px;
       width: 24px;
     }
-    &.sketch, &.sketch img {
-        display: inline-block;
+    &.sketch,
+    &.sketch img {
+      display: inline-block;
       height: 24px;
       width: 24px;
     }

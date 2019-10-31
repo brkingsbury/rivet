@@ -31,6 +31,21 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.5.3',
+    date: '10/29/2019',
+    note: 'Convert Radio Buttons to SVG and refactor icon approach',
+    updates: [
+      {
+        category: 'Design',
+        bullets: [
+          'Radio buttons are now made from SVG icons',
+          '!IMPORTANT: anyone referencing icons through a unicode character in css will have to update those references',
+          'see icon documentation page for details on atypical icon use'
+        ]
+      }
+    ]
+  },
+  {
     version: '0.5.2',
     date: '10/22/2019',
     note: 'Update Expansion Panels',

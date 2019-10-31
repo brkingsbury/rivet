@@ -67,7 +67,12 @@ export class IconsComponent implements OnInit {
     'templates',
     'logout',
     'up-outlinearrow',
-    'down-outlinearrow'
+    'down-outlinearrow',
+    'radio-unchecked',
+    'radio-checked',
+    'radio-unchecked-h',
+    'radio-checked-h',
+    'radio-read-only'
   ];
 
   copyText(icoInput) {

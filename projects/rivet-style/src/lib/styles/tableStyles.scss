@@ -40,8 +40,7 @@
     margin-right: 16px;
 
     .mat-button-wrapper:before {
-      font-family: 'rivet-icons';
-      content: '\f106';
+      @extend .inner-rivet-icon-beginning !optional;
     }
   }
 
@@ -49,8 +48,7 @@
     margin-right: 24px;
 
     .mat-button-wrapper:before {
-      font-family: 'rivet-icons';
-      content: '\f132';
+      @extend .inner-rivet-icon-previous !optional;
     }
   }
 
@@ -58,15 +56,13 @@
     margin-right: 16px;
 
     .mat-button-wrapper:before {
-      font-family: 'rivet-icons';
-      content: '\f12e';
+      @extend .inner-rivet-icon-next !optional;
     }
   }
 
   .mat-paginator-navigation-last {
     .mat-button-wrapper:before {
-      font-family: 'rivet-icons';
-      content: '\f11a';
+      @extend .inner-rivet-icon-end !optional;
     }
   }
 }

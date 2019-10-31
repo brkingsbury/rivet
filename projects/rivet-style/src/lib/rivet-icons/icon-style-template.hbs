@@ -44,6 +44,10 @@ $rivet-icon-path: '../rivet-icons' !default;
     .#{$prefix}#{nth($i, 1)}:before {
       content: nth($i, 2);
     }
+    .inner-#{$prefix}#{nth($i, 1)} {
+      font-family: 'rivet-icons' !important;
+      content: nth($i, 2);
+    }
   }
 }
 @include config-icon-content(

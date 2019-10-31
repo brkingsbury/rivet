@@ -1,6 +1,6 @@
 <h2 class="page-header">
-    Icons
-    <a class="rivet-icon-pdf" target="new" href="../../../assets/specs/Polaris_Icon_Specs.pdf" title="Spec Sheet"></a>
+  Icons
+  <a class="rivet-icon-pdf" target="new" href="../../../assets/specs/Polaris_Icon_Specs.pdf" title="Spec Sheet"></a>
 </h2>
 
 <div class="component-container">
@@ -11,14 +11,25 @@
 
   <div class="icon-container">
     <p class="hint">Click an icon below to copy the class name to your clipboard.</p>
-    <button
-      class="rvt-btn-icon"
-      *ngFor="let ico of icons"
-      title="rivet-icon-{{ ico }}"
-      (click)="copyText(icoInput)">
+    <button class="rvt-btn-icon" *ngFor="let ico of icons" title="rivet-icon-{{ ico }}" (click)="copyText(icoInput)">
       <span class="rivet-icon-{{ ico }}"></span>
       <input type="text" value="rivet-icon-{{ ico }}" #icoInput readonly />
       <span class="note" [hidden]="alert != icoInput">copied to clipboard!</span>
     </button>
   </div>
+
+  <strong>Atypical direct CSS usage</strong>
+  <p>
+    !IMPORTANT: starting in v0.5.3 icons referenced in css via unicode characters will no longer be supported. To add an
+    icon through css use:
+  </p>
+  <p>
+    <code>.element:before &#65371; @extend .inner-rivet-icon-name !optional; &#65373;</code>
+  </p>
+  <ul>
+    <li><code>:before</code> it is required that the icon be added as a pseudo-element</li>
+    <li><code>@extend</code> will reference the mixin from the Rivet icon font stylesheet</li>
+    <li><code>inner-</code> is a required prefix before the name of the icon</li>
+    <li><code>rivet-icon-name</code> is the standard name of the icon you want to use from the list below.</li>
+  </ul>
 </div>

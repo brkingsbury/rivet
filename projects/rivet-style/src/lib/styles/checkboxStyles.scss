@@ -59,8 +59,7 @@ mat-checkbox.mat-checkbox {
       padding: 4px;
 
       &::before {
-        font-family: 'rivet-icons';
-        content: '\f10f';
+        @extend .inner-rivet-icon-check !optional;
         font-size: 10px;
         font-weight: 600;
         color: $rvt-white;
@@ -90,8 +89,7 @@ mat-checkbox.mat-checkbox {
 
     .mat-checkbox-background {
       &::before {
-        font-family: 'rivet-icons';
-        content: '\f13c';
+        @extend .inner-rivet-icon-subtract !optional;
         font-size: 10px;
         color: $rvt-white;
         font-weight: 400;
@@ -243,8 +241,7 @@ $CheckboxSize: 18px;
       }
 
       &:after {
-        font: 600 10px 'rivet-icons';
-        content: '\f10f';
+        @extend .inner-rivet-icon-check !optional;
         color: $rvt-white;
       }
     }

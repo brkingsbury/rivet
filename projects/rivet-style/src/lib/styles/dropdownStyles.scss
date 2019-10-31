@@ -73,8 +73,7 @@ mat-form-field.mat-form-field {
         width: 10px;
         border: none;
         &:after {
-          font-family: 'rivet-icons';
-          content: '\f10a';
+          @extend .inner-rivet-icon-caret-down !optional;
           font-size: 12px;
         }
       }

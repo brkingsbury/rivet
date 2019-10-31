@@ -8,11 +8,11 @@ $rivet-icon-path: '../rivet-icons' !default;
 
 @font-face {
     font-family: 'rivet-icons';
-    src: url("#{$rivet-icon-path}/rivet-icons.eot?e0b6b82f706792c1922b5f2530448acd?#iefix") format("embedded-opentype"),
-url("#{$rivet-icon-path}/rivet-icons.woff2?e0b6b82f706792c1922b5f2530448acd") format("woff2"),
-url("#{$rivet-icon-path}/rivet-icons.woff?e0b6b82f706792c1922b5f2530448acd") format("woff"),
-url("#{$rivet-icon-path}/rivet-icons.ttf?e0b6b82f706792c1922b5f2530448acd") format("truetype"),
-url("#{$rivet-icon-path}/rivet-icons.svg?e0b6b82f706792c1922b5f2530448acd#rivet-icons") format("svg");
+    src: url("#{$rivet-icon-path}/rivet-icons.eot?458edcf442c6ee777562232ac87b9116?#iefix") format("embedded-opentype"),
+url("#{$rivet-icon-path}/rivet-icons.woff2?458edcf442c6ee777562232ac87b9116") format("woff2"),
+url("#{$rivet-icon-path}/rivet-icons.woff?458edcf442c6ee777562232ac87b9116") format("woff"),
+url("#{$rivet-icon-path}/rivet-icons.ttf?458edcf442c6ee777562232ac87b9116") format("truetype"),
+url("#{$rivet-icon-path}/rivet-icons.svg?458edcf442c6ee777562232ac87b9116#rivet-icons") format("svg");
     font-weight: normal;
     font-style: normal;
 }
@@ -46,6 +46,10 @@ url("#{$rivet-icon-path}/rivet-icons.svg?e0b6b82f706792c1922b5f2530448acd#rivet-
 @mixin config-icon-content($prefix, $content...) {
   @each $i in $content {
     .#{$prefix}#{nth($i, 1)}:before {
+      content: nth($i, 2);
+    }
+    .inner-#{$prefix}#{nth($i, 1)} {
+      font-family: 'rivet-icons' !important;
       content: nth($i, 2);
     }
   }
@@ -103,21 +107,26 @@ url("#{$rivet-icon-path}/rivet-icons.svg?e0b6b82f706792c1922b5f2530448acd#rivet-
   'presentation' '\f131',
   'previous' '\f132',
   'purchase' '\f133',
-  'reassignclients' '\f134',
-  'reporteditor' '\f135',
-  'reset' '\f136',
-  'resync' '\f137',
-  'retirement' '\f138',
-  'search' '\f139',
-  'settings' '\f13a',
-  'star' '\f13b',
-  'subtract' '\f13c',
-  'sync' '\f13d',
-  'table' '\f13e',
-  'templates' '\f13f',
-  'text' '\f140',
-  'transfers' '\f141',
-  'unlocked' '\f142',
-  'up-outlinearrow' '\f143',
-  'worddoc' '\f144'
+  'radio-checked-h' '\f134',
+  'radio-checked' '\f135',
+  'radio-read-only' '\f136',
+  'radio-unchecked-h' '\f137',
+  'radio-unchecked' '\f138',
+  'reassignclients' '\f139',
+  'reporteditor' '\f13a',
+  'reset' '\f13b',
+  'resync' '\f13c',
+  'retirement' '\f13d',
+  'search' '\f13e',
+  'settings' '\f13f',
+  'star' '\f140',
+  'subtract' '\f141',
+  'sync' '\f142',
+  'table' '\f143',
+  'templates' '\f144',
+  'text' '\f145',
+  'transfers' '\f146',
+  'unlocked' '\f147',
+  'up-outlinearrow' '\f148',
+  'worddoc' '\f149'
 );
