@@ -1,6 +1,10 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
+[rvttooltip] {
+  pointer-events: all;
+}
+
 .rivet-tooltip {
   position: absolute;
   color: #fff;

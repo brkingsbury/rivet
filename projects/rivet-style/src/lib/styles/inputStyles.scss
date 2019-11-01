@@ -31,13 +31,17 @@ form {
         display: none;
       }
     }
-    .mat-form-field-label-wrapper label.mat-form-field-label {
-      font-family: $RvtFontFamily;
-      font-size: 16px;
-      font-weight: 400;
-      color: $rvt-neutral-400;
-      .mat-placeholder-required {
+    .mat-form-field-label-wrapper {
+      overflow: visible;
+      label.mat-form-field-label {
+        font-family: $RvtFontFamily;
+        font-size: 16px;
+        font-weight: 400;
+        color: $rvt-neutral-400;
+        overflow: visible;
+        .mat-placeholder-required {
           color: $rvt-neutral-400;
+        }
       }
     }
     .mat-form-field-underline {

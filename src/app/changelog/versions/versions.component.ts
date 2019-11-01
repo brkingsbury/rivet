@@ -31,6 +31,17 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.5.4',
+    date: '11/1/2019',
+    note: 'Adjust tooltip anchor',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Adjusted Rivet tooltips to render on AfterViewInit to prevent getting lost in Material components']
+      }
+    ]
+  },
+  {
     version: '0.5.3',
     date: '10/29/2019',
     note: 'Convert Radio Buttons to SVG and refactor icon approach',
