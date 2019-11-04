@@ -32,7 +32,7 @@ export class RvtTooltipDirective implements OnChanges, OnInit, AfterViewInit {
     // whereas setting something like 'display: none' would return undefined width and height
     this.tooltipEl.style.top = this.anchorEl.offsetTop - this.tooltipEl.offsetHeight - 14 + 'px';
     this.tooltipEl.style.left =
-      this.anchorEl.offsetLeft + this.anchorEl.offsetWidth / 2 - this.tooltipEl.offsetWidth / 2 + 'px';
+      this.anchorEl.offsetLeft + this.anchorEl.offsetWidth / 2 - this.tooltipEl.offsetWidth / 2 + 200 + 'px';
   };
 
   hideTooltip = function(): void {

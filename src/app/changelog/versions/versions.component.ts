@@ -31,6 +31,20 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.5.6',
+    date: '11/4/2019',
+    note: 'Adjust tooltips',
+    updates: [
+      {
+        category: 'Components',
+        bullets: [
+          'Assign max width of 300px to tooltips',
+          'Adjust tooltip placement logic to get around flexbox issues'
+        ]
+      }
+    ]
+  },
+  {
     version: '0.5.5',
     date: '11/3/2019',
     note: 'Make expanded state an input',
