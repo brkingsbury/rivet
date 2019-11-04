@@ -31,6 +31,19 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.5.5',
+    date: '11/3/2019',
+    note: 'Make expanded state an input',
+    updates: [
+      {
+        category: 'Components',
+        bullets: [
+          'Make expansion panel component expanded property an @Input so we can expand the panel programmatically'
+        ]
+      }
+    ]
+  },
+  {
     version: '0.5.4',
     date: '11/1/2019',
     note: 'Adjust tooltip anchor',

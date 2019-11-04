@@ -6,6 +6,7 @@ import {
   EventEmitter,
   HostListener,
   Input,
+  NgZone,
   OnChanges,
   OnDestroy,
   OnInit,
@@ -25,12 +26,12 @@ import { takeUntil } from 'rxjs/operators';
 export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestroy, AfterViewInit {
   @Input() preventCollapse = false;
   @Input() hideExpansionContent = false;
+  @Input() panelExpanded = false;
   @Output() addButtonCallback?: EventEmitter<any> = new EventEmitter();
   @Output() deleteButtonCallback?: EventEmitter<any> = new EventEmitter();
 
   defaultExpansionHeight: number;
   isDeleting = false;
-  panelExpanded = false;
   panelHeight: number;
   showAddButton = false;
   showDeleteButton = false;
@@ -38,7 +39,7 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
   private onChanges: Subject<SimpleChanges> = new Subject();
   private unsubscribe: Subject<void> = new Subject();
 
-  constructor(private element: ElementRef, private cd: ChangeDetectorRef) {}
+  constructor(private element: ElementRef, private cd: ChangeDetectorRef, private zone: NgZone) {}
 
   ngOnDestroy() {
     this.unsubscribe.next();
@@ -54,19 +55,33 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
     this.showDeleteButton = this.deleteButtonCallback.observers.length > 0;
 
     this.onChanges.pipe(takeUntil(this.unsubscribe)).subscribe((changes: SimpleChanges) => {
-      if (!changes.hideExpansionContent) {
-        return;
-      }
+      if (changes.hideExpansionContent) {
+        const expand = !changes.hideExpansionContent.currentValue;
 
-      const expand = !changes.hideExpansionContent.currentValue;
-
-      if (expand) {
-        setTimeout(() => {
-          this.cd.markForCheck();
+        if (expand) {
+          this.zone.runOutsideAngular(() => {
+            setTimeout(() => {
+              this.cd.markForCheck();
+              this.expandPanel(expand);
+            }, 625);
+          });
+        } else {
           this.expandPanel(expand);
-        }, 625);
-      } else {
-        this.expandPanel(expand);
+        }
+      }
+      if (changes.panelExpanded) {
+        const expand = changes.panelExpanded.currentValue;
+
+        if (expand) {
+          this.zone.runOutsideAngular(() => {
+            setTimeout(() => {
+              this.cd.markForCheck();
+              this.expandPanel(expand);
+            }, 625);
+          });
+        } else {
+          this.expandPanel(expand);
+        }
       }
     });
   }
