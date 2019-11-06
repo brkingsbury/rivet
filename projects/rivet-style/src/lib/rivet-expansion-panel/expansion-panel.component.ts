@@ -56,32 +56,11 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
 
     this.onChanges.pipe(takeUntil(this.unsubscribe)).subscribe((changes: SimpleChanges) => {
       if (changes.hideExpansionContent) {
-        const expand = !changes.hideExpansionContent.currentValue;
-
-        if (expand) {
-          this.zone.runOutsideAngular(() => {
-            setTimeout(() => {
-              this.cd.markForCheck();
-              this.expandPanel(expand);
-            }, 625);
-          });
-        } else {
-          this.expandPanel(expand);
-        }
+        this.expandOnChange(!changes.hideExpansionContent.currentValue);
       }
-      if (changes.panelExpanded) {
-        const expand = changes.panelExpanded.currentValue;
 
-        if (expand) {
-          this.zone.runOutsideAngular(() => {
-            setTimeout(() => {
-              this.cd.markForCheck();
-              this.expandPanel(expand);
-            }, 625);
-          });
-        } else {
-          this.expandPanel(expand);
-        }
+      if (changes.panelExpanded) {
+        this.expandOnChange(changes.panelExpanded.currentValue);
       }
     });
   }
@@ -123,6 +102,19 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
   addButtonClicked() {
     this.addButtonCallback.emit();
     this.resizePanel();
+  }
+
+  private expandOnChange(expand: boolean) {
+    if (expand) {
+      this.zone.runOutsideAngular(() => {
+        setTimeout(() => {
+          this.expandPanel(expand);
+          this.cd.detectChanges();
+        }, 625);
+      });
+    } else {
+      this.expandPanel(expand);
+    }
   }
 
   private resizePanel() {

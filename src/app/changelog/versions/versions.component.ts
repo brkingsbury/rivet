@@ -31,6 +31,17 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.5.7',
+    date: '11/5/2019',
+    note: 'Adjust rivet expansion panel',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Clean up to use detectChanges when calling outside of angular and update documentation.']
+      }
+    ]
+  },
+  {
     version: '0.5.6',
     date: '11/4/2019',
     note: 'Adjust tooltips',
