@@ -27,8 +27,8 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
   @Input() preventCollapse = false;
   @Input() hideExpansionContent = false;
   @Input() panelExpanded = false;
-  @Input() overlayDeleteBtnText?: string = 'Delete';
-  @Input() overlayCancelBtnText?: string = 'Cancel';
+  @Input() overlayDeleteBtnText?: string;
+  @Input() overlayCancelBtnText?: string;
   @Output() addButtonCallback?: EventEmitter<any> = new EventEmitter();
   @Output() deleteButtonCallback?: EventEmitter<any> = new EventEmitter();
 
@@ -41,7 +41,11 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
   private onChanges: Subject<SimpleChanges> = new Subject();
   private unsubscribe: Subject<void> = new Subject();
 
-  constructor(private element: ElementRef, private cd: ChangeDetectorRef, private zone: NgZone) {}
+  constructor(private element: ElementRef, private cd: ChangeDetectorRef, private zone: NgZone) {
+    // default button values
+    this.overlayDeleteBtnText = 'Delete';
+    this.overlayCancelBtnText = 'Cancel';
+  }
 
   ngOnDestroy() {
     this.unsubscribe.next();
