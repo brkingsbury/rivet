@@ -37,6 +37,8 @@
     <code>deleteButtonCallback</code>: EventEmitter - event to emit on click, while hide the delete button if not set.
     (optional)
   </p>
+  <p><code>overlayDeleteBtnText</code>: string - text for delete overlay 'delete' button (optional)</p>
+  <p><code>overlayCancelBtnText</code>: string - text for delete overlay 'cancel' button (optional)</p>
   <div class="example-component">
     <advicent-rivet-expansion-panel>
       <div header-content>
@@ -124,6 +126,79 @@
             <mat-hint>Helper Text</mat-hint>
         </mat-form-field>
     </div>
+</advicent-rivet-expansion-panel>
+    </textarea
+  >
+</section>
+<section class="component-container">
+  <header>
+    <h2>
+      Expandable Line Item With Delete Overlay
+    </h2>
+    <p>
+      Has parameter for <code>deleteButtonCallback</code>, <code>overlayDeleteBtnText</code>, and
+      <code>overlayCancelBtnText</code>
+    </p>
+    <p>
+      <code>rivet-delete-overlay-content</code> is also required on an element (&lt;p&gt; in this case) that contains
+      the text message attribute (to transclude the "are you sure?" message in a translatable way)
+    </p>
+  </header>
+  <div class="example-component">
+    <advicent-rivet-expansion-panel
+      (deleteButtonCallback)="mockDelete($event)"
+      overlayDeleteBtnText="Delete"
+      overlayCancelBtnText="Cancel"
+    >
+      <p rivet-delete-overlay-content>Are you sure you want to delete this item?</p>
+      <div header-content>
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+      </div>
+      <span header-button-content> </span>
+      <div expansion-content>
+        <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+        </mat-form-field>
+      </div>
+    </advicent-rivet-expansion-panel>
+  </div>
+
+  <!-- Example -->
+  <div class="example-code-header"><p>HTML</p></div>
+  <textarea class="example-code large">
+<advicent-rivet-expansion-panel
+  (deleteButtonCallback)="mockDelete($event)"
+  overlayDeleteBtnText="Delete"
+  overlayCancelBtnText="Cancel"
+>
+  <p rivet-delete-overlay-content>Are you sure you want to delete this item?</p>
+  <div header-content>
+      <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+      </mat-form-field>
+      <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+      </mat-form-field>
+  </div>
+  <span header-button-content>
+      <button class="rvt-btn-icon rivet-icon-delete" aria-label="Delete"></button>
+  </span>
+  <div expansion-content>
+      <mat-form-field>
+          <input matInput placeholder="Label" />
+          <mat-hint>Helper Text</mat-hint>
+      </mat-form-field>
+  </div>
 </advicent-rivet-expansion-panel>
     </textarea
   >

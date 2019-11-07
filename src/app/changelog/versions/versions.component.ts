@@ -31,6 +31,17 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '0.5.9',
+    date: '11/7/2019',
+    note: 'Allow translations in expansion panel',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Remove hard coded strings in expansion panel', 'see documentation page for implementation details']
+      }
+    ]
+  },
+  {
     version: '0.5.7',
     date: '11/5/2019',
     note: 'Adjust rivet expansion panel',

@@ -27,6 +27,8 @@ export class RivetExpansionPanelComponent implements OnChanges, OnInit, OnDestro
   @Input() preventCollapse = false;
   @Input() hideExpansionContent = false;
   @Input() panelExpanded = false;
+  @Input() overlayDeleteBtnText?: string = 'Delete';
+  @Input() overlayCancelBtnText?: string = 'Cancel';
   @Output() addButtonCallback?: EventEmitter<any> = new EventEmitter();
   @Output() deleteButtonCallback?: EventEmitter<any> = new EventEmitter();
 
