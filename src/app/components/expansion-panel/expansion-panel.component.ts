@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class ExpansionPanelComponent implements OnInit {
   constructor() {}
 
-  mockDelete = function() {
+  mockDelete = function(e) {
     alert('deleted');
   };
 
