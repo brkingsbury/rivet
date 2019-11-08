@@ -1,14 +1,14 @@
 @import '../../styles.scss';
 
 .version-history {
-    div:first-of-type {
-        padding: 15px 30px;
-        background-color: transparentize($rvt-primary-color, 0.9);
-        margin-bottom: 45px;
-        > hr {
-            display: none;
-        }
+  div:first-of-type {
+    padding: 15px 30px;
+    background-color: $rvt-primary-color-alpha-10;
+    margin-bottom: 45px;
+    > hr {
+      display: none;
     }
+  }
   h5 {
     margin-top: 15px;
     display: inline-block;

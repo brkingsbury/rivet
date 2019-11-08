@@ -4,7 +4,7 @@
 .cdk-overlay-container {
   font-family: $RvtFontFamily;
   .cdk-overlay-backdrop {
-    background: transparentize($rvt-neutral-600, 0.29);
+    background: $rvt-neutral-600-alpha-71;
   }
   .mat-dialog-container {
     position: relative;

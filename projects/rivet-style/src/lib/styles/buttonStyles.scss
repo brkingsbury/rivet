@@ -60,10 +60,10 @@ button {
     &:hover:not(:disabled),
     &:focus:not(:disabled),
     &.loading:disabled {
-      background-color: transparentize($rvt-primary-color, 0.9);
+      background-color: $rvt-primary-color-alpha-10;
     }
     &:active:not(:disabled) {
-      background-color: transparentize($rvt-primary-color, 0.72);
+      background-color: $rvt-primary-color-alpha-28;
     }
     &:disabled:not(.loading) {
       border: 1px dashed $rvt-disabled-color;
@@ -76,7 +76,7 @@ button {
     color: $rvt-neutral-600;
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
-      background-color: transparentize($rvt-neutral-600, 0.9);
+      background-color: $rvt-neutral-600-alpha-10;
       color: $rvt-neutral-600;
     }
     &.loading:disabled {
@@ -87,7 +87,7 @@ button {
       }
     }
     &:active:not(:disabled) {
-      background-color: transparentize($rvt-neutral-600, 0.72);
+      background-color: $rvt-neutral-600-alpha-28;
     }
     &:disabled:not(.loading) {
       color: $rvt-disabled-text-color;

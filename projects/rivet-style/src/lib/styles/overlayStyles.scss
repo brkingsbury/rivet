@@ -5,7 +5,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: transparentize($rvt-neutral-200, 0.1);
+  background: $rvt-neutral-200-alpha-90;
   z-index: 100;
   .overlay-content {
     margin: 10px 0 0 0;

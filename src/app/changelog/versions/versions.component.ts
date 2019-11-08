@@ -31,6 +31,25 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.0.0',
+    date: '11/8/2019',
+    note: 'CSS Variables',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: [
+          'Breaking change for legacy browsers unless you add the rvtPolyfill',
+          'Updated variables to use CSS Custom Properties',
+          'Added polyfill for legacy browser CSS Custom Property support'
+        ]
+      },
+      {
+        category: 'Style',
+        bullets: ['Added CSS Variable column']
+      }
+    ]
+  },
+  {
     version: '0.5.8',
     date: '11/7/2019',
     note: 'Allow translations in expansion panel',

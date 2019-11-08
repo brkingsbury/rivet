@@ -1,7 +1,8 @@
 {
   "name": "rivet-style",
-  "version": "0.5.8",
+  "version": "4.0.0",
   "dependencies": {
+    "css-vars-ponyfill": "^2.1.2",
     "hammerjs": "^2.0.8"
   },
   "peerDependencies": {
@@ -13,6 +14,7 @@
     "accounting": "^0.4.1"
   },
   "bundledDependencies": [
+    "css-vars-ponyfill",
     "hammerjs"
   ]
 }

@@ -1,50 +1,57 @@
 //------- Default Color Variables
-$rvt-primary-color: #585096 !default;
-$rvt-primary-color-light: #877cc7 !default;
-$rvt-primary-color-dark: #292868 !default;
+$rvt-primary-color: #{var(--rvt-primary-color, #585096)} !default;
+$rvt-primary-color-light: #{var(--rvt-primary-color-light, #877cc7)} !default;
+$rvt-primary-color-dark: #{var(--rvt-primary-color-dark, #292868)} !default;
 
-$rvt-accent-color: #e7aa39 !default;
+$rvt-accent-color: #{var(--rvt-accent-color, #e7aa39)} !default;
 
-$rvt-warning-color: #c72929 !default;
-$rvt-good-color: #26a54a !default;
-$rvt-insufficient-color: #f3e31d !default;
+$rvt-warning-color: #{var(--rvt-warning-color, #c72929)} !default;
+$rvt-good-color: #{var(--rvt-good-color, #26a54a)} !default;
+$rvt-insufficient-color: #{var(--rvt-insufficient-color, #f3e31d)} !default;
 
-$rvt-white: #fff !default;
-$rvt-neutral-50: #f7f7f7 !default;
-$rvt-neutral-100: #ebebec !default;
-$rvt-neutral-200: #cbced5 !default;
-$rvt-neutral-300: #adb3be !default;
-$rvt-neutral-400: #6b7280 !default;
-$rvt-neutral-600: #394059 !default;
-$rvt-neutral-900: #192239 !default;
-
+$rvt-white: #{var(--rvt-white, #fff)} !default;
+$rvt-neutral-50: #{var(--rvt-neutral-50, #f7f7f7)} !default;
+$rvt-neutral-100: #{var(--rvt-neutral-100, #ebebec)} !default;
+$rvt-neutral-200: #{var(--rvt-neutral-200, #cbced5)} !default;
+$rvt-neutral-300: #{var(--rvt-neutral-300, #adb3be)} !default;
+$rvt-neutral-400: #{var(--rvt-neutral-400, #6b7280)} !default;
+$rvt-neutral-600: #{var(--rvt-neutral-600, #394059)} !default;
+$rvt-neutral-900: #{var(--rvt-neutral-900, #192239)} !default;
 //-------- Component Color Variables
-$rvt-topnav-background: $rvt-neutral-100 !default;
-$rvt-overlay-color: $rvt-neutral-400 !default;
-$rvt-sidenav-background: $rvt-white !default;
-$rvt-bg-color: $rvt-white !default;
+$rvt-topnav-background: #{var(--rvt-topnav-background, $rvt-neutral-100)} !default;
+$rvt-overlay-color: #{var(--rvt-overlay-color, $rvt-neutral-400)} !default;
+$rvt-sidenav-background: #{var(--rvt-sidenav-background, $rvt-white)} !default;
+$rvt-bg-color: #{var(--rvt-bg-color, $rvt-white)} !default;
 
 //---------- Branding Color Variables
-$rvt-disabled-color: #bcc0c9 !default;
-$rvt-disabled-text-color: $rvt-disabled-color !default;
+$rvt-disabled-color: #{var(--rvt-disabled-color, #bcc0c9)} !default;
+$rvt-disabled-text-color: #{var(--rvt-disabled-text-color, $rvt-disabled-color)} !default;
 
-$rvt-invalid-color: $rvt-warning-color !default;
+$rvt-invalid-color: #{var(--rvt-invalid-color, $rvt-warning-color)} !default;
 
-$rvt-keyboard-focus-color: #4d90fe !default;
+$rvt-keyboard-focus-color: #{var(--rvt-keyboard-focus-color, #4d90fe)} !default;
 
 //----------- Data Color Variables
-$rvt-data-good: #2C8C66;
-$rvt-data-good-light: #8DAD52;
-$rvt-data-warn: #FAC155;
-$rvt-data-wanr-dark: #EC6F3E;
-$rvt-data-bad: #DD4141;
-$rvt-data-accent-1: #3379CB;
-$rvt-data-accent-1-dark: #064A66;
-$rvt-data-accent-2: #F69943;
-$rvt-data-accent-3: #008BA9;
-$rvt-data-accent-3-dark: #006398;
-$rvt-data-accent-4: #AC3E82;
-$rvt-data-accent-4-dark: #504F8E;
+$rvt-data-good: #{var(--rvt-data-good, #2c8c66)} !default;
+$rvt-data-good-light: #{var(--rvt-data-good-light, #8dad52)} !default;
+$rvt-data-warn: #{var(--rvt-data-warn, #fac155)} !default;
+$rvt-data-warn-dark: #{var(--rvt-data-warn-dark, #ec6f3e)} !default;
+$rvt-data-bad: #{var(--rvt-data-bad, #dd4141)} !default;
+$rvt-data-accent-1: #{var(--rvt-data-accent-1, #3379cb)} !default;
+$rvt-data-accent-1-dark: #{var(--rvt-data-accent-1-dark, #064a66)} !default;
+$rvt-data-accent-2: #{var(--rvt-data-accent-2, #f69943)} !default;
+$rvt-data-accent-3: #{var(--rvt-data-accent-3, #008ba9)} !default;
+$rvt-data-accent-3-dark: #{var(--rvt-data-accent-3-dark, #006398)} !default;
+$rvt-data-accent-4: #{var(--rvt-data-accent-4, #ac3e82)} !default;
+$rvt-data-accent-4-dark: #{var(--rvt-data-4-dark, #504f8e)} !default;
+
+//----------- Alpha Value Variables
+$rvt-primary-color-alpha-10: #{var(--rvt-primary-color-alpha-10, rgba(88, 80, 150, 0.1))} !default;
+$rvt-primary-color-alpha-28: #{var(--rvt-primary-color-alpha-28, rgba(88, 80, 150, 0.28))} !default;
+$rvt-neutral-200-alpha-90: #{var(--rvt-neutral-200-alpha-90, rgba(203, 206, 213, 0.9))} !default;
+$rvt-neutral-600-alpha-10: #{var(--rvt-neutral-600-alpha-10, rgba(57, 64, 89, 0.1))} !default;
+$rvt-neutral-600-alpha-28: #{var(--rvt-neutral-600-alpha-28, rgba(57, 64, 89, 0.28))} !default;
+$rvt-neutral-600-alpha-71: #{var(--rvt-neutral-600-alpha-71, rgba(57, 64, 89, 0.71))} !default;
 
 //---------------------- ! All #'s (50-900) must be defined !
 
