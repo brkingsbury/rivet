@@ -63,6 +63,17 @@ export const versions = [
     ]
   },
   {
+    version: '3.5.8',
+    date: '11/8/2019',
+    note: 'Release version',
+    updates: [
+      {
+        category: 'Library',
+        bullets: ['Release branch cut to support Guided Retirement']
+      }
+    ]
+  },
+  {
     version: '0.5.8',
     date: '11/7/2019',
     note: 'Allow translations in expansion panel',
@@ -213,7 +224,7 @@ export const versions = [
         category: 'Rivet package',
         bullets: [
           'Delay the automatic opening of the expansion panel when the flag is set.' +
-            ' Does not affect default behavior only on hideExpansionContent.'
+          ' Does not affect default behavior only on hideExpansionContent.'
         ]
       }
     ]
@@ -820,8 +831,6 @@ export const versions = [
   templateUrl: './versions.component.html',
   styleUrls: ['../changelog.component.scss']
 })
-export class VersionsComponent implements OnInit {
+export class VersionsComponent {
   versions = versions;
-  constructor() {}
-  ngOnInit() {}
 }

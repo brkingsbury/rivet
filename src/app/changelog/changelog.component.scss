@@ -49,3 +49,10 @@ s {
   color: $rvt-good-color;
   font-size: 12px;
 }
+
+.half-container {
+  width: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  vertical-align: top;
+}
