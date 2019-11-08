@@ -1,5 +1,6 @@
-@import '../../lib/styles/typeStyles.scss';
-@import './rivetTheme.scss';
+@import './mixins.scss';
+@import './themeVariables.scss';
+@import './typeStyles.scss';
 
 // Styles for all Rivet Buttons
 @mixin buttonStyle {

@@ -31,6 +31,19 @@ import { Component, OnInit } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.0.1',
+    date: '11/8/2019',
+    note: 'Allow for using button styles outside of Angular app',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: [
+          'Removed dependency on Angular Material from buttonStyles.scss'
+        ]
+      },
+    ]
+  },
+  {
     version: '4.0.0',
     date: '11/8/2019',
     note: 'CSS Variables',

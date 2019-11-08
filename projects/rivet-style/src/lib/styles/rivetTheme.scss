@@ -1,4 +1,5 @@
 @import '~@angular/material/theming';
+@import './mixins.scss';
 @import './themeVariables.scss';
 
 $rvt-primary: mat-palette($rivet-primary, A400, 300, 900);
@@ -10,9 +11,4 @@ $rivet-theme: mat-light-theme($rvt-primary, $rvt-accent, $rvt-warn);
 @mixin rvt-core() {
   @include mat-core();
   @include angular-material-theme($rivet-theme);
-}
-
-@mixin keyboard-focus-style {
-    outline: 2px solid $rvt-keyboard-focus-color;
-    outline-offset: 2px;
 }
