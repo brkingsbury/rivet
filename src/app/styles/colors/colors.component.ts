@@ -24,6 +24,7 @@ export class ColorsComponent implements OnInit {
           { name: 'Gray 900', var: '$rvt-neutral-900', cssvar: '--rvt-neutral-900', color: '#192239', info: 'Primary Text' },
           { name: 'Gray 600', var: '$rvt-neutral-600', cssvar: '--rvt-neutral-600', color: '#394059', info: 'Icons' },
           { name: 'Gray 400', var: '$rvt-neutral-400', cssvar: '--rvt-neutral-400', color: '#6B7280', info: 'Inputs' },
+          // tslint:disable-next-line: max-line-length
           { name: 'Disabled', var: '$rvt-disabled-text-color', cssvar: '--rvt-disabled-text-color', color: '#BCC0C9', info: 'Disabled text' },
           { name: 'Invalid', var: '$rvt-warning-color', cssvar: '--rvt-warning-color', color: '#C72929', info: 'Warning Messages, Invalid' }
         ]
