@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 // ---------------------- Changelog template
 // {
@@ -37,10 +37,8 @@ export const versions = [
     updates: [
       {
         category: 'Rivet package',
-        bullets: [
-          'Removed dependency on Angular Material from buttonStyles.scss'
-        ]
-      },
+        bullets: ['Removed dependency on Angular Material from buttonStyles.scss']
+      }
     ]
   },
   {
@@ -59,6 +57,17 @@ export const versions = [
       {
         category: 'Style',
         bullets: ['Added CSS Variable column']
+      }
+    ]
+  },
+  {
+    version: '3.5.9',
+    date: '11/11/2019',
+    note: 'Adding some extra padding in expanded expansion panel',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Add padding in expanded expansion panel']
       }
     ]
   },
@@ -224,7 +233,7 @@ export const versions = [
         category: 'Rivet package',
         bullets: [
           'Delay the automatic opening of the expansion panel when the flag is set.' +
-          ' Does not affect default behavior only on hideExpansionContent.'
+            ' Does not affect default behavior only on hideExpansionContent.'
         ]
       }
     ]
