@@ -5,7 +5,6 @@ trigger:
   branches:
     include:
     - master
-    - releases/v3.5
   paths:
     include:
     - projects/rivet-style/*
