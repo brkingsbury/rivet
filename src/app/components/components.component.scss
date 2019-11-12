@@ -58,10 +58,6 @@
   cursor: pointer;
 }
 
-.component-container.deprecated {
-  opacity: 0.5;
-}
-
 button {
   margin-right: 15px;
 }
@@ -119,6 +115,10 @@ ul {
   }
 }
 
+.inset {
+    padding-left: 30px;
+}
+
 .mat-sidenav-container {
   min-height: 350px;
   margin-bottom: 60px;
@@ -127,6 +127,13 @@ ul {
 
 .component-container {
   font-size: 0;
+    &.deprecated {
+        opacity: 0.5;
+    }
+    h3 {
+        font-size: 30px;
+        color: $rvt-primary-color-dark;
+    }
 }
 
 .rvt-checkbox {

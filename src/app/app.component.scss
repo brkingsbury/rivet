@@ -20,67 +20,6 @@
   }
 }
 
-.dark-mode {
-  .mat-sidenav-container {
-    .mat-sidenav-content,
-    .mat-sidenav,
-    .nav-content-container {
-      background-color: $rvt-neutral-600;
-      color: $rvt-white;
-      border-color: $rvt-neutral-900;
-    }
-    hr {
-      background-color: $rvt-neutral-900;
-    }
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6,
-    p,
-    span,
-    a {
-      color: $rvt-white;
-    }
-    code {
-      background-color: $rvt-neutral-400;
-      color: $rvt-white;
-    }
-    .icon-container {
-      button,
-      span:before,
-      input {
-        color: $rvt-white;
-      }
-      button {
-        &.rvt-btn-icon {
-          &:hover {
-            background-color: $rvt-neutral-900;
-          }
-          &:active {
-            background-color: $rvt-primary-color-dark;
-          }
-        }
-      }
-    }
-    .page-header {
-      background-color: $rvt-neutral-900;
-      color: $rvt-white;
-    }
-    .example-component {
-      border-color: $rvt-neutral-900;
-    }
-    .example-code-header {
-      background-color: $rvt-neutral-900;
-    }
-    textarea.example-code {
-      background-color: $rvt-neutral-400;
-      color: $rvt-white;
-    }
-  }
-}
-
 p:not(.example-code-header) {
   max-width: 1200px;
 }
@@ -123,6 +62,8 @@ p:not(.example-code-header) {
   line-height: 100px;
   padding: 0 30px;
   background-color: $rvt-primary-color-dark;
+  background: linear-gradient(315deg, rgba(88, 80, 150, 1) 0%, rgba(41, 40, 104, 1) 100%);
+
   color: $rvt-white;
   a {
     text-decoration: none;

@@ -4,45 +4,52 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { RouterModule, Routes } from '@angular/router';
 import { MaterialComponentModule, RivetStyleModule } from 'rivet-style';
+import { AuthService } from '../../projects/rivet-style/src/lib/rivet-services/unique-name-validator';
 import { AppComponent } from './app.component';
 import { ChangelogComponent } from './changelog/changelog.component';
+import { VersionsComponent } from './changelog/versions/versions.component';
 import { ButtonsComponent } from './components/buttons/buttons.component';
 import { CheckboxComponent } from './components/checkbox/checkbox.component';
-import { ComponentsComponent, ComplianceComponent, ComplianceDialogComponent } from './components/components.component';
+import { ComplianceComponent, ComplianceDialogComponent, ComponentsComponent } from './components/components.component';
 import { DatepickerComponent } from './components/datepicker/datepicker.component';
 import { DialogComponent, DialogComponentDialogComponent } from './components/dialog/dialog.component';
 import { DropdownComponent } from './components/dropdown/dropdown.component';
 import { ExpansionPanelComponent } from './components/expansion-panel/expansion-panel.component';
 import { InputsComponent } from './components/inputs/inputs.component';
+import { LinksComponent } from './components/links/links.component';
 import { LoadingComponent } from './components/loading/loading.component';
+import { MiniExpansionPanelComponent } from './components/mini-expansion/mini-expansion.component';
 import { NavComponent } from './components/nav/nav.component';
 import { RadioButtonsComponent } from './components/radio-buttons/radio-buttons.component';
+import { SliderComponent } from './components/slider/slider.component';
+import { Snackbar2Component, SnackbarComponent } from './components/snackbar/snackbar.component';
 import { TableBasicExampleComponent } from './components/tables/table-example';
 import { TablesComponent } from './components/tables/tables.component';
 import { TabsComponent } from './components/tabs/tabs.component';
 import { TextAreasComponent } from './components/text-areas/text-areas.component';
+import { TooltipsComponent } from './components/tooltips/tooltips.component';
+import { ContributeComponent } from './getting-started/contribute/contribute.component';
+import { DesignersComponent } from './getting-started/designers/designers.component';
+import { DevelopersComponent } from './getting-started/developers/developers.component';
+import { GettingStartedComponent } from './getting-started/getting-started.component';
 import { HomeComponent } from './home/home.component';
 import { AccessibilityComponent } from './patterns/accessibility/accessibility.component';
 import { PatternsComponent } from './patterns/patterns.component';
+import { PerformanceComponent } from './patterns/performance/performance.component';
+import { StructureComponent } from './patterns/structure/structure.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ColorsComponent } from './styles/colors/colors.component';
 import { FontStylesComponent } from './styles/font-styles/font-styles.component';
 import { IconsComponent } from './styles/icons/icons.component';
+import { PersonaComponent } from './styles/persona/persona.component';
 import { StylesComponent } from './styles/styles.component';
 import { TestingComponent } from './testing/testing.component';
-import { PerformanceComponent } from './patterns/performance/performance.component';
-import { SliderComponent } from './components/slider/slider.component';
-import { StructureComponent } from './patterns/structure/structure.component';
-import { PersonaComponent } from './styles/persona/persona.component';
-import { AuthService } from '../../projects/rivet-style/src/lib/rivet-services/unique-name-validator';
-import { SnackbarComponent, Snackbar2Component } from './components/snackbar/snackbar.component';
-import { LinksComponent } from './components/links/links.component';
-import { TooltipsComponent } from './components/tooltips/tooltips.component';
-import { VersionsComponent } from './changelog/versions/versions.component';
-import { MiniExpansionPanelComponent } from './components/mini-expansion/mini-expansion.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'getting-started/designers', component: DesignersComponent },
+  { path: 'getting-started/developers', component: DevelopersComponent },
+  { path: 'getting-started/contribute', component: ContributeComponent },
   { path: 'style', component: StylesComponent },
   { path: 'style/icon', component: IconsComponent },
   { path: 'style/font', component: FontStylesComponent },
@@ -117,7 +124,11 @@ const appRoutes: Routes = [
     LinksComponent,
     TooltipsComponent,
     VersionsComponent,
-    MiniExpansionPanelComponent
+    MiniExpansionPanelComponent,
+    GettingStartedComponent,
+    DesignersComponent,
+    DevelopersComponent,
+    ContributeComponent
   ],
   entryComponents: [DialogComponent, DialogComponentDialogComponent, Snackbar2Component, ComplianceDialogComponent],
   imports: [

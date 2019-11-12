@@ -2,7 +2,6 @@
 
 .mat-sidenav-content {
   background: none;
-  background-color: $rvt-white;
   padding: 30px;
   height: auto;
 }
@@ -14,7 +13,8 @@
   background-color: #585096;
   cursor: default;
   text-align: center;
-  background: url('../../assets/pattern.jpg');
+  background: linear-gradient(315deg, rgba(41, 40, 104, 1) 0%, rgba(88, 80, 150, 1) 100%);
+
   img {
     position: relative;
     top: 7px;

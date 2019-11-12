@@ -11,9 +11,16 @@ export class SideNavComponent implements OnInit {
   sideNavConfig = {
     expandableObj: [
       {
+        title: 'Getting Started',
+        links: [
+          { name: 'Designer Toolkit', path: '/getting-started/designers' },
+          { name: 'Developer Toolkit', path: '/getting-started/developers' },
+          { name: 'Contribute', path: '/getting-started/contribute' }
+        ]
+      },
+      {
         title: 'Components',
         links: [
-          //   { name: 'Overview', path: '/components' },
           { name: 'Buttons', path: '/components/button' },
           { name: 'Checkbox', path: '/components/checkbox' },
           { name: 'Datepicker', path: '/components/datepicker' },
@@ -37,7 +44,6 @@ export class SideNavComponent implements OnInit {
       {
         title: 'Style',
         links: [
-          //   { name: 'Overview', path: '/style' },
           { name: 'Persona', path: '/style/persona' },
           { name: 'Icons', path: '/style/icon' },
           { name: 'Type', path: '/style/font' },
@@ -47,7 +53,6 @@ export class SideNavComponent implements OnInit {
       {
         title: 'Patterns',
         links: [
-          //   { name: 'Overview', path: '/patterns' },
           { name: 'Accessibility', path: '/patterns/a11y' },
           { name: 'Performance', path: '/patterns/performance' },
           { name: 'Structure', path: '/patterns/structure' }
@@ -55,7 +60,10 @@ export class SideNavComponent implements OnInit {
       },
       {
         title: 'Changelog',
-        links: [{ name: 'Roadmap', path: '/changelog/roadmap' }, { name: 'Versions', path: '/changelog/versions' }]
+        links: [
+            { name: 'Versions', path: '/changelog/versions' },
+            { name: 'Roadmap', path: '/changelog/roadmap' }
+        ]
       }
     ]
   };

@@ -1,0 +1,74 @@
+@import '../../styles.scss';
+@import '../app.component.scss';
+
+.inset {
+    padding-left: 30px;
+}
+
+.component-container {
+  font-size: 0;
+    h3 {
+        font-size: 30px;
+        color: $rvt-primary-color-dark;
+    }
+}
+.sketch-tile {
+    margin: 15px;
+}
+a.links {
+    text-decoration: none;
+    padding: 10px 15px;
+    &:hover, &:focus {
+        background-color: $rvt-neutral-100;
+        border-radius: 2px;
+    }
+    img {
+        margin-left: 5px;
+        height: 20px;
+        width: 20px;
+        vertical-align: sub;
+    }
+    
+}
+h2, h3, h4, h5, h6 {
+    margin-top: 15px;
+}
+ul {
+    font: 400 14px $RvtFontFamily;
+    margin: 0;
+    padding: 0;
+    li {
+        margin-left: 15px;
+    }
+}
+.note {
+    margin: 45px 0 0 30px;
+    width: fit-content;
+    padding: 20px;
+    background: linear-gradient(315deg, rgba(241,184,41,.8) 0%, rgba(231,170,57,.8) 100%);
+    border-radius: 3px;
+    h6 {
+        margin: 0;
+        font: 600 18px $RvtFontFamily;
+    }
+    p {
+        line-height: 50px;
+        color: $rvt-neutral-900;
+        font: 400 16px $RvtFontFamily;
+    }
+}
+.example-code {
+    width: 600px;
+    box-sizing: border-box;
+    background-color: $rvt-neutral-50;
+    margin: 0;
+    border: none;
+    border-bottom: 10px solid $rvt-neutral-50;
+    min-height: 500px;
+    overflow: auto;
+    padding: 10px;
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    line-height: 24px;
+    padding-left: 15px;
+}

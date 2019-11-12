@@ -1,33 +1,44 @@
-<div class="splash-logo">
-  <img src="../../assets/arrow.svg" alt="arrow logo" />
-  <div class="splash-text">
-    <h1 class="splash-header">Rivet</h1>
-    <a [routerLink]="['/changelog/versions']">v {{ versions[0].version }}</a>
-  </div>
-</div>
-
-<div class="part-container">
-  <div class="part">
-    <object type="image/svg+xml" data="../../assets/components.svg" [routerLink]="['/components']">uh oh</object>
-    <a tabindex="1" [routerLink]="['/components/button']">Components</a>
-    <p>Reusable UI elements for easy implementation and a seamless appearance.</p>
-  </div>
-
-  <div class="part">
-    <object type="image/svg+xml" data="../../assets/styles.svg" [routerLink]="['/style']">uh oh</object>
-    <a tabindex="1" [routerLink]="['/style/persona']">Style</a>
-    <p>Design tokens for creating a well-defined hierarchy and consistent color palette with minimal keystrokes.</p>
-  </div>
-
-  <div class="part">
-    <object type="image/svg+xml" data="../../assets/patterns.svg" [routerLink]="['/patterns']">uh oh</object>
-    <a tabindex="1" [routerLink]="['/patterns/a11y']">Patterns</a>
-    <p>Rules and guidelines for how to make our UI easy to use for everyone on the web.</p>
-  </div>
-
-  <div class="part">
-    <object type="image/svg+xml" data="../../assets/changelog.svg" [routerLink]="['/changelog']">uh oh</object>
-    <a tabindex="1" [routerLink]="['/changelog/roadmap']">Changelog</a>
-    <p>Rivet is ever-evolving. Keep tabs on its status and scheduled releases here.</p>
-  </div>
-</div>
+<section class="page">
+  <header class="intro">
+    <span class="circle"></span>
+    <img src="../../assets/arrow_white.svg" alt="arrow logo" />
+    <h1>
+      Rivet Design System
+    </h1>
+    <p>
+      Current version: <a [routerLink]="['/changelog/versions']">{{ versions[0].version }}</a> |
+      <a [routerLink]="['/changelog/roadmap']">Roadmap</a>
+    </p>
+  </header>
+  <p>
+    Rivet is our design system established for use by both developers and designers alike. It allows for developers to
+    easily implement different components without having to worry about styling each implementation. For designers is
+    helps maintain a common style across all components to ensure cohesive design throughout products. Rivet is
+    constantly evolving and improving so be sure to check the
+    <a [routerLink]="['/changelog/versions']">changelog</a> for recent changes and the
+    <a [routerLink]="['/changelog/roadmap']">roadmap</a> for future improvements.
+  </p>
+  <section class="tile-container">
+    <header>
+      <h2>Getting Started</h2>
+    </header>
+    <div class="tile">
+      <h3>Design</h3>
+      <p>Resources and files for designers to get shared assets in order to create cohesive styles across designs.</p>
+      <button class="rvt-btn-secondary" routerLink="/getting-started/designers">Start Designing</button>
+    </div>
+    <div class="tile">
+      <h3>Develop</h3>
+      <p>Documentation for how to get Rivet built into your project and other tools to get developers started.</p>
+      <button class="rvt-btn-secondary" routerLink="/getting-started/developers">Start Developing</button>
+    </div>
+    <div class="tile">
+      <h3>Contribute</h3>
+      <p>
+        Need a new component for your project that could help others? Did you find a bug and want to fix it? Learn how
+        to making changes to Rivet here.
+      </p>
+      <button class="rvt-btn-secondary" routerLink="/getting-started/contribute">Start Contributing</button>
+    </div>
+  </section>
+</section>

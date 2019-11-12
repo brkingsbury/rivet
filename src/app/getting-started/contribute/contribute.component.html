@@ -1,0 +1,84 @@
+<h1 class="page-header">
+  Contributing to Rivet
+</h1>
+
+<section class="component-container">
+  <header>
+    <h2>Making changes to Rivet</h2>
+  </header>
+  <p>
+    To make changes to the Rivet source code, follow the instructions listed
+    <a href="https://advicent.atlassian.net/wiki/spaces/POL/pages/337806359/Making+Rivet+changes" target="new">here</a>.
+  </p>
+</section>
+
+<section class="component-container">
+  <header>
+    <h2>Updating Rivet version</h2>
+  </header>
+  <p>
+    Once changes are made to the rivet-style package (documentation only updates do not need version updates), the
+    version number must be incremented in <br />
+    <code> rivet-style > package.json > "version": "x.x.x";</code>.
+  </p>
+  <h3>Versioning format</h3>
+  <ul>
+    Rivet versioning follows NPM versioning standards. (Major).(Minor).(Patch)
+    <li><code>(Major).X.X</code> - Major releases are used for large UI overhauls and systematic breaking changes</li>
+    <li><code>X.(Minor).X</code> - Minor releases are for new component additions and other new features</li>
+    <li><code>X.X.(Patch)</code> - Patch releases are reserved for bug fixes and minor styling adjustments</li>
+  </ul>
+  <p>
+    You can find more information on NPM versioning
+    <a href="https://docs.npmjs.com/about-semantic-versioning" target="new">here</a>
+  </p>
+  <h3>Updating the Changelog</h3>
+  <p>
+    When updating the version number, it is required to update the changelog located in the documentation site.
+    <br />You can find the changelog under <code>app > changelog > versions > versions.component.ts</code>
+  </p>
+  <h4>versions.component.ts - template</h4>
+  <textarea class="example-code" readonly>
+{
+    version: 'X.X.X',
+    date: 'X/X/XXXX',
+    note: 'Brief Summary of changes',
+    updates: [
+        {
+            category: 'Components',
+            bullets: [
+                'Item 1 of component changes',
+                'Item 2 of component changes'
+            ]
+        },
+        {
+            category: 'Design',
+            bullets: [
+                'You dont have to use all 3 categories'
+            ]
+        },
+        {
+            category: 'Library - Updated documentation for:',
+            bullets: [
+                'Something'
+            ]
+        },
+    ]
+}
+    </textarea
+  >
+</section>
+
+<section class="component-container">
+  <header>
+    <h2>Building accessible components</h2>
+  </header>
+  <p>
+    When working on specific components such as buttons, tooltips, etc. there are things to consider to build them out
+    with accessibility in mind. <br />
+    You can find detailed instructions
+    <a target="new" href="https://advicent.atlassian.net/wiki/spaces/UX/pages/188448775/Creating+Accessible+Components"
+      >here</a
+    >.
+  </p>
+</section>

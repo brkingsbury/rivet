@@ -1,56 +1,75 @@
 @import '../../styles.scss';
 
-.splash-logo {
-  position: relative;
-  left: calc(50% - 250px);
-  margin-top: 100px;
-  width: fit-content;
-  img {
-    display: inline-block;
-    height: 150px;
-    width: 150px;
-    margin-right: 5px;
-  }
-  .splash-text {
-    display: inline-block;
-    height: 150px;
-    vertical-align: top;
-    span {
-      color: $rvt-neutral-400;
-      padding-left: 5px;
+section.page {
+  display: flex;
+  margin: 100px 60px 0 60px;
+  flex-direction: column;
+
+  
+  .intro {
+    position: relative;
+    margin: 0 0 45px 0;
+    padding-left: 93px;
+    img {
+        height: 50px;
+        width: 50px;
+        position: absolute;
+        left: 0;
+        top: 11px;  
+    }
+    .circle {
+        position: absolute;
+        left: 0;
+        height: 74px;
+        width: 74px;
+        border-radius: 50%;
+        background: linear-gradient(315deg, rgba(241,184,41,1) 0%, rgba(231,170,57,1) 100%);
+    }
+    h1 {
+      color: $rvt-primary-color-dark;
+      font-size: 74px;
+      line-height: 1;
+      margin-left: -5px;
+    }
+    p {
+      font-size: 18px;
+      margin: 0 0 5px 0;
+      a {
+        font-size: 18px;
+      }
     }
   }
-  .splash-header {
-    margin: 0;
-    color: $rvt-neutral-900;
-    display: block;
-    font-size: 74px;
-    line-height: 1;
-    margin-top: 30px;
-  }
-}
-
-.part-container {
-  max-width: 1500px;
-  margin: 150px auto 0;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-  .part {
-    text-align: center;
-    width: 250px;
-    margin: 0 30px 30px 0;
-  }
-  object {
-    height: 140px;
-    width: 140px;
-  }
-  a {
-    display: block;
-    font-size: 28px;
-    margin: 15px 0 5px 0;
-  }
   p {
-    text-align: left;
+      max-width: 1000px;
+  }
+  .tile-container {
+    margin-top: 30px;
+    .tile {
+      padding: 30px;
+      border: 1px solid $rvt-neutral-200;
+      border-radius: 2px;
+      margin: 0 0 30px 0;
+      max-width: 1000px;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
+        linear-gradient(315deg, rgba(88, 80, 150, 1) 0%, rgba(41, 40, 104, 1) 100%);
+      * {
+        color: $rvt-white;
+      }
+      p {
+        margin-top: 10px;
+      }
+      button.rvt-btn-secondary {
+        border-color: $rvt-white;
+        color: $rvt-white;
+        margin-top: 30px;
+        &:hover,
+        &:focus {
+          background: rgba(255, 255, 255, 0.3);
+        }
+      }
+      h3 {
+        line-height: 1;
+      }
+    }
   }
 }
