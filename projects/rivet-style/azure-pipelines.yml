@@ -11,6 +11,8 @@ trigger:
     - projects/rivet-style/*
     - package.json
     - angular.json
+    exclude:
+    - src/*
 
 stages:
 - stage: 'Build'
