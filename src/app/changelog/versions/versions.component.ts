@@ -31,6 +31,17 @@ import { Component } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.0.2',
+    date: '11/12/2019',
+    note: 'Polyfill style fix',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: ['Fix broken link to CSS variable polyfil style']
+      }
+    ]
+  },
+  {
     version: '4.0.1',
     date: '11/8/2019',
     note: 'Allow for using button styles outside of Angular app',
@@ -233,7 +244,7 @@ export const versions = [
         category: 'Rivet package',
         bullets: [
           'Delay the automatic opening of the expansion panel when the flag is set.' +
-            ' Does not affect default behavior only on hideExpansionContent.'
+          ' Does not affect default behavior only on hideExpansionContent.'
         ]
       }
     ]

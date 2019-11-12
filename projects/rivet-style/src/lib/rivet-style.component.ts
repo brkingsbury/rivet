@@ -4,6 +4,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   selector: 'advicent-rivet-style',
   template: ``,
   styleUrls: [
+    './styles/polyfill.scss',
     './styles/typeStyles.scss',
     './styles/rivetTheme.scss',
     './styles/buttonStyles.scss',
@@ -23,7 +24,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class RivetStyleComponent implements OnInit {
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }
