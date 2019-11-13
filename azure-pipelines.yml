@@ -12,8 +12,8 @@ trigger:
       - azure-pipelines.yml
 
 stages:
-  - stage: "Build"
-    displayName: "Build - Test - Publish"
+  - stage: 'Build'
+    displayName: 'Build - Test - Publish'
     jobs:
       - job: Build
         pool:
@@ -22,25 +22,25 @@ stages:
 
         steps:
           - task: Npm@1
-            displayName: "npm install"
+            displayName: 'npm install'
             inputs:
-              workingDir: "$(System.DefaultWorkingDirectory)"
+              workingDir: '$(System.DefaultWorkingDirectory)'
               verbose: false
 
-          - script: "npm run-script lint"
-            workingDirectory: "$(System.DefaultWorkingDirectory)"
-            displayName: "ng lint"
+          - script: 'npm run-script lint'
+            workingDirectory: '$(System.DefaultWorkingDirectory)'
+            displayName: 'ng lint'
 
-          - script: "npm run-script build-prod "
-            workingDirectory: "$(System.DefaultWorkingDirectory)"
-            displayName: "ng build"
+          - script: 'npm run-script build-prod'
+            workingDirectory: '$(System.DefaultWorkingDirectory)'
+            displayName: 'ng build'
 
-          - script: "npm run-script test-prod"
-            workingDirectory: "$(System.DefaultWorkingDirectory)"
-            displayName: "ng test"
+          - script: 'npm run-script test-prod'
+            workingDirectory: '$(System.DefaultWorkingDirectory)'
+            displayName: 'ng test'
 
           - task: PublishBuildArtifacts@1
-            displayName: "Publish Style Guide"
+            displayName: 'Publish Style Guide'
             inputs:
               PathtoPublish: '$(System.DefaultWorkingDirectory)\dist\Rivet'
               ArtifactName: StyleGuideArtifacts
