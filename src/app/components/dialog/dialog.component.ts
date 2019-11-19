@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
-import { MatDialog, MatDialogRef } from '@angular/material';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-dialog-dialog',
   templateUrl: './dialog-template.html'
 })
 export class DialogComponentDialogComponent {
-  constructor(public dialogRef: MatDialogRef<DialogComponentDialogComponent>) {}
+  constructor(public dialogRef: MatDialogRef<DialogComponentDialogComponent>) { }
 
   onNoClick(): void {
     this.dialogRef.close();
@@ -19,9 +19,9 @@ export class DialogComponentDialogComponent {
   styleUrls: ['../components.component.scss']
 })
 export class DialogComponent {
-    isTemp = false;
-    isTs = false;
-  constructor(public dialog: MatDialog) {}
+  isTemp = false;
+  isTs = false;
+  constructor(public dialog: MatDialog) { }
 
   openDialog(): void {
     const dialogRef = this.dialog.open(DialogComponentDialogComponent, {

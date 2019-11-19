@@ -1,5 +1,7 @@
 import { Component, NgModule } from '@angular/core';
-import { MatSelect, MatFormFieldModule, MatInputModule, MatFormFieldControl } from '@angular/material';
+import { MatFormFieldModule, MatFormFieldControl } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelect } from '@angular/material/select';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @Component({
