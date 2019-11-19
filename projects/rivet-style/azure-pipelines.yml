@@ -21,7 +21,7 @@ stages:
     pool:
       name: Hosted VS2017
       demands: npm
-      
+
     steps:
     - task: Npm@1
       displayName: 'npm install (rivet-style)'

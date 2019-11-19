@@ -18,7 +18,7 @@ describe('RivetExpansionPanelComponent', () => {
     `
   })
   class WrapperComponent {
-    @ViewChild(RivetExpansionPanelComponent) expansionPanel: RivetExpansionPanelComponent;
+    @ViewChild(RivetExpansionPanelComponent, /* TODO: add static flag */ {}) expansionPanel: RivetExpansionPanelComponent;
   }
   @Component({
     template: `
@@ -29,7 +29,7 @@ describe('RivetExpansionPanelComponent', () => {
     `
   })
   class WrapperNoCallbackComponent {
-    @ViewChild(RivetExpansionPanelComponent) expansionPanel: RivetExpansionPanelComponent;
+    @ViewChild(RivetExpansionPanelComponent, /* TODO: add static flag */ {}) expansionPanel: RivetExpansionPanelComponent;
     public addButtonCallback = () => {};
     public deleteButtonCallback = () => {};
   }
@@ -47,7 +47,7 @@ describe('RivetExpansionPanelComponent', () => {
     `
   })
   class WrapperHasNoExpansionContentComponent {
-    @ViewChild(RivetExpansionPanelComponent) expansionPanel: RivetExpansionPanelComponent;
+    @ViewChild(RivetExpansionPanelComponent, /* TODO: add static flag */ {}) expansionPanel: RivetExpansionPanelComponent;
   }
 
   @Component({
@@ -63,7 +63,7 @@ describe('RivetExpansionPanelComponent', () => {
     `
   })
   class WrapperHasExpansionContentComponent {
-    @ViewChild(RivetExpansionPanelComponent) expansionPanel: RivetExpansionPanelComponent;
+    @ViewChild(RivetExpansionPanelComponent, /* TODO: add static flag */ {}) expansionPanel: RivetExpansionPanelComponent;
   }
 
   let component: RivetExpansionPanelComponent;
