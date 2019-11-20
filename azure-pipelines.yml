@@ -5,6 +5,7 @@ trigger:
   branches:
     include:
       - master
+      - angular_9_upgrade
   paths:
     include:
       - package.json
@@ -17,8 +18,7 @@ stages:
     jobs:
       - job: Build
         pool:
-          name: Hosted VS2017
-          demands: npm
+          vmImage: 'windows-latest'
 
         steps:
           - task: Npm@1

@@ -4,7 +4,8 @@ trigger:
   batch: true
   branches:
     include:
-    - master
+      - master
+      - angular_9_upgrade
   paths:
     include:
     - projects/rivet-style/*
@@ -19,8 +20,7 @@ stages:
   jobs:
   - job: Build
     pool:
-      name: Hosted VS2017
-      demands: npm
+      vmImage: 'windows-latest'
 
     steps:
     - task: Npm@1
