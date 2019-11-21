@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, SimpleChanges, ViewEncapsulation } from '@angular/core';
+import { Component, Input, Output, EventEmitter, SimpleChanges, OnChanges, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'rvt-drawer',
@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter, SimpleChanges, ViewEncapsulatio
   styleUrls: ['./rivet-drawer.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class RivetDrawerComponent {
+export class RivetDrawerComponent implements OnChanges {
   @Input() drawerOpen: boolean;
 
   @Output() public drawerCloseEvent = new EventEmitter<null>();
