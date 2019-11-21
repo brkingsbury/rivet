@@ -25,6 +25,7 @@ export class SideNavComponent implements OnInit {
           { name: 'Checkbox', path: '/components/checkbox' },
           { name: 'Datepicker', path: '/components/datepicker' },
           { name: 'Dialog', path: '/components/dialog' },
+          { name: 'Drawers', path: '/components/drawer' },
           { name: 'Dropdowns', path: '/components/dropdown' },
           { name: 'Expansion Panel', path: '/components/expansion' },
           { name: 'Inputs', path: '/components/input' },
@@ -61,8 +62,8 @@ export class SideNavComponent implements OnInit {
       {
         title: 'Changelog',
         links: [
-            { name: 'Versions', path: '/changelog/versions' },
-            { name: 'Roadmap', path: '/changelog/roadmap' }
+          { name: 'Versions', path: '/changelog/versions' },
+          { name: 'Roadmap', path: '/changelog/roadmap' }
         ]
       }
     ]

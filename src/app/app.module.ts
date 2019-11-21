@@ -44,6 +44,7 @@ import { IconsComponent } from './styles/icons/icons.component';
 import { PersonaComponent } from './styles/persona/persona.component';
 import { StylesComponent } from './styles/styles.component';
 import { TestingComponent } from './testing/testing.component';
+import { DrawerComponent } from './components/drawer/drawer.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -59,6 +60,7 @@ const appRoutes: Routes = [
   { path: 'components/checkbox', component: CheckboxComponent },
   { path: 'components/datepicker', component: DatepickerComponent },
   { path: 'components/dialog', component: DialogComponent },
+  { path: 'components/drawer', component: DrawerComponent },
   { path: 'components/dropdown', component: DropdownComponent },
   { path: 'components/input', component: InputsComponent },
   { path: 'components/radio', component: RadioButtonsComponent },
@@ -96,6 +98,7 @@ const appRoutes: Routes = [
     DatepickerComponent,
     DialogComponent,
     DialogComponentDialogComponent,
+    DrawerComponent,
     DropdownComponent,
     ExpansionPanelComponent,
     FontStylesComponent,

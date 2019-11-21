@@ -1,0 +1,44 @@
+<h1 class="page-header">
+  Drawer
+  <!-- <a class="rivet-icon-pdf" title="spec sheet" href=""
+    target="new"></a> -->
+  <!-- <a class="sketch" title="sketch file" href="" target="new">
+        <img src="../../assets/sketch.svg"/>
+    </a> -->
+  <!-- <app-compliance-marker></app-compliance-marker> -->
+</h1>
+
+<section class="component-container">
+  <header>
+    <h2>
+      Drawer
+    </h2>
+    <p>
+      Contains contextual content, similar to a modal but allows some revealing of content behind the panel.
+    </p>
+  </header>
+
+  <p>setting the boolean <code>drawerOpen</code> will define whether the drawer is open</p>
+  <div class="example-component">
+    <button (click)="toggleDrawer()">toggle drawer</button>
+    <rvt-drawer [drawerOpen]="toggleVariable">
+      <div rivet-drawer-content>
+        <button style="float: right;" class="rvt-btn-icon rivet-icon-menu-close" (click)="toggleDrawer()"></button>
+        <h2>Header</h2>
+        <p>Here's some content</p>
+      </div>
+    </rvt-drawer>
+  </div>
+
+  <!-- Example -->
+  <div class="example-code-header"><p>HTML</p></div>
+  <textarea class="example-code" readonly>
+<rvt-drawer [drawerOpen]="toggleVariable">
+    <div rivet-drawer-content>
+      <button style="float: right;" class="rvt-btn-icon rivet-icon-menu-close" (click)="toggleDrawer()"></button>
+      <h2>Header</h2>
+      <p>Here's some content</p>
+    </div>
+  </rvt-drawer>
+  </textarea>
+</section>

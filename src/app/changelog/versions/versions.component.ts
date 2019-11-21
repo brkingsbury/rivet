@@ -31,6 +31,21 @@ import { Component } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.1.0',
+    date: '11/21/2019',
+    note: 'Angular Upgrade',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: ['Upgrade Rivet to Angular 9 rc2']
+      },
+      {
+        category: 'Components',
+        bullets: ['Added generic drawer component for Essentials']
+      }
+    ]
+  },
+  {
     version: '4.0.2',
     date: '11/12/2019',
     note: 'Polyfill style fix',
@@ -244,7 +259,7 @@ export const versions = [
         category: 'Rivet package',
         bullets: [
           'Delay the automatic opening of the expansion panel when the flag is set.' +
-          ' Does not affect default behavior only on hideExpansionContent.'
+            ' Does not affect default behavior only on hideExpansionContent.'
         ]
       }
     ]

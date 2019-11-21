@@ -12,6 +12,7 @@ import { RivetStyleComponent } from './rivet-style.component';
 import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
 import { RivetMiniExpansionPanelComponent } from './rivet-mini-expansion-panel/rivet-mini-expansion-panel.component';
 import { RivetAccordionGroupComponent } from './rivet-accordion-group/rivet-accordion-group.component';
+import { RivetDrawerComponent } from './rivet-drawer/rivet-drawer.component';
 
 registerLocaleData(localeFrCA, 'fr-CA');
 
@@ -25,7 +26,8 @@ registerLocaleData(localeFrCA, 'fr-CA');
     RivetLabelComponent,
     RvtTooltipDirective,
     RivetMiniExpansionPanelComponent,
-    RivetAccordionGroupComponent
+    RivetAccordionGroupComponent,
+    RivetDrawerComponent
   ],
   exports: [
     RivetStyleComponent,
@@ -35,7 +37,8 @@ registerLocaleData(localeFrCA, 'fr-CA');
     RivetLabelComponent,
     RvtTooltipDirective,
     RivetMiniExpansionPanelComponent,
-    RivetAccordionGroupComponent
+    RivetAccordionGroupComponent,
+    RivetDrawerComponent
   ]
 })
 export class RivetStyleModule {}
