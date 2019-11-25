@@ -31,6 +31,17 @@ import { Component } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.1.1',
+    date: '11/25/2019',
+    note: 'Drawer fix',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Fixed flashing animation of drawer on render']
+      }
+    ]
+  },
+  {
     version: '4.1.0',
     date: '11/21/2019',
     note: 'Angular Upgrade',

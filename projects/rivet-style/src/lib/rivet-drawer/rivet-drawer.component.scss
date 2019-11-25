@@ -1,6 +1,6 @@
 .rivet-drawer {
-  &.closed [rivet-drawer-content] {
-    right: -300px;
+  &.open [rivet-drawer-content] {
+    right: 0;
   }
   [rivet-drawer-content] {
     width: 300px;
@@ -9,7 +9,7 @@
     z-index: 120;
     position: fixed;
     top: 0;
-    right: 0;
+    right: -300px;
     transition: right 400ms;
     padding: 20px;
     box-sizing: border-box;

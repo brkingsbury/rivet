@@ -16,9 +16,23 @@
     <p>
       Contains contextual content, similar to a modal but allows some revealing of content behind the panel.
     </p>
+    <ul>
+      <li><code>drawerOpen</code> <strong>&lt;boolean&gt;</strong> - sets the drawer state to open or closed</li>
+      <li>
+        <code>toggleDrawer()</code> <strong>&lt;function()&gt;</strong> - a public function that can be called on the
+        component to toggle the drawer to the opposite state of what it is currently in.
+      </li>
+      <li>
+        <code>openDrawer()</code> <strong>&lt;function()&gt;</strong> - a public function that can be called on the
+        component to open the drawer
+      </li>
+      <li>
+        <code>closeDrawer()</code> <strong>&lt;function()&gt;</strong> - a public function that can be called on the
+        component to close the drawer
+      </li>
+      <li><code>drawerCloseEvent</code> <strong>&lt;Output&gt;</strong> - emits an event when the drawer is closed</li>
+    </ul>
   </header>
-
-  <p>setting the boolean <code>drawerOpen</code> will define whether the drawer is open</p>
   <div class="example-component">
     <button (click)="toggleDrawer()">toggle drawer</button>
     <rvt-drawer [drawerOpen]="toggleVariable">
