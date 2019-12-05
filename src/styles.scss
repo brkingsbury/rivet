@@ -19,8 +19,6 @@ $rivet-icon-path: 'rivet-style/lib/rivet-icons';
 @import 'tooltipStyles';
 @import 'app/app.component.scss'; // used to import any temporary styles before they are in style package
 
-@include rvt-core(); // apply $rivet-theme to angular material. ONLY INCLUDE ONCE
-
 :root {
   // These are declared here for the color configurator
   --rvt-color-primary-h: 247;

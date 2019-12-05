@@ -1,7 +1,2 @@
 @import './mixins.scss';
 @import './themeVariables.scss';
-
-//------- Create Theme
-@mixin rvt-core() {
-  @include mat-core();
-}
