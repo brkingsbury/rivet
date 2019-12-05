@@ -1,6 +1,25 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
+:root {
+    --rvt-color-input-text: var(--rvt-color-text);
+    --rvt-color-input-text-invalid: var(--rvt-color-input-text);
+    --rvt-color-input-label: var(--rvt-color-neutral-6);
+    --rvt-color-input-label-focus: var(--rvt-color-text);
+    --rvt-color-input-label-invalid: var(--rvt-color-invalid);
+    --rvt-color-input-label-disabled: var(--rvt-color-input-label);
+    --rvt-color-input-helper: var(--rvt-color-neutral-6);
+    --rvt-color-input-helper-invalid: var(--rvt-color-invalid);
+    --rvt-color-input-helper-disabled: var(--rvt-color-input-helper);
+    --rvt-color-input-text-disabled: var(--rvt-color-disabled);
+    --rvt-color-input-border: var(--rvt-color-neutral-6);
+    --rvt-color-input-border-focus: var(--rvt-color-input-border);
+    --rvt-color-input-border-active: var(--rvt-color-primary-dark);
+    --rvt-color-input-border-invalid: var(--rvt-color-invalid);
+    --rvt-color-input-border-disabled: var(--rvt-color-input-text-disabled);
+    --rvt-color-input-border-readonly: transparent;
+}
+
 form {
   mat-form-field {
     * {
@@ -15,17 +34,17 @@ form {
       font-family: $RvtFontFamily;
       font-size: 16px;
       font-weight: 400;
-      color: $rvt-neutral-900;
+      color: var(--rvt-color-input-text);
       overflow: hidden;
       text-overflow: ellipsis;
       &.mat-input-element:disabled {
-        color: $rvt-disabled-text-color;
+        color: var(--rvt-color-input-text-disabled);
       }
     }
     &.mat-form-field-disabled {
       .mat-form-field-underline {
         background: none;
-        border-bottom: 2px dashed $rvt-disabled-color;
+        border-bottom: 2px dashed var(--rvt-color-input-text-disabled);
       }
       .mat-form-field-ripple {
         display: none;
@@ -37,25 +56,25 @@ form {
         font-family: $RvtFontFamily;
         font-size: 16px;
         font-weight: 400;
-        color: $rvt-neutral-400;
+        color: var(--rvt-color-input-label);
         overflow: visible;
         .mat-placeholder-required {
-          color: $rvt-neutral-400;
+          color: var(--rvt-color-input-label);
         }
       }
     }
     .mat-form-field-underline {
-      background-color: $rvt-neutral-400;
+      background-color: var(--rvt-color-input-border);
     }
     &.mat-focused {
       .mat-form-field-label-wrapper label.mat-form-field-label {
-        color: $rvt-neutral-400;
+        color: var(--rvt-color-input-label-focus);
         &.mat-form-field-empty {
-          color: $rvt-neutral-400;
+          color: var(--rvt-color-input-label-focus);
         }
       }
       .mat-form-field-underline {
-        background-color: $rvt-neutral-900;
+        background-color: var(--rvt-color-input-border-focus);
         height: 2px;
       }
     }
@@ -71,21 +90,21 @@ form {
       .mat-form-field-label-wrapper label.mat-form-field-label,
       .mat-form-field-label-wrapper label.mat-form-field-empty,
       .mat-form-field-hint-wrapper mat-hint {
-        color: $rvt-invalid-color !important;
+        color: var(--rvt-color-input-helper-invalid) !important;
       }
       input {
-        color: $rvt-neutral-900;
+        color: var(--rvt-color-input-text-invalid);
       }
       .mat-form-field-underline {
-        background-color: $rvt-invalid-color !important;
+        background-color: var(--rvt-color-input-border-invalid) !important;
         .mat-form-field-ripple {
-          background-color: $rvt-invalid-color !important;
+          background-color: var(--rvt-color-input-border-invalid) !important;
         }
       }
       &.mat-focused .mat-form-field-underline {
-        background-color: $rvt-invalid-color !important;
+        background-color: var(--rvt-color-input-border-invalid) !important;
         .mat-form-field-ripple {
-          background-color: $rvt-invalid-color !important;
+          background-color: var(--rvt-color-input-border-invalid) !important;
         }
       }
     }
@@ -96,12 +115,13 @@ form {
     }
     .mat-form-field-label-wrapper label.mat-form-field-label {
       &.mat-form-field-empty {
-        color: $rvt-neutral-900;
+        color: var(--rvt-color-input-text);
       }
     }
   }
   // Rivet Text Areas
   .rvt-input-wrap {
+    display: inline-block;
     position: relative;
     padding-bottom: 18px;
     label {
@@ -109,7 +129,7 @@ form {
       font-family: $RvtFontFamily;
       font-size: 12px;
       font-weight: 400;
-      color: $rvt-neutral-400;
+      color: var(--rvt-color-input-label);
     }
     textarea {
       display: block;
@@ -117,10 +137,10 @@ form {
       font-size: 16px;
       font-weight: 400;
       padding: 4px;
-      border: 1px solid $rvt-neutral-400;
+      border: 1px solid var(--rvt-color-input-border);
       min-height: 22px;
       min-width: 120px;
-      color: $rvt-neutral-900;
+      color: var(--rvt-color-input-text);
       overflow: hidden;
       white-space: nowrap;
       text-overflow: ellipsis;
@@ -132,24 +152,24 @@ form {
       }
       &:focus:not(:disabled),
       &:active:not(:disabled) {
-        border-color: $rvt-primary-color;
+        border-color: var(--rvt-color-input-border-active);
       }
       &:disabled {
-        border: 1px dashed $rvt-disabled-color;
-        color: $rvt-disabled-text-color;
+        border: 1px dashed var(--rvt-color-input-border-disabled);
+        color: var(--rvt-color-text-disabled);
         background: none;
       }
     }
     &.invalid {
       label,
       .helper-text {
-        color: $rvt-invalid-color;
+        color: var(--rvt-color-input-helper-invalid);
       }
       textarea {
-        border-color: $rvt-invalid-color;
+        border-color: var(--rvt-color-input-border-invalid);
         &:focus:not(:disabled),
         &:active:not(:disabled) {
-          border-color: $rvt-invalid-color;
+          border-color: var(--rvt-color-input-border-invalid);
         }
       }
     }
@@ -159,11 +179,7 @@ form {
       font-size: 12px;
       font-weight: 400;
       bottom: 0;
-      color: $rvt-neutral-400;
+      color: var(--rvt-color-input-helper);
     }
   }
-}
-
-.rvt-input-wrap {
-  display: inline-block;
 }

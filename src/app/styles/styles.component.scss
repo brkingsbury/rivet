@@ -39,8 +39,8 @@ table.mat-table tr {
     border-radius: 50%;
 
     &.white {
-      background-color: $rvt-white;
-      border: 1px solid $rvt-neutral-300;
+      background-color: var(--rvt-color-bg);
+      border: 1px solid var(--rvt-color-neutral-5);
     }
   }
 
@@ -49,7 +49,7 @@ table.mat-table tr {
   }
 
   td span {
-    color: $rvt-neutral-300;
+    color: var(--rvt-color-neutral-5);
   }
 }
 
@@ -65,27 +65,6 @@ table.mat-table tr {
       text-align: left;
       margin: 20px 0 5px 0;
     }
-
-    .color-layout {
-      display: flex;
-      flex-wrap: wrap;
-      line-height: 50px;
-
-      .color-block {
-        flex-grow: 1;
-        font-size: 12px;
-        font-weight: 600;
-        min-width: 100px;
-        color: transparent;
-        padding: 0 5px;
-
-        &:hover {
-          color: $rvt-white;
-          cursor: default;
-        }
-      }
-    }
-
     .rvt-icon-pdf {
       margin-left: 10px;
     }
@@ -101,7 +80,7 @@ table.mat-table tr {
 
 .persona {
   h3 {
-    color: $rvt-primary-color;
+    color: var(--rvt-color-primary);
     margin-bottom: 5px;
   }
 
@@ -112,18 +91,18 @@ table.mat-table tr {
   }
 
   h5 {
-    color: $rvt-primary-color;
+    color: var(--rvt-color-primary);
     font-size: 18px;
     margin: 15px 0 10px;
   }
 
   blockquote {
-    color: $rvt-primary-color;
+    color: var(--rvt-color-primary);
     max-width: 900px;
     font-style: italic;
 
     strong {
-      color: $rvt-primary-color;
+      color: var(--rvt-color-primary);
     }
   }
 
@@ -141,7 +120,7 @@ table.mat-table tr {
       display: inline-flex;
       max-width: 840px;
       font-size: 20px;
-      color: $rvt-primary-color-dark;
+      color: var(--rvt-color-primary-dark);
     }
   }
 
@@ -161,7 +140,7 @@ table.mat-table tr {
           margin-bottom: 10px;
           font-style: italic;
           strong {
-            color: $rvt-primary-color;
+            color: var(--rvt-color-primary);
             margin-right: 15px;
             font-style: normal;
           }
@@ -180,7 +159,7 @@ table.mat-table tr {
 
   .voice {
     blockquote {
-      color: $rvt-neutral-400;
+      color: var(--rvt-color-neutral-6);
       font-size: 16px;
     }
   }
@@ -196,7 +175,7 @@ table.mat-table tr {
 
       .gold {
         display: inline-block;
-        background-color: $rvt-accent-color;
+        background-color: var(--rvt-color-accent);
         height: 150px;
         width: 200px;
         vertical-align: middle;
@@ -224,7 +203,7 @@ table.mat-table tr {
   margin: 50px 10% 0;
 
   .hint {
-    color: $rvt-neutral-400;
+    color: var(--rvt-color-neutral-6);
     flex-basis: 100%;
     text-align: center;
     max-width: 100%;
@@ -262,8 +241,8 @@ table.mat-table tr {
       left: 0;
       padding: 2px 10px;
       font-size: 12px;
-      color: $rvt-white;
-      background-color: $rvt-primary-color;
+      color: var(--rvt-color-text-contrast);
+      background-color: var(--rvt-color-primary);
     }
   }
 }

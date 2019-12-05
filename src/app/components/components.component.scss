@@ -6,16 +6,16 @@
   margin-top: 30px;
   padding: 30px;
   margin: 0;
-  border: 2px solid $rvt-neutral-100;
+  border: 2px solid var(--rvt-color-neutral-2);
   border-bottom: none;
 }
 
 .example-code {
   box-sizing: border-box;
-  background-color: $rvt-neutral-50;
+  background-color: var(--rvt-color-neutral-1);
   margin: 0;
   border: none;
-  border-bottom: 10px solid $rvt-neutral-50;
+  border-bottom: 10px solid var(--rvt-color-neutral-1);
   width: 100%;
   min-height: 200px;
   overflow: auto;
@@ -32,7 +32,7 @@
 .example-code-header {
     display: block;
     width: 100%;
-    background-color: $rvt-neutral-100;
+    background-color: var(--rvt-color-neutral-2);
     margin: 0;
     label, p, a:not(.mat-tab-link) {
         display: inline-block;
@@ -42,11 +42,11 @@
         font: 600 12px $RvtFontFamily;
     }
     a:not(.mat-tab-link) {
-        background-color: $rvt-neutral-100;
+        background-color: var(--rvt-color-neutral-2);
         padding: 7px 15px;
         cursor: pointer;
         &.active {
-            background-color: $rvt-neutral-50;
+            background-color: var(--rvt-color-neutral-1);
         }
     }
 }
@@ -75,7 +75,7 @@ h5 {
     font-size: 16px;
     vertical-align: middle;
     &:before {
-      color: $rvt-neutral-900;
+      color: var(--rvt-color-text);
       line-height: 30px;
     }
   }
@@ -100,7 +100,7 @@ ul {
 
 .controls {
   padding: 15px;
-  background-color: $rvt-neutral-100;
+  background-color: var(--rvt-color-neutral-2);
   p {
     margin: 0 15px 0 0;
     font-size: 12px;
@@ -127,12 +127,9 @@ ul {
 
 .component-container {
   font-size: 0;
-    &.deprecated {
-        opacity: 0.5;
-    }
     h3 {
         font-size: 30px;
-        color: $rvt-primary-color-dark;
+        color: var(--rvt-color-primary-dark);
     }
 }
 

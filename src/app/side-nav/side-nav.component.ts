@@ -32,7 +32,7 @@ export class SideNavComponent implements OnInit {
           { name: 'Links', path: '/components/link' },
           { name: 'Loading', path: '/components/loading' },
           { name: 'Mini Expansion Panel', path: '/components/miniexpansion' },
-          { name: 'Navigation', path: '/components/nav' },
+        //   { name: 'Navigation', path: '/components/nav' },
           { name: 'Radio Button', path: '/components/radio' },
           { name: 'Snackbar', path: '/components/snackbar' },
           { name: 'Slider', path: '/components/slider' },

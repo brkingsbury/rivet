@@ -1,6 +1,17 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
+
+:root {
+    --rvt-color-checkbox-label: var(--rvt-color-text);
+    --rvt-color-checkbox-unselected: var(--rvt-color-neutral-dark);
+    --rvt-color-checkbox-selected: var(--rvt-color-primary);
+    --rvt-color-checkbox-selected-check: var(--rvt-color-text-contrast);
+    --rvt-color-checkbox-selected-hover: var(--rvt-color-primary-dark);
+    --rvt-color-checkbox-disabled: var(--rvt-color-disabled);
+    --rvt-color-checkbox-readonly: var(--rvt-color-checkbox-label);
+}
+
 // ---------- These Styles will be eventually deprecated --
 mat-checkbox.mat-checkbox {
   label .mat-checkbox-label {
@@ -207,7 +218,7 @@ $CheckboxSize: 18px;
       display: inline-block;
       padding-left: 25px;
       font: 400 14px $RvtFontFamily;
-      color: $rvt-neutral-900;
+      color: var(--rvt-color-checkbox-label);
       cursor: pointer;
       text-align: center;
 
@@ -217,7 +228,7 @@ $CheckboxSize: 18px;
         display: inline-block;
         height: calc(#{$CheckboxSize} - 2px);
         width: calc(#{$CheckboxSize} - 2px);
-        border: 1px solid $rvt-neutral-900;
+        border: 1px solid var(--rvt-color-checkbox-unselected);
         left: 3px;
         top: 1px;
         border-radius: 2px;
@@ -227,14 +238,16 @@ $CheckboxSize: 18px;
         content: none;
         position: absolute;
         display: inline-block;
-        left: 7px;
+        left: 6px;
         top: 4px;
+        font-size: 12px;
+        font-weight: 600;
       }
     }
 
     &:checked + label {
       &:before {
-        background-color: $rvt-primary-color;
+        background-color: var(--rvt-color-checkbox-selected);
         border: none;
         height: $CheckboxSize;
         width: $CheckboxSize;
@@ -242,7 +255,7 @@ $CheckboxSize: 18px;
 
       &:after {
         @extend .inner-rivet-icon-check !optional;
-        color: $rvt-white;
+        color: var(--rvt-color-checkbox-selected-check);
       }
     }
 
@@ -255,7 +268,7 @@ $CheckboxSize: 18px;
       }
 
       &:checked + label:before {
-        background-color: $rvt-primary-color-dark;
+        background-color: var(--rvt-color-checkbox-selected-hover);
         transition: background-color 400ms ease;
       }
     }
@@ -263,13 +276,13 @@ $CheckboxSize: 18px;
     &:disabled {
       cursor: default;
       + label {
-        color: $rvt-disabled-text-color;
+        color: var(--rvt-color-checkbox-disabled);
         cursor: default;
 
         &:before {
           cursor: default;
           background: none;
-          border: 1px dashed $rvt-disabled-color;
+          border: 1px dashed var(--rvt-color-checkbox-disabled);
         }
       }
 
@@ -277,19 +290,19 @@ $CheckboxSize: 18px;
         &:before {
           cursor: default;
           background: none;
-          border: 1px dashed $rvt-disabled-color;
+          border: 1px dashed var(--rvt-color-checkbox-disabled);
           height: calc(#{$CheckboxSize} - 2px);
           width: calc(#{$CheckboxSize} - 2px);
         }
 
         &:after {
-          color: $rvt-disabled-text-color;
+          color: var(--rvt-color-checkbox-disabled);
         }
       }
     }
     &:disabled.read-only {
       + label {
-        color: $rvt-neutral-900;
+        color: var(--rvt-color-checkbox-readonly);
         &:before {
           border: none;
         }
@@ -297,7 +310,7 @@ $CheckboxSize: 18px;
       &:checked {
         + label {
           &:after {
-            color: $rvt-neutral-900;
+            color: var(--rvt-color-checkbox-readonly);
           }
         }
       }
@@ -322,7 +335,7 @@ $CheckboxSize: 18px;
           width: calc(#{$CheckboxSize} - 4px);
         }
         &:after {
-          font-size: 8px;
+          font-size: 10px;
         }
       }
     }

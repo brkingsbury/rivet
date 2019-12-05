@@ -1,41 +1,43 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-    @ViewChild('content') content: ElementRef;
+export class AppComponent {
+  @ViewChild('content') content: ElementRef;
   difCursor = false;
   hasNav = false;
-  darkMode = false;
   keyYes = false;
+
+  colorDrawer = false;
+
+  toggleDrawer() {
+    this.colorDrawer = !this.colorDrawer;
+  }
 
   toggleCursor() {
     this.difCursor = !this.difCursor;
   }
-  test() {
-    this.darkMode = !this.darkMode;
-  }
+
   skip() {
     this.content.nativeElement.focus();
   }
   onKeyup(event) {
-      if (event.keyCode === 13 || event.keyCode === 32) {
-          this.skip();
-      }
+    if (event.keyCode === 13 || event.keyCode === 32) {
+      this.skip();
+    }
   }
 
   onKeydown(event) {
-      if (event.keyCode === 9) {
-          this.keyYes = true;
-      }
+    if (event.keyCode === 9) {
+      this.keyYes = true;
+    }
   }
 
   endFocus() {
-      this.keyYes = false;
+    this.keyYes = false;
   }
-
-  ngOnInit() {}
 }
+

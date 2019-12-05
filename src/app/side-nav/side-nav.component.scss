@@ -6,30 +6,28 @@
   height: auto;
 }
 .nav-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 0;
   left: 0;
   height: 100px;
   width: 250px;
-  background-color: #585096;
   cursor: default;
   text-align: center;
-  background: linear-gradient(315deg, rgba(41, 40, 104, 1) 0%, rgba(88, 80, 150, 1) 100%);
+  background: var(--rvt-color-primary-dark);
+  background: linear-gradient(315deg, var(--rvt-color-primary-dark) 0%, var(--rvt-color-primary) 100%);
 
   img {
-    position: relative;
-    top: 7px;
     height: 30px;
     width: 30px;
     cursor: default;
     margin-right: 5px;
   }
   a {
-    line-height: 100px;
-    color: #fff;
+    color: var(--rvt-color-text-contrast);
     margin: 0;
-    font-size: 22px;
-    font-family: $RvtFontFamily;
-    font-weight: 400;
+    font: 400 22px $RvtFontFamily;
     cursor: pointer;
     text-decoration: none;
     padding-right: 20px;
@@ -37,12 +35,12 @@
 }
 .nav-content-container {
   width: 212px; // 250px - 36px padding - 2px border
-  background-color: $rvt-white;
+  background-color: var(--rvt-color-neutral-white);
   padding: 50px 0 50px 36px;
-  color: $rvt-neutral-900;
+  color: var(--rvt-color-text);
   white-space: nowrap;
   * {
-    color: $rvt-neutral-900;
+    color: var(--rvt-color-text);
   }
   .nav-category {
     display: block;
@@ -51,18 +49,6 @@
     &.expanded .category-header.expanding span:before {
       transform: rotate(90deg);
       transition: transform 400ms ease;
-    }
-    .num-circle {
-      display: inline-block;
-      border-radius: 50%;
-      background: transparent;
-      border: 1px solid $rvt-neutral-400;
-      height: 23px;
-      width: 23px;
-      text-align: center;
-      color: $rvt-neutral-900;
-      line-height: 25px;
-      margin-right: 10px;
     }
     .category-label {
       display: block;
@@ -96,7 +82,7 @@
       margin: 15px 0 0 11px;
       a {
         display: block;
-        border-left: 4px solid $rvt-neutral-100;
+        border-left: 4px solid var(--rvt-color-neutral-2);
         padding-left: 15px;
         cursor: pointer;
         text-decoration: none;
@@ -105,12 +91,12 @@
         }
         &.active {
           font-weight: 600;
-          border-color: $rvt-accent-color;
+          border-color: var(--rvt-color-accent);
         }
         &:hover:not(.active),
         &:focus:not(.active) {
           font-weight: 600;
-          border-color: $rvt-neutral-200;
+          border-color: var(--rvt-color-neutral-3);
         }
       }
     }
@@ -119,8 +105,8 @@
     }
     &.active {
       .num-circle {
-        background-color: $rvt-accent-color;
-        color: $rvt-white;
+        background-color: var(--rvt-color-accent);
+        color: var(--rvt-color-neutral-white);
         border: none;
         height: 25px;
         width: 25px;

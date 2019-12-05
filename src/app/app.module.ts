@@ -45,6 +45,7 @@ import { PersonaComponent } from './styles/persona/persona.component';
 import { StylesComponent } from './styles/styles.component';
 import { TestingComponent } from './testing/testing.component';
 import { DrawerComponent } from './components/drawer/drawer.component';
+import { ThemeEditorComponent } from './theme-editor/theme-editor.component';
 
 const appRoutes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -131,7 +132,8 @@ const appRoutes: Routes = [
     GettingStartedComponent,
     DesignersComponent,
     DevelopersComponent,
-    ContributeComponent
+    ContributeComponent,
+    ThemeEditorComponent
   ],
   entryComponents: [DialogComponent, DialogComponentDialogComponent, Snackbar2Component, ComplianceDialogComponent],
   imports: [

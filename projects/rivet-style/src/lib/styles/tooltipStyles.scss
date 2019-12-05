@@ -1,16 +1,23 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
+:root {
+    --rvt-color-tooltip-bg: var(--rvt-color-primary-dark);
+    --rvt-color-tooltip-text: var(--rvt-color-text-contrast);
+    --rvt-color-tooltip-error-bg: var(--rvt-color-invalid);
+    --rvt-color-tooltip-error-text: var(--rvt-color-tooltip-text);
+}
+
 [rvttooltip] {
   pointer-events: all;
 }
 
 .rivet-tooltip {
   position: absolute;
-  color: #fff;
-  background-color: $rvt-primary-color-dark;
+  color: var(--rvt-color-tooltip-text);
+  background-color: var(--rvt-color-tooltip-bg);
   padding: 10px;
-  font-size: 14px;
+  font: 400 14px $RvtFontFamily;
   z-index: 110;
   max-width: 300px;
   white-space: normal;
@@ -26,12 +33,13 @@
     bottom: -7px;
     left: calc(50% - 10px);
     transform: rotate(45deg);
-    background-color: $rvt-primary-color-dark;
+    background-color: var(--rvt-color-tooltip-bg);
   }
   &.error-tooltip {
-    background-color: $rvt-warning-color;
+    background-color: var(--rvt-color-tooltip-error-bg);
+    color: var(--rvt-color-tooltip-error-text);
     &:after {
-      background-color: $rvt-warning-color;
+      background-color: var(--rvt-color-tooltip-error-bg);
     }
   }
 }

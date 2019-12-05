@@ -5,28 +5,27 @@ section.page {
   margin: 100px 60px 0 60px;
   flex-direction: column;
 
-  
   .intro {
     position: relative;
     margin: 0 0 45px 0;
     padding-left: 93px;
     img {
-        height: 50px;
-        width: 50px;
-        position: absolute;
-        left: 0;
-        top: 11px;  
+      height: 50px;
+      width: 50px;
+      position: absolute;
+      left: 0;
+      top: 11px;
     }
     .circle {
-        position: absolute;
-        left: 0;
-        height: 74px;
-        width: 74px;
-        border-radius: 50%;
-        background: linear-gradient(315deg, rgba(241,184,41,1) 0%, rgba(231,170,57,1) 100%);
+      position: absolute;
+      left: 0;
+      height: 74px;
+      width: 74px;
+      border-radius: 50%;
+      background: var(--rvt-color-accent);
     }
     h1 {
-      color: $rvt-primary-color-dark;
+      color: var(--rvt-color-primary-dark);
       font-size: 74px;
       line-height: 1;
       margin-left: -5px;
@@ -40,31 +39,31 @@ section.page {
     }
   }
   p {
-      max-width: 1000px;
+    max-width: 1000px;
   }
   .tile-container {
     margin-top: 30px;
     .tile {
       padding: 30px;
-      border: 1px solid $rvt-neutral-200;
+      border: 1px solid var(--rvt-color-neutral-3);
       border-radius: 2px;
       margin: 0 0 30px 0;
       max-width: 1000px;
       background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='36' height='72' viewBox='0 0 36 72'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M2 6h12L8 18 2 6zm18 36h12l-6 12-6-12z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"),
-        linear-gradient(315deg, rgba(88, 80, 150, 1) 0%, rgba(41, 40, 104, 1) 100%);
+        linear-gradient(315deg, var(--rvt-color-primary) 0%, var(--rvt-color-primary-dark) 100%);
       * {
-        color: $rvt-white;
+        color: var(--rvt-color-neutral-white);
       }
       p {
         margin-top: 10px;
       }
       button.rvt-btn-secondary {
-        border-color: $rvt-white;
-        color: $rvt-white;
+        border-color: var(--rvt-color-neutral-white);
+        color: var(--rvt-color-neutral-white);
         margin-top: 30px;
         &:hover,
         &:focus {
-          background: rgba(255, 255, 255, 0.3);
+          background: hsla(0, 100%, 100%, 0.3);
         }
       }
       h3 {

@@ -9,7 +9,7 @@
   font-size: 0;
     h3 {
         font-size: 30px;
-        color: $rvt-primary-color-dark;
+        color: var(--rvt-color-primary-dark);
     }
 }
 .sketch-tile {
@@ -19,7 +19,7 @@ a.links {
     text-decoration: none;
     padding: 10px 15px;
     &:hover, &:focus {
-        background-color: $rvt-neutral-100;
+        background-color: var(--rvt-color-neutral-2);
         border-radius: 2px;
     }
     img {
@@ -45,7 +45,7 @@ ul {
     margin: 45px 0 0 30px;
     width: fit-content;
     padding: 20px;
-    background: linear-gradient(315deg, rgba(241,184,41,.8) 0%, rgba(231,170,57,.8) 100%);
+    background: var(--rvt-color-accent);
     border-radius: 3px;
     h6 {
         margin: 0;
@@ -53,17 +53,17 @@ ul {
     }
     p {
         line-height: 50px;
-        color: $rvt-neutral-900;
+        color: var(--rvt-color-text);
         font: 400 16px $RvtFontFamily;
     }
 }
 .example-code {
     width: 600px;
     box-sizing: border-box;
-    background-color: $rvt-neutral-50;
+    background-color: var(--rvt-color-neutral-1);
     margin: 0;
     border: none;
-    border-bottom: 10px solid $rvt-neutral-50;
+    border-bottom: 10px solid var(--rvt-color-neutral-1);
     min-height: 500px;
     overflow: auto;
     padding: 10px;

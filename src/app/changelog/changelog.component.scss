@@ -3,7 +3,7 @@
 .version-history {
   div:first-of-type {
     padding: 15px 30px;
-    background-color: $rvt-primary-color-alpha-10;
+    background-color: var(--rvt-color-primary-alpha-10);
     margin-bottom: 45px;
     > hr {
       display: none;
@@ -16,7 +16,7 @@
   span {
     display: inline-block;
     font-size: 22px;
-    color: $rvt-neutral-400;
+    color: var(--rvt-color-neutral-6);
   }
   .release-notes {
     margin-top: 15px;
@@ -41,12 +41,12 @@
 }
 
 s {
-  color: $rvt-neutral-400;
+  color: var(--rvt-color-neutral-6);
 }
 
 .rivet-icon-check {
   margin-left: 10px;
-  color: $rvt-good-color;
+  color: var(--rvt-color-good);
   font-size: 12px;
 }
 

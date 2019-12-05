@@ -1,14 +1,7 @@
-@import '~@angular/material/theming';
 @import './mixins.scss';
 @import './themeVariables.scss';
-
-$rvt-primary: mat-palette($rivet-primary, A400, 300, 900);
-$rvt-accent: mat-palette($rivet-primary, A100);
-$rvt-warn: mat-palette($rivet-data, A700);
-$rivet-theme: mat-light-theme($rvt-primary, $rvt-accent, $rvt-warn);
 
 //------- Create Theme
 @mixin rvt-core() {
   @include mat-core();
-  @include angular-material-theme($rivet-theme);
 }

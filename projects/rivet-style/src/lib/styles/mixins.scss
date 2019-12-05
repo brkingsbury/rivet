@@ -1,4 +1,4 @@
 @mixin keyboard-focus-style {
-  outline: 2px solid $rvt-keyboard-focus-color;
+  outline: 2px solid var(--rvt-color-keyboard-focus);
   outline-offset: 2px;
 }

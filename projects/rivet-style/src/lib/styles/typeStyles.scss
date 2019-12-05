@@ -2,8 +2,13 @@
 
 $RvtFontFamily: 'Nunito Sans', Arial, sans-serif;
 
+:root {
+  --rvt-color-link: var(--rvt-color-primary-dark);
+}
+
 body {
   font-family: $RvtFontFamily;
+  color: var(--rvt-color-text);
 }
 
 h1 {
@@ -32,6 +37,7 @@ h6 {
 
 p {
   font: 400 14px $RvtFontFamily;
+  color: var(--rvt-color-text);
 }
 
 label {
@@ -43,7 +49,8 @@ textarea {
   font: 400 16px $RvtFontFamily;
 }
 
-a {
+a,
+a.rvt-link {
   font: 400 14px $RvtFontFamily;
   text-decoration: underline;
   &:hover {
@@ -54,6 +61,10 @@ a {
   }
 }
 
-span {
+span, button {
   font-family: $RvtFontFamily;
+}
+
+a.rvt-link {
+  color: var(--rvt-color-link);
 }

@@ -1,9 +1,16 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
+:root {
+    --rvt-color-snackbar-bg: var(--rvt-color-neutral-2);
+    --rvt-color-snackbar-text: var(--rvt-color-text);
+    --rvt-color-snackbar-btn-bg: var(--rvt-color-neutral-7);
+    --rvt-color-snackbar-btn-text: var(--rvt-color-text-contrast);
+}
+
 .cdk-overlay-container {
     .mat-snack-bar-container {
-        background: $rvt-neutral-100;
+        background: var(--rvt-color-snackbar-bg);
         box-shadow: none;
         font-family: $RvtFontFamily;
         padding: 20px;
@@ -15,31 +22,31 @@
             justify-content: space-between;
             p.snackbar-text {
                 display: inline-block;
-                color: $rvt-neutral-900
+                color: var(--rvt-color-snackbar-text);
             }
             button.snackbar-action {
-                background: $rvt-neutral-600;
+                background: var(--rvt-color-snackbar-btn-bg);
                 border-radius: 2px;
                 &:focus {
-                    outline: 2px solid #4D90FE;
+                    outline: 2px solid var(--rvt-color-keyboard-focus);
                 }
                 span {
-                    color: $rvt-white;
+                    color: var(--rvt-color-snackbar-btn-text);
                 }
             }
         }
         .mat-simple-snackbar{
-            color: $rvt-neutral-900;
+            color: var(--rvt-color-snackbar-text);
         }
         .mat-simple-snackbar-action {
             button.mat-button {
-                background: $rvt-neutral-600;
+                background: var(--rvt-color-snackbar-btn-bg);
                 border-radius: 2px;
                 &:focus {
-                    outline: 2px solid #4D90FE;
+                    outline: 2px solid var(--rvt-color-keyboard-focus);
                 }
                 span {
-                    color: $rvt-white;
+                    color: var(--rvt-color-snackbar-btn-text);
                 }
             }
         }

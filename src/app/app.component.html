@@ -1,9 +1,10 @@
 <a #main class="skip-link" tabindex="0" (click)="skip()" (keyup)="onKeyup($event)">Skip Navigation</a>
-<div class="style-wrapper" [ngClass]="{ fancy: difCursor, 'dark-mode': darkMode, 'key-focus': keyYes }" (keydown)="onKeydown($event)" (mousedown)="endFocus()">
-  <!-- <button class="rvt-btn-standard test-btn" (click)="sidenav.toggle()">Test</button> -->
-  <!-- <button class="rvt-btn-icon mode-btn" (click)="test()">
-        <span class="rivet-icon-retirement"></span>
-    </button> -->
+<div
+  class="style-wrapper"
+  [ngClass]="{ fancy: difCursor, 'key-focus': keyYes }"
+  (keydown)="onKeydown($event)"
+  (mousedown)="endFocus()"
+>
 
   <mat-sidenav-container autosize>
     <mat-sidenav #sidenav mode="side" opened class="site-sidenav">
@@ -11,9 +12,11 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-        <div #content tabindex="1">
-            <router-outlet></router-outlet>
-        </div>
+      <div #content tabindex="1">
+        <button class="rvt-btn-icon rivet-icon-settings color-selector-btn" (click)="toggleDrawer()"></button>
+        <router-outlet></router-outlet>
+        <app-theme-editor drawerStatus="{{colorDrawer}}"></app-theme-editor>
+      </div>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

@@ -1,6 +1,16 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
+
+:root {
+    --rvt-color-radio-label: var(--rvt-color-text);
+    --rvt-color-radio-unselected: var(--rvt-color-neutral-900);
+    --rvt-color-radio-selected: var(--rvt-color-primary);
+    --rvt-color-radio-disabled: var(--rvt-color-disabled);
+    --rvt-color-radio-readonly: var(--rvt-color-radio-label);
+}
+
+// ---- Styles to be deprecated
 .mat-radio-group {
   .mat-radio-button:not(.mat-radio-disabled) {
     label.mat-radio-label {
@@ -201,7 +211,7 @@ $RadioSize: 19px;
     + label {
       position: relative;
       font: 400 14px $RvtFontFamily;
-      color: $rvt-neutral-900;
+      color: var(--rvt-color-radio-label);
       cursor: pointer;
       text-align: center;
 
@@ -218,12 +228,12 @@ $RadioSize: 19px;
       // hover unchecked
       &:hover:not(:disabled) + label:before {
         @extend .inner-rivet-icon-radio-unchecked-h !optional;
-        color: $rvt-neutral-900;
+        color: var(--rvt-color-radio-unselected);
       }
       // resting unchecked
       + label:before {
         @extend .inner-rivet-icon-radio-unchecked !optional;
-        color: $rvt-neutral-900;
+        color: var(--rvt-color-radio-unselected);
       }
     }
 
@@ -231,36 +241,30 @@ $RadioSize: 19px;
       // hover checked
       &:hover:not(:disabled) + label:before {
         @extend .inner-rivet-icon-radio-checked-h !optional;
-        color: $rvt-primary-color;
+        color: var(--rvt-color-radio-selected);
       }
       // resting unchecked
       + label:before {
         @extend .inner-rivet-icon-radio-checked !optional;
-        color: $rvt-primary-color;
+        color: var(--rvt-color-radio-selected);
       }
     }
 
     &:disabled {
-      + label {
-        color: $rvt-disabled-text-color;
+      + label, + label:before {
+        color: var(--rvt-color-radio-disabled);
         cursor: default;
-
-        &:before {
-          color: $rvt-disabled-color;
-          cursor: default;
-        }
       }
 
       &.read-only {
         + label {
-          color: $rvt-neutral-900;
+          color: var(--rvt-color-radio-label);
         }
         &:not(:checked) + label:before {
-          color: $rvt-neutral-900;
           content: '';
         }
         &:checked + label:before {
-          color: $rvt-neutral-900;
+          color: var(--rvt-color-radio-readonly);
           @extend .inner-rivet-icon-radio-read-only !optional;
         }
       }

@@ -2,6 +2,32 @@
 @import './themeVariables.scss';
 @import './typeStyles.scss';
 
+:root {
+  --rvt-color-btn-disabled: var(--rvt-color-disabled);
+
+  --rvt-color-btn-primary-bg: var(--rvt-color-primary);
+  --rvt-color-btn-primary-text: var(--rvt-color-neutral-light);
+  --rvt-color-btn-primary-bg-hover: var(--rvt-color-primary-dark);
+  --rvt-color-btn-primary-bg-active: var(--rvt-color-neutral-dark);
+  --rvt-color-btn-primary-bg-disabled: var(--rvt-color-btn-disabled);
+  --rvt-color-btn-primary-text-disabled: var(--rvt-color-text-contrast);
+
+  --rvt-color-btn-secondary-border: var(--rvt-color-primary);
+  --rvt-color-btn-secondary-text: var(--rvt-color-primary);
+  --rvt-color-btn-secondary-bg: transparent;
+  --rvt-color-btn-secondary-bg-hover: var(--rvt-color-primary-alpha-10);
+  --rvt-color-btn-secondary-bg-active: var(--rvt-color-primary-alpha-28);
+  --rvt-color-btn-secondary-disabled-border: var(--rvt-color-btn-disabled);
+  --rvt-color-btn-secondary-disabled-text: var(--rvt-color-btn-disabled);
+
+  --rvt-color-btn-text: var(--rvt-color-text);
+  --rvt-color-btn-text-bg: transparent;
+  --rvt-color-btn-text-bg-hover: var(--rvt-color-neutral-6-alpha-10);
+  --rvt-color-btn-text-bg-active: var(--rvt-color-neutral-6-alpha-28);
+  --rvt-color-btn-text-bg-disabled: transparent;
+  --rvt-color-btn-text-disabled: var(--rvt-color-btn-disabled);
+}
+
 // Styles for all Rivet Buttons
 @mixin buttonStyle {
   font-family: $RvtFontFamily;
@@ -32,69 +58,72 @@ button {
   &.rvt-btn-primary-lg.rvt-btn-icon {
     @include buttonStyle;
     font-weight: 600;
-    background-color: $rvt-primary-color;
-    color: $rvt-white;
+    background-color: var(--rvt-color-btn-primary-bg);
+    color: var(--rvt-color-btn-primary-text);
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
-      background-color: $rvt-primary-color-dark;
+      background-color: var(--rvt-color-btn-primary-bg-hover);
     }
     &:active:not(:disabled) {
-      background-color: $rvt-neutral-900;
+      background-color: var(--rvt-color-btn-primary-bg-active);
     }
     &:disabled:not(.loading) {
-      background-color: $rvt-disabled-color;
-      color: $rvt-white;
+      background-color: var(--rvt-color-btn-disabled);
+      color: var(--rvt-color-btn-primary-text-disabled);
     }
     span,
     span:before {
-      color: $rvt-white;
+      color: var(--rvt-color-btn-primary-text);
     }
   }
   &.rvt-btn-primary-lg {
     padding: 15px;
   }
+
   &.rvt-btn-secondary {
     @include buttonStyle;
-    border: 1px solid $rvt-primary-color;
+    background: var(--rvt-color-btn-secondary-bg);
+    border: 1px solid var(--rvt-color-btn-secondary-border);
     padding: 10px 14px;
-    color: $rvt-primary-color;
+    color: var(--rvt-color-btn-secondary-text);
     &:hover:not(:disabled),
     &:focus:not(:disabled),
     &.loading:disabled {
-      background-color: $rvt-primary-color-alpha-10;
+      background: var(--rvt-color-btn-secondary-bg-hover);
     }
     &:active:not(:disabled) {
-      background-color: $rvt-primary-color-alpha-28;
+      background: var(--rvt-color-btn-secondary-bg-active);
     }
     &:disabled:not(.loading) {
-      border: 1px dashed $rvt-disabled-color;
-      color: $rvt-disabled-text-color;
+      border: 1px dashed var(--rvt-color-btn-secondary-disabled-border);
+      color: var(--rvt-color-btn-secondary-disabled-text);
     }
   }
+
   &.rvt-btn-text,
   &.rvt-btn-icon {
     @include buttonStyle;
-    color: $rvt-neutral-600;
+    background: var(--rvt-color-btn-text-bg);
+    color: var(--rvt-color-btn-text);
     &:hover:not(:disabled),
     &:focus:not(:disabled) {
-      background-color: $rvt-neutral-600-alpha-10;
-      color: $rvt-neutral-600;
+      background: var(--rvt-color-btn-text-bg-hover);
     }
     &.loading:disabled {
-      color: $rvt-neutral-200;
+      color: var(--rvt-color-btn-disabled);
       span,
       span:before {
-        color: $rvt-neutral-200;
+        color: var(--rvt-color-btn-disabled);
       }
     }
     &:active:not(:disabled) {
-      background-color: $rvt-neutral-600-alpha-28;
+      background: var(--rvt-color-btn-text-bg-active);
     }
     &:disabled:not(.loading) {
-      color: $rvt-disabled-text-color;
+      color: var(--rvt-color-btn-text-disabled);
       span,
       span:before {
-        color: $rvt-disabled-text-color;
+        color: var(--rvt-color-btn-text-disabled);
       }
     }
   }
@@ -104,7 +133,7 @@ button {
       display: inline-block;
       height: 14px;
       width: 14px;
-      fill: $rvt-neutral-600;
+      fill: var(--rvt-color-btn-text);
       vertical-align: top;
     }
     &.loading:disabled {
@@ -115,7 +144,7 @@ button {
       }
     }
     &:disabled:not(.loading) svg {
-      fill: $rvt-disabled-color;
+      fill: var(--rvt-color-btn-disabled);
     }
     span:not([class*='rivet-icon-']) {
       margin-left: 8px;

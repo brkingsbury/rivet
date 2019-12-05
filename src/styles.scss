@@ -21,6 +21,47 @@ $rivet-icon-path: 'rivet-style/lib/rivet-icons';
 
 @include rvt-core(); // apply $rivet-theme to angular material. ONLY INCLUDE ONCE
 
+:root {
+  // These are declared here for the color configurator
+  --rvt-color-primary-h: 247;
+  --rvt-color-primary-s: 30%;
+  --rvt-color-primary-l: 45%;
+
+  --rvt-color-primary: hsl(var(--rvt-color-primary-h), var(--rvt-color-primary-s), var(--rvt-color-primary-l));
+
+  --rvt-color-primary-dark-h: calc(var(--rvt-color-primary-h) - 6);
+  --rvt-color-primary-dark-s: calc(var(--rvt-color-primary-s) + 14%);
+  --rvt-color-primary-dark-l: calc(var(--rvt-color-primary-l) - 17%);
+
+  --rvt-color-primary-light-h: calc(var(--rvt-color-primary-h) + 2);
+  --rvt-color-primary-light-s: calc(var(--rvt-color-primary-s) + 10%);
+  --rvt-color-primary-light-l: calc(var(--rvt-color-primary-l) + 18%);
+
+  --rvt-color-primary-light: hsl(
+    var(--rvt-color-primary-light-h),
+    var(--rvt-color-primary-light-s),
+    var(--rvt-color-primary-light-l)
+  );
+
+  --rvt-color-primary-dark: hsl(
+    var(--rvt-color-primary-dark-h),
+    var(--rvt-color-primary-dark-s),
+    var(--rvt-color-primary-dark-l)
+  );
+  --rvt-color-accent-h: 39;
+  --rvt-color-accent-s: 78%;
+  --rvt-color-accent-l: 56%;
+  --rvt-color-accent: hsl(var(--rvt-color-accent-h), var(--rvt-color-accent-s), var(--rvt-color-accent-l));
+
+  --rvt-color-neutral-dark-h: 223;
+  --rvt-color-neutral-dark-s: 39%;
+  --rvt-color-neutral-dark-l: 16%;
+  --rvt-color-neutral-dark: hsl(
+    var(--rvt-color-neutral-dark-h),
+    var(--rvt-color-neutral-dark-s),
+    var(--rvt-color-neutral-dark-l)
+  );
+}
 html {
   font-size: 62.5%;
 }
@@ -32,7 +73,7 @@ body {
   height: 100vh;
 
   * {
-    color: $rvt-neutral-900;
+    color: var(--rvt-color-text);
   }
 }
 
@@ -43,7 +84,7 @@ hr {
 section header {
   h2 {
     font-size: 40px;
-    color: $rvt-primary-color-dark;
+    color: var(--rvt-color-primary-dark);
   }
   &:not(:first-of-type) h2 {
     margin-top: 30px;
@@ -59,11 +100,11 @@ h6,
 p,
 span {
   margin: 0;
-  color: $rvt-neutral-900;
+  color: var(--rvt-color-text);
 }
 
 code {
-  background-color: $rvt-neutral-100;
+  background-color: var(--rvt-color-neutral-2);
   font-family: 'Courier New', Courier, monospace;
   padding: 2px 4px;
 }

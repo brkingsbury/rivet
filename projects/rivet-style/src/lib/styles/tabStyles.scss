@@ -1,6 +1,28 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
+
+:root {
+    --rvt-color-tab-text: var(--rvt-color-text);
+    --rvt-color-tab-text-disabled: var(--rvt-color-disabled);
+    --rvt-color-tab-bg: transparent;
+    --rvt-color-tab-bg-focus: var(--rvt-color-neutral-1);
+    --rvt-color-tab-bg-selected: transparent;
+    --rvt-color-tab-bar: var(--rvt-color-neutral-2);
+    --rvt-color-tab-bar-focus: var(--rvt-color-neutral-3);
+    --rvt-color-tab-bar-selected: var(--rvt-color-accent);
+    --rvt-color-tab-number: var(--rvt-color-tab-text);
+    --rvt-color-tab-number-selected: var(--rvt-color-neutral-white);
+    --rvt-color-tab-number-disabled: var(--rvt-color-tab-text-disabled);
+    --rvt-color-tab-number-circle-bg: var(--rvt-color-neutral-white);
+    --rvt-color-tab-number-bg-focus: var(--rvt-color-tab-bg-focus);
+    --rvt-color-tab-number-circle-bg-selected: var(--rvt-color-tab-bar-selected);
+    --rvt-color-tab-number-circle-border: var(--rvt-color-tab-bar);
+    --rvt-color-tab-number-circle-border-focus: var(--rvt-color-tab-number-border);
+    --rvt-color-tab-number-circle-border-selected: var(--rvt-color-tab-number-circle-bg-selected);
+
+}
+
 .mat-tab-group,
 .mat-tab-group.mat-primary {
   &:not(.numbered-tabs) {
@@ -13,7 +35,7 @@
         bottom: 0;
         left: 0;
         height: 4px;
-        background-color: $rvt-neutral-100;
+        background-color: var(--rvt-color-tab-bar);
         z-index: 90;
       }
     }
@@ -21,6 +43,7 @@
   * {
     font-family: $RvtFontFamily;
   }
+  
   .mat-tab-header {
     border: none;
     height: 40px;
@@ -33,10 +56,10 @@
       height: 40px;
       min-width: auto;
       padding: 12px 16px;
-      color: $rvt-neutral-900;
+      color: var(--rvt-color-tab-text);
       opacity: 1;
       .mat-tab-label-content {
-        color: $rvt-neutral-900;
+        color: var(--rvt-color-tab-text);
         font-size: 16px;
         font-weight: 400;
         line-height: 16px;
@@ -44,7 +67,7 @@
       &:hover,
       &.cdk-keyboard-focused.cdk-focused {
         &:not(.mat-tab-disabled) {
-          background-color: $rvt-neutral-50;
+          background-color: var(--rvt-color-tab-bg-focus);
           .mat-tab-label-content {
             &::after {
               content: '';
@@ -54,7 +77,7 @@
               width: 100%;
               left: 0;
               bottom: 0;
-              background-color: $rvt-neutral-200;
+              background-color: var(--rvt-color-tab-bar-focus);
               z-index: 95;
             }
           }
@@ -64,13 +87,13 @@
         font-weight: 600;
       }
       &.mat-tab-disabled .mat-tab-label-content {
-        color: $rvt-disabled-text-color;
+        color: var(--rvt-color-tab-text-disabled);
       }
     }
   }
   .mat-tab-list .mat-ink-bar {
     height: 4px;
-    background-color: $rvt-accent-color;
+    background-color: var(--rvt-color-tab-bar-selected);
   }
 
   &.numbered-tabs {
@@ -90,7 +113,7 @@
           width: 100%;
           left: 0;
           bottom: 0;
-          background-color: $rvt-neutral-100;
+          background-color: var(--rvt-color-tab-bar);
         }
         span.tab-number {
           position: absolute;
@@ -101,24 +124,24 @@
           text-align: center;
           left: calc(50% - 12px);
           line-height: 23px;
-          background-color: $rvt-white;
-          border: 1px solid $rvt-neutral-100;
+          background-color: var(--rvt-color-tab-number-circle-bg);
+          border: 1px solid var(--rvt-color-tab-number-circle-border);
           z-index: 110;
-          color: $rvt-neutral-900;
+          color: var(--rvt-color-tab-number);
           font-family: $RvtFontFamily;
           font-size: 14px;
         }
       }
       &.mat-tab-label-active {
         .mat-tab-label-content span.tab-number {
-          background-color: $rvt-accent-color;
-          color: $rvt-white;
-          border-color: $rvt-accent-color;
+          background-color: var(--rvt-color-tab-number-circle-bg-selected);
+          color: var(--rvt-color-tab-number-selected);
+          border-color: var(--rvt-color-tab-number-circle-border-selected);
         }
       }
       &.mat-tab-disabled {
         .mat-tab-label-content span.tab-number {
-          color: $rvt-disabled-text-color;
+          color: var(--rvt-color-tab-text-disabled);
         }
       }
     }
@@ -137,6 +160,7 @@
   .mat-tab-links {
     height: 100%;
     a.mat-tab-link:not(.list-link) {
+    text-decoration: none;
       height: 100%;
       opacity: 1;
       min-width: auto;
@@ -147,7 +171,7 @@
       &.cdk-keyboard-focused.cdk-focused {
         &:not(.mat-tab-disabled),
         &:not(.cdk-mouse-focused) {
-          background-color: $rvt-neutral-50;
+          background-color: var(--rvt-color-tab-bg-focus);
           text-decoration: none;
           &::after {
             content: '';
@@ -157,7 +181,7 @@
             width: 100%;
             left: 0;
             bottom: 0;
-            background-color: $rvt-neutral-200;
+            background-color: var(--rvt-color-tab-bar-focus);
           }
         }
       }
@@ -165,10 +189,10 @@
         font-weight: 600;
       }
     }
-    .mat-ink-bar {
-      height: 4px;
-      background-color: $rvt-accent-color;
-    }
+  }
+  .mat-ink-bar {
+    height: 4px;
+    background: var(--rvt-color-tab-bar-selected);
   }
 }
 

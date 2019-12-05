@@ -186,11 +186,10 @@
     <label for="example-code-loading">HTML</label>
   </div>
   <textarea id="example-code-loading" class="example-code" readonly>
-    <button class="rvt-btn-primary loading" aria-label="Loading" disabled>
-        Loading
-        <mat-spinner></mat-spinner>
-    </button>
-        </textarea
-  >
+<button class="rvt-btn-primary loading" aria-label="Loading" disabled>
+    Loading
+    <mat-spinner *ngIf="loading"></mat-spinner>
+</button>
+    </textarea>
   <!-- End Example -->
 </section>

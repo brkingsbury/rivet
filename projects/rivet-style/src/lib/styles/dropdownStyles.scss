@@ -1,27 +1,41 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
+:root {
+    --rvt-color-dropdown-text: var(--rvt-color-text);
+    --rvt-color-dropdown-invalid: var(--rvt-color-invalid);
+    --rvt-color-dropdown-disabled: var(--rvt-color-text-disabled);
+    --rvt-color-dropdown-bar: var(--rvt-color-neutral-7);
+    --rvt-color-dropdown-bar-active: var(--rvt-color-primary);
+    --rvt-color-dropdown-label: var(--rvt-color-text-label);
+    --rvt-color-dropdown-helper: var(--rvt-color-text-label);
+    --rvt-color-dropdown-arrow: var(--rvt-color-neutral-7);
+    --rvt-color-dropdown-panel: var(--rvt-color-neutral-white);
+    --rvt-color-dropdown-panel-hover: var(--rvt-color-neutral-2);
+    --rvt-color-dropdown-panel-selected: var(--rvt-color-neutral-3);
+    --rvt-color-dropdown-panel-text: var(--rvt-color-dropdown-text);
+    --rvt-color-dropdown-panel-border: var(--rvt-color-dropdown-bar);
+}
 // -- Dropdown panel styles --
 .cdk-overlay-container .cdk-overlay-pane {
   margin-left: 16px;
   padding-right: 33px;
   .mat-select-panel {
     box-shadow: none;
-    border: 1px solid $rvt-neutral-100;
-    margin-top: 25px;
+    border: 1px solid var(--rvt-color-dropdown-panel-border);
+    margin-top: 28px;
     border-radius: 0;
+    background: $rvt-white;
     .mat-option {
       height: 32px;
-      font-family: $RvtFontFamily;
-      font-size: 16px;
-      font-weight: 400;
+      font: 400 16px $RvtFontFamily;
       &.mat-selected:not(mat-option-disabled) {
-        color: $rvt-neutral-900;
-        background-color: $rvt-neutral-200;
+        color: var(--rvt-color-dropdown-panel-text);
+        background-color: var(--rvt-color-dropdown-panel-selected);
         transition: background-color 200ms ease;
       }
       &:hover:not(.mat-option-disabled):not(.mat-selected) {
-        background-color: $rvt-neutral-100;
+        background-color: var(--rvt-color-dropdown-panel-hover);
         transition: background-color 200ms ease;
       }
       &:first-child {
@@ -32,37 +46,36 @@
 }
 
 mat-form-field.mat-form-field {
-  font-family: $RvtFontFamily;
-  font-size: 16px;
-  font-weight: 400;
+  font: 400 16px $RvtFontFamily;
   * {
     font-family: $RvtFontFamily; // Imported from typeStyles
   }
   .mat-form-field-label-wrapper label.mat-form-field-label {
-    font-family: $RvtFontFamily;
-    font-size: 16px;
-    font-weight: 400;
-    color: $rvt-neutral-400;
+    font: 400 16px $RvtFontFamily;
+    color: var(--rvt-color-dropdown-label);
     &.mat-form-field-empty {
-      color: $rvt-neutral-900;
+      color: var(--rvt-color-dropdown-text);
     }
   }
   &.mat-focused.mat-primary .mat-select-arrow {
-    color: $rvt-neutral-400;
+    color: var(--rvt-color-dropdown-arrow);
   }
   &.mat-form-field-disabled {
     label.mat-form-field-label,
     label.mat-form-field-label.mat-form-field-empty {
-      color: $rvt-disabled-text-color;
+      color: var(--rvt-color-dropdown-disabled);
+    }
+    .mat-form-field-underline {
+        background: var(--rvt-color-dropdown-disabled);
     }
   }
   .mat-select {
     &.mat-select-disabled {
       .mat-select-placeholder {
-        color: $rvt-disabled-text-color;
+        color: var(--rvt-color-dropdown-disabled);
       }
       .mat-select-arrow-wrapper .mat-select-arrow {
-        color: $rvt-disabled-text-color;
+        color: var(--rvt-color-dropdown-disabled);
       }
     }
     .mat-select-arrow-wrapper {
@@ -80,23 +93,21 @@ mat-form-field.mat-form-field {
     }
   }
   .mat-form-field-hint-wrapper mat-hint {
-    font-family: $RvtFontFamily;
-    font-size: 12px;
-    font-weight: 400;
+    font: 400 12px $RvtFontFamily;
   }
   .mat-form-field-underline {
-    background-color: $rvt-neutral-400;
+    background-color: var(--rvt-color-dropdown-bar);
     transition: background-color 200ms ease;
   }
   &.mat-focused {
     .mat-form-field-label-wrapper label.mat-form-field-label {
-      color: $rvt-neutral-400;
+        color: var(--rvt-color-dropdown-label);
       &.mat-form-field-empty {
-        color: $rvt-neutral-400;
+        color: var(--rvt-color-dropdown-label);
       }
     }
     .mat-form-field-underline {
-      background-color: $rvt-neutral-900;
+      background-color: var(--rvt-color-dropdown-bar-active);
       height: 2px;
     }
   }
@@ -109,16 +120,16 @@ mat-form-field.mat-form-field {
   &.invalid,
   &.invalid.mat-focused {
     label.mat-form-field-label {
-      color: $rvt-invalid-color;
+      color: var(--rvt-color-dropdown-invalid);
     }
     .mat-form-field-underline {
-      background-color: $rvt-invalid-color;
+      background-color: var(--rvt-color-dropdown-invalid);
       .mat-form-field-ripple {
-        background-color: $rvt-invalid-color;
+        background-color: var(--rvt-color-dropdown-invalid);
       }
     }
     .mat-form-field-subscript-wrapper .mat-form-field-hint-wrapper .mat-hint {
-      color: $rvt-invalid-color;
+      color: var(--rvt-color-dropdown-invalid);
     }
   }
   &.readonly {
@@ -144,7 +155,7 @@ mat-form-field.mat-form-field {
   &.high-level {
     .mat-form-field-underline,
     .mat-form-field-ripple {
-      background-color: $rvt-accent-color;
+      background-color: var(--rvt-color-accent);
       height: 4px;
     }
     .mat-select {
@@ -153,7 +164,7 @@ mat-form-field.mat-form-field {
         padding-left: 16px;
       }
       .mat-select-arrow {
-        color: $rvt-neutral-900;
+        color: var(--rvt-color-dropdown-text);
       }
     }
     .mat-form-field-infix {
@@ -161,11 +172,11 @@ mat-form-field.mat-form-field {
     }
     &:hover {
       .mat-form-field-infix {
-        background-color: $rvt-neutral-50;
+        background-color: var(--rvt-color-dropdown-panel-hover);
       }
     }
     &.mat-focused .mat-form-field-infix {
-      background-color: $rvt-neutral-50;
+      background-color: var(--rvt-color-dropdown-panel-hover);
     }
   }
 }

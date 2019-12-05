@@ -53,70 +53,69 @@ $rvt-neutral-600-alpha-10: #{var(--rvt-neutral-600-alpha-10, rgba(57, 64, 89, 0.
 $rvt-neutral-600-alpha-28: #{var(--rvt-neutral-600-alpha-28, rgba(57, 64, 89, 0.28))} !default;
 $rvt-neutral-600-alpha-71: #{var(--rvt-neutral-600-alpha-71, rgba(57, 64, 89, 0.71))} !default;
 
-//---------------------- ! All #'s (50-900) must be defined !
 
-$rivet-primary: (
-  50: $rvt-neutral-50,
-  100: $rvt-neutral-100,
-  200: $rvt-neutral-200,
-  300: $rvt-neutral-300,
-  400: $rvt-neutral-400,
-  500: $rvt-neutral-400,
-  600: $rvt-neutral-600,
-  700: $rvt-neutral-600,
-  800: $rvt-neutral-600,
-  900: $rvt-neutral-900,
-  A100: $rvt-accent-color,
-  A200: $rvt-primary-color-light,
-  A400: $rvt-primary-color,
-  A700: $rvt-primary-color-dark,
-  contrast: (
-    50: $rvt-neutral-900,
-    100: $rvt-neutral-900,
-    200: $rvt-neutral-900,
-    300: $rvt-neutral-900,
-    400: $rvt-white,
-    500: $rvt-white,
-    600: $rvt-white,
-    700: $rvt-white,
-    800: $rvt-neutral-900,
-    900: $rvt-white,
-    A100: $rvt-neutral-900,
-    A200: $rvt-neutral-900,
-    A400: $rvt-white,
-    A700: $rvt-white
-  )
-);
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~ START OF NEW CSS VARIABLES ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-$rivet-data: (
-  50: $rvt-neutral-50,
-  100: $rvt-neutral-100,
-  200: $rvt-neutral-200,
-  300: $rvt-neutral-300,
-  400: $rvt-neutral-400,
-  500: $rvt-neutral-400,
-  600: $rvt-neutral-600,
-  700: $rvt-neutral-600,
-  800: $rvt-neutral-600,
-  900: $rvt-neutral-900,
-  A100: $rvt-good-color,
-  A200: $rvt-good-color,
-  A400: $rvt-insufficient-color,
-  A700: $rvt-warning-color,
-  contrast: (
-    50: $rvt-white,
-    100: $rvt-white,
-    200: $rvt-white,
-    300: $rvt-white,
-    400: $rvt-white,
-    500: $rvt-white,
-    600: $rvt-white,
-    700: $rvt-white,
-    800: $rvt-white,
-    900: $rvt-white,
-    A100: $rvt-white,
-    A200: $rvt-white,
-    A400: $rvt-white,
-    A700: $rvt-white
-  )
-);
+
+:root {
+  // +++++++++++++ Base Level Colors +++++++++++++++++++
+  --rvt-color-primary: hsl(247, 30%, 45%);
+  --rvt-color-primary-dark: hsl(241, 44%, 28%); // can calc off of primary
+  --rvt-color-primary-light: hsl(249, 40%, 63%); // can calc off of primary
+
+  --rvt-color-primary-alpha-10: hsla(247, 30%, 45%, 0.1);
+  --rvt-color-primary-alpha-28: hsla(247, 30%, 45%, 0.28);
+
+  --rvt-color-accent: hsl(39, 78%, 56%);
+
+  --rvt-color-neutral-light: hsl(0, 100%, 100%); // (#FFFFFF)
+  --rvt-color-neutral-white: hsl(240, 0%, 100%); // (#FFFFFF)
+  --rvt-color-neutral-1: hsl(240, 0%, 97%); // (#F7F7F7)
+  --rvt-color-neutral-2: hsl(240, 3%, 92%); // (#EBEBEC)
+  --rvt-color-neutral-3: hsl(222, 11%, 82%); // (#CBCED5)
+  --rvt-color-neutral-4: hsl(222, 11%, 76%); // (#BCC0C9) -- Disabled
+  --rvt-color-neutral-5: hsl(219, 12%, 71%); // (#ADB3BE)
+  --rvt-color-neutral-6: hsl(220, 9%, 46%); // (#6B7280)
+  --rvt-color-neutral-7: hsl(227, 22%, 29%); // (#394059)
+  --rvt-color-neutral-dark: hsl(223, 39%, 16%); // (#192239)
+
+  --rvt-color-neutral-3-alpha-90: hsla(222, 11%, 82%, 0.9);
+  --rvt-color-neutral-6-alpha-10: hsla(227, 22%, 29%, 0.1);
+  --rvt-color-neutral-6-alpha-28: hsla(227, 22%, 29%, 0.28);
+  --rvt-color-neutral-6-alpha-71: hsla(227, 22%, 29%, 0.71);
+
+  --rvt-color-invalid: hsl(0, 66%, 47%);
+
+  --rvt-color-good: hsl(137, 63%, 40%);
+  --rvt-color-warn: hsl(56, 90%, 53%);
+  --rvt-color-bad: hsl(0, 66%, 47%);
+
+  // ---- Data Colors ---
+  --rvt-color-data-good-1: hsl(144, 62%, 45%);
+  --rvt-color-data-good-2: hsl(81, 36%, 50%);
+  --rvt-color-data-warn-1: hsl(39, 94%, 66%);
+  --rvt-color-data-warn-2: hsl(17, 82%, 58%);
+  --rvt-color-data-bad: hsl(0, 70%, 56%);
+  --rvt-color-data-accent-1a: hsl(212, 60%, 50%);
+  --rvt-color-data-accent-1b: hsl(198, 89%, 21%);
+  --rvt-color-data-accent-2: hsl(29, 91%, 61%);
+  --rvt-color-data-accent-3a: hsl(191, 100%, 33%);
+  --rvt-color-data-accent-3b: hsl(201, 100%, 30%);
+  --rvt-color-data-accent-4a: hsl(323, 47%, 46%);
+  --rvt-color-data-accent-4b: hsl(241, 29%, 43%);
+
+  // ++++++++++++++ Element Level Color ++++++++++++++++++
+  --rvt-color-text: var(--rvt-color-neutral-dark);
+  --rvt-color-text-contrast: var(--rvt-color-neutral-light);
+  --rvt-color-text-disabled: var(--rvt-color-neutral-4);
+  --rvt-color-text-label: var(--rvt-color-neutral-7);
+
+  --rvt-color-disabled: var(--rvt-color-neutral-4);
+
+  --rvt-color-keyboard-focus: hsl(217, 99%, 65%);
+
+  --rvt-color-topnav-bg: var(--rvt-color-neutral-5);
+  --rvt-color-overlay: var(--rvt-color-neutral-2);
+  --rvt-color-sidenav-bg: var(--rvt-color-neutral-light);
+  --rvt-color-bg: var(--rvt-color-neutral-light);
+}

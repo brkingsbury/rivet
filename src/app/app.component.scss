@@ -13,7 +13,7 @@
   background: transparent;
   font-size: 16px;
   &:focus {
-    color: white;
+    color: var(--rvt-color-text-contrast);
     top: 5px;
     left: 65px;
     transition: color 100ms ease;
@@ -24,11 +24,15 @@ p:not(.example-code-header) {
   max-width: 1200px;
 }
 
-.test-btn {
+.color-selector-btn {
   position: absolute;
   top: 0;
   z-index: 100;
   right: 0;
+  &:before {
+      font-size: 14px;
+      font-weight: 600;
+  }
 }
 
 .mode-btn {
@@ -42,12 +46,12 @@ p:not(.example-code-header) {
 }
 .mat-sidenav-container {
   top: 0;
-  background-color: $rvt-white;
+  background-color: var(--rvt-color-bg);
 }
 
 .mat-sidenav-content {
   background: none;
-  background-color: $rvt-white;
+  background-color: var(--rvt-color-bg);
   padding: 0;
   .component-container {
     padding: 30px;
@@ -61,10 +65,10 @@ p:not(.example-code-header) {
   height: 100px;
   line-height: 100px;
   padding: 0 30px;
-  background-color: $rvt-primary-color-dark;
-  background: linear-gradient(315deg, rgba(88, 80, 150, 1) 0%, rgba(41, 40, 104, 1) 100%);
+  background-color: var(--rvt-color-primary-dark);
+  background: linear-gradient(315deg, var(--rvt-color-primary) 0%, var(--rvt-color-primary-dark) 100%);
 
-  color: $rvt-white;
+  color: var(--rvt-color-text-contrast);
   a {
     text-decoration: none;
     margin-left: 15px;
@@ -72,7 +76,7 @@ p:not(.example-code-header) {
       margin-left: 30px;
     }
     &.rivet-icon-pdf {
-      color: $rvt-white;
+      color: var(--rvt-color-text-contrast);
       font-size: 24px;
       display: inline-block;
       height: 24px;
@@ -93,13 +97,11 @@ p:not(.example-code-header) {
     height: 27px;
     width: 27px;
     border: none;
-    font-family: $RvtFontFamily;
+    font: 600 12px $RvtFontFamily;
     padding: 5px;
     border-radius: 50%;
     background: $rvt-white;
-    color: $rvt-neutral-900;
-    font-size: 12px;
-    font-weight: 600;
+    color: var(--rvt-color-text);
     vertical-align: middle;
     cursor: pointer;
     position: relative;
@@ -110,7 +112,7 @@ p:not(.example-code-header) {
       height: 33px;
       width: 33px;
       content: '';
-      border: 2px solid $rvt-white;
+      border: 2px solid var(--rvt-color-neutral-white);
       border-radius: 50%;
       background: transparent;
     }
@@ -122,6 +124,10 @@ p:not(.example-code-header) {
   header {
     margin: 15px 0 5px 0;
   }
+}
+
+.component-container.deprecated {
+    opacity: 0.5;
 }
 
 .fancy {
@@ -137,6 +143,57 @@ p:not(.example-code-header) {
 }
 .rivet-mini-expansion-body {
   font-size: 12px;
+}
+
+.color-selector {
+    .color-box {
+        height: 50px;
+        width: 100%;
+    }
+    .rivet-drawer-apron {
+        background: none;
+    }
+    .rivet-drawer.open [rivet-drawer-content] {
+        box-shadow: -5px 0px 5px rgba(0,0,0,0.25);
+    }
+
+    .clr-close-btn {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+    }
+    
+    .color-select {
+        display: flex;
+        align-items: center;
+        h5 {
+            flex-grow: 1;
+            width: 95px;
+            font-size: 18px;
+            line-height: 48px;
+            color: var(--rvt-color-primary-dark);
+        }
+        .clr-slider {
+            flex-grow: 2;
+            .mat-slider-track-background {
+                background-color: var(--rvt-color-neutral-3);
+            }
+            .mat-slider-track-fill {
+                background-color: var(--rvt-color-primary);
+            }
+            .mat-slider-thumb, .mat-slider-thumb-label {
+                background-color: var(--rvt-color-primary);
+            }
+        }
+        span {
+            flex-grow: 1;
+            font-size: 12px;
+            color: var(--rvt-color-neutral-5);
+        }
+        &:last-of-type{
+            margin-bottom: 15px;
+        }
+    }
 }
 
 // ----------------------------------------
