@@ -119,3 +119,41 @@ $rvt-neutral-600-alpha-71: #{var(--rvt-neutral-600-alpha-71, rgba(57, 64, 89, 0.
   --rvt-color-sidenav-bg: var(--rvt-color-neutral-light);
   --rvt-color-bg: var(--rvt-color-neutral-light);
 }
+
+
+
+// --- Angular Material Rivet Theme
+// --- ! All #'s (50-900) must be defined !
+
+$rivet-primary: (
+  50: var(--rvt-color-neutral-light),
+  100: var(--rvt-color-neutral-1),
+  200: var(--rvt-color-neutral-2),
+  300: var(--rvt-color-neutral-3),
+  400: var(--rvt-color-neutral-4),
+  500: var(--rvt-color-neutral-5),
+  600: var(--rvt-color-neutral-6),
+  700: var(--rvt-color-neutral-7),
+  800: var(--rvt-color-neutral-dark),
+  900: var(--rvt-color-neutral-dark),
+  A100: var(--rvt-color-accent),
+  A200: var(--rvt-color-primary-light),
+  A400: var(--rvt-color-primary),
+  A700: var(--rvt-color-primary-dark),
+  contrast: (
+    50: var(--rvt-color-neutral-dark),
+    100: var(--rvt-color-neutral-dark),
+    200: var(--rvt-color-neutral-dark),
+    300: var(--rvt-color-neutral-dark),
+    400: var(--rvt-color-neutral-light),
+    500: var(--rvt-color-neutral-light),
+    600: var(--rvt-color-neutral-light),
+    700: var(--rvt-color-neutral-light),
+    800: var(--rvt-color-neutral-light),
+    900: var(--rvt-color-neutral-light),
+    A100: var(--rvt-color-neutral-dark),
+    A200: var(--rvt-color-neutral-dark),
+    A400: var(--rvt-color-neutral-light),
+    A700: var(--rvt-color-neutral-light)
+  )
+);

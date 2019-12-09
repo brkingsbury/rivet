@@ -31,8 +31,8 @@ import { Component } from '@angular/core';
 
 export const versions = [
   {
-    version: '4.2.1',
-    date: '12/04/2019',
+    version: '4.2.2',
+    date: '12/06/2019',
     note: 'The Color Update!',
     updates: [
       {
@@ -41,12 +41,6 @@ export const versions = [
           'New CSS variables have been created for use going forward',
           'Component styles have been linked to new color variables',
           'Minor styling fixes have been added to various components'
-        ]
-      },
-      {
-        category: 'Rivet Package',
-        bullets: [
-          'The rvt-core mixin has been removed. All styles should fully match Rivet styling and not use a Material theme.'
         ]
       }
     ]
