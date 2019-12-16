@@ -56,7 +56,8 @@ export class SideNavComponent implements OnInit {
         links: [
           { name: 'Accessibility', path: '/patterns/a11y' },
           { name: 'Performance', path: '/patterns/performance' },
-          { name: 'Structure', path: '/patterns/structure' }
+          { name: 'Structure', path: '/patterns/structure' },
+          { name: 'Validation & Errors', path: '/patterns/errors' }
         ]
       },
       {
@@ -77,7 +78,7 @@ export class SideNavComponent implements OnInit {
     this.cursorStatus.emit();
   }
 
-  constructor() {}
+  constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 }

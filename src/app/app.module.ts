@@ -45,6 +45,7 @@ import { PersonaComponent } from './styles/persona/persona.component';
 import { StylesComponent } from './styles/styles.component';
 import { TestingComponent } from './testing/testing.component';
 import { DrawerComponent } from './components/drawer/drawer.component';
+import { ErrorsComponent } from './patterns/errors/errors.component';
 import { ThemeEditorComponent } from './theme-editor/theme-editor.component';
 
 const appRoutes: Routes = [
@@ -81,6 +82,7 @@ const appRoutes: Routes = [
   { path: 'changelog/versions', component: VersionsComponent },
   { path: 'patterns', component: PatternsComponent },
   { path: 'patterns/a11y', component: AccessibilityComponent },
+  { path: 'patterns/errors', component: ErrorsComponent },
   { path: 'patterns/performance', component: PerformanceComponent },
   { path: 'patterns/structure', component: StructureComponent },
   { path: 'testing', component: TestingComponent },
@@ -133,7 +135,8 @@ const appRoutes: Routes = [
     DesignersComponent,
     DevelopersComponent,
     ContributeComponent,
-    ThemeEditorComponent
+    ThemeEditorComponent,
+    ErrorsComponent
   ],
   entryComponents: [DialogComponent, DialogComponentDialogComponent, Snackbar2Component, ComplianceDialogComponent],
   imports: [
@@ -152,4 +155,4 @@ const appRoutes: Routes = [
   providers: [AuthService],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
