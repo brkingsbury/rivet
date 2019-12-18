@@ -13,6 +13,8 @@
     transition: right 400ms;
     padding: 20px;
     box-sizing: border-box;
+    overflow-y: scroll;
+    overflow-x: visible;
   }
 }
 .rivet-drawer-apron {

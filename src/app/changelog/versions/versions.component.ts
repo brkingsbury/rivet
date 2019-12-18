@@ -31,6 +31,20 @@ import { Component } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.2.3',
+    date: '12/18/2019',
+    note: 'Drawer scrolling',
+    updates: [
+      {
+        category: 'Components',
+        bullets: [
+          'Add scrollbars to drawers to handle longer content',
+          'Add logic to remove scrollbars on main page when drawer is open'
+        ]
+      }
+    ]
+  },
+  {
     version: '4.2.2',
     date: '12/06/2019',
     note: 'The Color Update!',
@@ -285,7 +299,7 @@ export const versions = [
         category: 'Rivet package',
         bullets: [
           'Delay the automatic opening of the expansion panel when the flag is set.' +
-            ' Does not affect default behavior only on hideExpansionContent.'
+          ' Does not affect default behavior only on hideExpansionContent.'
         ]
       }
     ]
