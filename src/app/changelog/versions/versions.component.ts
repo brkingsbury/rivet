@@ -31,6 +31,25 @@ import { Component } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.2.4',
+    date: '1/7/2020',
+    note: 'Additional Icons',
+    updates: [
+      {
+        category: 'Components',
+        bullets: [
+          'Add batch-processor icon',
+          'Add db-timer-tasks icon',
+          'Add logging icon',
+          'Add naviplan-activity icon',
+          'Add site-manager icon',
+          'Add teams icon',
+          'Add xml-store icon'
+        ]
+      }
+    ]
+  },
+  {
     version: '4.2.3',
     date: '12/18/2019',
     note: 'Drawer scrolling',
@@ -123,6 +142,36 @@ export const versions = [
       {
         category: 'Style',
         bullets: ['Added CSS Variable column']
+      }
+    ]
+  },
+  {
+    version: '3.5.11',
+    date: '1/7/2020',
+    note: 'Additional Icons',
+    updates: [
+      {
+        category: 'Components',
+        bullets: [
+          'Add batch-processor icon',
+          'Add db-timer-tasks icon',
+          'Add logging icon',
+          'Add naviplan-activity icon',
+          'Add site-manager icon',
+          'Add teams icon',
+          'Add xml-store icon'
+        ]
+      }
+    ]
+  },
+  {
+    version: '3.5.10',
+    date: '12/03/2019',
+    note: 'Changing button text inputs in expansion panel component to an object of strings. Adding close button input.',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Changing button text inputs in expansion panel component to an object of strings. Adding close button input.']
       }
     ]
   },
