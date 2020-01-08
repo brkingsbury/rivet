@@ -146,7 +146,7 @@ export const versions = [
     ]
   },
   {
-    version: '3.5.10',
+    version: '3.5.11',
     date: '1/7/2020',
     note: 'Additional Icons',
     updates: [
@@ -161,6 +161,17 @@ export const versions = [
           'Add teams icon',
           'Add xml-store icon'
         ]
+      }
+    ]
+  },
+  {
+    version: '3.5.10',
+    date: '12/03/2019',
+    note: 'Changing button text inputs in expansion panel component to an object of strings. Adding close button input.',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Changing button text inputs in expansion panel component to an object of strings. Adding close button input.']
       }
     ]
   },
