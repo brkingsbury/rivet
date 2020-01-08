@@ -38,7 +38,7 @@ import 'core-js/es/set';
 import 'classlist.js'; // Run `npm install --save classlist.js`.
 
 /** IE10 and IE11 requires the following for the Reflect API. */
-//import 'core-js/modules/reflect';
+// import 'core-js/modules/reflect';
 
 /** Evergreen browsers require these. **/
 // Used for reflect-metadata in JIT. If you use AOT (and only Angular decorators), you can remove.
