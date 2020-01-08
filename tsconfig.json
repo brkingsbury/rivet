@@ -20,14 +20,11 @@
     ],
     "paths": {
       "rivet-style": [
-        "dist/rivet-style"
+        "../dist/rivet-style"
       ],
       "rivet-style/*": [
-        "dist/rivet-style/*"
+        "../dist/rivet-style/*"
       ]
     }
-  },
-  "angularCompilerOptions": {
-    "enableIvy": false
   }
 }

@@ -22,7 +22,12 @@
             "assets": [
               "src/np-favicon.ico",
               "src/assets",
-              "src/web.config"
+              "src/web.config",
+              {
+                "glob": "**/*",
+                "input": "./node_modules/rivet-style/lib/rivet-icons/",
+                "output": "./assets/fonts/"
+              }
             ],
             "styles": [
               "src/styles.scss"
