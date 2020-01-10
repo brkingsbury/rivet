@@ -31,6 +31,17 @@ import { Component } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.2.6',
+    date: '1/10/2020',
+    note: 'Angular Upgrade',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: ['Upgrade Rivet to Angular 9 rc8']
+      }
+    ]
+  },
+  {
     version: '4.2.5',
     date: '1/09/2020',
     note: 'Angular Upgrade',
@@ -38,17 +49,6 @@ export const versions = [
       {
         category: 'Rivet package',
         bullets: ['Upgrade Rivet to Angular 9 rc7']
-      }
-    ]
-  },
-  {
-    version: '4.2.6',
-    date: '1/09/2020',
-    note: 'Angular Upgrade',
-    updates: [
-      {
-        category: 'Rivet package',
-        bullets: ['Upgrade Rivet to Angular 9 rc8']
       }
     ]
   },
