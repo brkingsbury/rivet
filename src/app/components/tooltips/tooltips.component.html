@@ -9,30 +9,45 @@
     <h2>Tooltip (on mouseover)</h2>
     <p>A tooltip is used to clarify some detail related to the element it's attached to.</p>
     <ul>
-      <li>'rvtTooltip' is used to bind a string to the tooltip directive</li>
-      <li>'rvtTooltipClass' adds a class to the tooltip element</li>
+      <li><code>rvtTooltip</code> <strong>&lt;string&gt;</strong> - [required] used to bind a string to the tooltip
+        directive</li>
+      <li>
+        <code>rvtTooltipClass</code> <strong>&lt;string&gt;</strong> - adds a class to the tooltip element.
+      </li>
+      <li>
+        <code>rvtTooltipAbsolutePos</code> <strong>&lt;boolean&gt;</strong> - Moves the added tooltip element out as a
+        child of the body tag instead of inline, which can be helpful in a context where overflow: hidden is defined.
+        (simply adding the attribute works without passing an argument)
+      </li>
+      <li>
+        <code>rvtManualTooltipShow</code> <strong>&lt;boolean&gt;</strong> - is a boolean that controls whether a
+        tooltip is visible (set to 'undefined' to allow
+        mouseover functionality)
+      </li>
     </ul>
   </header>
 
   <div class="example-component">
-    <button rvtTooltip="Here's the value of the tooltip" class="rvt-btn-primary">
+    <button rvtTooltip="Here's the value of the tooltip" class="rvt-btn-primary" rvtTooltipAbsolutePos>
       Tooltip anchor
     </button>
-    <span
-      style="font-size: 30px; width: 30px;"
-      rvtTooltip="Tooltips can be attached to icons as well"
-      class="rivet-icon-help"
-    ></span>
+    <span style="font-size: 30px; width: 30px;" rvtTooltip="Tooltips can be attached to icons as well"
+      class="rivet-icon-help"></span>
   </div>
 
   <!-- Example -->
   <p class="example-code-header">HTML</p>
   <textarea class="example-code" readonly>
 <button
-  rvtTooltip="Static tooltip text"
-  class="rvt-btn-primary">
+  class="rvt-btn-primary"
+  rvtTooltip="Here's the value of the tooltip" rvtTooltipAbsolutePos>
   Tooltip anchor
 </button>
+
+<span
+  rvtTooltip="Tooltips can be attached to icons as well"
+  class="rivet-icon-help">
+</span>
   </textarea>
 </div>
 
@@ -41,22 +56,29 @@
     <h2>Tooltip (manual trigger)</h2>
     <p>Manually triggered tooltips can be used to call attention to something that has occured programatically</p>
     <ul>
-      <li>'rvtTooltip' is used to bind a string to the tooltip directive</li>
+
       <li>
-        '[rvtManualTooltipShow]' is a boolean that controls whether a tooltip is visible (set to 'undefined' to allow
+        <code>rvtTooltip</code><strong>&lt;string&gt;</strong> - [required] used to bind a string to the tooltip
+        directive
+      </li>
+      <li>
+        <code>rvtTooltipClass</code> <strong>&lt;string&gt;</strong> - adds a class to the tooltip element.
+      </li>
+      <li>
+        <code>rvtTooltipAbsolutePos</code> <strong>&lt;boolean&gt;</strong> - Moves the added tooltip element out as a
+        child of the body tag instead of inline, which can be helpful in a context where overflow: hidden is defined.
+        (simply adding the attribute works without passing an argument)
+      </li>
+      <li>
+        <code>rvtManualTooltipShow</code> <strong>&lt;boolean&gt;</strong> - is a boolean that controls whether a
+        tooltip is visible (set to 'undefined' to allow
         mouseover functionality)
       </li>
-      <li>'rvtTooltipClass' adds a class to the tooltip element</li>
     </ul>
   </header>
   <div class="example-component">
-    <button
-      (click)="triggerError()"
-      [rvtTooltip]="tooltipValue"
-      rvtTooltipClass="error-tooltip"
-      [rvtManualTooltipShow]="showTooltip"
-      class="rvt-btn-primary"
-    >
+    <button (click)="triggerError()" [rvtTooltip]="tooltipValue" rvtTooltipClass="error-tooltip"
+      [rvtManualTooltipShow]="showTooltip" class="rvt-btn-primary">
       Toggle Error
     </button>
     <span style="font-size: 16px;">showTooltip: {{ showTooltip }}</span>

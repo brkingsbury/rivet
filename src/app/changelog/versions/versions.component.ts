@@ -31,6 +31,17 @@ import { Component } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.2.7',
+    date: '1/10/2020',
+    note: 'Tooltip position update',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Add rvtTooltipAbsolutePos as an option on tooltips to allow appending to body instead of inline']
+      }
+    ]
+  },
+  {
     version: '4.2.6',
     date: '1/10/2020',
     note: 'Angular Upgrade',
