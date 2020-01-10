@@ -1,6 +1,40 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700');
 
 $RvtFontFamily: 'Nunito Sans', Arial, sans-serif;
+$RvtFontA: 5.6rem;
+$RvtFontB: 4.8rem;
+$RvtFontC: 3.8rem;
+$RvtFontD: 2.8rem;
+$RvtFontE: 2.2rem;
+$RvtFontF: 1.6rem;
+$RvtFontG: 1.4rem;
+$RvtFontH: 1.2rem;
+
+@mixin rvt-font-a{
+  font: 200 $RvtFontA $RvtFontFamily;
+}
+@mixin rvt-font-b{
+  font: 200 $RvtFontB $RvtFontFamily;
+}
+@mixin rvt-font-c{
+  font: 300 $RvtFontC $RvtFontFamily;
+}
+@mixin rvt-font-d{
+  font: 400 $RvtFontD $RvtFontFamily;
+}
+@mixin rvt-font-e{
+  font: 600 $RvtFontE $RvtFontFamily;
+}
+@mixin rvt-font-f{
+  font: 400 $RvtFontF $RvtFontFamily;
+}
+@mixin rvt-font-g{
+  font: 400 $RvtFontG $RvtFontFamily;
+}
+@mixin rvt-font-h{
+  font: 400 $RvtFontH $RvtFontFamily;
+}
+
 
 :root {
   --rvt-color-link: var(--rvt-color-primary-dark);
@@ -11,47 +45,48 @@ body {
   color: var(--rvt-color-text);
 }
 
-h1 {
-  font: 200 56px $RvtFontFamily;
+h1{
+  @include rvt-font-a;
 }
 
+
 h2 {
-  font: 200 48px $RvtFontFamily;
+  @include rvt-font-b;
 }
 
 h3 {
-  font: 300 38px $RvtFontFamily;
+  @include rvt-font-c;
 }
 
 h4 {
-  font: 400 28px $RvtFontFamily;
+  @include rvt-font-d;
 }
 
 h5 {
-  font: 600 22px $RvtFontFamily;
+  @include rvt-font-e;
 }
 
 h6 {
-  font: 400 16px $RvtFontFamily;
+  @include rvt-font-f;
 }
 
 p {
-  font: 400 14px $RvtFontFamily;
+  @include rvt-font-g;
   color: var(--rvt-color-text);
 }
 
 label {
-  font: 400 12px $RvtFontFamily;
+  @include rvt-font-h;
 }
 
 input,
 textarea {
-  font: 400 16px $RvtFontFamily;
+  @include rvt-font-f;
 }
 
 a,
 a.rvt-link {
-  font: 400 14px $RvtFontFamily;
+  @include rvt-font-g;
   text-decoration: underline;
   &:hover {
     text-decoration: underline;
@@ -63,8 +98,10 @@ a.rvt-link {
 
 span, button {
   font-family: $RvtFontFamily;
+  @include rvt-font-g;
 }
 
 a.rvt-link {
   color: var(--rvt-color-link);
 }
+

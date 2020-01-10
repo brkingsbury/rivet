@@ -31,6 +31,19 @@ import { Component } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.3.0',
+    date: '1/10/2020',
+    note: 'Font Mixins',
+    updates: [
+      {
+        category: 'Type',
+        bullets: [
+          'Add font mixin variables'
+        ]
+      }
+    ]
+  },
+  {
     version: '4.2.7',
     date: '1/10/2020',
     note: 'Tooltip position update',
