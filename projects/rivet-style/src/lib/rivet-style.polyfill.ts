@@ -1,9 +1,9 @@
 import cssVars from 'css-vars-ponyfill';
 
-export default function rvtPolyfill() {
+export function rvtPolyfill() {
   cssVars({
     onComplete: function(cssText, styleElms, cssVariables, benchmark) {
-      var element = document.getElementById('css-vars-root');
+      const element = document.getElementById('css-vars-root');
       if (element) {
         element.style.display = 'block';
       }
@@ -11,7 +11,6 @@ export default function rvtPolyfill() {
     preserveVars: true,
     silent: true,
     shadowDOM: true,
-    updateURLs: false,
     watch: true
   });
 }

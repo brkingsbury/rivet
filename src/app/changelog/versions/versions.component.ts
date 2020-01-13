@@ -31,15 +31,24 @@ import { Component } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.3.2',
+    date: '1/17/2020',
+    note: 'Update Polyfill to not update URLs for IE',
+    updates: [
+      {
+        category: 'Rivet package',
+        bullets: ['Fixed a bug where URL were getting parsed incorrectly in IE']
+      }
+    ]
+  },
+  {
     version: '4.3.1',
     date: '1/16/2020',
     note: 'Tooltip position fix',
     updates: [
       {
         category: 'Components',
-        bullets: [
-          'Fixed a bug with tooltip top offset position in global positioned mode'
-        ]
+        bullets: ['Fixed a bug with tooltip top offset position in global positioned mode']
       }
     ]
   },
@@ -50,9 +59,7 @@ export const versions = [
     updates: [
       {
         category: 'Type',
-        bullets: [
-          'Add font mixin variables'
-        ]
+        bullets: ['Add font mixin variables']
       }
     ]
   },
@@ -211,9 +218,7 @@ export const versions = [
     updates: [
       {
         category: 'Components',
-        bullets: [
-          'Fixed a bug with tooltip top offset position in global positioned mode'
-        ]
+        bullets: ['Fixed a bug with tooltip top offset position in global positioned mode']
       }
     ]
   },
@@ -250,11 +255,14 @@ export const versions = [
   {
     version: '3.5.10',
     date: '12/03/2019',
-    note: 'Changing button text inputs in expansion panel component to an object of strings. Adding close button input.',
+    note:
+      'Changing button text inputs in expansion panel component to an object of strings. Adding close button input.',
     updates: [
       {
         category: 'Components',
-        bullets: ['Changing button text inputs in expansion panel component to an object of strings. Adding close button input.']
+        bullets: [
+          'Changing button text inputs in expansion panel component to an object of strings. Adding close button input.'
+        ]
       }
     ]
   },
@@ -431,7 +439,7 @@ export const versions = [
         category: 'Rivet package',
         bullets: [
           'Delay the automatic opening of the expansion panel when the flag is set.' +
-          ' Does not affect default behavior only on hideExpansionContent.'
+            ' Does not affect default behavior only on hideExpansionContent.'
         ]
       }
     ]
