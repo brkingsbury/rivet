@@ -192,6 +192,17 @@ export const versions = [
     ]
   },
   {
+    version: '3.5.12',
+    date: '1/10/2020',
+    note: 'Tooltip position update',
+    updates: [
+      {
+        category: 'Components',
+        bullets: ['Add rvtTooltipAbsolutePos as an option on tooltips to allow appending to body instead of inline']
+      }
+    ]
+  },
+  {
     version: '3.5.11',
     date: '1/7/2020',
     note: 'Additional Icons',
