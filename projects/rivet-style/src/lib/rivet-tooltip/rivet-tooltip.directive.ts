@@ -33,7 +33,7 @@ export class RvtTooltipDirective implements OnChanges, OnInit, AfterViewInit {
       // If the tooltip is attached to the body instead of inline the positioning must be done relative to the body.
       const viewportOffset = this.anchorEl.getBoundingClientRect();
       const topScroll = window.pageYOffset || document.documentElement.scrollTop;
-      this.tooltipEl.style.top = viewportOffset.top + topScroll - this.anchorEl.offsetHeight - 14 + 'px';
+      this.tooltipEl.style.top = viewportOffset.top + topScroll - this.tooltipEl.offsetHeight - 14 + 'px';
       this.tooltipEl.style.left = viewportOffset.left + this.anchorEl.offsetWidth / 2 - this.tooltipEl.offsetWidth / 2 + 200 + 'px';
     } else {
       // Tooltip show/hide is managed by moving the element off screen.  This allows us to evaluate the width and height of the tooltip,

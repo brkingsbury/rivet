@@ -31,6 +31,19 @@ import { Component } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.3.1',
+    date: '1/16/2020',
+    note: 'Tooltip position fix',
+    updates: [
+      {
+        category: 'Components',
+        bullets: [
+          'Fixed a bug with tooltip top offset position in global positioned mode'
+        ]
+      }
+    ]
+  },
+  {
     version: '4.3.0',
     date: '1/10/2020',
     note: 'Font Mixins',
@@ -188,6 +201,19 @@ export const versions = [
       {
         category: 'Style',
         bullets: ['Added CSS Variable column']
+      }
+    ]
+  },
+  {
+    version: '3.5.13',
+    date: '1/16/2020',
+    note: 'Tooltip position fix',
+    updates: [
+      {
+        category: 'Components',
+        bullets: [
+          'Fixed a bug with tooltip top offset position in global positioned mode'
+        ]
       }
     ]
   },
