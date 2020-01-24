@@ -31,6 +31,20 @@ import { Component } from '@angular/core';
 
 export const versions = [
   {
+    version: '4.3.3',
+    date: '1/17/2020',
+    note: 'Responsive font sizes',
+    updates: [
+      {
+        category: 'Type',
+        bullets: [
+          'All font mixins that corrispond to a header tag now have min and max values and are responsive to screen size',
+          'font mixins now also have classes available to assign from HTML'
+        ]
+      }
+    ]
+  },
+  {
     version: '4.3.2',
     date: '1/17/2020',
     note: 'Update Polyfill to not update URLs for IE',
@@ -439,7 +453,7 @@ export const versions = [
         category: 'Rivet package',
         bullets: [
           'Delay the automatic opening of the expansion panel when the flag is set.' +
-            ' Does not affect default behavior only on hideExpansionContent.'
+          ' Does not affect default behavior only on hideExpansionContent.'
         ]
       }
     ]

@@ -4,6 +4,9 @@
   max-width: 900px;
   padding: 30px;
   transition: all 600ms ease;
+  table.mat-table {
+    width: 1200px;
+  }
 }
 
 table.mat-table {

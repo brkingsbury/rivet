@@ -1,29 +1,65 @@
 @import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600,700');
 
 $RvtFontFamily: 'Nunito Sans', Arial, sans-serif;
-$RvtFontA: 5.6rem;
-$RvtFontB: 4.8rem;
-$RvtFontC: 3.8rem;
-$RvtFontD: 2.8rem;
-$RvtFontE: 2.2rem;
+$RvtFontAMax: 5.6rem;
+$RvtFontBMax: 4.8rem;
+$RvtFontCMax: 3.8rem;
+$RvtFontDMax: 2.8rem;
+$RvtFontEMax: 2.2rem;
 $RvtFontF: 1.6rem;
 $RvtFontG: 1.4rem;
 $RvtFontH: 1.2rem;
+$RvtFontAMin: 4rem;
+$RvtFontBMin: 3.6rem;
+$RvtFontCMin: 2.8rem;
+$RvtFontDMin: 2rem;
+$RvtFontEMin: 1.8rem;
 
 @mixin rvt-font-a{
-  font: 200 $RvtFontA $RvtFontFamily;
+  font: 200 $RvtFontAMin $RvtFontFamily;
+  @media screen and (min-width: 320px) {
+    font-size: calc(#{$RvtFontAMin} + 16 * ((100vw - 320px) / 680));
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: $RvtFontAMax;
+  }
 }
+
 @mixin rvt-font-b{
-  font: 200 $RvtFontB $RvtFontFamily;
+  font: 200 $RvtFontBMin $RvtFontFamily;
+  @media screen and (min-width: 320px) {
+    font-size: calc(#{$RvtFontBMin} + 12 * ((100vw - 320px) / 680));
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: $RvtFontBMax;
+  }
 }
 @mixin rvt-font-c{
-  font: 300 $RvtFontC $RvtFontFamily;
+  font: 300 $RvtFontCMin $RvtFontFamily;
+  @media screen and (min-width: 320px) {
+    font-size: calc(#{$RvtFontCMin} + 10 * ((100vw - 320px) / 680));
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: $RvtFontCMax;
+  }
 }
 @mixin rvt-font-d{
-  font: 400 $RvtFontD $RvtFontFamily;
+  font: 400 $RvtFontDMin $RvtFontFamily;
+  @media screen and (min-width: 320px) {
+    font-size: calc(#{$RvtFontDMin} + 8 * ((100vw - 320px) / 680));
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: $RvtFontDMax;
+  }
 }
 @mixin rvt-font-e{
-  font: 600 $RvtFontE $RvtFontFamily;
+  font: 600 $RvtFontEMin $RvtFontFamily;
+  @media screen and (min-width: 320px) {
+    font-size: calc(#{$RvtFontEMin} + 4 * ((100vw - 320px) / 680));
+  }
+  @media screen and (min-width: 1000px) {
+    font-size: $RvtFontEMax;
+  }
 }
 @mixin rvt-font-f{
   font: 400 $RvtFontF $RvtFontFamily;
@@ -45,37 +81,37 @@ body {
   color: var(--rvt-color-text);
 }
 
-h1{
+h1, .rvt-font-a{
   @include rvt-font-a;
 }
 
 
-h2 {
+h2, .rvt-font-b {
   @include rvt-font-b;
 }
 
-h3 {
+h3, .rvt-font-c {
   @include rvt-font-c;
 }
 
-h4 {
+h4, .rvt-font-d {
   @include rvt-font-d;
 }
 
-h5 {
+h5, .rvt-font-e {
   @include rvt-font-e;
 }
 
-h6 {
+h6, .rvt-font-f {
   @include rvt-font-f;
 }
 
-p {
+p, .rvt-font-g {
   @include rvt-font-g;
   color: var(--rvt-color-text);
 }
 
-label {
+label, .rvt-font-h {
   @include rvt-font-h;
 }
 
