@@ -5,7 +5,7 @@ trigger:
   branches:
     include:
       - master
-      - angular_9_upgrade
+      - tbolz/removeUi
   paths:
     include:
       - package.json
@@ -14,7 +14,7 @@ trigger:
 
 stages:
   - stage: 'Build'
-    displayName: 'Build - Test - Publish'
+    displayName: 'Build - Test - Lint'
     jobs:
       - job: Build
         pool:
@@ -31,18 +31,39 @@ stages:
             workingDirectory: '$(System.DefaultWorkingDirectory)'
             displayName: 'ng lint'
 
-          - script: 'npm run-script build-prod'
-            workingDirectory: '$(System.DefaultWorkingDirectory)'
-            displayName: 'ng build'
-
-          - script: 'npm run-script test-prod'
+          - script: 'npm run-script test-package-prod'
             workingDirectory: '$(System.DefaultWorkingDirectory)'
             displayName: 'ng test'
 
-          - task: PublishBuildArtifacts@1
-            displayName: 'Publish Style Guide'
+          - script: 'npm run-script build_lib'
+            workingDirectory: '$(System.DefaultWorkingDirectory)'
+            displayName: 'ng build'
+
+          - task: PublishPipelineArtifact@1
+            displayName: 'publish artifacts'
             inputs:
-              PathtoPublish: '$(System.DefaultWorkingDirectory)\dist\Rivet'
-              ArtifactName: StyleGuideArtifacts
-#- stage: 'Deploy'
-# TODO when certian features are implemented
+              targetPath: '$(System.DefaultWorkingDirectory)\dist\rivet-style'
+              ArtifactName: RivetStyleArtifacts
+
+  - stage: 'Publish'
+    displayName: 'Publish Npm Package'
+    jobs:
+      - job: Publish
+        pool:
+          vmImage: 'windows-latest'
+
+        steps:
+          - task: DownloadPipelineArtifact@2
+            displayName: 'download artifacts'
+            inputs:
+              source: current
+              artifact: 'RivetStyleArtifacts'
+              path:  $(Pipeline.Workspace)/artifacts
+          - task: Npm@1
+            displayName: 'npm publish'
+            inputs:
+              command: publish
+              workingDir: '$(Pipeline.Workspace)/artifacts'
+              verbose: false
+              publishRegistry: useFeed
+              publishFeed: '246858e7-a485-4878-b2d1-1cf5bc2e9124'
