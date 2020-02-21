@@ -1,0 +1,6 @@
+<input class="rvt-slide-toggle-check" *ngIf="!control" (click)="toggle()" type="checkbox" [checked]="checked"
+    [disabled]="disabled" />
+<input class="rvt-slide-toggle-check" *ngIf="control" (click)="toggle()" type="checkbox" [checked]="control.value"
+    [disabled]="control.disabled" />
+<div class="rivet-slide-toggle-label">{{label}}</div>
+<div class="rivet-slide-toggle-rail"></div>

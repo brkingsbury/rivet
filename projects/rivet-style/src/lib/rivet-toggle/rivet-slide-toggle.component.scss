@@ -1,0 +1,113 @@
+@import '../styles/rivetTheme.scss';
+@import '../styles/typeStyles.scss';
+
+$SlideRailWidth: 32px;
+$SlideRailHeight: 14px;
+$KnobDiameter: 18px;
+
+:host {
+    display: inline-block;
+    position: relative;
+    display: inline-flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+.rvt-slide-toggle-check {
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    margin: 0;
+    & ~ .rivet-slide-toggle-rail{
+        background-color: var(--rvt-color-neutral-5);
+        border-radius: calc(#{$SlideRailHeight} / 2);
+        width: $SlideRailWidth;
+        height: $SlideRailHeight;
+        transition: background-color 400ms ease;
+        box-sizing: border-box;
+        position: relative;
+
+        &:before {
+            content: "";
+            display: block;
+            width: $KnobDiameter;
+            height: $KnobDiameter;
+            position: absolute;
+            left: -2px;
+            top: -2px;
+            border-radius: 50%;
+            border: 1px solid var(--rvt-color-neutral-dark);
+            background-color: var(--rvt-color-neutral-light);
+            transition: left 400ms ease, background-color 400ms ease, border-color 400ms ease;
+            box-sizing: border-box;
+        }
+    }
+    &:checked ~ .rivet-slide-toggle-rail{
+        background-color: var(--rvt-color-primary-light);
+        &:before {
+            left: calc(100% - #{$KnobDiameter} - 2px);
+            background-color: var(--rvt-color-primary);
+            border-color: var(--rvt-color-primary);
+        }
+    }
+    &:hover, &:focus {
+        ~ .rivet-slide-toggle-rail {
+            &:before {
+                border-width: 2px;
+            }
+        }
+        &:checked ~ .rivet-slide-toggle-rail {
+            &:before {
+                background-color: var(--rvt-color-primary-dark);
+                border-color: var(--rvt-color-primary-dark);
+            }
+        }
+    }
+    &:disabled {
+        ~ .rivet-slide-toggle-label {
+            color: var(--rvt-color-neutral-4);
+        }
+        ~ .rivet-slide-toggle-rail {
+            background-color: var(--rvt-color-neutral-2);
+            &:before {
+                background-color: var(--rvt-color-neutral-light);
+                border-color: var(--rvt-color-neutral-2);
+                border-style: dotted;
+            }
+        }
+        &:checked {
+            ~ .rivet-slide-toggle-rail {
+                &:before {
+                    background-color: var(--rvt-color-neutral-4);
+                    border-color: var(--rvt-color-neutral-4);
+                }
+            }
+        }
+    }
+}
+::ng-deep.key-focus {
+    .rvt-slide-toggle-check:not(:active):focus  {
+        ~ .rivet-slide-toggle-rail {
+            @include keyboard-focus-style;
+        }
+    }
+}
+
+.rivet-slide-toggle-label {
+    @include rvt-font-h;
+    max-width: 110px;
+    margin-left: 10px;
+}
+
+:host.label-above {
+    flex-direction: column;
+    .rivet-slide-toggle-label {
+        margin-bottom: 0;
+        margin-left: 0px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+}
