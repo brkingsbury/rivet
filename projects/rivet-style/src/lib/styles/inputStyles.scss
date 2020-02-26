@@ -1,25 +1,6 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
-:root {
-    --rvt-color-input-text: var(--rvt-color-text);
-    --rvt-color-input-text-invalid: var(--rvt-color-input-text);
-    --rvt-color-input-label: var(--rvt-color-neutral-6);
-    --rvt-color-input-label-focus: var(--rvt-color-text);
-    --rvt-color-input-label-invalid: var(--rvt-color-invalid);
-    --rvt-color-input-label-disabled: var(--rvt-color-input-label);
-    --rvt-color-input-helper: var(--rvt-color-neutral-6);
-    --rvt-color-input-helper-invalid: var(--rvt-color-invalid);
-    --rvt-color-input-helper-disabled: var(--rvt-color-input-helper);
-    --rvt-color-input-text-disabled: var(--rvt-color-disabled);
-    --rvt-color-input-border: var(--rvt-color-neutral-6);
-    --rvt-color-input-border-focus: var(--rvt-color-input-border);
-    --rvt-color-input-border-active: var(--rvt-color-primary-dark);
-    --rvt-color-input-border-invalid: var(--rvt-color-invalid);
-    --rvt-color-input-border-disabled: var(--rvt-color-input-text-disabled);
-    --rvt-color-input-border-readonly: transparent;
-}
-
 form {
   mat-form-field {
     * {

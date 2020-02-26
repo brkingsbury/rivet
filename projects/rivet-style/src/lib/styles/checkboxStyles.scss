@@ -1,17 +1,6 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
-
-:root {
-    --rvt-color-checkbox-label: var(--rvt-color-text);
-    --rvt-color-checkbox-unselected: var(--rvt-color-neutral-dark);
-    --rvt-color-checkbox-selected: var(--rvt-color-primary);
-    --rvt-color-checkbox-selected-check: var(--rvt-color-text-contrast);
-    --rvt-color-checkbox-selected-hover: var(--rvt-color-primary-dark);
-    --rvt-color-checkbox-disabled: var(--rvt-color-disabled);
-    --rvt-color-checkbox-readonly: var(--rvt-color-checkbox-label);
-}
-
 // ---------- These Styles will be eventually deprecated --
 mat-checkbox.mat-checkbox {
   label .mat-checkbox-label {

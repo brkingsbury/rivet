@@ -1,15 +1,6 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
-
-:root {
-    --rvt-color-radio-label: var(--rvt-color-text);
-    --rvt-color-radio-unselected: var(--rvt-color-neutral-900);
-    --rvt-color-radio-selected: var(--rvt-color-primary);
-    --rvt-color-radio-disabled: var(--rvt-color-disabled);
-    --rvt-color-radio-readonly: var(--rvt-color-radio-label);
-}
-
 // ---- Styles to be deprecated
 .mat-radio-group {
   .mat-radio-button:not(.mat-radio-disabled) {

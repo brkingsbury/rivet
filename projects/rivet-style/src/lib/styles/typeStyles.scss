@@ -87,11 +87,6 @@ $RvtFontEMin: 1.8rem;
   font-family: $RvtFontFamily;
 }
 
-
-:root {
-  --rvt-color-link: var(--rvt-color-primary-dark);
-}
-
 body {
   font-family: $RvtFontFamily;
   color: var(--rvt-color-text);

@@ -2,32 +2,6 @@
 @import './themeVariables.scss';
 @import './typeStyles.scss';
 
-:root {
-  --rvt-color-btn-disabled: var(--rvt-color-disabled);
-
-  --rvt-color-btn-primary-bg: var(--rvt-color-primary);
-  --rvt-color-btn-primary-text: var(--rvt-color-neutral-light);
-  --rvt-color-btn-primary-bg-hover: var(--rvt-color-primary-dark);
-  --rvt-color-btn-primary-bg-active: var(--rvt-color-neutral-dark);
-  --rvt-color-btn-primary-bg-disabled: var(--rvt-color-btn-disabled);
-  --rvt-color-btn-primary-text-disabled: var(--rvt-color-text-contrast);
-
-  --rvt-color-btn-secondary-border: var(--rvt-color-primary);
-  --rvt-color-btn-secondary-text: var(--rvt-color-primary);
-  --rvt-color-btn-secondary-bg: transparent;
-  --rvt-color-btn-secondary-bg-hover: var(--rvt-color-primary-alpha-10);
-  --rvt-color-btn-secondary-bg-active: var(--rvt-color-primary-alpha-28);
-  --rvt-color-btn-secondary-disabled-border: var(--rvt-color-btn-disabled);
-  --rvt-color-btn-secondary-disabled-text: var(--rvt-color-btn-disabled);
-
-  --rvt-color-btn-text: var(--rvt-color-text);
-  --rvt-color-btn-text-bg: transparent;
-  --rvt-color-btn-text-bg-hover: var(--rvt-color-neutral-6-alpha-10);
-  --rvt-color-btn-text-bg-active: var(--rvt-color-neutral-6-alpha-28);
-  --rvt-color-btn-text-bg-disabled: transparent;
-  --rvt-color-btn-text-disabled: var(--rvt-color-btn-disabled);
-}
-
 // Styles for all Rivet Buttons
 @mixin buttonStyle {
   font-family: $RvtFontFamily;

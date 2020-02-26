@@ -1,21 +1,6 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
-:root {
-    --rvt-color-dropdown-text: var(--rvt-color-text);
-    --rvt-color-dropdown-invalid: var(--rvt-color-invalid);
-    --rvt-color-dropdown-disabled: var(--rvt-color-text-disabled);
-    --rvt-color-dropdown-bar: var(--rvt-color-neutral-7);
-    --rvt-color-dropdown-bar-active: var(--rvt-color-primary);
-    --rvt-color-dropdown-label: var(--rvt-color-text-label);
-    --rvt-color-dropdown-helper: var(--rvt-color-text-label);
-    --rvt-color-dropdown-arrow: var(--rvt-color-neutral-7);
-    --rvt-color-dropdown-panel: var(--rvt-color-neutral-white);
-    --rvt-color-dropdown-panel-hover: var(--rvt-color-neutral-2);
-    --rvt-color-dropdown-panel-selected: var(--rvt-color-neutral-3);
-    --rvt-color-dropdown-panel-text: var(--rvt-color-dropdown-text);
-    --rvt-color-dropdown-panel-border: var(--rvt-color-dropdown-bar);
-}
 // -- Dropdown panel styles --
 .cdk-overlay-container .cdk-overlay-pane {
   margin-left: 16px;

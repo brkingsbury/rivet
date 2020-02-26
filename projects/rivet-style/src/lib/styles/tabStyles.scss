@@ -1,28 +1,6 @@
 @import '../../lib/styles/typeStyles.scss';
 @import './rivetTheme.scss';
 
-
-:root {
-    --rvt-color-tab-text: var(--rvt-color-text);
-    --rvt-color-tab-text-disabled: var(--rvt-color-disabled);
-    --rvt-color-tab-bg: transparent;
-    --rvt-color-tab-bg-focus: var(--rvt-color-neutral-1);
-    --rvt-color-tab-bg-selected: transparent;
-    --rvt-color-tab-bar: var(--rvt-color-neutral-2);
-    --rvt-color-tab-bar-focus: var(--rvt-color-neutral-3);
-    --rvt-color-tab-bar-selected: var(--rvt-color-accent);
-    --rvt-color-tab-number: var(--rvt-color-tab-text);
-    --rvt-color-tab-number-selected: var(--rvt-color-neutral-white);
-    --rvt-color-tab-number-disabled: var(--rvt-color-tab-text-disabled);
-    --rvt-color-tab-number-circle-bg: var(--rvt-color-neutral-white);
-    --rvt-color-tab-number-bg-focus: var(--rvt-color-tab-bg-focus);
-    --rvt-color-tab-number-circle-bg-selected: var(--rvt-color-tab-bar-selected);
-    --rvt-color-tab-number-circle-border: var(--rvt-color-tab-bar);
-    --rvt-color-tab-number-circle-border-focus: var(--rvt-color-tab-number-border);
-    --rvt-color-tab-number-circle-border-selected: var(--rvt-color-tab-number-circle-bg-selected);
-
-}
-
 .mat-tab-group,
 .mat-tab-group.mat-primary {
   &:not(.numbered-tabs) {
