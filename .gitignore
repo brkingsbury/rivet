@@ -33,6 +33,7 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+/__ivy_ngcc__
 
 # System Files
 .DS_Store
