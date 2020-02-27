@@ -8,6 +8,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
     './styles/typeStyles.scss',
     './styles/rivetTheme.scss',
     './styles/buttonStyles.scss',
+    './styles/cardStyles.scss',
     './styles/inputStyles.scss',
     './styles/checkboxStyles.scss',
     './styles/iconStyles.scss',

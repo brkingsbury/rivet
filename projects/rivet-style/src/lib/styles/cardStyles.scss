@@ -1,0 +1,13 @@
+.rvt-card {
+    border-color: var(--rvt-color-neutral-3);
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 4px;
+    padding: 20px 30px 40px;
+}
+
+@media (max-width: 960px) {
+    .rvt-card {
+        padding: 10px 15px 20px;
+    }
+}
