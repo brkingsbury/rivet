@@ -1,0 +1,170 @@
+@import '../../lib/styles/iconStyles.scss';
+@import '../../lib/styles/typeStyles.scss';
+@import '../../lib/styles/rivetTheme.scss';
+
+$tileBorderRadius: 4px;
+$transitionTime: 300ms;
+
+.rvt-tile {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    background: none;
+    padding: 15px;
+    width: 200px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    * {
+        transition: border $transitionTime ease;
+    }
+
+    @mixin checkmark {
+        &:before {
+            content: '';
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: -11px;
+            right: -11px;
+            border-radius: 50%;
+            background: var(--rvt-tile-border-hover);
+            transition: background $transitionTime ease;
+        }
+
+        &:after {
+            @extend .inner-rivet-icon-check !optional;
+            position: absolute;
+            right: -6px;
+            top: -6px;
+            color: var(--rvt-tile-check);
+            font-size: 20px;
+        }
+    }
+
+    button.rvt-tile-content {
+        background: none;
+        border: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100px;
+        border: 2px solid var(--rvt-tile-border);
+        border-radius: 4px 4px 0 0;
+        padding: 0;
+        cursor: pointer;
+
+        &:hover {
+            @include checkmark;
+
+            border-color: var(--rvt-tile-hover-border);
+            &:before {
+                background: var(--rvt-tile-hover-border);
+            }
+
+            ~button {
+                border-color: var(--rvt-tile-hover-border);
+            }
+        }
+
+        &.selected {
+            @include checkmark;
+
+            border-color: var(--rvt-tile-selected-border);
+
+            &:before {
+                background: var(--rvt-tile-selected-border);
+            }
+
+            ~button {
+                border-color: var(--rvt-tile-selected-border);
+                color: var(--rvt-tile-selected-text);
+
+                &:hover {
+                    background-color: var(--rvt-tile-selected-hover);
+                }
+
+                &:before,
+                span {
+                    color: var(--rvt-tile-selected-text);
+                }
+            }
+        }
+    }
+
+
+    button.rvt-btn-icon {
+        position: relative;
+        height: 30px;
+        bottom: 0;
+        border: 2px solid var(--rvt-tile-border);
+        border-top: 0;
+        line-height: 30px;
+        padding: 0;
+        flex-grow: 1;
+        justify-content: center;
+
+        &.rivet-icon-edit {
+            border-radius: 0 0 0 4px;
+
+            span {
+                @include rvt-font-g;
+                vertical-align: baseline;
+            }
+        }
+
+        &.rivet-icon-delete {
+            border-left-width: 0;
+            border-radius: 0 0 4px 0;
+        }
+    }
+
+    &.deleting {
+        .rvt-tile-content.selected {
+
+            &:before,
+            &:after {
+                content: none;
+            }
+        }
+
+        .delete-overlay {
+            position: absolute;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            left: 0;
+            top: 0;
+            padding: 0 15px;
+            background: var(--rvt-tile-delete-bg);
+            height: 100%;
+            width: calc(100% - 30px);
+            border-radius: $tileBorderRadius;
+
+            p {
+                color: var(--rvt-tile-delete-text);
+            }
+        }
+    }
+
+    button:focus {
+        outline: none;
+    }
+}
+
+.key-focus {
+
+    button[class^='rvt-tile']:not(:active):focus,
+    button.rvt-btn-icon:not(:active):focus {
+        @include keyboard-focus-style;
+
+        &:before,
+        &:after {
+            outline: none;
+        }
+    }
+}
