@@ -4,131 +4,204 @@
 
 // Styles for all Rivet Buttons
 @mixin buttonStyle {
-  font-family: $RvtFontFamily;
-  font-size: 14px;
-  border-radius: 2px;
-  background: none;
-  border: none;
-  padding: 11px 15px;
-  cursor: pointer;
-  transition: background-color 200ms ease;
-  line-height: 14px;
-  &:disabled {
-    cursor: default;
-  }
-  &:active,
-  &:hover,
-  &:focus,
-  &:active:hover {
+    font-family: $RvtFontFamily;
+    font-size: 14px;
+    border-radius: 2px;
+    background: none;
+    border: none;
+    padding: 11px 15px;
+    cursor: pointer;
+    transition: background-color 200ms ease;
     line-height: 14px;
-    outline: none;
-  }
+    text-decoration: none;
+
+    &:disabled {
+        cursor: default;
+    }
+
+    &:active,
+    &:hover,
+    &:focus,
+    &:active:hover {
+        line-height: 14px;
+        outline: none;
+        text-decoration: none;
+    }
 }
 
-button {
-  &.rvt-btn-primary,
-  &.rvt-btn-primary.rvt-btn-icon,
-  &.rvt-btn-primary-lg,
-  &.rvt-btn-primary-lg.rvt-btn-icon {
-    @include buttonStyle;
-    font-weight: 600;
-    background-color: var(--rvt-color-btn-primary-bg);
-    color: var(--rvt-color-btn-primary-text);
-    &:hover:not(:disabled),
-    &:focus:not(:disabled) {
-      background-color: var(--rvt-color-btn-primary-bg-hover);
-    }
-    &:active:not(:disabled) {
-      background-color: var(--rvt-color-btn-primary-bg-active);
-    }
-    &:disabled:not(.loading) {
-      background-color: var(--rvt-color-btn-disabled);
-      color: var(--rvt-color-btn-primary-text-disabled);
-    }
-    span,
-    span:before {
-      color: var(--rvt-color-btn-primary-text);
-    }
-  }
-  &.rvt-btn-primary-lg {
-    padding: 15px;
-  }
+button, a {
 
-  &.rvt-btn-secondary {
-    @include buttonStyle;
-    background: var(--rvt-color-btn-secondary-bg);
-    border: 1px solid var(--rvt-color-btn-secondary-border);
-    padding: 10px 14px;
-    color: var(--rvt-color-btn-secondary-text);
-    &:hover:not(:disabled),
-    &:focus:not(:disabled),
-    &.loading:disabled {
-      background: var(--rvt-color-btn-secondary-bg-hover);
-    }
-    &:active:not(:disabled) {
-      background: var(--rvt-color-btn-secondary-bg-active);
-    }
-    &:disabled:not(.loading) {
-      border: 1px dashed var(--rvt-color-btn-secondary-disabled-border);
-      color: var(--rvt-color-btn-secondary-disabled-text);
-    }
-  }
+    &.rvt-btn-primary,
+    &.rvt-btn-primary.rvt-btn-icon,
+    &.rvt-btn-primary-lg,
+    &.rvt-btn-primary-lg.rvt-btn-icon {
+        @include buttonStyle;
+        font-weight: 600;
+        background-color: var(--rvt-color-btn-primary-bg);
+        color: var(--rvt-color-btn-primary-text);
 
-  &.rvt-btn-text,
-  &.rvt-btn-icon {
-    @include buttonStyle;
-    background: var(--rvt-color-btn-text-bg);
-    color: var(--rvt-color-btn-text);
-    &:hover:not(:disabled),
-    &:focus:not(:disabled) {
-      background: var(--rvt-color-btn-text-bg-hover);
+        &:hover:not(:disabled),
+        &:focus:not(:disabled) {
+            background-color: var(--rvt-color-btn-primary-bg-hover);
+        }
+
+        &:active:not(:disabled) {
+            background-color: var(--rvt-color-btn-primary-bg-active);
+        }
+
+        &:disabled:not(.loading) {
+            background-color: var(--rvt-color-btn-disabled);
+            color: var(--rvt-color-btn-primary-text-disabled);
+        }
+
+        span,
+        span:before {
+            color: var(--rvt-color-btn-primary-text);
+        }
+
+        &.inverse {
+            background-color: var(--rvt-btn-inverse-primary-bg);
+            color: var(--rvt-bnt-inverse-primary-text);
+
+            &:hover:not(:disabled),
+            &:focus:not(:disabled) {
+                background-color: var(--rvt-btn-inverse-primary-bg-hover);
+            }
+
+            &:active:not(:disabled) {
+                background-color: var(--rvt-btn-inverse-primary-bg-active);
+            }
+        }
     }
-    &.loading:disabled {
-      color: var(--rvt-color-btn-disabled);
-      span,
-      span:before {
-        color: var(--rvt-color-btn-disabled);
-      }
+
+    &.rvt-btn-primary-lg {
+        padding: 15px;
     }
-    &:active:not(:disabled) {
-      background: var(--rvt-color-btn-text-bg-active);
+
+    &.rvt-btn-secondary {
+        @include buttonStyle;
+        background: var(--rvt-color-btn-secondary-bg);
+        border: 1px solid var(--rvt-color-btn-secondary-border);
+        padding: 10px 14px;
+        color: var(--rvt-color-btn-secondary-text);
+
+        &:hover:not(:disabled),
+        &:focus:not(:disabled),
+        &.loading:disabled {
+            background: var(--rvt-color-btn-secondary-bg-hover);
+        }
+
+        &:active:not(:disabled) {
+            background: var(--rvt-color-btn-secondary-bg-active);
+        }
+
+        &:disabled:not(.loading) {
+            border: 1px dashed var(--rvt-color-btn-secondary-disabled-border);
+            color: var(--rvt-color-btn-secondary-disabled-text);
+        }
+
+        &.inverse {
+            border-color: var(--rvt-btn-inverse-secondary);
+            color: var(--rvt-btn-inverse-secondary);
+
+            &:hover:not(:disabled),
+            &:focus:not(:disabled),
+            &.loading:disabled {
+                background: var(--rvt-btn-inverse-secondary-hover);
+            }
+
+            &:active:not(:disabled) {
+                background: var(--rvt-btn-inverse-secondary-active);
+            }
+        }
     }
-    &:disabled:not(.loading) {
-      color: var(--rvt-color-btn-text-disabled);
-      span,
-      span:before {
-        color: var(--rvt-color-btn-text-disabled);
-      }
+
+    &.rvt-btn-text,
+    &.rvt-btn-icon {
+        @include buttonStyle;
+        background: var(--rvt-color-btn-text-bg);
+        color: var(--rvt-color-btn-text);
+
+        &:hover:not(:disabled),
+        &:focus:not(:disabled) {
+            background: var(--rvt-color-btn-text-bg-hover);
+        }
+
+        &.loading:disabled {
+            color: var(--rvt-color-btn-disabled);
+
+            span,
+            span:before {
+                color: var(--rvt-color-btn-disabled);
+            }
+        }
+
+        &:active:not(:disabled) {
+            background: var(--rvt-color-btn-text-bg-active);
+        }
+
+        &:disabled:not(.loading) {
+            color: var(--rvt-color-btn-text-disabled);
+
+            span,
+            span:before {
+                color: var(--rvt-color-btn-text-disabled);
+            }
+        }
+
+        &.inverse {
+            color: var(--rvt-btn-inverse-text);
+
+            &:hover:not(:disabled),
+            &:focus:not(:disabled) {
+                background: var(--rvt-btn-inverse-text-bg-hover);
+            }
+
+            &:active:not(:disabled) {
+                background: var(--rvt-btn-inverse-text-bg-active);
+            }
+        }
     }
-  }
-  &.rvt-btn-icon {
-    @include buttonStyle;
-    [class*='rivet-icon-'] {
-      display: inline-block;
-      height: 14px;
-      width: 14px;
-      fill: var(--rvt-color-btn-text);
-      vertical-align: top;
+
+    &.rvt-btn-icon {
+        @include buttonStyle;
+
+        [class*='rivet-icon-'] {
+            display: inline-block;
+            height: 14px;
+            width: 14px;
+            color: var(--rvt-color-btn-text);
+            vertical-align: top;
+        }
+
+        &.loading:disabled {
+            padding: 11px;
+            line-height: 14px;
+
+            .mat-spinner {
+                margin: 0 auto;
+            }
+        }
+
+        &:disabled:not(.loading) svg {
+            fill: var(--rvt-color-btn-disabled);
+        }
+
+        span:not([class*='rivet-icon-']) {
+            margin-left: 8px;
+            vertical-align: middle;
+        }
+
+        &.inverse {
+            [class*='rivet-icon-'], span {
+                color: var(--rvt-btn-inverse-text);
+            }
+        }
     }
-    &.loading:disabled {
-      padding: 11px;
-      line-height: 14px;
-      .mat-spinner {
-        margin: 0 auto;
-      }
-    }
-    &:disabled:not(.loading) svg {
-      fill: var(--rvt-color-btn-disabled);
-    }
-    span:not([class*='rivet-icon-']) {
-      margin-left: 8px;
-      vertical-align: middle;
-    }
-  }
 }
 
 .key-focus {
-  button[class^='rvt-btn']:not(:active):focus {
-    @include keyboard-focus-style;
-  }
+    button[class^='rvt-btn']:not(:active):focus {
+        @include keyboard-focus-style;
+    }
 }

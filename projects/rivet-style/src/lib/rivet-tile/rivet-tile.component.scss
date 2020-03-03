@@ -57,7 +57,7 @@ $transitionTime: 300ms;
         cursor: pointer;
         flex-wrap: wrap;
 
-        & > * {
+        :host ::ng-deep & > * {
           flex-basis: 100%;
         }
 

@@ -71,6 +71,11 @@
   --rvt-color-btn-primary-bg-disabled: var(--rvt-color-btn-disabled);
   --rvt-color-btn-primary-text-disabled: var(--rvt-color-text-contrast);
 
+  --rvt-btn-inverse-primary-bg: var(--rvt-color-neutral-white);
+  --rvt-btn-inverse-primary-bg-hover: hsla(240, 0%, 100%, 0.85);
+  --rvt-btn-inverse-primary-bg-active: hsla(240, 0%, 100%, 0.70);
+  --rvt-bnt-inverse-primary-text: var(--rvt-color-text);
+
   --rvt-color-btn-secondary-border: var(--rvt-color-primary);
   --rvt-color-btn-secondary-text: var(--rvt-color-primary);
   --rvt-color-btn-secondary-bg: transparent;
@@ -79,12 +84,20 @@
   --rvt-color-btn-secondary-disabled-border: var(--rvt-color-btn-disabled);
   --rvt-color-btn-secondary-disabled-text: var(--rvt-color-btn-disabled);
 
+  --rvt-btn-inverse-secondary: var(--rvt-color-neutral-white);
+  --rvt-btn-inverse-secondary-hover: hsla(240, 0%, 100%, 0.25);
+  --rvt-btn-inverse-secondary-active: hsla(240, 0%, 100%, 0.35);
+
   --rvt-color-btn-text: var(--rvt-color-text);
   --rvt-color-btn-text-bg: transparent;
   --rvt-color-btn-text-bg-hover: var(--rvt-color-neutral-6-alpha-10);
   --rvt-color-btn-text-bg-active: var(--rvt-color-neutral-6-alpha-28);
   --rvt-color-btn-text-bg-disabled: transparent;
   --rvt-color-btn-text-disabled: var(--rvt-color-btn-disabled);
+
+  --rvt-btn-inverse-text: var(--rvt-color-text-contrast);
+  --rvt-btn-inverse-text-bg-hover: var(--rvt-btn-inverse-secondary-hover);
+  --rvt-btn-inverse-text-bg-active: var(--rvt-btn-inverse-secondary-active);
 
   /* +++++++++++++ Checkbox Level Colors +++++++++++++++++++ */
   --rvt-color-checkbox-label: var(--rvt-color-text);
@@ -160,6 +173,10 @@
   --rvt-color-tab-number-circle-border-focus: var(--rvt-color-tab-number-border);
   --rvt-color-tab-number-circle-border-selected: var(--rvt-color-tab-number-circle-bg-selected);
 
+  --rvt-tab-inverse-bar: var(--rvt-color-neutral-white);
+  --rvt-tab-inverse-text: var(--rvt-color-text-contrast);
+  --rvt-tab-inverse-bg-hover: hsla(240, 0%, 100%, 0.25);
+
   /* +++++++++++++ Tooltip Level Colors +++++++++++++++++++ */
   --rvt-color-tooltip-bg: var(--rvt-color-primary-dark);
   --rvt-color-tooltip-text: var(--rvt-color-text-contrast);
@@ -168,6 +185,7 @@
 
   /* +++++++++++++ Type Level Colors +++++++++++++++++++ */
   --rvt-color-link: var(--rvt-color-primary-dark);
+  --rvt-link-inverse: var(--rvt-color-text-contrast);
 
   /* +++++++++++++ Tile Level Colors +++++++++++++++++++ */
   --rvt-tile-text: var(--rvt-color-text);

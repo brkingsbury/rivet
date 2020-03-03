@@ -150,5 +150,8 @@ span, button {
 
 a.rvt-link {
   color: var(--rvt-color-link);
+  &.inverse {
+      color: var(--rvt-link-inverse);
+  }
 }
 

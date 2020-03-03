@@ -48,7 +48,7 @@ $KnobDiameter: 18px;
     &:checked ~ .rivet-slide-toggle-rail{
         background-color: var(--rvt-color-primary-light);
         &:before {
-            left: calc(100% - #{$KnobDiameter} - 2px);
+            left: calc(100% - #{$KnobDiameter} + 2px);
             background-color: var(--rvt-color-primary);
             border-color: var(--rvt-color-primary);
         }
