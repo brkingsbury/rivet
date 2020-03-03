@@ -1,0 +1,34 @@
+<div class="rvt-tile"
+     [class.deleting]="deleting">
+    <button class="rvt-tile-content"
+            [class.selected]="config.isSelected"
+            (click)="selectTile()"
+            [disabled]="deleting">
+
+        <ng-content></ng-content>
+    </button>
+
+    <button *ngIf="tileEdit?.observers?.length > 0"
+            class="rvt-btn-icon rivet-icon-edit"
+            (click)="editTile()"
+            [disabled]="deleting">
+        <span *ngIf="tileDelete?.observers?.length === 0 && config.editText !== undefined">
+            {{config.editText}}
+        </span>
+    </button>
+
+    <button *ngIf="tileDelete?.observers?.length > 0"
+            class="rvt-btn-icon rivet-icon-delete"
+            (click)="deleteTile()"
+            [disabled]="deleting">
+    </button>
+
+    <div *ngIf="deleting"
+         class="delete-overlay">
+        <p>{{config.deleteText}}</p>
+        <button class="rvt-btn-secondary inverse"
+                (click)="cancelDelete()">{{config.cancelBtnText}}</button>
+        <button class="rvt-btn-primary inverse"
+                (click)="confirmDelete()">{{config.deleteBtnText}}</button>
+    </div>
+</div>

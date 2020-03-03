@@ -168,6 +168,17 @@
 
   /* +++++++++++++ Type Level Colors +++++++++++++++++++ */
   --rvt-color-link: var(--rvt-color-primary-dark);
+
+  /* +++++++++++++ Tile Level Colors +++++++++++++++++++ */
+  --rvt-tile-text: var(--rvt-color-text);
+  --rvt-tile-border: var(--rvt-color-neutral-2);
+  --rvt-tile-hover-border: var(--rvt-color-neutral-4);
+  --rvt-tile-selected-border: var(--rvt-color-primary);
+  --rvt-tile-selected-hover: var(--rvt-color-btn-secondary-bg-hover);
+  --rvt-tile-empty-text: var(--rvt-color-neutral-3);
+  --rvt-tile-check: var(--rvt-color-text-contrast);
+  --rvt-tile-delete-bg: var(--rvt-color-primary);
+  --rvt-tile-delete-text: var(--rvt-color-text-contrast);
 }
 
 
