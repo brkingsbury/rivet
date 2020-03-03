@@ -12,7 +12,9 @@
             class="rvt-btn-icon rivet-icon-edit"
             (click)="editTile()"
             [disabled]="deleting">
-        <span *ngIf="tileDelete?.observers?.length === 0">Edit</span>
+        <span *ngIf="tileDelete?.observers?.length === 0 && config.editText !== undefined">
+            {{config.editText}}
+        </span>
     </button>
 
     <button *ngIf="tileDelete?.observers?.length > 0"

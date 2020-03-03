@@ -55,11 +55,17 @@ $transitionTime: 300ms;
         border-radius: 4px 4px 0 0;
         padding: 0;
         cursor: pointer;
+        flex-wrap: wrap;
+
+        & > * {
+          flex-basis: 100%;
+        }
 
         &:hover {
             @include checkmark;
 
             border-color: var(--rvt-tile-hover-border);
+
             &:before {
                 background: var(--rvt-tile-hover-border);
             }
@@ -101,7 +107,7 @@ $transitionTime: 300ms;
         bottom: 0;
         border: 2px solid var(--rvt-tile-border);
         border-top: 0;
-        line-height: 30px;
+        line-height: 32px;
         padding: 0;
         flex-grow: 1;
         justify-content: center;
@@ -111,7 +117,7 @@ $transitionTime: 300ms;
 
             span {
                 @include rvt-font-g;
-                vertical-align: baseline;
+                vertical-align: top;
             }
         }
 
@@ -147,6 +153,7 @@ $transitionTime: 300ms;
 
             p {
                 color: var(--rvt-tile-delete-text);
+                width: 100%;
             }
         }
     }

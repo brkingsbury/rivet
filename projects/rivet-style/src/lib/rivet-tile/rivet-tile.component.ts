@@ -12,6 +12,7 @@ export class RivetTileComponent implements OnInit {
     @Output() tileDelete = new EventEmitter();
     @Input() config = {
         isSelected: false,
+        editText: undefined,
         deleteText: 'Are you sure you want to delete?',
         cancelBtnText: 'Cancel',
         deleteBtnText: 'Delete'
