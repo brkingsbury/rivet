@@ -5,10 +5,11 @@
 .cdk-overlay-container .cdk-overlay-pane {
   margin-left: 16px;
   padding-right: 33px;
+  margin-top: 28px;
+  margin-bottom: 26px;
   .mat-select-panel {
     box-shadow: none;
     border: 1px solid var(--rvt-color-dropdown-panel-border);
-    margin-top: 28px;
     border-radius: 0;
     background: $rvt-white;
     .mat-option {

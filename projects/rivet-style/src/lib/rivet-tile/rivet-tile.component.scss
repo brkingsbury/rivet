@@ -111,6 +111,7 @@ $transitionTime: 300ms;
         padding: 0;
         flex-grow: 1;
         justify-content: center;
+        margin: 0; // specifically declared for safari bug
 
         &.rivet-icon-edit {
             border-radius: 0 0 0 4px;
