@@ -71,21 +71,21 @@ form {
       .mat-form-field-label-wrapper label.mat-form-field-label,
       .mat-form-field-label-wrapper label.mat-form-field-empty,
       .mat-form-field-hint-wrapper mat-hint {
-        color: var(--rvt-color-input-helper-invalid) !important;
+        color: var(--rvt-color-text);
       }
       input {
         color: var(--rvt-color-input-text-invalid);
       }
       .mat-form-field-underline {
-        background-color: var(--rvt-color-input-border-invalid) !important;
+        background-color: var( --rvt-color-text);
         .mat-form-field-ripple {
-          background-color: var(--rvt-color-input-border-invalid) !important;
+          background-color: var( --rvt-color-text);
         }
       }
       &.mat-focused .mat-form-field-underline {
-        background-color: var(--rvt-color-input-border-invalid) !important;
+        background-color: var( --rvt-color-text);
         .mat-form-field-ripple {
-          background-color: var(--rvt-color-input-border-invalid) !important;
+          background-color: var( --rvt-color-text);
         }
       }
     }
