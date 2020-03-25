@@ -57,8 +57,12 @@ $transitionTime: 300ms;
         cursor: pointer;
         flex-wrap: wrap;
 
-        :host ::ng-deep & > * {
-          flex-basis: 100%;
+        :host ::ng-deep &>* {
+            flex-basis: 100%;
+        }
+
+        &.only-select {
+            border-radius: 4px;
         }
 
         &:hover {
@@ -75,7 +79,7 @@ $transitionTime: 300ms;
             }
         }
 
-        &.selected {
+        &.selected:not(:disabled) {
             @include checkmark;
 
             border-color: var(--rvt-tile-selected-border);
@@ -95,6 +99,18 @@ $transitionTime: 300ms;
                 &:before,
                 span {
                     color: var(--rvt-tile-selected-text);
+                }
+            }
+        }
+
+        &:disabled {
+            border: 2px dashed var(--rvt-tile-disabled-border);
+
+            &.selected {
+
+                &:before,
+                &:after {
+                    content: none;
                 }
             }
         }

@@ -1,10 +1,11 @@
 <div class="rvt-tile"
      [class.deleting]="deleting">
     <button class="rvt-tile-content"
-            [class.selected]="config.isSelected"
+            [class.selected]="control?.value ? control.value : config.isSelected"
+            [class.only-select]="(tileEdit?.observers?.length === 0 && tileDelete?.observers?.length === 0)"
             (click)="selectTile()"
-            [disabled]="deleting">
-
+            [disabled]="deleting || control?.disabled || config.isDisabled">
+            
         <ng-content></ng-content>
     </button>
 
