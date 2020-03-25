@@ -4,6 +4,13 @@
   width: 100%;
   cursor: pointer;
   display: flex;
+  &.header-flip {
+    justify-content: flex-end;
+    [class*='rivet-icon-caret-'] {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+  }
   [class*='rivet-icon-caret-'] {
     margin-right: 10px;
     margin-top: -0.2em;
