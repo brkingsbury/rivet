@@ -187,7 +187,7 @@ $transitionTime: 300ms;
 
 .key-focus {
 
-    button:not(:active):focus,
+    button.rvt-tile-content:not(:active):focus,
     button.rvt-btn-icon:not(:active):focus {
         @include keyboard-focus-style;
 

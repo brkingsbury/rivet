@@ -201,7 +201,8 @@ button, a {
 }
 
 .key-focus {
-    button[class^='rvt-btn']:not(:active):focus {
+    button[class^='rvt-btn']:not(:active):focus,
+    a[class^='rvt-btn']:not(:active):focus {
         @include keyboard-focus-style;
     }
 }
