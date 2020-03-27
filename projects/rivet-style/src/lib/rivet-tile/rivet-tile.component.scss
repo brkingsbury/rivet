@@ -65,7 +65,8 @@ $transitionTime: 300ms;
             border-radius: 4px;
         }
 
-        &:hover {
+        &:hover,
+        &:focus {
             @include checkmark;
 
             border-color: var(--rvt-tile-hover-border);
@@ -176,13 +177,17 @@ $transitionTime: 300ms;
     }
 
     button:focus {
-        outline: none;
+
+        &:before,
+        &:after {
+            outline: none;
+        }
     }
 }
 
 .key-focus {
 
-    button[class^='rvt-tile']:not(:active):focus,
+    button:not(:active):focus,
     button.rvt-btn-icon:not(:active):focus {
         @include keyboard-focus-style;
 
