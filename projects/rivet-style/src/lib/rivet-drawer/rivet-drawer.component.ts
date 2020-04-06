@@ -57,7 +57,7 @@ export class RivetDrawerComponent implements OnChanges {
 
     public apronClick = function (): void {
         this.apronClickEvent.emit();
-    }
+    };
 
 
     ngOnChanges(changes: SimpleChanges) {
