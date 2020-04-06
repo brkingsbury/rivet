@@ -36,6 +36,7 @@ export class RivetDrawerComponent implements OnChanges {
     @Input() drawerOpen: boolean;
 
     @Output() public drawerCloseEvent = new EventEmitter<null>();
+    @Output() public apronClickEvent = new EventEmitter<null>();
 
     public get panelOpen(): boolean {
         return this.drawerOpen;
@@ -53,6 +54,11 @@ export class RivetDrawerComponent implements OnChanges {
     public openDrawer = function (): void {
         this.drawerOpen = true;
     };
+
+    public apronClick = function (): void {
+        this.apronClickEvent.emit();
+    }
+
 
     ngOnChanges(changes: SimpleChanges) {
         if (changes.drawerOpen) {

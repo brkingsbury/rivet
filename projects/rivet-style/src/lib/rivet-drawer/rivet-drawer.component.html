@@ -1,6 +1,7 @@
 <div class="rivet-drawer-apron"
      *ngIf="drawerOpen"
-     [@fadeTransition]></div>
+     [@fadeTransition]
+     (click)="apronClick()"></div>
 <div class="rivet-drawer"
      [ngClass]="drawerOpen ? 'open' : 'closed'">
     <ng-content select="[rivet-drawer-content]"></ng-content>
