@@ -1,0 +1,57 @@
+:root {
+    --rvt-spacing-xxs: 5px;
+    --rvt-spacing-xs: 10px;
+    --rvt-spacing-sm: 15px;
+    --rvt-spacing-md: 20px;
+    --rvt-spacing-lg: 30px;
+    --rvt-spacing-xl: 40px;
+    --rvt-spacing-xxl: 60px;
+    --rvt-spacing-xxxl: 90px;
+}
+
+// set class prefix ('mt') and matching property ('margin-top')
+$sides: m margin,
+p padding,
+mt margin-top,
+mr margin-right,
+mb margin-bottom,
+ml margin-left,
+pt padding-top,
+pr padding-right,
+pb padding-bottom,
+pl padding-left,
+mx margin-left margin-right,
+my margin-top margin-bottom,
+px padding-left padding-right,
+py padding-top padding-bottom;
+
+@mixin generate($prefix, $propOne, $propTwo: null) {
+    $rvtSizes: (xxs, xs, sm, md, lg, xl, xxl, xxxl); // based on rvt-spacing variables
+
+    // loop through rvtSizes array
+    @for $i from 1 through length($rvtSizes) {
+        // set $size to current (location in array) suffix in $rvtSizes 
+        $size: nth($rvtSizes, $i);
+
+        @if ($propTwo==null) {
+            // create class name (ex. mt-xxs)
+            .#{$prefix}-#{$size} {
+                // create property (ex. margin-top: var(--rvt-spacing-xxs)
+                #{$propOne}: var(--rvt-spacing-#{$size});
+            }
+        }
+
+        @else {
+            .#{$prefix}-#{$size} {
+                #{$propOne}: var(--rvt-spacing-#{$size});
+                #{$propTwo}: var(--rvt-spacing-#{$size});
+            }
+        }
+    }
+}
+
+@each $classNamePrefix,
+$propertyOne,
+$propertyTwo in $sides {
+    @include generate($classNamePrefix, $propertyOne, $propertyTwo);
+}

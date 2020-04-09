@@ -1,6 +1,7 @@
 @import '~@angular/material/theming';
 @import './mixins.scss';
 @import './themeVariables.scss';
+@import './spacingVariables.scss';
 
 $rvt-primary: mat-palette($rivet-primary, A400, 300, 900);
 $rvt-accent: mat-palette($rivet-primary, A100);
