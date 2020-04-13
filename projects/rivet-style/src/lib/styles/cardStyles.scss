@@ -6,6 +6,10 @@
     padding: 20px 30px 40px;
 }
 
+.mat-card {
+    box-shadow: none !important;
+}
+
 @media (max-width: 960px) {
     .rvt-card {
         padding: 10px 15px 20px;
