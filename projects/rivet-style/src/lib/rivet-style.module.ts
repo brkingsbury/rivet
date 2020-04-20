@@ -2,7 +2,6 @@ import { CommonModule, registerLocaleData } from '@angular/common';
 import localeFrCA from '@angular/common/locales/fr-CA';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import 'hammerjs';
 import { MaterialComponentModule } from './material-component-module';
 import { RivetAccordionGroupComponent } from './rivet-accordion-group/rivet-accordion-group.component';
@@ -20,7 +19,7 @@ import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
 registerLocaleData(localeFrCA, 'fr-CA');
 
 @NgModule({
-    imports: [CommonModule, MaterialComponentModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule],
+    imports: [CommonModule, MaterialComponentModule, FormsModule, ReactiveFormsModule],
     declarations: [
         RivetStyleComponent,
         RivetExpansionPanelComponent,
