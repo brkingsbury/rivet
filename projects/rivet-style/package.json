@@ -1,6 +1,6 @@
 {
     "name": "rivet-style",
-    "version": "4.8.2",
+    "version": "4.8.3-alpha.0",
     "dependencies": {
         "css-vars-ponyfill": "^2.1.2",
         "hammerjs": "^2.0.8"
