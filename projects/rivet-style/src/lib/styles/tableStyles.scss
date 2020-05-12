@@ -1,11 +1,11 @@
-@import '../../lib/styles/typeStyles.scss';
-@import './rivetTheme.scss';
+@import './themeVariables.scss';
+@import './typeStyles.scss';
 
 .mat-paginator {
   * {
     font-family: $RvtFontFamily;
     font-size: 12px;
-    color: $rvt-neutral-600;
+    color: var(--rvt-color-pagination-text);
   }
 
   .mat-paginator-page-size-label {
@@ -24,7 +24,7 @@
     width: auto;
 
     &:disabled .mat-button-wrapper:before {
-      color: $rvt-disabled-text-color;
+      color: var(--rvt-color-pagination-disabled);
     }
 
     .mat-button-wrapper:before {
@@ -72,7 +72,7 @@ table.mat-table {
 
   * {
     font-family: $RvtFontFamily;
-    color: $rvt-neutral-900;
+    color: var(--rvt-color-table-text);
   }
 
   .mat-header-row {
@@ -82,7 +82,7 @@ table.mat-table {
       font: 700 24px $RvtFontFamily;
       & + .mat-header-row .mat-header-cell {
         border-bottom: none;
-        border-top: 2px solid $rvt-neutral-100;
+        border-top: 2px solid var(--rvt-color-table-header-border);
       }
     }
 
@@ -90,7 +90,7 @@ table.mat-table {
       font-size: 14px;
       font-weight: 700;
       padding: 15px 15px 5px 0;
-      border-bottom: 2px solid $rvt-neutral-100;
+      border-bottom: 2px solid var(--rvt-color-table-header-border);
       &:first-of-type {
         padding-left: 20px;
       }
@@ -100,7 +100,7 @@ table.mat-table {
   .mat-row {
     height: auto;
     &:hover {
-      background-color: $rvt-neutral-100;
+      background-color: var(--rvt-color-table-hover);
     }
 
     .mat-cell {
@@ -114,14 +114,14 @@ table.mat-table {
     }
 
     &:not(:last-of-type) .mat-cell {
-      border-bottom: 1px solid $rvt-neutral-100;
+      border-bottom: 1px solid var(--rvt-color-table-divider);
     }
   }
 }
 
 hr {
   border: none;
-  background: $rvt-neutral-100;
+  background: var(--rvt-color-divider);
   height: 2px;
 
   &.section-divider {

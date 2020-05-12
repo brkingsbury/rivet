@@ -62,7 +62,7 @@ button, a {
 
         &.inverse {
             background-color: var(--rvt-btn-inverse-primary-bg);
-            color: var(--rvt-bnt-inverse-primary-text);
+            color: var(--rvt-btn-inverse-primary-text);
 
             &:hover:not(:disabled),
             &:focus:not(:disabled) {
