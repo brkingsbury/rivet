@@ -7,7 +7,7 @@
     label.mat-radio-label {
       font-family: $RvtFontFamily;
       font-size: 14px;
-      color: $rvt-neutral-900;
+      color: var(--rvt-color-neutral-dark);
 
       .mat-radio-container {
         height: 18px;
@@ -17,7 +17,7 @@
         .mat-radio-outer-circle {
           height: 18px;
           width: 18px;
-          border-color: $rvt-neutral-900;
+          border-color: var(--rvt-color-neutral-dark);
           transition: none;
           border-width: 1px;
         }
@@ -25,7 +25,7 @@
         .mat-radio-inner-circle {
           height: 12px;
           width: 12px;
-          background-color: $rvt-primary-color;
+          background-color: var(--rvt-color-primary);
           left: 3px;
           top: 3px;
         }
@@ -99,12 +99,12 @@
     &.mat-radio-checked {
       .mat-radio-container {
         .mat-radio-inner-circle {
-          background-color: $rvt-primary-color;
+          background-color: var(--rvt-color-primary);
           transform: scale(1);
         }
 
         .mat-radio-outer-circle {
-          border-color: $rvt-primary-color;
+          border-color: var(--rvt-color-primary);
         }
       }
 
@@ -118,7 +118,7 @@
               border-width: 2px;
               left: -1px;
               top: -1px;
-              border-color: $rvt-primary-color-dark;
+              border-color: var(--rvt-color-primary-dark);
             }
           }
         }
@@ -142,13 +142,13 @@
 
   .mat-radio-button.mat-radio-disabled {
     .mat-radio-label {
-      color: $rvt-disabled-text-color;
+      color: var(--rvt-color-text-disabled);
 
       .mat-radio-container {
         .mat-radio-outer-circle {
           height: 18px;
           width: 18px;
-          border: 1px dashed $rvt-disabled-color;
+          border: 1px dashed var(--rvt-color-disabled);
         }
       }
     }
@@ -158,7 +158,7 @@
         transform: scale(1);
         height: 12px;
         width: 12px;
-        background-color: $rvt-neutral-300;
+        background-color: var(--rvt-color-neutral-3);
         left: 3px;
         top: 3px;
       }
@@ -171,7 +171,7 @@
     }
 
     &.mat-radio-checked .mat-radio-inner-circle {
-      background-color: $rvt-neutral-900;
+      background-color: var(--rvt-color-neutral-dark);
     }
   }
 

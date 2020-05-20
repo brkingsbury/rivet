@@ -1,6 +1,6 @@
 import { CommonModule, registerLocaleData } from '@angular/common';
 import localeFrCA from '@angular/common/locales/fr-CA';
-import { NgModule } from '@angular/core';
+import { ModuleWithProviders, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import 'hammerjs';
 import { MaterialComponentModule } from './material-component-module';
@@ -11,6 +11,7 @@ import { RivetHelperComponent } from './rivet-input-helper/rivet-input-helper.co
 import { RivetLabelComponent } from './rivet-input-label/rivet-input-label.component';
 import { RivetInputComponent } from './rivet-input/rivet-input.component';
 import { RivetMiniExpansionPanelComponent } from './rivet-mini-expansion-panel/rivet-mini-expansion-panel.component';
+import { RivetThemingService } from './rivet-services/rivet-theming.service';
 import { RivetStyleComponent } from './rivet-style.component';
 import { RivetTileComponent } from './rivet-tile/rivet-tile.component';
 import { RivetSlideToggleComponent } from './rivet-toggle/rivet-slide-toggle.component';
@@ -45,6 +46,20 @@ registerLocaleData(localeFrCA, 'fr-CA');
         RivetDrawerComponent,
         RivetSlideToggleComponent,
         RivetTileComponent
+    ],
+    providers: [
+        RivetThemingService
     ]
+
 })
-export class RivetStyleModule { }
+export class RivetStyleModule {
+    static forRoot(): ModuleWithProviders {
+        return {
+            ngModule: RivetStyleModule,
+            providers: [RivetThemingService]
+        };
+    }
+}
+
+export { RivetThemingService };
+

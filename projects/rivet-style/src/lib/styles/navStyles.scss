@@ -7,7 +7,7 @@
   top: 0;
   left: 0;
   height: 46px;
-  background-color: $rvt-neutral-100;
+  background-color: var(--rvt-color-neutral-1);
   padding: 0 40px;
   overflow: hidden;
   display: flex;
@@ -43,24 +43,24 @@
 
 .mat-sidenav-container {
   top: 46px;
-  background-color: $rvt-white;
+  background-color: var(--rvt-color-neutral-white);
   .mat-drawer-side.mat-sidenav {
-    border-right: 2px solid $rvt-neutral-100;
+    border-right: 2px solid var(--rvt-color-neutral-1);
   }
 }
 .mat-sidenav-content {
   background: none;
-  background-color: $rvt-white;
+  background-color: var(--rvt-color-neutral-white);
   padding: 30px;
 }
 .nav-content-container {
   width: 212px; // 250px - 36px padding - 2px border
-  background-color: $rvt-white;
+  background-color: var(--rvt-color-neutral-white);
   padding: 50px 0 50px 36px;
-  color: $rvt-neutral-900;
+  color: var(--rvt-color-neutral-dark);
   white-space: nowrap;
   * {
-    color: $rvt-neutral-900;
+    color: var(--rvt-color-neutral-dark);
   }
   .nav-category {
     margin-bottom: 30px;
@@ -72,11 +72,11 @@
       display: inline-block;
       border-radius: 50%;
       background: transparent;
-      border: 1px solid $rvt-neutral-400;
+      border: 1px solid var(--rvt-color-neutral-4);
       height: 23px;
       width: 23px;
       text-align: center;
-      color: $rvt-neutral-900;
+      color: var(--rvt-color-neutral-dark);
       line-height: 25px;
       margin-right: 10px;
     }
@@ -111,7 +111,7 @@
       margin: 15px 0 0 11px;
       a {
         display: block;
-        border-left: 4px solid $rvt-neutral-100;
+        border-left: 4px solid var(--rvt-color-neutral-1);
         padding-left: 15px;
         cursor: pointer;
         text-decoration: none;
@@ -120,19 +120,19 @@
         }
         &.active {
           font-weight: 600;
-          border-color: $rvt-accent-color;
+          border-color: var(--rvt-color-accent);
         }
         &:hover:not(.active),
         &:focus:not(.active) {
           font-weight: 600;
-          border-color: $rvt-neutral-200;
+          border-color: var(--rvt-color-neutral-2);
         }
       }
     }
     &.active {
       .num-circle {
-        background-color: $rvt-accent-color;
-        color: $rvt-white;
+        background-color: var(--rvt-color-accent);
+        color: var(--rvt-color-neutral-white);
         border: none;
         height: 25px;
         width: 25px;

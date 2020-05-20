@@ -9,7 +9,7 @@
         box-shadow: none;
         border: 1px solid var(--rvt-color-dropdown-panel-border);
         border-radius: 0;
-        background: $rvt-white;
+        background: var(--rvt-color-neutral-white);
 
         .mat-option {
             height: 32px;

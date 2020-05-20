@@ -3,7 +3,7 @@
 
 .mat-spinner.mat-progress-spinner {
   svg circle {
-    stroke: $rvt-neutral-400;
+    stroke: var(--rvt-color-neutral-4);
   }
 }
 
@@ -23,12 +23,12 @@ button.loading:disabled {
   }
   &.rvt-btn-primary {
     .mat-spinner svg circle {
-      stroke: $rvt-white;
+      stroke: var(--rvt-color-neutral-white);
     }
   }
   &.rvt-btn-secondary {
     .mat-spinner svg circle {
-      stroke: $rvt-primary-color;
+      stroke: var(--rvt-color-btn-secondary-text);
     }
   }
   &.rvt-btn-standard,
@@ -36,7 +36,7 @@ button.loading:disabled {
   &.rvt-btn-icon {
     color: transparent;
     .mat-spinner svg circle {
-      stroke: $rvt-neutral-600;
+      stroke: var(--rvt-color-neutral-6);
     }
   }
   &.rvt-btn-icon .mat-spinner {
@@ -61,7 +61,7 @@ button.loading:disabled {
     font-family: $RvtFontFamily;
     font-size: 18px;
     font-weight: 600;
-    color: $rvt-neutral-400;
+    color: var(--rvt-color-neutral-4);
     margin-bottom: 10px;
   }
   .mat-spinner.mat-progress-spinner {
@@ -71,7 +71,7 @@ button.loading:disabled {
       max-height: 45px;
       max-width: 45px;
       circle {
-        stroke: $rvt-neutral-400;
+        stroke: var(--rvt-color-neutral-4);
       }
     }
   }

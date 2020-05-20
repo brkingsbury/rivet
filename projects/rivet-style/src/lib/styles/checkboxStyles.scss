@@ -6,7 +6,7 @@ mat-checkbox.mat-checkbox {
   label .mat-checkbox-label {
     font-family: $RvtFontFamily;
     font-size: 14px;
-    color: $rvt-neutral-900;
+    color: var(rvt-color-neutral-dark);
   }
 
   .mat-checkbox-inner-container,
@@ -19,7 +19,7 @@ mat-checkbox.mat-checkbox {
     }
 
     .mat-checkbox-frame {
-      border: 1px solid $rvt-neutral-900;
+      border: 1px solid var(rvt-color-neutral-dark);
       border-radius: 2px;
       z-index: 100;
     }
@@ -49,12 +49,12 @@ mat-checkbox.mat-checkbox {
     &.cdk-keyboard-focused {
       .mat-checkbox-background {
         border: none;
-        background-color: $rvt-primary-color-dark;
+        background-color: var(--rvt-color-primary-dark);
       }
     }
 
     .mat-checkbox-background {
-      background-color: $rvt-primary-color;
+      background-color: var(--rvt-color-primary);
       transition: background-color 400ms ease;
       padding: 4px;
 
@@ -62,7 +62,7 @@ mat-checkbox.mat-checkbox {
         @extend .inner-rivet-icon-check !optional;
         font-size: 10px;
         font-weight: 600;
-        color: $rvt-white;
+        color: var(--rvt-color-neutral-white);
       }
     }
   }
@@ -77,7 +77,7 @@ mat-checkbox.mat-checkbox {
     &:not(:hover),
     &:not(.cdk-focused),
     &:not(.cdk-keyboard-focused) {
-      border-color: $rvt-primary-color;
+      border-color: var(--rvt-color-primary);
     }
 
     &.cdk-focused,
@@ -91,7 +91,7 @@ mat-checkbox.mat-checkbox {
       &::before {
         @extend .inner-rivet-icon-subtract !optional;
         font-size: 10px;
-        color: $rvt-white;
+        color: var(--rvt-color-neutral-white);
         font-weight: 400;
       }
 
@@ -136,11 +136,11 @@ mat-checkbox.mat-checkbox {
 
   &.mat-checkbox-disabled {
     .mat-checkbox-frame {
-      border: 1px dashed $rvt-disabled-color;
+      border: 1px dashed var(--rvt-color-input-border-disabled);
     }
 
     label .mat-checkbox-label {
-      color: $rvt-disabled-text-color;
+      color: var(--rvt-color-text-disabled);
     }
 
     &:hover,
@@ -151,14 +151,14 @@ mat-checkbox.mat-checkbox {
       }
 
       .mat-checkbox-frame {
-        border: 1px dashed $rvt-disabled-color;
+        border: 1px dashed var(--rvt-color-input-border-disabled);
       }
 
       .mat-checkbox-background {
         background: none;
 
         &::before {
-          color: $rvt-disabled-text-color;
+          color: var(--rvt-color-text-disabled);
         }
       }
     }
@@ -169,7 +169,7 @@ mat-checkbox.mat-checkbox {
       }
 
       label .mat-checkbox-label {
-        color: $rvt-neutral-900;
+        color: var(rvt-color-neutral-dark);
       }
 
       &:hover,
@@ -181,7 +181,7 @@ mat-checkbox.mat-checkbox {
 
         .mat-checkbox-background {
           &::before {
-            color: $rvt-neutral-900;
+            color: var(rvt-color-neutral-dark);
           }
         }
       }

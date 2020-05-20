@@ -19,29 +19,29 @@
     left: 0;
     width: 100%;
     height: 1px;
-    background-color: $rvt-neutral-400;
+    background-color: var(--rvt-color-neutral-4);
   }
   &.valid:after {
-    background-color: $rvt-neutral-400;
+    background-color: var(--rvt-color-neutral-4);
   }
   &.invalid.dirty.nonvacant:after,
   &.invalid.pristine.untouched.nonvacant:after {
-    background-color: $rvt-warning-color;
+    background-color: var(--rvt-color-warn);
   }
   &:focus-within:after,
   &:hover:after {
     height: 2px;
   }
   &:focus-within:after {
-    background-color: $rvt-primary-color-dark;
+    background-color: var(--rvt-color-neutral-dark);
   }
   &[disabled]:after {
     background-color: transparent;
     height: 1px;
     background-image: repeating-linear-gradient(
       90deg,
-      $rvt-neutral-300,
-      $rvt-neutral-300 1px,
+      var(--rvt-color-neutral-3),
+      var(--rvt-color-neutral-3),
       transparent 1px,
       transparent 4px
     );
@@ -51,7 +51,7 @@
     }
   }
   input {
-    color: $rvt-neutral-900;
+    color: var(--rvt-color-neutral-dark);
     font: 400 16px 'Nunito Sans', Arial, sans-serif;
     background-color: transparent;
     line-height: 20px;

@@ -2,7 +2,7 @@
 
 .rvt-line-expansion {
   position: relative;
-  background-color: $rvt-white;
+  background-color: var(--rvt-color-neutral-white);
   transition: height 400ms ease, background-color 400ms ease;
   overflow: hidden;
   margin-bottom: 15px;
@@ -21,7 +21,7 @@
 
   .top-panel {
     padding: 15px;
-    border-bottom: 1px solid $rvt-neutral-100;
+    border-bottom: 1px solid var(--rvt-color-neutral-1);
     display: flex;
     flex-direction: row;
     [header-content] {
@@ -52,6 +52,6 @@
   &:focus,
   &:hover,
   &:active {
-    background-color: $rvt-neutral-50;
+    background-color: var(--rvt-color-neutral-light);
   }
 }

@@ -2,6 +2,7 @@
 @import './typeStyles.scss';
 
 .mat-paginator {
+    background-color: transparent !important;
   * {
     font-family: $RvtFontFamily;
     font-size: 12px;
@@ -69,6 +70,7 @@
 
 table.mat-table {
   width: 100%; // to take up 100% width of container
+  background-color: var(--rvt-color-main-bg);
 
   * {
     font-family: $RvtFontFamily;

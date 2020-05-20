@@ -87,12 +87,15 @@ form {
     &.ng-invalid,
     &.mat-form-field-invalid {
       .mat-form-field-label-wrapper label.mat-form-field-label,
-      .mat-form-field-label-wrapper label.mat-form-field-empty,
-      .mat-form-field-hint-wrapper mat-hint {
+      .mat-form-field-label-wrapper label.mat-form-field-empty
+      {
         color: var(--rvt-color-text);
       }
       input {
         color: var(--rvt-color-input-text-invalid);
+      }
+      mat-hint {
+        color: var(--rvt-color-invalid) !important;
       }
       .mat-form-field-underline {
         background-color: var( --rvt-color-text);
@@ -111,6 +114,7 @@ form {
       font-family: $RvtFontFamily;
       font-size: 12px;
       font-weight: 400;
+      color: var(--rvt-color-input-helper) !important;
     }
     .mat-form-field-label-wrapper label.mat-form-field-label {
       &.mat-form-field-empty {
@@ -131,6 +135,7 @@ form {
       color: var(--rvt-color-input-label);
     }
     textarea {
+        background-color: var(--rvt-color-main-bg);
       display: block;
       font-family: $RvtFontFamily;
       font-size: 16px;
@@ -178,7 +183,7 @@ form {
       font-size: 12px;
       font-weight: 400;
       bottom: 0;
-      color: var(--rvt-color-input-helper);
+      color: var(--rvt-color-input-helper) !important;
     }
   }
 }

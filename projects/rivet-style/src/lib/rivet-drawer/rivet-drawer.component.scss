@@ -1,3 +1,4 @@
+@import '../styles/rivetTheme.scss';
 .rivet-drawer {
   &.open [rivet-drawer-content] {
     right: 0;
@@ -5,7 +6,7 @@
   [rivet-drawer-content] {
     width: 300px;
     height: 100%;
-    background-color: white;
+    background-color: var(--rvt-color-main-bg);
     z-index: 120;
     position: fixed;
     top: 0;

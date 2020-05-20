@@ -5,7 +5,7 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: $rvt-neutral-200-alpha-90;
+  background: var(--rvt-color-neutral-3-alpha-90);
   z-index: 100;
   .overlay-content {
     margin: 10px 0 0 0;
@@ -19,7 +19,7 @@
     [rivet-delete-overlay-content] {
       margin-right: 15px;
       font-weight: 600;
-      color: $rvt-neutral-900;
+      color: var(--rvt-color-neutral-dark);
     }
   }
 }
