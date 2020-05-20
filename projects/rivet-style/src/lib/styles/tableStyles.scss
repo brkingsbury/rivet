@@ -1,9 +1,7 @@
-@import './themeVariables.scss';
-@import './typeStyles.scss';
-
 .mat-paginator {
+    background-color: transparent !important;
   * {
-    font-family: $RvtFontFamily;
+    font-family: var(--rvt-font-family);
     font-size: 12px;
     color: var(--rvt-color-pagination-text);
   }
@@ -69,9 +67,10 @@
 
 table.mat-table {
   width: 100%; // to take up 100% width of container
+  background-color: var(--rvt-color-main-bg);
 
   * {
-    font-family: $RvtFontFamily;
+    font-family: var(--rvt-font-family);
     color: var(--rvt-color-table-text);
   }
 
@@ -79,7 +78,8 @@ table.mat-table {
     height: auto;
 
     &.table-header {
-      font: 700 24px $RvtFontFamily;
+      font-weight: var(--rvt-font-weight-bold);
+      font-size: var(--rvt-font-size-e);
       & + .mat-header-row .mat-header-cell {
         border-bottom: none;
         border-top: 2px solid var(--rvt-color-table-header-border);

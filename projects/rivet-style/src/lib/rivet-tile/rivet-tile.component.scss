@@ -65,9 +65,14 @@ $transitionTime: 300ms;
             border-radius: 4px;
         }
 
-        &:hover,
-        &:focus {
-            @include checkmark;
+        &.can-select{
+            cursor: pointer;
+
+            &:hover:not(:disabled),
+            &:focus:not(:disabled) {
+                @include checkmark;
+
+                border-color: var(--rvt-tile-hover-border);
 
             border-color: var(--rvt-tile-hover-border);
 
@@ -75,8 +80,15 @@ $transitionTime: 300ms;
                 background: var(--rvt-tile-hover-border);
             }
 
-            ~button {
-                border-color: var(--rvt-tile-hover-border);
+            &:disabled {
+                border: 2px dashed var(--rvt-tile-disabled-border);
+
+                &.selected {
+                    &:before,
+                    &:after {
+                        content: none;
+                    }
+                }
             }
         }
 

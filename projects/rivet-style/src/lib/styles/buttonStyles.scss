@@ -1,10 +1,8 @@
-@import './mixins.scss';
-@import './themeVariables.scss';
-@import './typeStyles.scss';
+@import './rivetTheme.scss'; // needed for keyboard focus mixin
 
 // Styles for all Rivet Buttons
 @mixin buttonStyle {
-    font-family: $RvtFontFamily;
+    font-family: var(--rvt-font-family);
     font-size: 14px;
     border-radius: 2px;
     background: none;

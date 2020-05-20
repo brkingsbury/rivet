@@ -1,0 +1,73 @@
+.mat-datepicker-toggle button.mat-icon-button {
+    position: relative;
+    background: none;
+
+    &:before {
+        @extend .inner-rivet-icon-datepicker !optional;
+        outline: none;
+    }
+
+    span.mat-button-wrapper {
+        display: none;
+    }
+}
+
+.mat-datepicker-content {
+    background-color: var(--rvt-color-datepicker-bg);
+
+    .mat-calendar-body-label:not(:last-of-type) {
+        visibility: hidden; // hides extra month label without breaking 1st of month position (already aria-hidden)
+    }
+
+    .mat-calendar-body-label:last-of-type {
+        display: none;
+    }
+
+    .mat-calendar-table-header {
+        border-bottom: 1px solid var(--rvt-color-datepicker-content-border);
+    }
+
+    .mat-calendar-body-cell-content {
+        border-color: transparent;
+
+        &:hover,
+        &:focus {
+            border-color: var(--rvt-color-datepicker-content-border);
+        }
+    }
+
+    .mat-calendar-body-active .mat-calendar-body-cell-content {
+        border-color: var(--rvt-color-datepicker-content-active);
+        background-color: var(--rvt-color-datepicker-content-active);
+        color: var(--rvt-color-datepicker-content-active-text);
+    }
+
+    .mat-calendar-controls button {
+        background-color: transparent;
+
+        &:hover,
+        &:focus {
+            background-color: var(--rvt-color-datepicker-content-hover);
+        }
+
+        &.mat-calendar-previous-button {
+            &:after {
+                content: none;
+            }
+
+            &:before {
+                @extend .inner-rivet-icon-previous !optional;
+            }
+        }
+
+        &.mat-calendar-next-button {
+            &:after {
+                content: none;
+            }
+
+            &:before {
+                @extend .inner-rivet-icon-next !optional;
+            }
+        }
+    }
+}
