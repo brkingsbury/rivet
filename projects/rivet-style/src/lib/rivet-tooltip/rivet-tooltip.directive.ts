@@ -24,7 +24,8 @@ export class RvtTooltipDirective implements OnChanges, OnInit, AfterViewInit {
         const viewportOffset = this.anchorEl.getBoundingClientRect();
         this.tooltipEl.style.display = 'block';
 
-        let rightOverflowOffset = document.documentElement.offsetWidth - (viewportOffset.left + (this.anchorEl.offsetWidth / 2) + this.tooltipEl.offsetWidth / 2);
+        let rightOverflowOffset = document.documentElement.offsetWidth -
+            (viewportOffset.left + (this.anchorEl.offsetWidth / 2) + this.tooltipEl.offsetWidth / 2);
         let leftOverflowOffset = viewportOffset.left - (this.tooltipEl.offsetWidth / 2 - this.anchorEl.offsetWidth / 2);
 
         // assigns a negative number, or zero.
@@ -32,7 +33,7 @@ export class RvtTooltipDirective implements OnChanges, OnInit, AfterViewInit {
         // assigns a positive number, or zero (is fed a negative number)
         leftOverflowOffset = leftOverflowOffset >= 0 ? 0 : Math.abs(leftOverflowOffset);
         // total offsets to reduce variables
-        let overflowOffset = rightOverflowOffset + leftOverflowOffset;
+        const overflowOffset = rightOverflowOffset + leftOverflowOffset;
 
         if (this.rvtTooltipAbsolutePos !== undefined) {
             // If the tooltip is attached to the body instead of inline the positioning must be done relative to the body.
@@ -41,7 +42,8 @@ export class RvtTooltipDirective implements OnChanges, OnInit, AfterViewInit {
             // set --arrow-offset variable first, since it can't be assigned as a style attribute
             this.tooltipEl.style = '--arrow-offset: ' + (-overflowOffset) + 'px;';
             this.tooltipEl.style.top = viewportOffset.top + topScroll - this.tooltipEl.offsetHeight - 14 + 'px';
-            this.tooltipEl.style.left = viewportOffset.left + this.anchorEl.offsetWidth / 2 - this.tooltipEl.offsetWidth / 2 + 400 + overflowOffset + leftScroll + 'px';
+            this.tooltipEl.style.left = viewportOffset.left + this.anchorEl.offsetWidth / 2 - this.tooltipEl.offsetWidth / 2 +
+                400 + overflowOffset + leftScroll + 'px';
         } else {
             // Tooltip show/hide is managed by moving the element off screen.
             // This allows us to evaluate the width and height of the tooltip,
