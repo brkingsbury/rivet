@@ -6,6 +6,7 @@
 }
 
 .rivet-tooltip {
+  --arrow-offset: 0;
   position: absolute;
   color: var(--rvt-color-tooltip-text);
   background-color: var(--rvt-color-tooltip-bg);
@@ -15,7 +16,7 @@
   max-width: 300px;
   white-space: normal;
   text-align: center;
-  margin: 0 -200px;
+  margin: 0 -400px;
   &:after {
     content: '';
     display: block;
@@ -25,6 +26,7 @@
     height: 20px;
     bottom: -7px;
     left: calc(50% - 10px);
+    margin-left: var(--arrow-offset);
     transform: rotate(45deg);
     background-color: var(--rvt-color-tooltip-bg);
   }

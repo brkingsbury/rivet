@@ -10,6 +10,7 @@ form {
       font-family: $RvtFontFamily;
       font-size: 16px;
       font-weight: 400;
+      vertical-align: top;
     }
     input {
       font-family: $RvtFontFamily;
@@ -44,8 +45,20 @@ form {
         }
       }
     }
+    .mat-form-field-subscript-wrapper {
+        position: relative;
+    }
+    .mat-form-field-wrapper {
+        .mat-form-field-underline {
+            position: relative;
+            bottom: initial;
+            background-color: var(--rvt-color-input-border);
+        }        
+    }
     .mat-form-field-underline {
-      background-color: var(--rvt-color-input-border);
+        position: relative;
+        bottom: initial;
+        background-color: var(--rvt-color-input-border);
     }
     &.mat-focused {
       .mat-form-field-label-wrapper label.mat-form-field-label {
@@ -64,6 +77,11 @@ form {
       .mat-form-field-ripple {
         height: 2px;
       }
+    }
+    &:hover:not(.mat-form-field-disabled):not(.mat-focused){
+        .mat-form-field-underline {
+            margin-bottom: -1px;
+        }
     }
     &.invalid,
     &.ng-invalid,

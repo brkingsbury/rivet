@@ -2,10 +2,10 @@
         (click)="toggleMiniExpansion()"
         [ngClass]="{ 'panel-open': panelOpen, 'header-flip': arrowRight }">
     <span *ngIf="!arrowRight"
-          [ngClass]="panelOpen ? 'rivet-icon-caret-down' : 'rivet-icon-caret-right'"> </span>
+          [ngClass]="panelOpen ? 'rivet-icon-caret-' + openedArrowDirection : 'rivet-icon-caret-' + closedArrowDirection"> </span>
     <ng-content select="[rivet-mini-expansion-head]"></ng-content>
     <span *ngIf="arrowRight"
-          [ngClass]="panelOpen ? 'rivet-icon-caret-down' : 'rivet-icon-caret-right'"> </span>
+          [ngClass]="panelOpen ? 'rivet-icon-caret-' + openedArrowDirection : 'rivet-icon-caret-' + closedArrowDirection"> </span>
 </button>
 <div class="rivet-mini-expansion-body"
      [hidden]="!panelOpen">

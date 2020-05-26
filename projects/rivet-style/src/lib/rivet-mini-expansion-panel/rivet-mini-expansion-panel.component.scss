@@ -12,11 +12,13 @@
     }
   }
   [class*='rivet-icon-caret-'] {
-    margin-right: 10px;
-    margin-top: -0.2em;
     &:before {
+      margin-right: 10px;
       vertical-align: middle;
     }
+  }
+  [class*='rivet-icon-caret-left'], [class*='rivet-icon-caret-right'] {
+    margin-top: -0.2em;
   }
 }
 .rivet-mini-expansion-body {

@@ -1,4 +1,6 @@
-import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angular/core';
+import { Component, EventEmitter, Input, Output, ViewEncapsulation, OnInit } from '@angular/core';
+
+type ExpansionArrowDirection = 'up' | 'down' | 'left' | 'right';
 
 @Component({
     selector: 'advicent-rivet-mini-expansion-panel',
@@ -7,14 +9,18 @@ import { Component, EventEmitter, Input, Output, ViewEncapsulation } from '@angu
     encapsulation: ViewEncapsulation.None
 })
 export class RivetMiniExpansionPanelComponent {
-    private _panelOpen = false;
-    @Input() arrowRight: boolean;
+
+    @Input() public arrowRight: boolean;
+    @Input() public openedArrowDirection: ExpansionArrowDirection = 'down';
+    @Input() public closedArrowDirection: ExpansionArrowDirection = 'right';
 
     @Input() public set panelOpen(panelOpen: boolean) {
         panelOpen ? this.openExpansion() : this.closeExpansion();
     }
 
-    @Output() public panelOpenEvent = new EventEmitter<null>();
+    @Output() public panelOpenEvent = new EventEmitter<void>();
+
+    private _panelOpen = false;
 
     public get panelOpen(): boolean {
         return this._panelOpen;
