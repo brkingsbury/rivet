@@ -2,6 +2,7 @@
 @import './typeStyles.scss';
 
 .mat-paginator {
+    background-color: transparent !important;
   * {
     font-family: $RvtFontFamily;
     font-size: 12px;
@@ -114,7 +115,9 @@ table.mat-table {
     }
 
     &:not(:last-of-type) .mat-cell {
-      border-bottom: 1px solid var(--rvt-color-table-divider);
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: var(--rvt-color-table-divider);
     }
   }
 }
