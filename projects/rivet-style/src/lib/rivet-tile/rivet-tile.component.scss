@@ -65,13 +65,14 @@ $transitionTime: 300ms;
             border-radius: 4px;
         }
 
-        &.can-select{
+        &.can-select {
             cursor: pointer;
 
             &:hover:not(:disabled),
             &:focus:not(:disabled) {
                 @include checkmark;
 
+                outline-color: var(--rvt-tile-hover-border);
                 border-color: var(--rvt-tile-hover-border);
 
             border-color: var(--rvt-tile-hover-border);
@@ -84,6 +85,7 @@ $transitionTime: 300ms;
                 border: 2px dashed var(--rvt-tile-disabled-border);
 
                 &.selected {
+
                     &:before,
                     &:after {
                         content: none;
