@@ -1,8 +1,7 @@
-@import '../../lib/styles/typeStyles.scss';
-@import './rivetTheme.scss';
+@import './rivetTheme.scss'; // still needed for keyboard focus colors
 
 .cdk-overlay-container {
-  font-family: $RvtFontFamily;
+  font-family: var(--rvt-font-family);
   .cdk-overlay-backdrop {
     background: var(--rvt-color-neutral-6-alpha-71);
   }
@@ -16,7 +15,9 @@
       margin: 0 0 20px 0;
       padding: 0;
       position: relative;
-      font: 700 24px $RvtFontFamily;
+      font-family: var(--rvt-font-family);
+      font-size: var(--rvt-font-size-e);
+      font-weight: var(--rvt-font-weight-bold);
       &:after {
         content: '';
         position: absolute;

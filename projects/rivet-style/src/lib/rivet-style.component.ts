@@ -21,7 +21,8 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         './styles/overlayStyles.scss',
         './styles/snackbarStyles.scss',
         './styles/tooltipStyles.scss',
-        './styles/sliderStyles.scss'
+        './styles/sliderStyles.scss',
+        './styles/datepickerStyles.scss'
     ],
     encapsulation: ViewEncapsulation.None
 })

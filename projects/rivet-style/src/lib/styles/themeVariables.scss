@@ -50,7 +50,7 @@
   --rvt-color-btn-primary-text-disabled: var(--rvt-color-text-contrast);
 
   --rvt-btn-inverse-primary-bg: var(--rvt-color-neutral-white);
-  --rvt-bnt-inverse-primary-text: var(--rvt-color-text);
+  --rvt-btn-inverse-primary-text: var(--rvt-color-text);
 
   --rvt-color-btn-secondary-text: var(--rvt-color-primary);
   --rvt-color-btn-secondary-border: var(--rvt-color-btn-secondary-text);
@@ -81,6 +81,13 @@
   --rvt-color-checkbox-selected-hover: var(--rvt-color-primary-dark);
   --rvt-color-checkbox-disabled: var(--rvt-color-disabled);
   --rvt-color-checkbox-readonly: var(--rvt-color-checkbox-label);
+
+   /* +++++++++++++ Datepicker Level Colors +++++++++++++++++++ */
+   --rvt-color-datepicker-bg: var(--rvt-color-bg);
+   --rvt-color-datepicker-content-border: var(--rvt-color-neutral-3);
+   --rvt-color-datepicker-content-active: var(--rvt-color-primary);
+   --rvt-color-datepicker-content-hover: var(--rvt-color-neutral-3);
+   --rvt-color-datepicker-content-active-text: var(--rvt-color-text-contrast);
 
   /* +++++++++++++ Dropdown Level Colors +++++++++++++++++++ */
   --rvt-color-dropdown-text: var(--rvt-color-text);
@@ -187,10 +194,11 @@
     // #A8B3BD
     // #E2E6E9
   
-    --rvt-color-neutral-white: hsl(229, 37.2%, 16.9%); /* (#394059) */
+    // --rvt-color-neutral-white: hsl(229, 37.2%, 16.9%); /* (#394059) */
     // --rvt-color-neutral-light: hsl(223, 39%, 16%); /* (#192239) */
     // --rvt-color-neutral-1: hsl(227, 22%, 29%); /* (#6B7280) */
     // --rvt-color-neutral-2: hsl(220, 9%, 46%); /* (#ADB3BE) */
+    --rvt-color-neutral-white: hsl(206, 14%, 10%);
     --rvt-color-neutral-light: hsl(206, 14%, 10%);
     --rvt-color-neutral-1: hsl(210, 13%, 15%);
     --rvt-color-neutral-2: hsl(210, 14%, 20%);
@@ -201,12 +209,13 @@
     --rvt-color-neutral-7: hsl(206, 14%, 90%);
     --rvt-color-neutral-dark: hsl(206, 14%, 90%);
 
-    --rvt-color-neutral-7: hsl(240, 0%, 97%); /* (#FFFFFF) */
-    --rvt-color-neutral-dark: hsl(0, 100%, 100%); /* (#FFFFFF) */
+    // --rvt-color-neutral-7: hsl(240, 0%, 97%); /* (#FFFFFF) */
+    // --rvt-color-neutral-dark: hsl(0, 100%, 100%); /* (#FFFFFF) */
 
     @include common-colors;
     @include interpolated-colors;
 
+    --rvt-color-primary-light: hsl(249, 40%, 58%); // adjusted for contrast ratio
     --rvt-color-btn-primary-text: hsl(0, 100%, 100%);
     --rvt-tab-inverse-bg-hover: hsla(223, 39%, 16%, 0.25);
     --rvt-color-text-contrast: hsl(0, 100%, 100%);
@@ -256,39 +265,3 @@
     @include common-colors;
     @include interpolated-colors;
 }
-
-// --- Angular Material Rivet Theme
-// --- ! All #'s (50-900) must be defined !
-
-$rivet-primary: (
-  50: var(--rvt-color-neutral-light),
-  100: var(--rvt-color-neutral-1),
-  200: var(--rvt-color-neutral-2),
-  300: var(--rvt-color-neutral-3),
-  400: var(--rvt-color-neutral-4),
-  500: var(--rvt-color-neutral-5),
-  600: var(--rvt-color-neutral-6),
-  700: var(--rvt-color-neutral-7),
-  800: var(--rvt-color-neutral-dark),
-  900: var(--rvt-color-neutral-dark),
-  A100: var(--rvt-color-accent),
-  A200: var(--rvt-color-primary-light),
-  A400: var(--rvt-color-primary),
-  A700: var(--rvt-color-primary-dark),
-  contrast: (
-    50: var(--rvt-color-neutral-dark),
-    100: var(--rvt-color-neutral-dark),
-    200: var(--rvt-color-neutral-dark),
-    300: var(--rvt-color-neutral-dark),
-    400: var(--rvt-color-neutral-light),
-    500: var(--rvt-color-neutral-light),
-    600: var(--rvt-color-neutral-light),
-    700: var(--rvt-color-neutral-light),
-    800: var(--rvt-color-neutral-light),
-    900: var(--rvt-color-neutral-light),
-    A100: var(--rvt-color-neutral-dark),
-    A200: var(--rvt-color-neutral-dark),
-    A400: var(--rvt-color-neutral-light),
-    A700: var(--rvt-color-neutral-light)
-  )
-);

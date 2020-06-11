@@ -1,11 +1,9 @@
-@import '../../lib/styles/typeStyles.scss';
-@import './rivetTheme.scss';
-
 .cdk-overlay-container {
     .mat-snack-bar-container {
         background: var(--rvt-color-snackbar-bg);
         box-shadow: none;
-        font-family: $RvtFontFamily;
+        font-family: var(--rvt-font-family);
+        font-size: var(--rvt-font-size-g);
         padding: 20px;
         border-radius: 2px;
         .snackbar-content {
