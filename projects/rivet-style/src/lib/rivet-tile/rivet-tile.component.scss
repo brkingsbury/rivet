@@ -54,7 +54,7 @@ $transitionTime: 300ms;
         border: 2px solid var(--rvt-tile-border);
         border-radius: 4px 4px 0 0;
         padding: 0;
-        cursor: pointer;
+        cursor: default;
         flex-wrap: wrap;
 
         :host ::ng-deep &>* {
@@ -65,25 +65,30 @@ $transitionTime: 300ms;
             border-radius: 4px;
         }
 
-        &.can-select{
+        &.can-select {
             cursor: pointer;
 
             &:hover:not(:disabled),
             &:focus:not(:disabled) {
                 @include checkmark;
 
+                outline-color: var(--rvt-tile-hover-border);
                 border-color: var(--rvt-tile-hover-border);
 
-            border-color: var(--rvt-tile-hover-border);
+                &:before {
+                    background: var(--rvt-tile-hover-border);
+                }
 
-            &:before {
-                background: var(--rvt-tile-hover-border);
+                ~button {
+                    border-color: var(--rvt-tile-hover-border);
+                }
             }
 
             &:disabled {
                 border: 2px dashed var(--rvt-tile-disabled-border);
 
                 &.selected {
+
                     &:before,
                     &:after {
                         content: none;
@@ -92,9 +97,11 @@ $transitionTime: 300ms;
             }
         }
 
-        &.selected:not(:disabled) {
+        &.selected:not(:disabled),
+        &.selected:focus:not(:disabled) {
             @include checkmark;
 
+            outline-color: var(--rvt-tile-selected-border);
             border-color: var(--rvt-tile-selected-border);
 
             &:before {
@@ -112,18 +119,6 @@ $transitionTime: 300ms;
                 &:before,
                 span {
                     color: var(--rvt-tile-selected-text);
-                }
-            }
-        }
-
-        &:disabled {
-            border: 2px dashed var(--rvt-tile-disabled-border);
-
-            &.selected {
-
-                &:before,
-                &:after {
-                    content: none;
                 }
             }
         }
@@ -189,7 +184,6 @@ $transitionTime: 300ms;
     }
 
     button:focus {
-
         &:before,
         &:after {
             outline: none;
