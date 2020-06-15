@@ -1,14 +1,7 @@
-@import '~@angular/material/theming';
+@import '~@angular/material/theming'; // needed for mat-core
 @import './mixins.scss';
 @import './themeVariables.scss';
 @import './spacingVariables.scss';
+@import './typeStyles.scss';
 
-$rvt-primary: mat-palette($rivet-primary, A400, 300, 900);
-$rvt-accent: mat-palette($rivet-primary, A100);
-$rivet-theme: mat-light-theme($rvt-primary, $rvt-accent);
-
-//------- Create Theme
-@mixin rvt-core() {
-  @include mat-core();
-  @include angular-material-theme($rivet-theme);
-}
+@include mat-core(); // needed for material components + overlays (datepickers, dropdowns, etc.)

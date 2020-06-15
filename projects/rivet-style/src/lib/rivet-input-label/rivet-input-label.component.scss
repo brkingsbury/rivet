@@ -14,11 +14,11 @@
   .nonvacant > & {
     top: 2px;
     width: calc(400% / 3);
-    color: $rvt-neutral-400;
+    color: var(--rvt-color-neutral-4);
     transform: perspective(100px) scale(0.75);
   }
   .invalid.dirty.nonvacant > &,
   .invalid.pristine.untouched.nonvacant > & {
-    color: $rvt-warning-color;
+    color: var(--rvt-color-warn);
   }
 }

@@ -1,6 +1,3 @@
-@import '../../lib/styles/typeStyles.scss';
-@import './rivetTheme.scss';
-
 .mat-tab-group,
 .mat-tab-group.mat-primary {
     &:not(.numbered-tabs) {
@@ -20,7 +17,7 @@
     }
 
     * {
-        font-family: $RvtFontFamily;
+        font-family: var(--rvt-font-family);
     }
 
     .mat-tab-header {
@@ -137,7 +134,7 @@
                     border: 1px solid var(--rvt-color-tab-number-circle-border);
                     z-index: 110;
                     color: var(--rvt-color-tab-number);
-                    font-family: $RvtFontFamily;
+                    font-family: var(--rvt-font-family);
                     font-size: 14px;
                 }
             }
@@ -168,7 +165,7 @@
     border: none;
 
     * {
-        font-family: $RvtFontFamily;
+        font-family: var(--rvt-font-family);
     }
 
     .mat-tab-links {
@@ -221,5 +218,6 @@
 
     a.mat-tab-link {
         height: 46px;
+        color: var(--rvt-color-text) !important;
     }
 }

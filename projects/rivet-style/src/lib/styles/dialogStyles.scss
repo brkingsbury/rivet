@@ -1,22 +1,23 @@
-@import '../../lib/styles/typeStyles.scss';
-@import './rivetTheme.scss';
+@import './rivetTheme.scss'; // still needed for keyboard focus colors
 
 .cdk-overlay-container {
-  font-family: $RvtFontFamily;
+  font-family: var(--rvt-font-family);
   .cdk-overlay-backdrop {
-    background: $rvt-neutral-600-alpha-71;
+    background: var(--rvt-color-neutral-6-alpha-71);
   }
   .mat-dialog-container {
     position: relative;
     border-radius: 0;
     box-shadow: none;
-    background: $rvt-white;
+    background: var(--rvt-color-neutral-white);
     padding: 20px 10px 10px 20px;
     .mat-dialog-title {
       margin: 0 0 20px 0;
       padding: 0;
       position: relative;
-      font: 700 24px $RvtFontFamily;
+      font-family: var(--rvt-font-family);
+      font-size: var(--rvt-font-size-e);
+      font-weight: var(--rvt-font-weight-bold);
       &:after {
         content: '';
         position: absolute;
@@ -24,7 +25,7 @@
         bottom: 0;
         left: -20px;
         width: calc(100% + 30px);
-        background-color: $rvt-neutral-100;
+        background-color: var(--rvt-color-neutral-1);
       }
     }
     .mat-dialog-content {
@@ -53,7 +54,7 @@
       overflow: hidden;
       .mat-dialog-title {
         padding: 15px 15px 5px 15px;
-        border-bottom: 3px solid $rvt-neutral-100;
+        border-bottom: 3px solid var(--rvt-color-neutral-1);
         margin: 0;
       }
       .mat-dialog-content {
@@ -68,14 +69,14 @@
           }
         }
         .left-col {
-          border-right: 1px solid $rvt-neutral-100;
+          border-right: 1px solid var(--rvt-color-neutral-1);
         }
         .mat-radio-button {
           display: block;
         }
       }
       .mat-dialog-actions {
-        border-top: 3px solid $rvt-neutral-100;
+        border-top: 3px solid var(--rvt-color-neutral-1);
         padding: 15px;
         .close-btn {
           margin-right: 0;
