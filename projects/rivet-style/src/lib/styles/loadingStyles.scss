@@ -22,7 +22,7 @@ button.loading:disabled {
   }
   &.rvt-btn-primary {
     .mat-spinner svg circle {
-      stroke: var(--rvt-color-neutral-white);
+      stroke: var(--rvt-color-neutral-0);
     }
   }
   &.rvt-btn-secondary {

@@ -39,8 +39,8 @@ $KnobDiameter: 18px;
             left: -2px;
             top: -2px;
             border-radius: 50%;
-            border: 1px solid var(--rvt-color-neutral-dark);
-            background-color: var(--rvt-color-neutral-light);
+            border: 1px solid var(--rvt-color-neutral-8);
+            background-color: var(--rvt-color-neutral-0);
             transition: left 400ms ease, background-color 400ms ease, border-color 400ms ease;
             box-sizing: border-box;
         }
@@ -73,7 +73,7 @@ $KnobDiameter: 18px;
         ~ .rivet-slide-toggle-rail {
             background-color: var(--rvt-color-neutral-2);
             &:before {
-                background-color: var(--rvt-color-neutral-light);
+                background-color: var(--rvt-color-neutral-0);
                 border-color: var(--rvt-color-neutral-2);
                 border-style: dotted;
             }
