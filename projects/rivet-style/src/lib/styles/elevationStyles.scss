@@ -1,0 +1,23 @@
+@mixin rvt-elevation-high {
+    box-shadow: 0 0 35px 0 var(--rvt-color-shadow);
+}
+
+@mixin rvt-elevation-medium {
+    box-shadow: 0 0 20px 0 var(--rvt-color-shadow);
+}
+
+@mixin rvt-elevation-low {
+    box-shadow: 0 0 10px 0 var(--rvt-color-shadow);
+}
+
+.rvt-elevation-high {
+    @include rvt-elevation-high;
+}
+
+.rvt-elevation-medium {
+    @include rvt-elevation-medium;
+}
+
+.rvt-elevation-low {
+    @include rvt-elevation-low;
+}

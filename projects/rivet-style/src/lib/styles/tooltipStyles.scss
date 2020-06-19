@@ -1,39 +1,45 @@
+@import './elevationStyles.scss';
+
 [rvttooltip] {
-  pointer-events: all;
+    pointer-events: all;
 }
 
 .rivet-tooltip {
-  --arrow-offset: 0;
-  position: absolute;
-  color: var(--rvt-color-tooltip-text);
-  background-color: var(--rvt-color-tooltip-bg);
-  padding: 10px;
-  font-family: var(--rvt-font-family);
-  font-weight: 400;
-  font-size: var(--rvt-font-size-g);
-  z-index: 140;
-  max-width: 300px;
-  white-space: normal;
-  text-align: center;
-  margin: 0 -400px;
-  &:after {
-    content: '';
-    display: block;
+    @include rvt-elevation-low;
+    --arrow-offset: 0;
     position: absolute;
-    z-index: -1;
-    width: 20px;
-    height: 20px;
-    bottom: -7px;
-    left: calc(50% - 10px);
-    margin-left: var(--arrow-offset);
-    transform: rotate(45deg);
+    color: var(--rvt-color-tooltip-text);
     background-color: var(--rvt-color-tooltip-bg);
-  }
-  &.error-tooltip {
-    background-color: var(--rvt-color-tooltip-error-bg);
-    color: var(--rvt-color-tooltip-error-text);
+    padding: 10px;
+    font-family: var(--rvt-font-family);
+    font-weight: var(--rvt-font-weight-regular);
+    font-size: var(--rvt-font-size-g);
+    z-index: 140;
+    max-width: 300px;
+    white-space: normal;
+    text-align: center;
+    margin: 0 -400px;
+
     &:after {
-      background-color: var(--rvt-color-tooltip-error-bg);
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 20px;
+        height: 20px;
+        bottom: -7px;
+        left: calc(50% - 10px);
+        margin-left: var(--arrow-offset);
+        transform: rotate(45deg);
+        background-color: var(--rvt-color-tooltip-bg);
     }
-  }
+
+    &.error-tooltip {
+        background-color: var(--rvt-color-tooltip-error-bg);
+        color: var(--rvt-color-tooltip-error-text);
+
+        &:after {
+            background-color: var(--rvt-color-tooltip-error-bg);
+        }
+    }
 }

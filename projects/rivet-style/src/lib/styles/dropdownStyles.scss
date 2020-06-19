@@ -1,11 +1,11 @@
-@import './rivetTheme.scss';
+@import './elevationStyles.scss';
 
 // -- Dropdown panel styles --
 .mat-select-panel-wrap {
     margin: 28px 18px 26px 16px;
 
     .mat-select-panel {
-        box-shadow: none;
+        @include rvt-elevation-low;
         border: 1px solid var(--rvt-color-dropdown-panel-border);
         border-radius: 0;
         background: var(--rvt-color-neutral-white);
