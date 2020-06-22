@@ -191,7 +191,7 @@ mat-form-field.mat-form-field {
         }
 
         .mat-select {
-            font-weight: 600;
+            font-weight: var(--rvt-font-weight-bold);
 
             .mat-select-value {
                 padding-left: 16px;

@@ -36,7 +36,7 @@
             .mat-tab-label-content {
                 color: var(--rvt-color-tab-text);
                 font-size: 16px;
-                font-weight: 400;
+                font-weight: var(--rvt-font-weight-regular);
                 line-height: 16px;
             }
 
@@ -62,7 +62,7 @@
             }
 
             &.mat-tab-label-active .mat-tab-label-content {
-                font-weight: 600;
+                font-weight: var(--rvt-font-weight-bold);
             }
 
             &.mat-tab-disabled .mat-tab-label-content {
@@ -177,7 +177,7 @@
             opacity: 1;
             min-width: auto;
             font-size: 16px;
-            font-weight: 400;
+            font-weight: var(--rvt-font-weight-regular);
             padding: 0 20px;
 
             &:hover,
@@ -202,7 +202,7 @@
             }
 
             &.mat-tab-label-active {
-                font-weight: 600;
+                font-weight: var(--rvt-font-weight-bold);
             }
         }
     }

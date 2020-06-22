@@ -59,7 +59,7 @@ button.loading:disabled {
   .loading-text {
     font-family: $RvtFontFamily;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: var(--rvt-font-weight-bold);
     color: var(--rvt-color-neutral-4);
     margin-bottom: 10px;
   }

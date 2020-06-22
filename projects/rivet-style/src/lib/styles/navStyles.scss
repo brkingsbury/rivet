@@ -82,13 +82,13 @@
     .category-label {
       display: block;
       font-size: 12px;
-      font-weight: 400;
+      font-weight: var(--rvt-font-weight-regular);
       margin-left: 31px;
     }
     .category-header {
       position: relative;
       display: inline-block;
-      font-weight: 600;
+      font-weight: var(--rvt-font-weight-bold);
       margin: 0;
       line-height: 25px;
       span {
@@ -118,12 +118,12 @@
           outline: none;
         }
         &.active {
-          font-weight: 600;
+            font-weight: var(--rvt-font-weight-bold);
           border-color: var(--rvt-color-accent);
         }
         &:hover:not(.active),
         &:focus:not(.active) {
-          font-weight: 600;
+            font-weight: var(--rvt-font-weight-bold);
           border-color: var(--rvt-color-neutral-2);
         }
       }
@@ -137,7 +137,7 @@
         width: 25px;
       }
       .section-header {
-        font-weight: 600;
+        font-weight: var(--rvt-font-weight-bold);
       }
     }
   }

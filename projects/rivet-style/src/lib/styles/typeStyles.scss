@@ -5,7 +5,7 @@
 
     --rvt-font-weight-light: 200;
     --rvt-font-weight-regular: 400;
-    --rvt-font-weight-bold: 600;
+    --rvt-font-weight-bold: 700;
 
     --rvt-font-display-1: 6.8rem;
     --rvt-font-display-2: 5.7rem;
@@ -30,7 +30,7 @@
 $RvtFontFamily: var(--rvt-font-family);
 
 @mixin rvt-font-display-1 {
-    font-weight: var(--rvt-font-weight-light);
+    font-weight: var(--rvt-font-weight-regular);
     font-size: var(--rvt-font-display-1-min);
     font-family: var(--rvt-font-family);
 
@@ -44,7 +44,7 @@ $RvtFontFamily: var(--rvt-font-family);
 }
 
 @mixin rvt-font-display-2 {
-    font-weight: var(--rvt-font-weight-light);
+    font-weight: var(--rvt-font-weight-regular);
     font-size: var(--rvt-font-display-2-min);
     font-family: var(--rvt-font-family);
 
@@ -58,7 +58,7 @@ $RvtFontFamily: var(--rvt-font-family);
 }
 
 @mixin rvt-font-a {
-    font-weight: var(--rvt-font-weight-light);
+    font-weight: var(--rvt-font-weight-regular);
     font-size: var(--rvt-font-size-a-min);
     font-family: var(--rvt-font-family);
 
@@ -72,7 +72,7 @@ $RvtFontFamily: var(--rvt-font-family);
 }
 
 @mixin rvt-font-b {
-    font-weight: var(--rvt-font-weight-light);
+    font-weight: var(--rvt-font-weight-regular);
     font-size: var(--rvt-font-size-b-min);
     font-family: var(--rvt-font-family);
 
@@ -101,7 +101,7 @@ $RvtFontFamily: var(--rvt-font-family);
 }
 
 @mixin rvt-font-d {
-    font-weight: var(--rvt-font-weight-bold);
+    font-weight: var(--rvt-font-weight-regular);
     font-size: var(--rvt-font-size-d-min);
     font-family: var(--rvt-font-family);
 
