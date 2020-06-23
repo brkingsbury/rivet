@@ -2,7 +2,7 @@
 
 .rvt-line-expansion {
   position: relative;
-  background-color: var(--rvt-color-neutral-white);
+  background-color: var(--rvt-color-neutral-0);
   transition: height 400ms ease, background-color 400ms ease;
   overflow: hidden;
   margin-bottom: 15px;
@@ -52,6 +52,6 @@
   &:focus,
   &:hover,
   &:active {
-    background-color: var(--rvt-color-neutral-light);
+    background-color: var(--rvt-color-neutral-0);
   }
 }

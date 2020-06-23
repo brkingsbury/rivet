@@ -1,3 +1,5 @@
+@import './elevationStyles.scss';
+
 .mat-datepicker-toggle button.mat-icon-button {
     position: relative;
     background: none;
@@ -13,6 +15,7 @@
 }
 
 .mat-datepicker-content {
+    @include rvt-elevation-low;
     background-color: var(--rvt-color-datepicker-bg);
 
     .mat-calendar-body-label:not(:last-of-type) {

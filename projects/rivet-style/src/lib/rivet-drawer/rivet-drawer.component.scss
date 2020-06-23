@@ -1,33 +1,39 @@
-@import '../styles/rivetTheme.scss';
+@import '../styles/elevationStyles.scss';
+
 .rivet-drawer {
-  &.open [rivet-drawer-content] {
-    right: 0;
-  }
-  [rivet-drawer-content] {
-    width: 300px;
-    height: 100%;
-    background-color: var(--rvt-color-main-bg);
-    z-index: 120;
+
+    &.open [rivet-drawer-content] {
+        @include rvt-elevation-high;
+        right: 0;
+    }
+
+    [rivet-drawer-content] {
+        width: 300px;
+        height: 100%;
+        background-color: var(--rvt-color-main-bg);
+        z-index: 120;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        transition: right 400ms;
+        padding: 20px;
+        box-sizing: border-box;
+        overflow-y: scroll;
+        overflow-x: visible;
+    }
+}
+
+.rivet-drawer-apron {
     position: fixed;
     top: 0;
-    right: -300px;
-    transition: right 400ms;
-    padding: 20px;
-    box-sizing: border-box;
-    overflow-y: scroll;
-    overflow-x: visible;
-  }
-}
-.rivet-drawer-apron {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  display: block;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 110;
-  &.hide {
-    display: none;
-  }
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: block;
+    background-color: rgba(0, 0, 0, 0.2);
+    z-index: 110;
+
+    &.hide {
+        display: none;
+    }
 }

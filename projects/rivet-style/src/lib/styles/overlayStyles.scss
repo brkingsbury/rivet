@@ -18,8 +18,8 @@
     }
     [rivet-delete-overlay-content] {
       margin-right: 15px;
-      font-weight: 600;
-      color: var(--rvt-color-neutral-dark);
+      font-weight: var(--rvt-font-weight-bold);
+      color: var(--rvt-color-neutral-8);
     }
   }
 }

@@ -42,24 +42,24 @@
 
 .mat-sidenav-container {
   top: 46px;
-  background-color: var(--rvt-color-neutral-white);
+  background-color: var(--rvt-color-neutral-0);
   .mat-drawer-side.mat-sidenav {
     border-right: 2px solid var(--rvt-color-neutral-1);
   }
 }
 .mat-sidenav-content {
   background: none;
-  background-color: var(--rvt-color-neutral-white);
+  background-color: var(--rvt-color-neutral-0);
   padding: 30px;
 }
 .nav-content-container {
   width: 212px; // 250px - 36px padding - 2px border
-  background-color: var(--rvt-color-neutral-white);
+  background-color: var(--rvt-color-neutral-0);
   padding: 50px 0 50px 36px;
-  color: var(--rvt-color-neutral-dark);
+  color: var(--rvt-color-neutral-8);
   white-space: nowrap;
   * {
-    color: var(--rvt-color-neutral-dark);
+    color: var(--rvt-color-neutral-8);
   }
   .nav-category {
     margin-bottom: 30px;
@@ -75,20 +75,20 @@
       height: 23px;
       width: 23px;
       text-align: center;
-      color: var(--rvt-color-neutral-dark);
+      color: var(--rvt-color-neutral-8);
       line-height: 25px;
       margin-right: 10px;
     }
     .category-label {
       display: block;
       font-size: 12px;
-      font-weight: 400;
+      font-weight: var(--rvt-font-weight-regular);
       margin-left: 31px;
     }
     .category-header {
       position: relative;
       display: inline-block;
-      font-weight: 600;
+      font-weight: var(--rvt-font-weight-bold);
       margin: 0;
       line-height: 25px;
       span {
@@ -118,12 +118,12 @@
           outline: none;
         }
         &.active {
-          font-weight: 600;
+            font-weight: var(--rvt-font-weight-bold);
           border-color: var(--rvt-color-accent);
         }
         &:hover:not(.active),
         &:focus:not(.active) {
-          font-weight: 600;
+            font-weight: var(--rvt-font-weight-bold);
           border-color: var(--rvt-color-neutral-2);
         }
       }
@@ -131,13 +131,13 @@
     &.active {
       .num-circle {
         background-color: var(--rvt-color-accent);
-        color: var(--rvt-color-neutral-white);
+        color: var(--rvt-color-neutral-0);
         border: none;
         height: 25px;
         width: 25px;
       }
       .section-header {
-        font-weight: 600;
+        font-weight: var(--rvt-font-weight-bold);
       }
     }
   }

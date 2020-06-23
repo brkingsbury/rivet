@@ -88,7 +88,7 @@ table.mat-table {
 
     .mat-header-cell {
       font-size: 14px;
-      font-weight: 700;
+      font-weight: var(--rvt-font-weight-bold);
       padding: 15px 15px 5px 0;
       border-bottom: 2px solid var(--rvt-color-table-header-border);
       &:first-of-type {

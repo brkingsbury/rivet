@@ -33,7 +33,7 @@
     height: 2px;
   }
   &:focus-within:after {
-    background-color: var(--rvt-color-neutral-dark);
+    background-color: var(--rvt-color-neutral-8);
   }
   &[disabled]:after {
     background-color: transparent;
@@ -51,7 +51,7 @@
     }
   }
   input {
-    color: var(--rvt-color-neutral-dark);
+    color: var(--rvt-color-neutral-8);
     font: 400 16px 'Nunito Sans', Arial, sans-serif;
     background-color: transparent;
     line-height: 20px;

@@ -35,7 +35,7 @@ button, a {
     &.rvt-btn-primary-lg,
     &.rvt-btn-primary-lg.rvt-btn-icon {
         @include buttonStyle;
-        font-weight: 600;
+        font-weight: var(--rvt-font-weight-bold);
         background-color: var(--rvt-color-btn-primary-bg);
         color: var(--rvt-color-btn-primary-text);
 
