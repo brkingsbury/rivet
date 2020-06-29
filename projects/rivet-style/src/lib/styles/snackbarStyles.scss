@@ -8,13 +8,28 @@
         font-size: var(--rvt-font-size-g);
         padding: 20px;
         border-radius: 2px;
+
+        &.error {
+            background-color: var(--rvt-color-data-bad);
+            * {
+              color: var(--rvt-color-text-contrast);
+            }
+        }
+        &.success {
+          background-color: var(--rvt-color-primary);
+          * {
+            color: var(--rvt-color-text-contrast);
+          }
+        }
+
         .snackbar-content {
             display: flex;
             flex-direction: row;
             align-items: center;
             justify-content: space-between;
             p.snackbar-text {
-                display: inline-block;
+                display: flex;
+                align-items: center;
                 color: var(--rvt-color-snackbar-text);
             }
             button.snackbar-action {
