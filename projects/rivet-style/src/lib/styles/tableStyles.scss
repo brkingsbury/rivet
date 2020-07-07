@@ -20,6 +20,7 @@
 
   button[class*='mat-paginator-navigation'] {
     width: auto;
+    background-color: transparent;
 
     &:disabled .mat-button-wrapper:before {
       color: var(--rvt-color-pagination-disabled);
@@ -123,7 +124,7 @@ table.mat-table {
 
 hr {
   border: none;
-  background: var(--rvt-color-divider);
+  background-color: var(--rvt-color-divider);
   height: 2px;
 
   &.section-divider {

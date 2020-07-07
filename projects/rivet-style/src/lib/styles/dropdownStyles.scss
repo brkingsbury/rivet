@@ -217,3 +217,32 @@ mat-form-field.mat-form-field {
         }
     }
 }
+
+.mat-autocomplete-panel {
+    box-shadow: none;
+    border: 1px solid var(--rvt-color-dropdown-panel-border);
+    border-radius: 0;
+    background: var(--rvt-color-neutral-white);
+
+    .mat-option {
+        height: 32px;
+        font-family: var(--rvt-font-family);
+        font-size: var(--rvt-font-size-g);
+        font-weight: var(--rvt-font-weight-regular);
+
+        &.mat-selected:not(mat-option-disabled) {
+            color: var(--rvt-color-dropdown-panel-text);
+            background-color: var(--rvt-color-dropdown-panel-selected);
+            transition: background-color 200ms ease;
+        }
+
+        &:hover:not(.mat-option-disabled):not(.mat-selected) {
+            background-color: var(--rvt-color-dropdown-panel-hover);
+            transition: background-color 200ms ease;
+        }
+
+        &:first-child {
+            margin-top: 8px;
+        }
+    }
+}

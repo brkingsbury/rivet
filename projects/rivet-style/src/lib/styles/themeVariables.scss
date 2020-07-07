@@ -40,6 +40,7 @@
     --rvt-color-overlay: var(--rvt-color-neutral-2);
     --rvt-color-sidenav-bg: var(--rvt-color-neutral-0);
     --rvt-color-bg: var(--rvt-color-neutral-0);
+    --rvt-color-divider: var(--rvt-color-neutral-2);
 
     /* +++++++++++++ Button Level Colors +++++++++++++++++++ */
     --rvt-color-btn-disabled: var(--rvt-color-disabled);
@@ -74,6 +75,10 @@
     --rvt-btn-inverse-text: var(--rvt-color-text-contrast);
     --rvt-btn-inverse-text-bg-hover: var(--rvt-btn-inverse-secondary-hover);
     --rvt-btn-inverse-text-bg-active: var(--rvt-btn-inverse-secondary-active);
+
+    /* +++++++++++++ Card Level Colors +++++++++++++++++++ */
+    --rvt-color-card-background: transparent;
+    --rvt-color-card-border: var(--rvt-color-neutral-2);
 
     /* +++++++++++++ Checkbox Level Colors +++++++++++++++++++ */
     --rvt-color-checkbox-label: var(--rvt-color-text);
@@ -132,10 +137,10 @@
     --rvt-color-radio-readonly: var(--rvt-color-radio-label);
 
     /* +++++++++++++ Snackbar Level Colors +++++++++++++++++++ */
-    --rvt-color-snackbar-bg: var(--rvt-color-neutral-2);
+    --rvt-color-snackbar-bg: var(--rvt-color-neutral-0);
+    --rvt-color-snackbar-bg-error: var(--rvt-color-data-bad);
+    --rvt-color-snackbar-bg-success: var(--rvt-color-primary);
     --rvt-color-snackbar-text: var(--rvt-color-text);
-    --rvt-color-snackbar-btn-bg: var(--rvt-color-neutral-7);
-    --rvt-color-snackbar-btn-text: var(--rvt-color-text-contrast);
 
     /* +++++++++++++ Tab Level Colors +++++++++++++++++++ */
     --rvt-color-tab-text: var(--rvt-color-text);
@@ -158,6 +163,16 @@
 
     --rvt-tab-inverse-bar: var(--rvt-color-neutral-0);
     --rvt-tab-inverse-text: var(--rvt-color-text-contrast);
+
+    /* +++++++++++++ Table Level Colors ++++++++++++++++++++++ */
+
+    --rvt-color-pagination-text: var(--rvt-color-neutral-600);
+    --rvt-color-pagination-disabled: var(--rvt-color-btn-text-disabled);
+
+    --rvt-color-table-text: var(--rvt-color-text);
+    --rvt-color-table-header-border: var(--rvt-color-neutral-1);
+    --rvt-color-table-hover: var(--rvt-color-neutral-2);
+    --rvt-color-table-divider: var(--rvt-color-divider);
 
     /* +++++++++++++ Tooltip Level Colors +++++++++++++++++++ */
     --rvt-color-tooltip-bg: var(--rvt-color-primary-dark);
@@ -208,13 +223,17 @@
     @include interpolated-colors;
 
     --rvt-color-primary-light: hsl(249, 40%, 58%); // adjusted for contrast ratio
-    --rvt-color-btn-primary-text: hsl(0, 100%, 100%);
+    --rvt-color-btn-primary-text: var(--rvt-color-neutral-8);
     --rvt-tab-inverse-bg-hover: hsla(223, 39%, 16%, 0.25);
-    --rvt-color-text-contrast: hsl(0, 100%, 100%);
-    --rvt-color-btn-secondary-text: hsl(0, 100%, 100%);
-    --rvt-color-link: hsl(240, 0%, 97%);
+    --rvt-color-text-contrast: var(--rvt-color-neutral-8);
+    --rvt-color-btn-secondary-text: var(--rvt-color-neutral-8);    --rvt-color-btn-secondary-bg-hover: var(--rvt-color-neutral-3);
+    --rvt-color-btn-secondary-bg-active: var(--rvt-color-neutral-5);
+    --rvt-color-link: var(--rvt-color-neutral-8);
     --rvt-color-snackbar-btn-text: var(--rvt-color-neutral-0);
     --rvt-color-radio-selected: var(--rvt-color-neutral-8);
+    --rvt-color-btn-text-bg-hover: var(--rvt-color-neutral-3);
+    --rvt-color-btn-text-bg-active: var(--rvt-color-neutral-5);
+    --rvt-color-card-background: var(--rvt-color-neutral-2);
 
 }
 

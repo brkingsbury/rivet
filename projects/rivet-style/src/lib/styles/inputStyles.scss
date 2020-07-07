@@ -2,9 +2,28 @@
 
 form {
   mat-form-field {
+    max-width: 100%;
     * {
       font-family: $RvtFontFamily; // Imported from typeStyles
     }
+
+    &.rvt-input-sm {
+        width: 45px;
+    }
+
+    &.rvt-input-md {
+        width: 135px;
+    }
+
+    &.rvt-input-lg {
+        width: 210px;
+    }
+
+    &.rvt-input-full {
+        width: 100%;
+    }
+
+
     &.mat-form-field {
       font-family: $RvtFontFamily;
       font-size: 16px;

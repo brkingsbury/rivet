@@ -88,7 +88,6 @@ $transitionTime: 300ms;
                 border: 2px dashed var(--rvt-tile-disabled-border);
 
                 &.selected {
-
                     &:before,
                     &:after {
                         content: none;

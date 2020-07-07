@@ -1,61 +1,67 @@
 @import './elevationStyles.scss';
 
-.cdk-overlay-container {
-    .mat-snack-bar-container {
-        @include rvt-elevation-medium;
-        background: var(--rvt-color-snackbar-bg);
-        font-family: var(--rvt-font-family);
-        font-size: var(--rvt-font-size-g);
-        padding: 20px;
-        border-radius: 2px;
+.mat-snack-bar-container {
+    @include rvt-elevation-medium;
+    background: var(--rvt-color-snackbar-bg);
+    font-family: var(--rvt-font-family);
+    font-size: var(--rvt-font-size-g);
+    padding: 20px;
+    border-radius: 4px;
 
-        &.error {
-            background-color: var(--rvt-color-data-bad);
-            * {
-              color: var(--rvt-color-text-contrast);
-            }
-        }
-        &.success {
-          background-color: var(--rvt-color-primary);
-          * {
-            color: var(--rvt-color-text-contrast);
-          }
-        }
+    .snackbar-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
 
-        .snackbar-content {
+        .snackbar-text {
             display: flex;
-            flex-direction: row;
             align-items: center;
-            justify-content: space-between;
-            p.snackbar-text {
-                display: flex;
-                align-items: center;
-                color: var(--rvt-color-snackbar-text);
-            }
-            button.snackbar-action {
-                background: var(--rvt-color-snackbar-btn-bg);
-                border-radius: 2px;
-                &:focus {
-                    outline: 2px solid var(--rvt-color-keyboard-focus);
-                }
-                span {
-                    color: var(--rvt-color-snackbar-btn-text);
-                }
-            }
-        }
-        .mat-simple-snackbar{
             color: var(--rvt-color-snackbar-text);
         }
-        .mat-simple-snackbar-action {
-            button.mat-button {
-                background: var(--rvt-color-snackbar-btn-bg);
-                border-radius: 2px;
-                &:focus {
-                    outline: 2px solid var(--rvt-color-keyboard-focus);
-                }
-                span {
-                    color: var(--rvt-color-snackbar-btn-text);
-                }
+
+        button.snackbar-action {
+            &:focus {
+                outline: 2px solid var(--rvt-color-keyboard-focus);
+            }
+
+            span {
+                color: var(--rvt-color-snackbar-btn-text);
+            }
+        }
+    }
+
+
+    &.error {
+        background-color: var(--rvt-color-snackbar-bg-error);
+
+        *,
+        .snackbar-text {
+            color: var(--rvt-color-text-contrast);
+        }
+    }
+
+    &.success {
+        background-color: var(--rvt-color-snackbar-bg-success);
+
+        *,
+        .snackbar-text {
+            color: var(--rvt-color-text-contrast);
+        }
+    }
+
+    .mat-simple-snackbar {
+        color: var(--rvt-color-snackbar-text);
+    }
+
+    .mat-simple-snackbar-action {
+        button.mat-button {
+            &:focus {
+                outline: 2px solid var(--rvt-color-keyboard-focus);
+            }
+
+            span {
+                color: var(--rvt-color-snackbar-btn-text);
             }
         }
     }
