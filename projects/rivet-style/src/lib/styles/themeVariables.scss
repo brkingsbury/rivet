@@ -129,6 +129,10 @@
     --rvt-color-input-border-disabled: var(--rvt-color-input-text-disabled);
     --rvt-color-input-border-readonly: transparent;
 
+    /* +++++++++++++ Popover Colors ++++++++++++++++++++ */
+    --rvt-color-popover-bg: var(--rvt-color-bg);
+    --rvt-color-popover-txt: var(--rvt-color-text);
+
     /* +++++++++++++ Radio Level Colors +++++++++++++++++++ */
     --rvt-color-radio-label: var(--rvt-color-text);
     --rvt-color-radio-unselected: var(--rvt-color-neutral-900);
@@ -234,10 +238,13 @@
     --rvt-color-btn-text-bg-hover: var(--rvt-color-neutral-3);
     --rvt-color-btn-text-bg-active: var(--rvt-color-neutral-5);
     --rvt-color-card-background: var(--rvt-color-neutral-2);
+    --rvt-color-popover-bg: var(--rvt-color-neutral-2);
 
 }
 
 :root {
+    /* +++ Non Colors +++ */
+    --rvt-border-radius: 4px;
 
     /* +++++++++++++ Base Level Colors +++++++++++++++++++ */
     --rvt-color-primary: hsl(247, 30%, 45%);
