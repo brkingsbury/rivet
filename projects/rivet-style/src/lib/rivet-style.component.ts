@@ -23,8 +23,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
         './styles/tooltipStyles.scss',
         './styles/sliderStyles.scss',
         './styles/datepickerStyles.scss',
-        './styles/elevationStyles.scss',
-        './styles/popoverStyles.scss'
+        './styles/elevationStyles.scss'
     ],
     encapsulation: ViewEncapsulation.None
 })

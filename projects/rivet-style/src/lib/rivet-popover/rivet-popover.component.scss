@@ -1,0 +1,98 @@
+@import '../styles/elevationStyles.scss';
+
+
+.popover-container {
+    position: fixed;
+    width: 200px;
+    height: auto;
+    background-color: var(--rvt-color-popover-bg);
+    @include rvt-elevation-low;
+    &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        z-index: 100;
+        width: 20px;
+        height: 20px;
+        top: -10px;
+        // right: calc(50% - 10px);
+        right: 20px;
+        transform: rotate(45deg);
+        background-color: var(--rvt-color-popover-bg);
+        @include rvt-elevation-low;
+    }
+}
+
+// .mat-menu-panel {
+//     @include rvt-elevation-low;
+//     position: relative;
+//     overflow: visible !important;
+//     margin-top: 20px;
+//     z-index: 100;
+
+//     &:before {
+//         content: '';
+//         display: block;
+//         position: absolute;
+//         z-index: 100;
+//         width: 20px;
+//         height: 20px;
+//         top: -10px;
+//         // right: calc(50% - 10px);
+//         right: 20px;
+//         transform: rotate(45deg);
+//         background-color: var(--rvt-color-popover-bg);
+//         @include rvt-elevation-low;
+//     }
+// }
+
+// .mat-menu-content {
+//     z-index: 110;
+//     position: relative;
+//     padding: 20px;
+//     background-color: var(--rvt-color-popover-bg);
+//     border-radius: var(--rvt-border-radius);
+
+//     .mat-menu-item {
+//         background-color: transparent;
+//         color: var(--rvt-color-popover-txt);
+//         height: 36px;
+//         line-height: 36px;
+//     }
+// }
+
+// .mat-menu-trigger {
+//     position: relative;
+//     z-index: 101;
+//     &:after {
+//         opacity: 0;
+//         transition: opacity 100ms ease;
+//         content: '';
+//             display: block;
+//             position: absolute;
+//             z-index: -1;
+//             width: 20px;
+//             height: 20px;
+//             bottom: -30px;
+//             right: calc(50% - 10px);
+//             transform: rotate(45deg);
+//             background-color: var(--rvt-color-popover-bg);
+//             @include rvt-elevation-low;
+//     }
+
+//     &[aria-expanded="true"] {
+//         &:after {
+//             content: '';
+//             display: block;
+//             position: absolute;
+//             z-index: 101;
+//             width: 20px;
+//             height: 20px;
+//             bottom: -30px;
+//             right: calc(50% - 10px);
+//             transform: rotate(45deg);
+//             background-color: var(--rvt-color-popover-bg);
+//             @include rvt-elevation-low;
+//         }
+//     }
+// }
