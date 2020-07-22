@@ -50,7 +50,7 @@ import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
 
 })
 export class RivetStyleModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot(): ModuleWithProviders<RivetStyleModule> {
         return {
             ngModule: RivetStyleModule,
             providers: [RivetThemingService]
