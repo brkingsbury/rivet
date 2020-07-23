@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
     styleUrls: ['./rivet-popover.component.scss'],
 })
 export class RivetPopoverComponent {
-    @Input() popoverTrigger: false;
+    @Input() popoverTrigger: boolean;
 }
