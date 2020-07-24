@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, HostListener, Input } from '@angular/core';
 
 
 @Component({
@@ -8,4 +8,13 @@ import { Component, Input } from '@angular/core';
 })
 export class RivetPopoverComponent {
     @Input() popoverTrigger: boolean;
+
+    @HostListener('document:click', ['$event'])
+    outsideClick(event) {
+        // if (!this.x(event.target)) {
+        //     this.popoverTrigger = false;
+        // }
+        // this.popoverVisible = false;
+        console.log('other click');
+    }
 }

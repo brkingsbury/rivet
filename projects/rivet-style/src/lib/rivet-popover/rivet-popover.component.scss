@@ -1,17 +1,25 @@
 @import '../styles/elevationStyles.scss';
 
+:host {
+    position: fixed;
+    background-color: var(--rvt-color-popover-bg);
+    border-radius: var(--rvt-border-radius);
+    @include rvt-elevation-low;
+
+}
 
 .popover-container {
-    position: fixed;
     width: 200px;
     height: auto;
+    z-index: 150;
     background-color: var(--rvt-color-popover-bg);
-    @include rvt-elevation-low;
-    &:before {
+    padding: var(--rvt-spacing-md);
+    border-radius: var(--rvt-border-radius);
+    &:after {
         content: '';
         display: block;
         position: absolute;
-        z-index: 100;
+        z-index: -1;
         width: 20px;
         height: 20px;
         top: -10px;
