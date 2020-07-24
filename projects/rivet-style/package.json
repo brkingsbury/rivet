@@ -16,6 +16,7 @@
     },
     "bundledDependencies": [
         "css-vars-ponyfill",
-        "hammerjs"
+        "hammerjs",
+        "tslib"
     ]
 }
