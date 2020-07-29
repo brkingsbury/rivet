@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { ModuleWithProviders, NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import 'hammerjs';
 import { MaterialComponentModule } from './material-component-module';
 import { RivetAccordionGroupComponent } from './rivet-accordion-group/rivet-accordion-group.component';
 import { RivetDrawerComponent } from './rivet-drawer/rivet-drawer.component';
@@ -50,7 +49,7 @@ import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
 
 })
 export class RivetStyleModule {
-    static forRoot(): ModuleWithProviders {
+    static forRoot(): ModuleWithProviders<RivetStyleModule> {
         return {
             ngModule: RivetStyleModule,
             providers: [RivetThemingService]
