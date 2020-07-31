@@ -1,10 +1,14 @@
 @import '../styles/elevationStyles.scss';
 
 :host {
-    position: fixed;
+    position: absolute;
     background-color: var(--rvt-color-popover-bg);
     border-radius: var(--rvt-border-radius);
     @include rvt-elevation-low;
+    top: var(--popover-top);
+    right: var(--popover-right);
+    margin-top: 17px;
+    z-index: 100;
 
 }
 
@@ -15,7 +19,7 @@
     background-color: var(--rvt-color-popover-bg);
     padding: var(--rvt-spacing-md);
     border-radius: var(--rvt-border-radius);
-    &:after {
+    &:before {
         content: '';
         display: block;
         position: absolute;
@@ -24,7 +28,7 @@
         height: 20px;
         top: -10px;
         // right: calc(50% - 10px);
-        right: 20px;
+        right: var(--popover-arrow-right);
         transform: rotate(45deg);
         background-color: var(--rvt-color-popover-bg);
         @include rvt-elevation-low;

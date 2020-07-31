@@ -1,20 +1,21 @@
-import { Component, HostListener, Input } from '@angular/core';
+import { Component } from '@angular/core';
 
 
 @Component({
     selector: 'rvt-popover',
-    templateUrl: './rivet-popover.component.html',
+    template: '<div class="popover-container"><ng-content></ng-content></div>',
     styleUrls: ['./rivet-popover.component.scss'],
 })
 export class RivetPopoverComponent {
-    @Input() popoverTrigger: boolean;
+    // @Input () popoverVisible: boolean;
+    // @Input() isVis: boolean;
+    // @Output() isPopover: EventEmitter<any> = new EventEmitter();
 
-    @HostListener('document:click', ['$event'])
-    outsideClick(event) {
-        // if (!this.x(event.target)) {
-        //     this.popoverTrigger = false;
-        // }
-        // this.popoverVisible = false;
-        console.log('other click');
-    }
+    // @HostListener('window:resize', [])
+    // onResize() {
+    //     console.log('resizing');
+    //     this.isVis = false;
+    //     this.isPopover.emit(this.isVis);
+    //     console.log('vis', this.isVis);
+    // }
 }

@@ -10,7 +10,8 @@ import { RivetHelperComponent } from './rivet-input-helper/rivet-input-helper.co
 import { RivetLabelComponent } from './rivet-input-label/rivet-input-label.component';
 import { RivetInputComponent } from './rivet-input/rivet-input.component';
 import { RivetMiniExpansionPanelComponent } from './rivet-mini-expansion-panel/rivet-mini-expansion-panel.component';
-import { PopoverTriggerDirective, RivetPopoverComponent } from './rivet-popover/rivet-popover.component';
+import { PopoverTriggerDirective } from './rivet-popover/rivet-popover-toggle.directive';
+import { RivetPopoverComponent } from './rivet-popover/rivet-popover.component';
 import { RivetThemingService } from './rivet-services/rivet-theming.service';
 import { RivetStyleComponent } from './rivet-style.component';
 import { RivetTileComponent } from './rivet-tile/rivet-tile.component';
