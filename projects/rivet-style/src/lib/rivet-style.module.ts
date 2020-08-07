@@ -9,6 +9,8 @@ import { RivetHelperComponent } from './rivet-input-helper/rivet-input-helper.co
 import { RivetLabelComponent } from './rivet-input-label/rivet-input-label.component';
 import { RivetInputComponent } from './rivet-input/rivet-input.component';
 import { RivetMiniExpansionPanelComponent } from './rivet-mini-expansion-panel/rivet-mini-expansion-panel.component';
+import { RivetPopoverTriggerDirective } from './rivet-popover/rivet-popover-trigger.directive';
+import { RivetPopoverService } from './rivet-services/rivet-popover.services';
 import { RivetThemingService } from './rivet-services/rivet-theming.service';
 import { RivetStyleComponent } from './rivet-style.component';
 import { RivetTileComponent } from './rivet-tile/rivet-tile.component';
@@ -28,7 +30,8 @@ import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
         RivetAccordionGroupComponent,
         RivetDrawerComponent,
         RivetSlideToggleComponent,
-        RivetTileComponent
+        RivetTileComponent,
+        RivetPopoverTriggerDirective
     ],
     exports: [
         RivetStyleComponent,
@@ -44,7 +47,7 @@ import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
         RivetTileComponent
     ],
     providers: [
-        RivetThemingService
+        RivetThemingService, RivetPopoverService
     ]
 
 })
@@ -52,7 +55,7 @@ export class RivetStyleModule {
     static forRoot(): ModuleWithProviders<RivetStyleModule> {
         return {
             ngModule: RivetStyleModule,
-            providers: [RivetThemingService]
+            providers: [RivetThemingService, RivetPopoverService]
         };
     }
 }
