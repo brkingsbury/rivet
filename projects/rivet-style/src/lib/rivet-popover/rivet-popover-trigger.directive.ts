@@ -2,15 +2,17 @@ import { Directive, HostListener } from '@angular/core';
 import { RivetPopoverService } from '../rivet-services/rivet-popover.services';
 
 @Directive({
-  selector: '[rvtPopoverTrigger]'
+    selector: '[rvtPopoverTrigger]'
 })
 export class RivetPopoverTriggerDirective {
 
-    constructor(private popService: RivetPopoverService) {}
+    constructor(private popoverService: RivetPopoverService) { }
 
-  @HostListener('click') onClick() {
-      // pass id to service
-      this.popService.toggle('testId');
-  }
+    @HostListener('click', ['$event'])
+    onClick() {
+        console.log('clicked');
+        // pass id to service
+        this.popoverService.toggle('testId');
+    }
 
 }

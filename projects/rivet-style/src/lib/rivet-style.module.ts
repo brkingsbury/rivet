@@ -44,7 +44,8 @@ import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
         RivetAccordionGroupComponent,
         RivetDrawerComponent,
         RivetSlideToggleComponent,
-        RivetTileComponent
+        RivetTileComponent,
+        RivetPopoverTriggerDirective
     ],
     providers: [
         RivetThemingService, RivetPopoverService
