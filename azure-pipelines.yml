@@ -5,7 +5,6 @@ trigger:
   branches:
     include:
       - master
-      - tbolz/removeUi
   paths:
     include:
       - package.json
@@ -18,7 +17,7 @@ stages:
     jobs:
       - job: Build
         pool:
-          vmImage: 'windows-latest'
+          vmImage: 'ubuntu-16.04'
 
         steps:
           - task: Npm@1
@@ -42,15 +41,16 @@ stages:
           - task: PublishPipelineArtifact@1
             displayName: 'publish artifacts'
             inputs:
-              targetPath: '$(System.DefaultWorkingDirectory)\dist\rivet-style'
+              targetPath: '$(System.DefaultWorkingDirectory)/dist/rivet-style'
               ArtifactName: RivetStyleArtifacts
 
   - stage: 'Publish'
+    condition: and(succeeded('Build'), eq(variables['Build.SourceBranch'], 'refs/heads/master'))
     displayName: 'Publish Npm Package'
     jobs:
       - job: Publish
         pool:
-          vmImage: 'windows-latest'
+          vmImage: 'ubuntu-16.04'
 
         steps:
           - task: DownloadPipelineArtifact@2
