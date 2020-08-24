@@ -4,6 +4,7 @@
   width: 100%;
   cursor: pointer;
   display: flex;
+  outline: none;
   &.header-flip {
     justify-content: flex-end;
     [class*='rivet-icon-caret-'] {

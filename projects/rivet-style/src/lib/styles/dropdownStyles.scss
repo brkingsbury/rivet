@@ -226,9 +226,11 @@ mat-form-field.mat-form-field {
 
     .mat-option {
         height: 32px;
-        font-family: var(--rvt-font-family);
-        font-size: var(--rvt-font-size-g);
-        font-weight: var(--rvt-font-weight-regular);
+        .mat-option-text {
+            font-family: var(--rvt-font-family);
+            font-size: var(--rvt-font-size-g);
+            font-weight: var(--rvt-font-weight-regular);
+        }
 
         &.mat-selected:not(mat-option-disabled) {
             color: var(--rvt-color-dropdown-panel-text);

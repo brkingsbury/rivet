@@ -1,6 +1,6 @@
-@import '../../lib/styles/iconStyles.scss';
 @import '../../lib/styles/typeStyles.scss';
-@import '../../lib/styles/rivetTheme.scss';
+@import '../../lib/styles/iconStyles.scss';
+@import '../styles/mixins.scss'; // needed for keyboard focus mixin
 
 $tileBorderRadius: 4px;
 $transitionTime: 300ms;
@@ -52,7 +52,7 @@ $transitionTime: 300ms;
         width: 100%;
         height: 100px;
         border: 2px solid var(--rvt-tile-border);
-        border-radius: 4px 4px 0 0;
+        border-radius: $tileBorderRadius $tileBorderRadius 0 0;
         padding: 0;
         cursor: default;
         flex-wrap: wrap;
@@ -62,14 +62,18 @@ $transitionTime: 300ms;
         }
 
         &.only-select {
-            border-radius: 4px;
+            border-radius: $tileBorderRadius;
         }
 
         &.can-select {
             cursor: pointer;
 
-            &:hover:not(:disabled),
-            &:focus:not(:disabled) {
+            &:focus {
+                outline-color: var(--rvt-tile-hover-border);
+            }
+
+            &:hover:not(:disabled):not(:focus),
+            &:active {
                 @include checkmark;
 
                 outline-color: var(--rvt-tile-hover-border);
@@ -84,10 +88,12 @@ $transitionTime: 300ms;
                 }
             }
 
+
             &:disabled {
                 border: 2px dashed var(--rvt-tile-disabled-border);
 
                 &.selected {
+
                     &:before,
                     &:after {
                         content: none;
@@ -96,8 +102,7 @@ $transitionTime: 300ms;
             }
         }
 
-        &.selected:not(:disabled),
-        &.selected:focus:not(:disabled) {
+        &.selected:not(:disabled) {
             @include checkmark;
 
             outline-color: var(--rvt-tile-selected-border);
@@ -105,6 +110,20 @@ $transitionTime: 300ms;
 
             &:before {
                 background: var(--rvt-tile-selected-border);
+            }
+
+            &:hover:not(:focus),
+            &:active {
+                border-color: var(--rvt-tile-hover-border);
+            }
+
+            &:active {
+                outline: none;
+
+                &:before,
+                &:after {
+                    content: none;
+                }
             }
 
             ~button {
@@ -137,7 +156,7 @@ $transitionTime: 300ms;
         margin: 0; // specifically declared for safari bug
 
         &.rivet-icon-edit {
-            border-radius: 0 0 0 4px;
+            border-radius: 0 0 0 $tileBorderRadius;
 
             span {
                 @include rvt-font-g;
@@ -147,7 +166,7 @@ $transitionTime: 300ms;
 
         &.rivet-icon-delete {
             border-left-width: 0;
-            border-radius: 0 0 4px 0;
+            border-radius: 0 0 $tileBorderRadius 0;
         }
     }
 
@@ -183,6 +202,7 @@ $transitionTime: 300ms;
     }
 
     button:focus {
+
         &:before,
         &:after {
             outline: none;
@@ -191,14 +211,16 @@ $transitionTime: 300ms;
 }
 
 .key-focus {
+    .rvt-tile {
 
-    button.rvt-tile-content:not(:active):focus,
-    button.rvt-btn-icon:not(:active):focus {
-        @include keyboard-focus-style;
+        button.rvt-tile-content:not(:active):not(:disabled):focus,
+        button.rvt-btn-icon:not(:active):focus {
+            @include keyboard-focus-style;
 
-        &:before,
-        &:after {
-            outline: none;
+            &:before,
+            &:after {
+                outline: none;
+            }
         }
     }
 }

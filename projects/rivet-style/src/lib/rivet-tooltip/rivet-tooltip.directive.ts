@@ -1,9 +1,9 @@
-import { AfterViewInit, Directive, ElementRef, HostListener, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { AfterViewInit, Directive, ElementRef, HostListener, Input, OnChanges, OnDestroy, OnInit, SimpleChanges } from '@angular/core';
 
 @Directive({
     selector: '[rvtTooltip]'
 })
-export class RvtTooltipDirective implements OnChanges, OnInit, AfterViewInit {
+export class RvtTooltipDirective implements OnChanges, OnInit, OnDestroy, AfterViewInit {
     @Input() rvtTooltip: string;
     @Input() rvtTooltipClass: string;
     @Input() rvtManualTooltipShow?: boolean;
@@ -107,5 +107,9 @@ export class RvtTooltipDirective implements OnChanges, OnInit, AfterViewInit {
                 this.hideTooltip();
             }
         }
+    }
+
+    ngOnDestroy() {
+        this.tooltipEl.remove();
     }
 }
