@@ -99,6 +99,9 @@ export class RvtTooltipDirective implements OnChanges, OnInit, OnDestroy, AfterV
         // allow for dynamic changes to text
         if (changes.rvtTooltip) {
             this.tooltipEl.innerText = changes.rvtTooltip.currentValue;
+            if (changes.rvtTooltip.previousValue !== undefined) {
+                this.showTooltip(); // if this is not the initialization of the tooltip, trigger the open function to re-center
+            }
         }
         if (changes.rvtManualTooltipShow) {
             if (changes.rvtManualTooltipShow.currentValue === true) {
