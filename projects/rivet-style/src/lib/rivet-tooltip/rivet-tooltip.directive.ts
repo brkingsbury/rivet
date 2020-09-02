@@ -9,12 +9,6 @@ export class RvtTooltipDirective implements OnChanges, OnInit, OnDestroy, AfterV
     @Input() rvtManualTooltipShow?: boolean;
     @Input() rvtTooltipAbsolutePos?: boolean;
 
-    // type TooltipPositionConfig = {
-    //     arrowOffset: number,
-    //     topOffset: number,
-    //     leftOffset: number
-    // };
-
     private tooltipEl: HTMLElement = document.createElement('div');
     private anchorEl: HTMLElement;
     private hiddenOffset = '-900000px';
