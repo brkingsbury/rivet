@@ -20,7 +20,7 @@ export class RvtTooltipDirective implements OnChanges, OnInit, OnDestroy, AfterV
     }
 
     getTooltipPosition = function (): any {
-        let tooltipPosConf: any = {};
+        const tooltipPosConf: any = {};
         const viewportOffset = this.anchorEl.getBoundingClientRect();
         this.tooltipEl.style.display = 'block';
 
@@ -54,7 +54,7 @@ export class RvtTooltipDirective implements OnChanges, OnInit, OnDestroy, AfterV
                 this.anchorEl.offsetLeft + this.anchorEl.offsetWidth / 2 - this.tooltipEl.offsetWidth / 2 + 400 + overflowOffset;
         }
         return tooltipPosConf;
-    }
+    };
 
     showTooltip = function (): void {
         // This is the bounding box for the element the tooltip is pointing to
@@ -75,7 +75,7 @@ export class RvtTooltipDirective implements OnChanges, OnInit, OnDestroy, AfterV
             this.tooltipEl.style.left = tooltipPosConf.leftOffset + 'px';
         }
 
-    }
+    };
 
     hideTooltip = function (): void {
         this.tooltipEl.style.left = this.hiddenOffset;
@@ -120,7 +120,8 @@ export class RvtTooltipDirective implements OnChanges, OnInit, OnDestroy, AfterV
         if (changes.rvtTooltip) {
             this.tooltipEl.innerText = changes.rvtTooltip.currentValue;
             if (changes.rvtTooltip.previousValue !== undefined) {
-                this.refreshTooltipPosition(); // if this is not the initialization of the tooltip, trigger the refresh function to re-center
+                this.refreshTooltipPosition(); // if this is not the initialization
+                // of the tooltip, trigger the refresh function to re-center
             }
         }
         if (changes.rvtManualTooltipShow) {
