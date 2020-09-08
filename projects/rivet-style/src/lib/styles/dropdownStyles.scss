@@ -22,7 +22,8 @@
                 transition: background-color 200ms ease;
             }
 
-            &:hover:not(.mat-option-disabled):not(.mat-selected) {
+            &:hover:not(.mat-option-disabled):not(.mat-selected),
+            &.mat-active:not(.mat-option-disabled) {
                 background-color: var(--rvt-color-dropdown-panel-hover);
                 transition: background-color 200ms ease;
             }
@@ -226,6 +227,7 @@ mat-form-field.mat-form-field {
 
     .mat-option {
         height: 32px;
+
         .mat-option-text {
             font-family: var(--rvt-font-family);
             font-size: var(--rvt-font-size-g);
@@ -238,7 +240,7 @@ mat-form-field.mat-form-field {
             transition: background-color 200ms ease;
         }
 
-        &:hover:not(.mat-option-disabled):not(.mat-selected) {
+        &:hover:not(.mat-option-disabled):not(.mat-selected), &.mat-active:not(.mat-option-disabled) {
             background-color: var(--rvt-color-dropdown-panel-hover);
             transition: background-color 200ms ease;
         }

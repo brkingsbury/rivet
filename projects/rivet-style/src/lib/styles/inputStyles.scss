@@ -1,10 +1,10 @@
 @import './rivetTheme.scss';
 
-form {
-  mat-form-field {
+mat-form-field {
     max-width: 100%;
+
     * {
-      font-family: $RvtFontFamily; // Imported from typeStyles
+        font-family: var(--rvt-font-family); // Extra precaution for all of Materials random child elements
     }
 
     &.rvt-input-sm {
@@ -25,183 +25,218 @@ form {
 
 
     &.mat-form-field {
-      font-family: $RvtFontFamily;
-      font-size: 16px;
-      font-weight: var(--rvt-font-weight-regular);
-      vertical-align: top;
-    }
-    input {
-      font-family: $RvtFontFamily;
-      font-size: 16px;
-      font-weight: var(--rvt-font-weight-regular);
-      color: var(--rvt-color-input-text);
-      overflow: hidden;
-      text-overflow: ellipsis;
-      &.mat-input-element:disabled {
-        color: var(--rvt-color-input-text-disabled);
-      }
-    }
-    &.mat-form-field-disabled {
-      .mat-form-field-underline {
-        background: none !important;
-        border-bottom: 2px dashed var(--rvt-color-input-text-disabled);
-      }
-      .mat-form-field-ripple {
-        display: none;
-      }
-    }
-    .mat-form-field-label-wrapper {
-      overflow: visible;
-      label.mat-form-field-label {
-        font-family: $RvtFontFamily;
+        font-family: var(--rvt-font-family);
         font-size: 16px;
         font-weight: var(--rvt-font-weight-regular);
-        color: var(--rvt-color-input-label);
-        overflow: visible;
-        .mat-placeholder-required {
-          color: var(--rvt-color-input-label);
-        }
-      }
+        vertical-align: top;
     }
+
+    input {
+        font-family: var(--rvt-font-family);
+        font-size: 16px;
+        font-weight: var(--rvt-font-weight-regular);
+        color: var(--rvt-color-input-text);
+        overflow: hidden;
+        text-overflow: ellipsis;
+
+        &.mat-input-element:disabled {
+            color: var(--rvt-color-input-text-disabled);
+        }
+    }
+
+    .mat-form-field-label-wrapper {
+        overflow: visible;
+
+        label.mat-form-field-label {
+            font-family: var(--rvt-font-family);
+            font-size: 16px;
+            font-weight: var(--rvt-font-weight-regular);
+            color: var(--rvt-color-input-label);
+            overflow: visible;
+
+            &.mat-form-field-empty {
+                color: var(--rvt-color-input-text);
+            }
+
+            .mat-placeholder-required {
+                color: var(--rvt-color-input-label);
+            }
+        }
+    }
+
     .mat-form-field-subscript-wrapper {
         position: relative;
     }
+
     .mat-form-field-wrapper {
         .mat-form-field-underline {
             position: relative;
             bottom: initial;
             background-color: var(--rvt-color-input-border);
-        }        
-    }
-    .mat-form-field-underline {
-        position: relative;
-        bottom: initial;
-        background-color: var(--rvt-color-input-border);
-    }
-    &.mat-focused {
-      .mat-form-field-label-wrapper label.mat-form-field-label {
-        color: var(--rvt-color-input-label-focus);
-        &.mat-form-field-empty {
-          color: var(--rvt-color-input-label-focus);
         }
-      }
-      .mat-form-field-underline {
-        background-color: var(--rvt-color-input-border-focus);
-        height: 2px;
-      }
     }
-    &:hover:not(.mat-form-field-disabled) {
-      .mat-form-field-underline,
-      .mat-form-field-ripple {
-        height: 2px;
-      }
-    }
-    &:hover:not(.mat-form-field-disabled):not(.mat-focused){
+
+    &.mat-focused {
+        .mat-form-field-label-wrapper label.mat-form-field-label {
+            color: var(--rvt-color-input-label-focus);
+
+            &.mat-form-field-empty {
+                color: var(--rvt-color-input-label-focus);
+            }
+        }
+
         .mat-form-field-underline {
+            background-color: var(--rvt-color-input-border-focus);
+            height: 2px;
             margin-bottom: -1px;
         }
     }
+
+    &:hover:not(.mat-form-field-disabled) {
+
+        .mat-form-field-underline,
+        .mat-form-field-ripple {
+            margin-bottom: -1px;
+            height: 2px;
+        }
+    }
+
+    &.mat-form-field-disabled {
+        .mat-form-field-underline {
+            background: none !important;
+            border-bottom: 2px dashed var(--rvt-color-input-text-disabled);
+        }
+
+        .mat-form-field-ripple {
+            display: none;
+        }
+    }
+
     &.invalid,
     &.ng-invalid,
     &.mat-form-field-invalid {
-      .mat-form-field-label-wrapper label.mat-form-field-label,
-      .mat-form-field-label-wrapper label.mat-form-field-empty
-      {
-        color: var(--rvt-color-text);
-      }
-      input {
-        color: var(--rvt-color-input-text-invalid);
-      }
-      mat-hint {
-        color: var(--rvt-color-invalid) !important;
-      }
-      .mat-form-field-underline {
-        background-color: var( --rvt-color-text);
-        .mat-form-field-ripple {
-          background-color: var( --rvt-color-text);
+
+        .mat-form-field-label-wrapper label.mat-form-field-label,
+        .mat-form-field-label-wrapper label.mat-form-field-empty {
+            color: var(--rvt-color-input-label-invalid);
+
+            span {
+                color: var(--rvt-color-input-label-invalid);
+            }
+
+            .mat-placeholder-required {
+                color: var(--rvt-color-input-label-invalid);
+            }
         }
-      }
-      &.mat-focused .mat-form-field-underline {
-        background-color: var( --rvt-color-text);
-        .mat-form-field-ripple {
-          background-color: var( --rvt-color-text);
+
+        input {
+            color: var(--rvt-color-input-text);
         }
-      }
+
+        mat-hint {
+            color: var(--rvt-color-input-label-invalid) !important;
+        }
+
+        .mat-form-field-underline {
+            background-color: var(--rvt-color-text);
+
+            .mat-form-field-ripple {
+                background-color: var(--rvt-color-text);
+            }
+        }
+
+        .mat-placeholder-required {
+            color: var(--rvt-color-input-label-invalid);
+        }
+
+        &.mat-focused .mat-form-field-underline {
+            background-color: var(--rvt-color-text);
+
+            .mat-form-field-ripple {
+                background-color: var(--rvt-color-text);
+            }
+        }
     }
+
     .mat-form-field-hint-wrapper mat-hint {
-      font-family: $RvtFontFamily;
-      font-size: 12px;
-      font-weight: var(--rvt-font-weight-regular);
-      color: var(--rvt-color-input-helper) !important;
+        font-family: var(--rvt-font-family);
+        font-size: 12px;
+        font-weight: var(--rvt-font-weight-regular);
+        color: var(--rvt-color-input-helper) !important;
     }
-    .mat-form-field-label-wrapper label.mat-form-field-label {
-      &.mat-form-field-empty {
-        color: var(--rvt-color-input-text);
-      }
-    }
-  }
-  // Rivet Text Areas
-  .rvt-input-wrap {
+}
+
+// Rivet Text Areas
+.rvt-input-wrap {
     display: inline-block;
     position: relative;
     padding-bottom: 18px;
+
     label {
-      display: block;
-      font-family: $RvtFontFamily;
-      font-size: 12px;
-      font-weight: var(--rvt-font-weight-regular);
-      color: var(--rvt-color-input-label);
+        display: block;
+        font-family: var(--rvt-font-family);
+        font-size: 12px;
+        font-weight: var(--rvt-font-weight-regular);
+        color: var(--rvt-color-input-label);
     }
+
     textarea {
         background-color: var(--rvt-color-main-bg);
-      display: block;
-      font-family: $RvtFontFamily;
-      font-size: 16px;
-      font-weight: var(--rvt-font-weight-regular);
-      padding: 4px;
-      border: 1px solid var(--rvt-color-input-border);
-      min-height: 22px;
-      min-width: 120px;
-      color: var(--rvt-color-input-text);
-      overflow: hidden;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-      &:hover:not(:disabled),
-      &:focus:not(:disabled),
-      &:active:not(:disabled) {
-        border-width: 2px;
-        padding: 3px;
-      }
-      &:focus:not(:disabled),
-      &:active:not(:disabled) {
-        border-color: var(--rvt-color-input-border-active);
-      }
-      &:disabled {
-        border: 1px dashed var(--rvt-color-input-border-disabled);
-        color: var(--rvt-color-text-disabled);
-        background: none;
-      }
-    }
-    &.invalid {
-      label,
-      .helper-text {
-        color: var(--rvt-color-input-helper-invalid);
-      }
-      textarea {
-        border-color: var(--rvt-color-input-border-invalid);
+        display: block;
+        font-family: var(--rvt-font-family);
+        font-size: 16px;
+        font-weight: var(--rvt-font-weight-regular);
+        padding: 4px;
+        border: 1px solid var(--rvt-color-input-border);
+        min-height: 22px;
+        min-width: 120px;
+        color: var(--rvt-color-input-text);
+        overflow: hidden;
+        white-space: normal;
+        text-overflow: ellipsis;
+
+        &:hover:not(:disabled),
         &:focus:not(:disabled),
         &:active:not(:disabled) {
-          border-color: var(--rvt-color-input-border-invalid);
+            border-width: 2px;
+            padding: 3px;
         }
-      }
+
+        &:focus:not(:disabled),
+        &:active:not(:disabled) {
+            border-color: var(--rvt-color-input-border-active);
+        }
+
+        &:disabled {
+            border: 1px dashed var(--rvt-color-input-border-disabled);
+            color: var(--rvt-color-text-disabled);
+            background: none;
+        }
     }
+
+    &.invalid {
+
+        label,
+        .helper-text {
+            color: var(--rvt-color-input-helper-invalid);
+        }
+
+        textarea {
+            border-color: var(--rvt-color-input-border-invalid);
+
+            &:focus:not(:disabled),
+            &:active:not(:disabled) {
+                border-color: var(--rvt-color-input-border-invalid);
+            }
+        }
+    }
+
     .helper-text {
-      position: absolute;
-      font-family: $RvtFontFamily;
-      font-size: 12px;
-      font-weight: var(--rvt-font-weight-regular);
-      bottom: 0;
-      color: var(--rvt-color-input-helper) !important;
+        position: absolute;
+        font-family: var(--rvt-font-family);
+        font-size: 12px;
+        font-weight: var(--rvt-font-weight-regular);
+        bottom: 0;
+        color: var(--rvt-color-input-helper) !important;
     }
-  }
 }

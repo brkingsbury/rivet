@@ -19,8 +19,8 @@ export class RvtTooltipDirective implements OnChanges, OnInit, OnDestroy, AfterV
         this.tooltipEl.classList.add('rivet-tooltip');
     }
 
-    showTooltip = function (): void {
-        // This is the bounding box for the element the tooltip is pointing to
+    getTooltipPosition = function (): any {
+        const tooltipPosConf: any = {};
         const viewportOffset = this.anchorEl.getBoundingClientRect();
         this.tooltipEl.style.display = 'block';
 
@@ -39,22 +39,42 @@ export class RvtTooltipDirective implements OnChanges, OnInit, OnDestroy, AfterV
             // If the tooltip is attached to the body instead of inline the positioning must be done relative to the body.
             const topScroll = window.pageYOffset || document.documentElement.scrollTop;
             const leftScroll = window.pageXOffset || document.documentElement.scrollLeft;
-            // set --arrow-offset variable first, since it can't be assigned as a style attribute
-            this.tooltipEl.style = '--arrow-offset: ' + (-overflowOffset) + 'px;';
-            this.tooltipEl.style.top = viewportOffset.top + topScroll - this.tooltipEl.offsetHeight - 14 + 'px';
-            this.tooltipEl.style.left = viewportOffset.left + this.anchorEl.offsetWidth / 2 - this.tooltipEl.offsetWidth / 2 +
-                400 + overflowOffset + leftScroll + 'px';
+            tooltipPosConf.arrowOffset = -overflowOffset;
+            tooltipPosConf.topOffset = viewportOffset.top + topScroll - this.tooltipEl.offsetHeight - 14;
+            tooltipPosConf.leftOffset = viewportOffset.left + this.anchorEl.offsetWidth / 2 - this.tooltipEl.offsetWidth / 2 +
+                400 + overflowOffset + leftScroll;
+
         } else {
             // Tooltip show/hide is managed by moving the element off screen.
             // This allows us to evaluate the width and height of the tooltip,
             // whereas setting something like 'display: none' would return undefined width and height
-
-            // set --arrow-offset variable first, since it can't be assigned as a style attribute
-            this.tooltipEl.style = '--arrow-offset: ' + (-overflowOffset) + 'px;';
-            this.tooltipEl.style.top = this.anchorEl.offsetTop - this.tooltipEl.offsetHeight - 14 + 'px';
-            this.tooltipEl.style.left =
-                this.anchorEl.offsetLeft + this.anchorEl.offsetWidth / 2 - this.tooltipEl.offsetWidth / 2 + 400 + overflowOffset + 'px';
+            tooltipPosConf.arrowOffset = -overflowOffset;
+            tooltipPosConf.topOffset = this.anchorEl.offsetTop - this.tooltipEl.offsetHeight - 14;
+            tooltipPosConf.leftOffset =
+                this.anchorEl.offsetLeft + this.anchorEl.offsetWidth / 2 - this.tooltipEl.offsetWidth / 2 + 400 + overflowOffset;
         }
+        return tooltipPosConf;
+    };
+
+    showTooltip = function (): void {
+        // This is the bounding box for the element the tooltip is pointing to
+        this.tooltipEl.style.display = 'block';
+        const tooltipPosConf = this.getTooltipPosition();
+        // set --arrow-offset variable first, since it can't be assigned as a style attribute
+        this.tooltipEl.style = '--arrow-offset: ' + tooltipPosConf.arrowOffset + 'px;';
+        this.tooltipEl.style.top = tooltipPosConf.topOffset + 'px';
+        this.tooltipEl.style.left = tooltipPosConf.leftOffset + 'px';
+    };
+
+    refreshTooltipPosition = function (): void {
+        if (this.tooltipEl.style.left !== this.hiddenOffset) {
+            // only apply re-centering if the tooltip isn't at its offset position
+            const tooltipPosConf = this.getTooltipPosition();
+            this.tooltipEl.style = '--arrow-offset: ' + tooltipPosConf.arrowOffset + 'px;';
+            this.tooltipEl.style.top = tooltipPosConf.topOffset + 'px';
+            this.tooltipEl.style.left = tooltipPosConf.leftOffset + 'px';
+        }
+
     };
 
     hideTooltip = function (): void {
@@ -100,7 +120,8 @@ export class RvtTooltipDirective implements OnChanges, OnInit, OnDestroy, AfterV
         if (changes.rvtTooltip) {
             this.tooltipEl.innerText = changes.rvtTooltip.currentValue;
             if (changes.rvtTooltip.previousValue !== undefined) {
-                this.showTooltip(); // if this is not the initialization of the tooltip, trigger the open function to re-center
+                this.refreshTooltipPosition(); // if this is not the initialization
+                // of the tooltip, trigger the refresh function to re-center
             }
         }
         if (changes.rvtManualTooltipShow) {

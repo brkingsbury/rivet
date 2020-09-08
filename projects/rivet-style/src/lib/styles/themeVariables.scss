@@ -113,7 +113,7 @@
 
     /* +++++++++++++ Input Level Colors +++++++++++++++++++ */
     --rvt-color-input-text: var(--rvt-color-text);
-    --rvt-color-input-text-invalid: var(--rvt-color-input-text);
+    --rvt-color-input-text-invalid: var(--rvt-color-invalid);
     --rvt-color-input-label: var(--rvt-color-neutral-6);
     --rvt-color-input-label-focus: var(--rvt-color-text);
     --rvt-color-input-label-invalid: var(--rvt-color-invalid);
@@ -234,6 +234,7 @@
     --rvt-color-btn-text-bg-hover: var(--rvt-color-neutral-3);
     --rvt-color-btn-text-bg-active: var(--rvt-color-neutral-5);
     --rvt-color-card-background: var(--rvt-color-neutral-2);
+    --rvt-color-btn-primary-bg-active: var(--rvt-color-neutral-0);
 
 }
 
