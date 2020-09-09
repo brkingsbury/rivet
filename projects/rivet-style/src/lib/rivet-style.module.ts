@@ -9,6 +9,8 @@ import { RivetHelperComponent } from './rivet-input-helper/rivet-input-helper.co
 import { RivetLabelComponent } from './rivet-input-label/rivet-input-label.component';
 import { RivetInputComponent } from './rivet-input/rivet-input.component';
 import { RivetMiniExpansionPanelComponent } from './rivet-mini-expansion-panel/rivet-mini-expansion-panel.component';
+import { RvtPopoverDirective } from './rivet-popover/popover-trigger.directive';
+import { RivetPopoverComponent } from './rivet-popover/popover.component';
 import { RivetThemingService } from './rivet-services/rivet-theming.service';
 import { RivetStyleComponent } from './rivet-style.component';
 import { RivetTileComponent } from './rivet-tile/rivet-tile.component';
@@ -28,7 +30,9 @@ import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
         RivetAccordionGroupComponent,
         RivetDrawerComponent,
         RivetSlideToggleComponent,
-        RivetTileComponent
+        RivetTileComponent,
+        RvtPopoverDirective,
+        RivetPopoverComponent
     ],
     exports: [
         RivetStyleComponent,
@@ -41,7 +45,9 @@ import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
         RivetAccordionGroupComponent,
         RivetDrawerComponent,
         RivetSlideToggleComponent,
-        RivetTileComponent
+        RivetTileComponent,
+        RvtPopoverDirective,
+        RivetPopoverComponent
     ],
     providers: [
         RivetThemingService
