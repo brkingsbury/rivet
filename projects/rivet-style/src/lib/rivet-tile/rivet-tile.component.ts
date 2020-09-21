@@ -2,51 +2,58 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
-    selector: 'rvt-tile',
-    templateUrl: './rivet-tile.component.html',
-    styleUrls: ['./rivet-tile.component.scss']
+  selector: 'rvt-tile',
+  templateUrl: './rivet-tile.component.html',
+  styleUrls: ['./rivet-tile.component.scss']
 })
 export class RivetTileComponent {
 
-    @Output() tileSelect = new EventEmitter();
-    @Output() tileEdit = new EventEmitter();
-    @Output() tileDelete = new EventEmitter();
+  @Input() config = {
+    editText: undefined,
+    cancelBtnText: 'Cancel',
+    deleteBtnText: 'Delete',
+    deleteText: 'Are you sure you want to delete?'
+  };
 
-    @Input() config = {
-        isSelected: false,
-        isDisabled: false,
-        editText: undefined,
-        deleteText: 'Are you sure you want to delete?',
-        cancelBtnText: 'Cancel',
-        deleteBtnText: 'Delete'
-    };
+  @Input() control: FormControl;
+  @Input() isSelected = false;
+  @Input() isDisabled = false;
 
-    @Input() control: FormControl;
+  @Output() tileSelect = new EventEmitter();
+  @Output() tileEdit = new EventEmitter();
+  @Output() tileDelete = new EventEmitter();
 
-    deleting = false;
-    editTile() {
-        this.tileEdit.emit();
-    }
+  public deleting = false;
 
-    selectTile() {
-      if (this.control && !this.control.disabled) {
+  editTile() {
+    this.tileEdit.emit();
+  }
+
+  selectTile() {
+    if (this.control && !this.control.disabled) {
         this.control.setValue(!this.control.value);
-      } else {
+    } else {
         this.tileSelect.emit();
-        this.config.isSelected = !this.config.isSelected;
-      }
     }
 
-    deleteTile() {
-        this.deleting = true;
+    // ? not a great pattern, but if we don't define a tileSelect event handler, then we have some default logic to handle tile selection,
+    // ? else the defined handler is responsible for toggling the tile through `@Input() isSelected`. This is necessary for handling
+    // ? tile selection dependent on async calls
+    if (this.tileSelect.observers.length === 0) {
+      this.isSelected = !this.isSelected;
     }
+  }
 
-    confirmDelete() {
-        this.deleting = false;
-        this.tileDelete.emit();
-    }
+  deleteTile() {
+    this.deleting = true;
+  }
 
-    cancelDelete() {
-        this.deleting = false;
-    }
+  confirmDelete() {
+    this.deleting = false;
+    this.tileDelete.emit();
+  }
+
+  cancelDelete() {
+    this.deleting = false;
+  }
 }
