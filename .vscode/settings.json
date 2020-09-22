@@ -1,5 +1,12 @@
 {
   "files.exclude": {
     "**/node_modules": true
-  }
+  },
+  "editor.codeActionsOnSave": {
+		"source.fixAll": true
+  },
+	"tslint.configFile": "./tslint.json",
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2
 }

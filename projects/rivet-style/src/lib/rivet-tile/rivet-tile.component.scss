@@ -90,16 +90,20 @@ $transitionTime: 300ms;
 
 
             &:disabled {
-                border: 2px dashed var(--rvt-tile-disabled-border);
+              border: 2px dashed var(--rvt-tile-disabled-border);
 
-                &.selected {
-
-                    &:before,
-                    &:after {
-                        content: none;
-                    }
+              &.selected {
+                &:before,
+                &:after {
+                  content: none;
                 }
+              }
             }
+        }
+
+        // todo: Implement "Pending" state class, body is copy pasted from disabled
+        &.pending {
+          border: 2px dashed var(--rvt-tile-disabled-border);
         }
 
         &.selected:not(:disabled) {

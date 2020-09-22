@@ -16,45 +16,44 @@ import { RivetSlideToggleComponent } from './rivet-toggle/rivet-slide-toggle.com
 import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
 
 @NgModule({
-    imports: [CommonModule, MaterialComponentModule, FormsModule, ReactiveFormsModule],
-    declarations: [
-        RivetStyleComponent,
-        RivetExpansionPanelComponent,
-        RivetInputComponent,
-        RivetHelperComponent,
-        RivetLabelComponent,
-        RvtTooltipDirective,
-        RivetMiniExpansionPanelComponent,
-        RivetAccordionGroupComponent,
-        RivetDrawerComponent,
-        RivetSlideToggleComponent,
-        RivetTileComponent
-    ],
-    exports: [
-        RivetStyleComponent,
-        RivetExpansionPanelComponent,
-        RivetInputComponent,
-        RivetHelperComponent,
-        RivetLabelComponent,
-        RvtTooltipDirective,
-        RivetMiniExpansionPanelComponent,
-        RivetAccordionGroupComponent,
-        RivetDrawerComponent,
-        RivetSlideToggleComponent,
-        RivetTileComponent
-    ],
-    providers: [
-        RivetThemingService
-    ]
-
+  imports: [CommonModule, MaterialComponentModule, FormsModule, ReactiveFormsModule],
+  declarations: [
+    RivetStyleComponent,
+    RivetExpansionPanelComponent,
+    RivetInputComponent,
+    RivetHelperComponent,
+    RivetLabelComponent,
+    RvtTooltipDirective,
+    RivetMiniExpansionPanelComponent,
+    RivetAccordionGroupComponent,
+    RivetDrawerComponent,
+    RivetSlideToggleComponent,
+    RivetTileComponent
+  ],
+  exports: [
+    RivetStyleComponent,
+    RivetExpansionPanelComponent,
+    RivetInputComponent,
+    RivetHelperComponent,
+    RivetLabelComponent,
+    RvtTooltipDirective,
+    RivetMiniExpansionPanelComponent,
+    RivetAccordionGroupComponent,
+    RivetDrawerComponent,
+    RivetSlideToggleComponent,
+    RivetTileComponent
+  ],
+  providers: [
+    RivetThemingService
+  ]
 })
 export class RivetStyleModule {
-    static forRoot(): ModuleWithProviders<RivetStyleModule> {
-        return {
-            ngModule: RivetStyleModule,
-            providers: [RivetThemingService]
-        };
-    }
+  static forRoot(): ModuleWithProviders<RivetStyleModule> {
+    return {
+      ngModule: RivetStyleModule,
+      providers: [RivetThemingService]
+    };
+  }
 }
 
 export { RivetThemingService };

@@ -17,9 +17,9 @@
           },
           "configurations": {
             "production": {
-              "project": "projects/rivet-style/ng-package.prod.json"
-            ,              "tsConfig": "projects/rivet-style/tsconfig.lib.prod.json"
-}
+              "project": "projects/rivet-style/ng-package.prod.json",
+              "tsConfig": "projects/rivet-style/tsconfig.lib.prod.json"
+            }
           }
         },
         "test": {
