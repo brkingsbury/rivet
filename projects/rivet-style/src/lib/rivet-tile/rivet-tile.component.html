@@ -1,36 +1,39 @@
 <div class="rvt-tile"
      [class.deleting]="deleting">
-    <button class="rvt-tile-content"
-            [class.can-select]="(tileSelect?.observers?.length !== 0)"
-            [class.pending]="state === 'Pending'"
-            [class.selected]="control?.value ? control.value : state === 'Selected'"
-            [class.only-select]="(tileEdit?.observers?.length === 0 && tileDelete?.observers?.length === 0)"
-            (click)="selectTile()"
-            [disabled]="deleting || control?.disabled || state === 'Disabled' || (tileSelect?.observers?.length === 0)">
-        <ng-content></ng-content>
-    </button>
+  <button class="rvt-tile-content"
+          [class.can-select]="(tileSelect?.observers?.length !== 0)"
+          [class.pending]="state === 'Pending'"
+          [class.selected]="control?.value ? control.value : state === 'Selected'"
+          [class.only-select]="(tileEdit?.observers?.length === 0 && tileDelete?.observers?.length === 0)"
+          (click)="selectTile()"
+          [disabled]="deleting || control?.disabled || state === 'Disabled' || (tileSelect?.observers?.length === 0)">
+    <mat-spinner *ngIf="state === 'Pending'"
+                 [strokeWidth]="2"
+                 [diameter]="19"></mat-spinner>
+    <ng-content></ng-content>
+  </button>
 
-    <button *ngIf="tileEdit?.observers?.length > 0"
-            class="rvt-btn-icon rivet-icon-edit"
-            (click)="editTile()"
-            [disabled]="deleting">
-        <span *ngIf="tileDelete?.observers?.length === 0 && config.editText !== undefined">
-            {{config.editText}}
-        </span>
-    </button>
+  <button *ngIf="tileEdit?.observers?.length > 0"
+          class="rvt-btn-icon rivet-icon-edit"
+          (click)="editTile()"
+          [disabled]="deleting">
+    <span *ngIf="tileDelete?.observers?.length === 0 && config.editText !== undefined">
+      {{config.editText}}
+    </span>
+  </button>
 
-    <button *ngIf="tileDelete?.observers?.length > 0"
-            class="rvt-btn-icon rivet-icon-delete"
-            (click)="deleteTile()"
-            [disabled]="deleting">
-    </button>
+  <button *ngIf="tileDelete?.observers?.length > 0"
+          class="rvt-btn-icon rivet-icon-delete"
+          (click)="deleteTile()"
+          [disabled]="deleting">
+  </button>
 
-    <div *ngIf="deleting"
-         class="delete-overlay">
-        <p>{{config.deleteText}}</p>
-        <button class="rvt-btn-secondary inverse"
-                (click)="cancelDelete()">{{config.cancelBtnText}}</button>
-        <button class="rvt-btn-primary inverse"
-                (click)="confirmDelete()">{{config.deleteBtnText}}</button>
-    </div>
+  <div *ngIf="deleting"
+       class="delete-overlay">
+    <p>{{config.deleteText}}</p>
+    <button class="rvt-btn-secondary inverse"
+            (click)="cancelDelete()">{{config.cancelBtnText}}</button>
+    <button class="rvt-btn-primary inverse"
+            (click)="confirmDelete()">{{config.deleteBtnText}}</button>
+  </div>
 </div>
