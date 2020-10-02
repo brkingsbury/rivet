@@ -91,6 +91,7 @@ $transitionTime: 300ms;
 
             &:disabled {
               border: 2px dashed var(--rvt-tile-disabled-border);
+              cursor: default;
 
               &.selected {
                 &:before,

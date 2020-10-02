@@ -115,6 +115,24 @@ button, a {
         }
     }
 
+    &.rvt-btn-tertiary {
+        @include buttonStyle;
+        background-color: var(--rvt-color-btn-tertiary-bg);
+        color: var(--rvt-color-btn-tertiary-text);
+        &:hover:not(:disabled),
+        &:focus:not(:disabled) {
+            background-color: var(--rvt-color-btn-tertiary-bg-hover);
+        }
+        &:active:not(:disabled) {
+            background-color: var(--rvt-color-btn-tertiary-bg-active);
+        }
+        &:disabled {
+            background-color: var(--rvt-color-btn-tertiary-bg-disabled);
+            border: 1px dashed var(--rvt-color-btn-tertiary-border-disabled);
+            color: var(--rvt-color-btn-tertiary-text-disabled);
+        }
+    }
+
     &.rvt-btn-text,
     &.rvt-btn-icon {
         @include buttonStyle;

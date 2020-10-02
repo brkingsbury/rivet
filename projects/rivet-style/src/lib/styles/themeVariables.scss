@@ -65,6 +65,14 @@
 
     --rvt-btn-inverse-secondary: var(--rvt-color-neutral-0);
 
+    --rvt-color-btn-tertiary-text: var(--rvt-color-text);
+    --rvt-color-btn-tertiary-bg: var(--rvt-color-neutral-2);
+    --rvt-color-btn-tertiary-bg-hover: var(--rvt-color-neutral-4);
+    --rvt-color-btn-tertiary-bg-active: var(--rvt-color-neutral-5);
+    --rvt-color-btn-tertiary-bg-disabled: var(--rvt-color-bg);
+    --rvt-color-btn-tertiary-border-disabled: var(--rvt-color-btn-disabled);
+    --rvt-color-btn-tertiary-text-disabled: var(--rvt-color-btn-disabled);
+
     --rvt-color-btn-text: var(--rvt-color-text);
     --rvt-color-btn-text-bg: transparent;
     --rvt-color-btn-text-bg-hover: var(--rvt-color-neutral-6-alpha-10);
