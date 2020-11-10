@@ -5,6 +5,7 @@ import { MaterialComponentModule } from './material-component-module';
 import { RivetAccordionGroupComponent } from './rivet-accordion-group/rivet-accordion-group.component';
 import { RivetDrawerComponent } from './rivet-drawer/rivet-drawer.component';
 import { RivetExpansionPanelComponent } from './rivet-expansion-panel/expansion-panel.component';
+import { RivetFormFieldDirective } from './rivet-form-field/rvt-form-field.directive';
 import { RivetHelperComponent } from './rivet-input-helper/rivet-input-helper.component';
 import { RivetLabelComponent } from './rivet-input-label/rivet-input-label.component';
 import { RivetInputComponent } from './rivet-input/rivet-input.component';
@@ -28,7 +29,8 @@ import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
     RivetAccordionGroupComponent,
     RivetDrawerComponent,
     RivetSlideToggleComponent,
-    RivetTileComponent
+    RivetTileComponent,
+    RivetFormFieldDirective
   ],
   exports: [
     RivetStyleComponent,
@@ -41,11 +43,13 @@ import { RvtTooltipDirective } from './rivet-tooltip/rivet-tooltip.directive';
     RivetAccordionGroupComponent,
     RivetDrawerComponent,
     RivetSlideToggleComponent,
-    RivetTileComponent
+    RivetTileComponent,
+    RivetFormFieldDirective
   ],
   providers: [
     RivetThemingService
   ]
+
 })
 export class RivetStyleModule {
   static forRoot(): ModuleWithProviders<RivetStyleModule> {
