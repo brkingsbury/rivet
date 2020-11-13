@@ -9,6 +9,10 @@
     --rvt-color-warn: hsl(56, 90%, 53%);
     --rvt-color-bad: hsl(0, 66%, 47%);
 
+    --rvt-color-good-contrast: hsl(137, 63%, 40%);
+    --rvt-color-warn-contrast: hsl(56, 90%, 53%);
+    --rvt-color-bad-contrast: hsl(3, 99%, 63%);
+
     /* +++++++++++++ Data Level Colors +++++++++++++++++++ */
     --rvt-color-data-good-1: hsl(144, 62%, 45%);
     --rvt-color-data-good-2: hsl(81, 36%, 50%);
@@ -29,7 +33,7 @@
 
     /* +++++++++++++ Element Level Colors +++++++++++++++++++ */
     --rvt-color-text: var(--rvt-color-neutral-8);
-    --rvt-color-text-contrast: var(--rvt-color-neutral-0);
+    --rvt-color-text-contrast: var(--rvt-color-neutral-0-contrast);
     --rvt-color-text-disabled: var(--rvt-color-neutral-4);
     --rvt-color-text-label: var(--rvt-color-neutral-7);
     --rvt-color-text-invalid: var(--rvt-color-invalid);
@@ -174,7 +178,7 @@
 
     /* +++++++++++++ Table Level Colors ++++++++++++++++++++++ */
 
-    --rvt-color-pagination-text: var(--rvt-color-neutral-600);
+    --rvt-color-pagination-text: var(--rvt-color-neutral-7);
     --rvt-color-pagination-disabled: var(--rvt-color-btn-text-disabled);
 
     --rvt-color-table-text: var(--rvt-color-text);
@@ -191,9 +195,12 @@
     /* +++++++++++++ Type Level Colors +++++++++++++++++++ */
     --rvt-color-link: var(--rvt-color-primary-dark);
     --rvt-link-inverse: var(--rvt-color-text-contrast);
+    --rvt-color-icon-color: var(--rvt-color-primary);
+    --rvt-color-icon-neutral: var(--rvt-color-text);
 
     /* ++++++++++++ Site Level Colors +++++++++++++++++++ */
     --rvt-color-main-bg: var(--rvt-color-neutral-0);
+    --rvt-color-head-bg: var(--rvt-color-primary);
 
     /* +++++++++++++ Tile Level Colors +++++++++++++++++++ */
     --rvt-tile-text: var(--rvt-color-text);
@@ -233,7 +240,6 @@
     --rvt-color-primary-light: hsl(249, 40%, 58%); // adjusted for contrast ratio
     --rvt-color-btn-primary-text: var(--rvt-color-neutral-8);
     --rvt-tab-inverse-bg-hover: hsla(223, 39%, 16%, 0.25);
-    --rvt-color-text-contrast: var(--rvt-color-neutral-8);
     --rvt-color-btn-secondary-text: var(--rvt-color-neutral-8);    --rvt-color-btn-secondary-bg-hover: var(--rvt-color-neutral-3);
     --rvt-color-btn-secondary-bg-active: var(--rvt-color-neutral-5);
     --rvt-color-link: var(--rvt-color-neutral-8);
@@ -241,8 +247,12 @@
     --rvt-color-radio-selected: var(--rvt-color-neutral-8);
     --rvt-color-btn-text-bg-hover: var(--rvt-color-neutral-3);
     --rvt-color-btn-text-bg-active: var(--rvt-color-neutral-5);
-    --rvt-color-card-background: var(--rvt-color-neutral-2);
+    --rvt-color-card-background: var(--rvt-color-neutral-1);
+    --rvt-color-card-border: var(--rvt-color-neutral-1);
     --rvt-color-btn-primary-bg-active: var(--rvt-color-neutral-0);
+    --rvt-color-icon-color: var(--rvt-color-primary-light);
+    --rvt-color-icon-neutral: var(--rvt-color-neutral-6);
+    --rvt-color-head-bg: var(--rvt-color-neutral-1);
 
 }
 
@@ -268,6 +278,16 @@
     --rvt-color-neutral-6: hsl(220, 9%, 46%); // #6B7280
     --rvt-color-neutral-7: hsl(227, 22%, 29%); // #394059
     --rvt-color-neutral-8: hsl(223, 39%, 16%); // #192239
+
+    --rvt-color-neutral-0-contrast: hsl(240, 0%, 100%); // #FFFFFF
+    --rvt-color-neutral-1-contrast: hsl(240, 0%, 97%); // #F7F7F7
+    --rvt-color-neutral-2-contrast: hsl(240, 3%, 92%); // #EBEBEC
+    --rvt-color-neutral-3-contrast: hsl(222, 11%, 82%); // #CBCED5
+    --rvt-color-neutral-4-contrast: hsl(222, 11%, 76%); // #BCC0C9 - Disabled
+    --rvt-color-neutral-5-contrast: hsl(219, 12%, 71%); // #ADB3BE
+    --rvt-color-neutral-6-contrast: hsl(220, 9%, 46%); // #6B7280
+    --rvt-color-neutral-7-contrast: hsl(227, 22%, 29%); // #394059
+    --rvt-color-neutral-8-contrast: hsl(223, 39%, 16%); // #192239
 
     // Old variables - DO NOT USE
     --rvt-color-neutral-light: hsl(0, 100%, 100%);
