@@ -1,7 +1,12 @@
 @import './rivetTheme.scss';
 
-mat-form-field {
+mat-form-field.mat-form-field-type-mat-input {
+  // type-mat-input is used to specify input instead of dropdown
   max-width: 100%;
+  font-family: var(--rvt-font-family);
+  font-size: 16px;
+  font-weight: var(--rvt-font-weight-regular);
+  vertical-align: top;
 
   * {
     font-family: var(--rvt-font-family); // Extra precaution for all of Materials random child elements
@@ -23,60 +28,78 @@ mat-form-field {
     width: 100%;
   }
 
+  // base styles for all parts of the form field
+  .mat-form-field-wrapper {
 
-  &.mat-form-field {
-    font-family: var(--rvt-font-family);
-    font-size: 16px;
-    font-weight: var(--rvt-font-weight-regular);
-    vertical-align: top;
-  }
-
-  input {
-    font-family: var(--rvt-font-family);
-    font-size: 16px;
-    font-weight: var(--rvt-font-weight-regular);
-    color: var(--rvt-color-input-text);
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    &.mat-input-element:disabled {
-      color: var(--rvt-color-input-text-disabled);
-    }
-  }
-
-  .mat-form-field-label-wrapper {
-    overflow: visible;
-
-    label.mat-form-field-label {
+    input {
       font-family: var(--rvt-font-family);
       font-size: 16px;
       font-weight: var(--rvt-font-weight-regular);
-      color: var(--rvt-color-input-label);
+      color: var(--rvt-color-input-text);
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .mat-form-field-label-wrapper {
       overflow: visible;
 
-      &.mat-form-field-empty {
-        color: var(--rvt-color-input-text);
-      }
-
-      .mat-placeholder-required {
+      label.mat-form-field-label {
+        font-family: var(--rvt-font-family);
+        font-size: 16px;
+        font-weight: var(--rvt-font-weight-regular);
         color: var(--rvt-color-input-label);
+        overflow: visible;
+
+        &.mat-form-field-empty {
+          color: var(--rvt-color-input-text);
+        }
+
+        .mat-placeholder-required {
+          color: var(--rvt-color-input-label);
+        }
       }
     }
-  }
 
-  .mat-form-field-subscript-wrapper {
-    position: relative;
-  }
-
-  .mat-form-field-wrapper {
     .mat-form-field-underline {
       position: relative;
       bottom: initial;
-      background-color: var(--rvt-color-input-border);
+      height: 2px;
+      background: none;
+      margin-bottom: 1px;
+      border-bottom-width: 1px;
+      border-bottom-style: solid;
+      border-bottom-color: var(--rvt-color-input-border);
+
+      .mat-form-field-ripple {
+        display: none; // fallback in case ripple is not disabled
+      }
+    }
+
+    .mat-form-field-subscript-wrapper {
+      position: relative;
+
+      .mat-form-field-hint-wrapper mat-hint {
+        font-family: var(--rvt-font-family);
+        font-size: 14px;
+        font-weight: var(--rvt-font-weight-regular);
+        color: var(--rvt-color-input-helper) !important;
+      }
+      mat-error {
+        font-family: var(--rvt-font-family);
+        font-size: 14px;
+        font-weight: var(--rvt-font-weight-regular);
+      }
     }
   }
 
-  &.mat-focused {
+  // hover styles
+  &:hover:not(.mat-form-field-disabled) .mat-form-field-underline {
+    border-bottom-width: 2px;
+    margin-bottom: -1px;
+  }
+
+  // focused styles
+  &.mat-focused:not(.mat-form-field-disabled) {
     .mat-form-field-label-wrapper label.mat-form-field-label {
       color: var(--rvt-color-input-label-focus);
 
@@ -86,35 +109,41 @@ mat-form-field {
     }
 
     .mat-form-field-underline {
-      background-color: var(--rvt-color-input-border-focus);
-      height: 2px;
       margin-bottom: -1px;
+      border-bottom-width: 2px;
+      border-bottom-color: var(--rvt-color-input-border-active);
     }
   }
 
-  &:hover:not(.mat-form-field-disabled) {
-
-    .mat-form-field-underline,
-    .mat-form-field-ripple {
-      margin-bottom: -1px;
-      height: 2px;
-    }
-  }
-
+  // disabled styles
   &.mat-form-field-disabled {
-    .mat-form-field-underline {
-      background: none !important;
-      border-bottom: 2px dashed var(--rvt-color-input-text-disabled);
+    input {
+      color: var(--rvt-color-input-text-disabled);
     }
 
-    .mat-form-field-ripple {
-      display: none;
+    .mat-form-field-underline {
+      margin-bottom: -1px;
+      border-bottom-width: 2px;
+      border-bottom-style: dashed;
+      border-bottom-color: var(--rvt-color-input-text-disabled);
     }
   }
 
+  // read-only styles
+  &.read-only,
+  &.read-only.mat-form-field-disabled {
+    .mat-form-field-underline {
+      margin-bottom: -1px;
+      border-bottom-width: 2px;
+      border-bottom-color: transparent;
+    }
+  }
+
+  // invalid styles
   &.invalid,
   &.ng-invalid,
-  &.mat-form-field-invalid {
+  &.mat-form-field-invalid,
+  &.rvt-form-field-error {
 
     .mat-form-field-label-wrapper label.mat-form-field-label,
     .mat-form-field-label-wrapper label.mat-form-field-empty {
@@ -133,37 +162,23 @@ mat-form-field {
       color: var(--rvt-color-input-text);
     }
 
-    mat-hint {
+    mat-hint, mat-error {
       color: var(--rvt-color-input-label-invalid) !important;
-    }
-
-    .mat-form-field-underline {
-      background-color: var(--rvt-color-text);
-
-      .mat-form-field-ripple {
-        background-color: var(--rvt-color-text);
-      }
     }
 
     .mat-placeholder-required {
       color: var(--rvt-color-input-label-invalid);
     }
+    
+    .mat-form-field-underline {
+      border-bottom-color: var(--rvt-color-input-border-invalid);
+    }
 
     &.mat-focused .mat-form-field-underline {
-      background-color: var(--rvt-color-text);
-
-      .mat-form-field-ripple {
-        background-color: var(--rvt-color-text);
-      }
+      border-bottom-color: var(--rvt-color-input-border-invalid);
     }
   }
 
-  .mat-form-field-hint-wrapper mat-hint {
-    font-family: var(--rvt-font-family);
-    font-size: 12px;
-    font-weight: var(--rvt-font-weight-regular);
-    color: var(--rvt-color-input-helper) !important;
-  }
 }
 
 // ---------------- Rivet Text Area Styles ---------------
