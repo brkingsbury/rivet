@@ -10,7 +10,7 @@
     [rivet-drawer-content] {
         width: 300px;
         height: 100%;
-        background-color: var(--rvt-color-main-bg);
+        background-color: var(--rvt-color-drawer-bg);
         z-index: 120;
         position: fixed;
         top: 0;
@@ -31,6 +31,7 @@
     width: 100%;
     display: block;
     background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--rvt-color-drawer-apron);
     z-index: 110;
 
     &.hide {
