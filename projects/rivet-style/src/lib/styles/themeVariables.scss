@@ -1,319 +1,359 @@
 @mixin common-colors {
 
-    --rvt-color-invalid: hsl(0, 66%, 47%);
+  --rvt-color-invalid: hsl(0, 66%, 47%);
 
-    --rvt-color-keyboard-focus: hsl(217, 99%, 65%);
-    --rvt-color-shadow: hsla(223, 39%, 16%, 0.35);
+  --rvt-color-keyboard-focus: hsl(217, 99%, 65%);
+  --rvt-color-shadow: hsla(223, 39%, 16%, 0.35);
 
-    --rvt-color-good: hsl(137, 63%, 40%);
-    --rvt-color-warn: hsl(56, 90%, 53%);
-    --rvt-color-bad: hsl(0, 66%, 47%);
+  --rvt-color-good: hsl(137, 63%, 40%);
+  --rvt-color-warn: hsl(56, 90%, 53%);
+  --rvt-color-bad: hsl(0, 66%, 47%);
 
-    --rvt-color-good-contrast: hsl(137, 63%, 40%);
-    --rvt-color-warn-contrast: hsl(56, 90%, 53%);
-    --rvt-color-bad-contrast: hsl(3, 99%, 63%);
+  --rvt-color-good-contrast: hsl(137, 63%, 40%);
+  --rvt-color-warn-contrast: hsl(56, 90%, 53%);
+  --rvt-color-bad-contrast: hsl(3, 99%, 63%);
 
-    /* +++++++++++++ Data Level Colors +++++++++++++++++++ */
-    --rvt-color-data-good-1: hsl(144, 62%, 45%);
-    --rvt-color-data-good-2: hsl(81, 36%, 50%);
-    --rvt-color-data-warn-1: hsl(39, 94%, 66%);
-    --rvt-color-data-warn-2: hsl(17, 82%, 58%);
-    --rvt-color-data-bad: hsl(0, 70%, 56%);
-    --rvt-color-data-accent-1a: hsl(212, 60%, 50%);
-    --rvt-color-data-accent-1b: hsl(198, 89%, 21%);
-    --rvt-color-data-accent-2: hsl(29, 91%, 61%);
-    --rvt-color-data-accent-3a: hsl(191, 100%, 33%);
-    --rvt-color-data-accent-3b: hsl(201, 100%, 30%);
-    --rvt-color-data-accent-4a: hsl(323, 47%, 46%);
-    --rvt-color-data-accent-4b: hsl(241, 29%, 43%);
+  /* +++++++++++++ Data Level Colors +++++++++++++++++++ */
+  --rvt-color-data-good-1: hsl(144, 62%, 45%);
+  --rvt-color-data-good-2: hsl(81, 36%, 50%);
+  --rvt-color-data-warn-1: hsl(39, 94%, 66%);
+  --rvt-color-data-warn-2: hsl(17, 82%, 58%);
+  --rvt-color-data-bad: hsl(0, 70%, 56%);
+  --rvt-color-data-accent-1a: hsl(212, 60%, 50%);
+  --rvt-color-data-accent-1b: hsl(198, 89%, 21%);
+  --rvt-color-data-accent-2: hsl(29, 91%, 61%);
+  --rvt-color-data-accent-3a: hsl(191, 100%, 33%);
+  --rvt-color-data-accent-3b: hsl(201, 100%, 30%);
+  --rvt-color-data-accent-4a: hsl(323, 47%, 46%);
+  --rvt-color-data-accent-4b: hsl(241, 29%, 43%);
 }
 
 /* +++++++++++++ CSS VARIABLES (v4.2 and Later) +++++++++++++++++++ */
 @mixin interpolated-colors {
 
-    /* +++++++++++++ Element Level Colors +++++++++++++++++++ */
-    --rvt-color-text: var(--rvt-color-neutral-8);
-    --rvt-color-text-emphasis: var(--rvt-color-neutral-8);
-    --rvt-color-text-contrast: var(--rvt-color-neutral-0-contrast);
-    --rvt-color-text-disabled: var(--rvt-color-neutral-4);
-    --rvt-color-text-label: var(--rvt-color-neutral-7);
-    --rvt-color-text-invalid: var(--rvt-color-invalid);
+  /* +++++++++++++ Element Level Colors +++++++++++++++++++ */
+  --rvt-color-text: var(--rvt-color-neutral-8);
+  --rvt-color-text-emphasis: var(--rvt-color-neutral-8);
+  --rvt-color-text-contrast: var(--rvt-color-neutral-0-contrast);
+  --rvt-color-text-disabled: var(--rvt-color-neutral-4);
+  --rvt-color-text-label: var(--rvt-color-neutral-7);
+  --rvt-color-text-invalid: var(--rvt-color-invalid);
 
-    --rvt-color-disabled: var(--rvt-color-neutral-4);
+  --rvt-color-disabled: var(--rvt-color-neutral-4);
 
-    --rvt-color-topnav-bg: var(--rvt-color-neutral-5);
-    --rvt-color-overlay: var(--rvt-color-neutral-2);
-    --rvt-color-sidenav-bg: var(--rvt-color-neutral-0);
-    --rvt-color-bg: var(--rvt-color-neutral-0);
-    --rvt-color-divider: var(--rvt-color-neutral-2);
+  --rvt-color-topnav-bg: var(--rvt-color-neutral-5);
+  --rvt-color-overlay: var(--rvt-color-neutral-2);
+  --rvt-color-sidenav-bg: var(--rvt-color-neutral-0);
+  --rvt-color-bg: var(--rvt-color-neutral-0);
+  --rvt-color-divider: var(--rvt-color-neutral-2);
 
-    /* +++++++++++++ Button Level Colors +++++++++++++++++++ */
-    --rvt-color-btn-disabled: var(--rvt-color-disabled);
+  /* +++++++++++++ Button Level Colors +++++++++++++++++++ */
+  --rvt-color-btn-disabled: var(--rvt-color-disabled);
 
-    --rvt-color-btn-primary-bg: var(--rvt-color-primary);
-    --rvt-color-btn-primary-text: var(--rvt-color-neutral-0);
-    --rvt-color-btn-primary-bg-hover: var(--rvt-color-primary-dark);
-    --rvt-color-btn-primary-bg-active: var(--rvt-color-neutral-8);
-    --rvt-color-btn-primary-bg-disabled: var(--rvt-color-btn-disabled);
-    --rvt-color-btn-primary-text-disabled: var(--rvt-color-text-contrast);
+  --rvt-color-btn-primary-bg: var(--rvt-color-primary);
+  --rvt-color-btn-primary-text: var(--rvt-color-neutral-0);
+  --rvt-color-btn-primary-bg-hover: var(--rvt-color-primary-dark);
+  --rvt-color-btn-primary-bg-active: var(--rvt-color-neutral-8);
+  --rvt-color-btn-primary-bg-disabled: var(--rvt-color-btn-disabled);
+  --rvt-color-btn-primary-text-disabled: var(--rvt-color-text-contrast);
 
-    --rvt-btn-inverse-primary-bg: var(--rvt-color-neutral-0);
-    --rvt-btn-inverse-primary-text: var(--rvt-color-text);
+  --rvt-btn-inverse-primary-bg: var(--rvt-color-neutral-0);
+  --rvt-btn-inverse-primary-text: var(--rvt-color-text);
 
-    --rvt-color-btn-secondary-text: var(--rvt-color-primary);
-    --rvt-color-btn-secondary-border: var(--rvt-color-btn-secondary-text);
-    --rvt-color-btn-secondary-bg: transparent;
-    --rvt-color-btn-secondary-bg-hover: var(--rvt-color-primary-alpha-10);
-    --rvt-color-btn-secondary-bg-active: var(--rvt-color-primary-alpha-28);
-    --rvt-color-btn-secondary-disabled-border: var(--rvt-color-btn-disabled);
-    --rvt-color-btn-secondary-disabled-text: var(--rvt-color-btn-disabled);
+  --rvt-color-btn-secondary-text: var(--rvt-color-primary);
+  --rvt-color-btn-secondary-border: var(--rvt-color-btn-secondary-text);
+  --rvt-color-btn-secondary-bg: transparent;
+  --rvt-color-btn-secondary-bg-hover: var(--rvt-color-primary-alpha-10);
+  --rvt-color-btn-secondary-bg-active: var(--rvt-color-primary-alpha-28);
+  --rvt-color-btn-secondary-disabled-border: var(--rvt-color-btn-disabled);
+  --rvt-color-btn-secondary-disabled-text: var(--rvt-color-btn-disabled);
 
-    --rvt-btn-inverse-secondary: var(--rvt-color-neutral-0);
+  --rvt-btn-inverse-secondary: var(--rvt-color-neutral-0);
 
-    --rvt-color-btn-tertiary-text: var(--rvt-color-text);
-    --rvt-color-btn-tertiary-bg: var(--rvt-color-neutral-2);
-    --rvt-color-btn-tertiary-bg-hover: var(--rvt-color-neutral-4);
-    --rvt-color-btn-tertiary-bg-active: var(--rvt-color-neutral-5);
-    --rvt-color-btn-tertiary-bg-disabled: var(--rvt-color-bg);
-    --rvt-color-btn-tertiary-border-disabled: var(--rvt-color-btn-disabled);
-    --rvt-color-btn-tertiary-text-disabled: var(--rvt-color-btn-disabled);
+  --rvt-color-btn-tertiary-text: var(--rvt-color-text);
+  --rvt-color-btn-tertiary-bg: var(--rvt-color-neutral-2);
+  --rvt-color-btn-tertiary-bg-hover: var(--rvt-color-neutral-4);
+  --rvt-color-btn-tertiary-bg-active: var(--rvt-color-neutral-5);
+  --rvt-color-btn-tertiary-bg-disabled: var(--rvt-color-bg);
+  --rvt-color-btn-tertiary-border-disabled: var(--rvt-color-btn-disabled);
+  --rvt-color-btn-tertiary-text-disabled: var(--rvt-color-btn-disabled);
 
-    --rvt-color-btn-text: var(--rvt-color-text);
-    --rvt-color-btn-text-bg: transparent;
-    --rvt-color-btn-text-bg-hover: var(--rvt-color-neutral-6-alpha-10);
-    --rvt-color-btn-text-bg-active: var(--rvt-color-neutral-6-alpha-28);
-    --rvt-color-btn-text-bg-disabled: transparent;
-    --rvt-color-btn-text-disabled: var(--rvt-color-btn-disabled);
+  --rvt-color-btn-text: var(--rvt-color-text);
+  --rvt-color-btn-text-bg: transparent;
+  --rvt-color-btn-text-bg-hover: var(--rvt-color-neutral-6-alpha-10);
+  --rvt-color-btn-text-bg-active: var(--rvt-color-neutral-6-alpha-28);
+  --rvt-color-btn-text-bg-disabled: transparent;
+  --rvt-color-btn-text-disabled: var(--rvt-color-btn-disabled);
 
-    --rvt-btn-inverse-text: var(--rvt-color-text-contrast);
-    --rvt-btn-inverse-text-bg-hover: var(--rvt-btn-inverse-secondary-hover);
-    --rvt-btn-inverse-text-bg-active: var(--rvt-btn-inverse-secondary-active);
+  --rvt-btn-inverse-text: var(--rvt-color-text-contrast);
+  --rvt-btn-inverse-text-bg-hover: var(--rvt-btn-inverse-secondary-hover);
+  --rvt-btn-inverse-text-bg-active: var(--rvt-btn-inverse-secondary-active);
 
-    /* +++++++++++++ Card Level Colors +++++++++++++++++++ */
-    --rvt-color-card-background: transparent;
-    --rvt-color-card-border: var(--rvt-color-neutral-2);
+  /* +++++++++++++ Card Level Colors +++++++++++++++++++ */
+  --rvt-color-card-background: transparent;
+  --rvt-color-card-border: var(--rvt-color-neutral-2);
 
-    /* +++++++++++++ Checkbox Level Colors +++++++++++++++++++ */
-    --rvt-color-checkbox-label: var(--rvt-color-text);
-    --rvt-color-checkbox-unselected: var(--rvt-color-neutral-8);
-    --rvt-color-checkbox-selected: var(--rvt-color-primary);
-    --rvt-color-checkbox-selected-check: var(--rvt-color-text-contrast);
-    --rvt-color-checkbox-selected-hover: var(--rvt-color-primary-dark);
-    --rvt-color-checkbox-disabled: var(--rvt-color-disabled);
-    --rvt-color-checkbox-readonly: var(--rvt-color-checkbox-label);
+  /* +++++++++++++ Checkbox Level Colors +++++++++++++++++++ */
+  --rvt-color-checkbox-label: var(--rvt-color-text);
+  --rvt-color-checkbox-unselected: var(--rvt-color-neutral-8);
+  --rvt-color-checkbox-selected: var(--rvt-color-primary);
+  --rvt-color-checkbox-selected-check: var(--rvt-color-text-contrast);
+  --rvt-color-checkbox-selected-hover: var(--rvt-color-primary-dark);
+  --rvt-color-checkbox-disabled: var(--rvt-color-disabled);
+  --rvt-color-checkbox-readonly: var(--rvt-color-checkbox-label);
 
-    /* +++++++++++++ Datepicker Level Colors +++++++++++++++++++ */
-    --rvt-color-datepicker-bg: var(--rvt-color-bg);
-    --rvt-color-datepicker-content-border: var(--rvt-color-neutral-3);
-    --rvt-color-datepicker-content-active: var(--rvt-color-primary);
-    --rvt-color-datepicker-content-hover: var(--rvt-color-neutral-3);
-    --rvt-color-datepicker-content-active-text: var(--rvt-color-text-contrast);
+  /* +++++++++++++ Datepicker Level Colors +++++++++++++++++++ */
+  --rvt-color-datepicker-bg: var(--rvt-color-bg);
+  --rvt-color-datepicker-content-border: var(--rvt-color-neutral-3);
+  --rvt-color-datepicker-content-active: var(--rvt-color-primary);
+  --rvt-color-datepicker-content-hover: var(--rvt-color-neutral-3);
+  --rvt-color-datepicker-content-active-text: var(--rvt-color-text-contrast);
 
-    /* +++++++++++++ Drawer Level Colors +++++++++++++++++++ */
-    --rvt-color-drawer-bg: var(--rvt-color-main-bg);
-    --rvt-color-drawer-apron: hsla(222, 11%, 82%, 0.4); // neutral-3 @ 40% 
+  /* +++++++++++++ Drawer Level Colors +++++++++++++++++++ */
+  --rvt-color-drawer-bg: var(--rvt-color-main-bg);
+  --rvt-color-drawer-apron: hsla(222, 11%, 82%, 0.4); // neutral-3 @ 40% 
 
-    /* +++++++++++++ Dropdown Level Colors +++++++++++++++++++ */
-    --rvt-color-dropdown-text: var(--rvt-color-text);
-    --rvt-color-dropdown-invalid: var(--rvt-color-invalid);
-    --rvt-color-dropdown-disabled: var(--rvt-color-text-disabled);
-    --rvt-color-dropdown-bar: var(--rvt-color-neutral-7);
-    --rvt-color-dropdown-bar-active: var(--rvt-color-primary);
-    --rvt-color-dropdown-label: var(--rvt-color-text-label);
-    --rvt-color-dropdown-helper: var(--rvt-color-text-label);
-    --rvt-color-dropdown-arrow: var(--rvt-color-neutral-7);
-    --rvt-color-dropdown-panel: var(--rvt-color-neutral-0);
-    --rvt-color-dropdown-panel-hover: var(--rvt-color-neutral-2);
-    --rvt-color-dropdown-panel-selected: var(--rvt-color-neutral-3);
-    --rvt-color-dropdown-panel-text: var(--rvt-color-dropdown-text);
-    --rvt-color-dropdown-panel-border: var(--rvt-color-dropdown-bar);
+  /* +++++++++++++ Dropdown Level Colors +++++++++++++++++++ */
+  --rvt-color-dropdown-text: var(--rvt-color-text);
+  --rvt-color-dropdown-invalid: var(--rvt-color-invalid);
+  --rvt-color-dropdown-disabled: var(--rvt-color-text-disabled);
+  --rvt-color-dropdown-bar: var(--rvt-color-neutral-7);
+  --rvt-color-dropdown-bar-active: var(--rvt-color-primary);
+  --rvt-color-dropdown-bar-invalid: var(--rvt-color-invalid);
+  --rvt-color-dropdown-label: var(--rvt-color-text-label);
+  --rvt-color-dropdown-label-disabled: var(--rvt-color-text-disabled);
+  --rvt-color-dropdown-label-invalid: var(--rvt-color-invalid);
+  --rvt-color-dropdown-helper: var(--rvt-color-text-label);
+  --rvt-color-dropdown-arrow: var(--rvt-color-neutral-7);
+  --rvt-color-dropdown-panel: var(--rvt-color-neutral-0);
+  --rvt-color-dropdown-panel-hover: var(--rvt-color-neutral-2);
+  --rvt-color-dropdown-panel-selected: var(--rvt-color-neutral-3);
+  --rvt-color-dropdown-panel-text: var(--rvt-color-dropdown-text);
+  --rvt-color-dropdown-panel-border: var(--rvt-color-dropdown-bar);
 
-    /* +++++++++++++ Input Level Colors +++++++++++++++++++ */
-    --rvt-color-input-text: var(--rvt-color-text);
-    --rvt-color-input-text-invalid: var(--rvt-color-invalid);
-    --rvt-color-input-label: var(--rvt-color-neutral-6);
-    --rvt-color-input-label-focus: var(--rvt-color-text);
-    --rvt-color-input-label-invalid: var(--rvt-color-invalid);
-    --rvt-color-input-label-disabled: var(--rvt-color-input-label);
-    --rvt-color-input-helper: var(--rvt-color-neutral-6);
-    --rvt-color-input-helper-invalid: var(--rvt-color-invalid);
-    --rvt-color-input-helper-disabled: var(--rvt-color-input-helper);
-    --rvt-color-input-text-disabled: var(--rvt-color-disabled);
-    --rvt-color-input-border: var(--rvt-color-neutral-6);
-    --rvt-color-input-border-focus: var(--rvt-color-input-border);
-    --rvt-color-input-border-active: var(--rvt-color-primary-dark);
-    --rvt-color-input-border-invalid: var(--rvt-color-invalid);
-    --rvt-color-input-border-disabled: var(--rvt-color-input-text-disabled);
-    --rvt-color-input-border-readonly: transparent;
+  /* +++++++++++++ Input Level Colors +++++++++++++++++++ */
+  --rvt-color-input-text: var(--rvt-color-text);
+  --rvt-color-input-text-invalid: var(--rvt-color-invalid);
+  --rvt-color-input-label: var(--rvt-color-neutral-6);
+  --rvt-color-input-label-focus: var(--rvt-color-text);
+  --rvt-color-input-label-invalid: var(--rvt-color-invalid);
+  --rvt-color-input-label-disabled: var(--rvt-color-input-label);
+  --rvt-color-input-helper: var(--rvt-color-neutral-6);
+  --rvt-color-input-helper-invalid: var(--rvt-color-invalid);
+  --rvt-color-input-helper-disabled: var(--rvt-color-input-helper);
+  --rvt-color-input-text-disabled: var(--rvt-color-disabled);
+  --rvt-color-input-border: var(--rvt-color-neutral-6);
+  --rvt-color-input-border-focus: var(--rvt-color-input-border);
+  --rvt-color-input-border-active: var(--rvt-color-primary-dark);
+  --rvt-color-input-border-invalid: var(--rvt-color-invalid);
+  --rvt-color-input-border-disabled: var(--rvt-color-input-text-disabled);
+  --rvt-color-input-border-readonly: transparent;
 
-    /* +++++++++++++ Radio Level Colors +++++++++++++++++++ */
-    --rvt-color-radio-label: var(--rvt-color-text);
-    --rvt-color-radio-unselected: var(--rvt-color-neutral-900);
-    --rvt-color-radio-selected: var(--rvt-color-primary);
-    --rvt-color-radio-disabled: var(--rvt-color-disabled);
-    --rvt-color-radio-readonly: var(--rvt-color-radio-label);
+  /* +++++++++++++ Radio Level Colors +++++++++++++++++++ */
+  --rvt-color-radio-label: var(--rvt-color-text);
+  --rvt-color-radio-unselected: var(--rvt-color-neutral-900);
+  --rvt-color-radio-selected: var(--rvt-color-primary);
+  --rvt-color-radio-disabled: var(--rvt-color-disabled);
+  --rvt-color-radio-readonly: var(--rvt-color-radio-label);
 
-    /* +++++++++++++ Snackbar Level Colors +++++++++++++++++++ */
-    --rvt-color-snackbar-bg: var(--rvt-color-neutral-0);
-    --rvt-color-snackbar-bg-error: var(--rvt-color-data-bad);
-    --rvt-color-snackbar-bg-success: var(--rvt-color-primary);
-    --rvt-color-snackbar-text: var(--rvt-color-text);
+  /* +++++++++++++ Slider Level Colors +++++++++++++++++++ */
+  --rvt-color-slider-track: var(--rvt-color-neutral-4);
+  --rvt-color-slider-track-fill: var(--rvt-color-primary);
+  --rvt-color-slider-track-hover: var(--rvt-color-neutral-5);
+  --rvt-color-slider-thumb: var(--rvt-color-primary);
+  --rvt-color-slider-track-disabled: var(--rvt-color-neutral-3);
+  --rvt-color-slider-track-fill-disabled: var(--rvt-color-neutral-3);
+  --rvt-color-slider-thumb-disabled: var(--rvt-color-neutral-3);
 
-    /* +++++++++++++ Tab Level Colors +++++++++++++++++++ */
-    --rvt-color-tab-text: var(--rvt-color-text);
-    --rvt-color-tab-text-disabled: var(--rvt-color-disabled);
-    --rvt-color-tab-bg: transparent;
-    --rvt-color-tab-bg-focus: var(--rvt-color-neutral-1);
-    --rvt-color-tab-bg-selected: transparent;
-    --rvt-color-tab-bar: var(--rvt-color-neutral-2);
-    --rvt-color-tab-bar-focus: var(--rvt-color-neutral-3);
-    --rvt-color-tab-bar-selected: var(--rvt-color-accent);
-    --rvt-color-tab-number: var(--rvt-color-tab-text);
-    --rvt-color-tab-number-selected: var(--rvt-color-neutral-0);
-    --rvt-color-tab-number-disabled: var(--rvt-color-tab-text-disabled);
-    --rvt-color-tab-number-circle-bg: var(--rvt-color-neutral-0);
-    --rvt-color-tab-number-bg-focus: var(--rvt-color-tab-bg-focus);
-    --rvt-color-tab-number-circle-bg-selected: var(--rvt-color-tab-bar-selected);
-    --rvt-color-tab-number-circle-border: var(--rvt-color-tab-bar);
-    --rvt-color-tab-number-circle-border-focus: var(--rvt-color-tab-number-border);
-    --rvt-color-tab-number-circle-border-selected: var(--rvt-color-tab-number-circle-bg-selected);
+  /* +++++++++++++ Snackbar Level Colors +++++++++++++++++++ */
+  --rvt-color-snackbar-bg: var(--rvt-color-neutral-0);
+  --rvt-color-snackbar-bg-error: var(--rvt-color-data-bad);
+  --rvt-color-snackbar-bg-success: var(--rvt-color-primary);
+  --rvt-color-snackbar-text: var(--rvt-color-text);
 
-    --rvt-tab-inverse-bar: var(--rvt-color-neutral-0);
-    --rvt-tab-inverse-text: var(--rvt-color-text-contrast);
+  /* +++++++++++++ Tab Level Colors +++++++++++++++++++ */
+  --rvt-color-tab-text: var(--rvt-color-text);
+  --rvt-color-tab-text-disabled: var(--rvt-color-disabled);
+  --rvt-color-tab-bg: transparent;
+  --rvt-color-tab-bg-focus: var(--rvt-color-neutral-1);
+  --rvt-color-tab-bg-selected: transparent;
+  --rvt-color-tab-bar: var(--rvt-color-neutral-2);
+  --rvt-color-tab-bar-focus: var(--rvt-color-neutral-3);
+  --rvt-color-tab-bar-selected: var(--rvt-color-accent);
+  --rvt-color-tab-number: var(--rvt-color-tab-text);
+  --rvt-color-tab-number-selected: var(--rvt-color-neutral-0);
+  --rvt-color-tab-number-disabled: var(--rvt-color-tab-text-disabled);
+  --rvt-color-tab-number-circle-bg: var(--rvt-color-neutral-0);
+  --rvt-color-tab-number-bg-focus: var(--rvt-color-tab-bg-focus);
+  --rvt-color-tab-number-circle-bg-selected: var(--rvt-color-tab-bar-selected);
+  --rvt-color-tab-number-circle-border: var(--rvt-color-tab-bar);
+  --rvt-color-tab-number-circle-border-focus: var(--rvt-color-tab-number-border);
+  --rvt-color-tab-number-circle-border-selected: var(--rvt-color-tab-number-circle-bg-selected);
 
-    /* +++++++++++++ Table Level Colors ++++++++++++++++++++++ */
+  --rvt-tab-inverse-bar: var(--rvt-color-neutral-0);
+  --rvt-tab-inverse-text: var(--rvt-color-text-contrast);
 
-    --rvt-color-pagination-text: var(--rvt-color-neutral-7);
-    --rvt-color-pagination-disabled: var(--rvt-color-btn-text-disabled);
+  /* +++++++++++++ Table Level Colors ++++++++++++++++++++++ */
 
-    --rvt-color-table-text: var(--rvt-color-text);
-    --rvt-color-table-header-border: var(--rvt-color-neutral-1);
-    --rvt-color-table-hover: var(--rvt-color-neutral-2);
-    --rvt-color-table-divider: var(--rvt-color-divider);
+  --rvt-color-pagination-text: var(--rvt-color-neutral-7);
+  --rvt-color-pagination-disabled: var(--rvt-color-btn-text-disabled);
 
-    /* +++++++++++++ Tooltip Level Colors +++++++++++++++++++ */
-    --rvt-color-tooltip-bg: var(--rvt-color-primary-dark);
-    --rvt-color-tooltip-text: var(--rvt-color-text-contrast);
-    --rvt-color-tooltip-error-bg: var(--rvt-color-invalid);
-    --rvt-color-tooltip-error-text: var(--rvt-color-tooltip-text);
+  --rvt-color-table-text: var(--rvt-color-text);
+  --rvt-color-table-header-border: var(--rvt-color-neutral-1);
+  --rvt-color-table-hover: var(--rvt-color-neutral-2);
+  --rvt-color-table-divider: var(--rvt-color-divider);
 
-    /* +++++++++++++ Type Level Colors +++++++++++++++++++ */
-    --rvt-color-link: var(--rvt-color-primary-dark);
-    --rvt-link-inverse: var(--rvt-color-text-contrast);
-    --rvt-color-icon-color: var(--rvt-color-primary);
-    --rvt-color-icon-neutral: var(--rvt-color-text);
+  /* +++++++++++++ Tooltip Level Colors +++++++++++++++++++ */
+  --rvt-color-tooltip-bg: var(--rvt-color-primary-dark);
+  --rvt-color-tooltip-text: var(--rvt-color-text-contrast);
+  --rvt-color-tooltip-error-bg: var(--rvt-color-invalid);
+  --rvt-color-tooltip-error-text: var(--rvt-color-tooltip-text);
 
-    /* ++++++++++++ Site Level Colors +++++++++++++++++++ */
-    --rvt-color-main-bg: var(--rvt-color-neutral-0);
-    --rvt-color-head-bg: var(--rvt-color-primary-dark);
+  /* +++++++++++++ Type Level Colors +++++++++++++++++++ */
+  --rvt-color-link: var(--rvt-color-primary-dark);
+  --rvt-link-inverse: var(--rvt-color-text-contrast);
+  --rvt-color-icon-color: var(--rvt-color-primary);
+  --rvt-color-icon-neutral: var(--rvt-color-text);
 
-    /* +++++++++++++ Tile Level Colors +++++++++++++++++++ */
-    --rvt-tile-text: var(--rvt-color-text);
-    --rvt-tile-border: var(--rvt-color-neutral-2);
-    --rvt-tile-hover-border: var(--rvt-color-neutral-4);
-    --rvt-tile-selected-border: var(--rvt-color-primary);
-    --rvt-tile-selected-hover: var(--rvt-color-btn-secondary-bg-hover);
-    --rvt-tile-empty-text: var(--rvt-color-neutral-3);
-    --rvt-tile-check: var(--rvt-color-text-contrast);
-    --rvt-tile-delete-bg: var(--rvt-color-primary);
-    --rvt-tile-delete-text: var(--rvt-color-text-contrast);
-    --rvt-tile-disabled-border: var(--rvt-tile-border);
+  /* ++++++++++++ Site Level Colors +++++++++++++++++++ */
+  --rvt-color-main-bg: var(--rvt-color-neutral-0);
+  --rvt-color-head-bg: var(--rvt-color-primary-dark);
+
+  /* +++++++++++++ Tile Level Colors +++++++++++++++++++ */
+  --rvt-tile-text: var(--rvt-color-text);
+  --rvt-tile-background: transparent;
+  --rvt-tile-button-hover: var(--rvt-color-neutral-6-alpha-10);
+  --rvt-tile-button-active: var(--rvt-color-neutral-6-alpha-28);
+  --rvt-tile-border: var(--rvt-color-neutral-2);
+  --rvt-tile-hover-border: var(--rvt-color-neutral-4);
+  --rvt-tile-selected-border: var(--rvt-color-primary);
+  --rvt-tile-selected-hover: var(--rvt-color-btn-secondary-bg-hover);
+  --rvt-tile-empty-text: var(--rvt-color-neutral-3);
+  --rvt-tile-check: var(--rvt-color-text-contrast);
+  --rvt-tile-delete-bg: var(--rvt-color-primary);
+  --rvt-tile-delete-text: var(--rvt-color-text-contrast);
+  --rvt-tile-disabled-border: var(--rvt-tile-border);
 }
 
 
 [data-theme="dark"] {
 
-    --rvt-color-neutral-0: hsl(206, 14%, 10%); // #161A1D
-    --rvt-color-neutral-1: hsl(210, 13%, 15%); // #21262B
-    --rvt-color-neutral-2: hsl(210, 14%, 20%); // #2C333A
-    --rvt-color-neutral-3: hsl(208, 13%, 25%); // #374048
-    --rvt-color-neutral-4: hsl(209, 14%, 30%); // #424D57
-    --rvt-color-neutral-5: hsl(211, 13%, 35%); // #4E5965
-    --rvt-color-neutral-6: hsl(209, 14%, 70%); // #A8B3BD
-    --rvt-color-neutral-7: hsl(206, 14%, 85%); // #D3DADE
-    --rvt-color-neutral-8: hsl(210, 13%, 95%); // #F1F2F4
+  --rvt-color-neutral-0: hsl(206, 14%, 10%); // #161A1D
+  --rvt-color-neutral-1: hsl(210, 13%, 15%); // #21262B
+  --rvt-color-neutral-2: hsl(210, 14%, 20%); // #2C333A
+  --rvt-color-neutral-3: hsl(208, 13%, 25%); // #374048
+  --rvt-color-neutral-4: hsl(209, 14%, 30%); // #424D57
+  --rvt-color-neutral-5: hsl(211, 13%, 35%); // #4E5965
+  --rvt-color-neutral-6: hsl(209, 14%, 70%); // #A8B3BD
+  --rvt-color-neutral-7: hsl(206, 14%, 85%); // #D3DADE
+  --rvt-color-neutral-8: hsl(210, 13%, 95%); // #F1F2F4
 
-    // Old variables - DO NOT USE
-    --rvt-color-neutral-white: hsl(206, 14%, 10%);
-    --rvt-color-neutral-light: hsl(206, 14%, 10%);
-    --rvt-color-neutral-dark: hsl(206, 14%, 90%);
-    // end old variables
+  // Old variables - DO NOT USE
+  --rvt-color-neutral-white: hsl(206, 14%, 10%);
+  --rvt-color-neutral-light: hsl(206, 14%, 10%);
+  --rvt-color-neutral-dark: hsl(206, 14%, 90%);
+  // end old variables
 
-    @include common-colors;
-    @include interpolated-colors;
-    
-    --rvt-color-text: var(--rvt-color-neutral-6);
-    --rvt-color-primary-light: hsl(249, 40%, 58%); // adjusted for contrast ratio
-    --rvt-color-btn-primary-text: var(--rvt-color-neutral-8);
-    --rvt-tab-inverse-bg-hover: hsla(223, 39%, 16%, 0.25);
-    --rvt-color-btn-secondary-text: var(--rvt-color-neutral-8);    --rvt-color-btn-secondary-bg-hover: var(--rvt-color-neutral-3);
-    --rvt-color-btn-secondary-bg-active: var(--rvt-color-neutral-5);
-    --rvt-color-link: var(--rvt-color-neutral-8);
-    --rvt-color-snackbar-btn-text: var(--rvt-color-neutral-0);
-    --rvt-color-radio-selected: var(--rvt-color-neutral-8);
-    --rvt-color-btn-text-bg-hover: var(--rvt-color-neutral-3);
-    --rvt-color-btn-text-bg-active: var(--rvt-color-neutral-5);
-    --rvt-color-card-background: var(--rvt-color-neutral-1);
-    --rvt-color-card-border: var(--rvt-color-neutral-1);
-    --rvt-color-btn-primary-bg-active: var(--rvt-color-neutral-0);
-    --rvt-color-icon-color: var(--rvt-color-primary-light);
-    --rvt-color-icon-neutral: var(--rvt-color-neutral-6);
-    --rvt-color-head-bg: var(--rvt-color-neutral-1);
-    --rvt-color-drawer-apron: var(--rvt-color-neutral-6-alpha-28);
-    --rvt-color-shadow: hsla(206, 14%, 10%, 0.35);
+  @include common-colors;
+  @include interpolated-colors;
+
+  --rvt-color-text: var(--rvt-color-neutral-6);
+  --rvt-color-primary-light: hsl(249, 40%, 58%); // adjusted for contrast ratio
+  
+  --rvt-tab-inverse-bg-hover: hsla(223, 39%, 16%, 0.25);
+ 
+  --rvt-color-link: var(--rvt-color-neutral-8);
+  --rvt-color-icon-color: var(--rvt-color-primary-light);
+  --rvt-color-icon-neutral: var(--rvt-color-neutral-6);
+  --rvt-color-head-bg: var(--rvt-color-neutral-1);
+  --rvt-color-shadow: hsla(206, 14%, 10%, 0.35);
+
+  /* +++++++++++++ Component Level Colors For Dark Mode +++++++++++++++++++ */
+
+  // Buttons
+  --rvt-color-btn-primary-text: var(--rvt-color-neutral-8);
+  --rvt-color-btn-secondary-text: var(--rvt-color-neutral-8);
+  --rvt-color-btn-secondary-bg-hover: var(--rvt-color-neutral-3);
+  --rvt-color-btn-secondary-bg-active: var(--rvt-color-neutral-5);
+  --rvt-color-btn-text-bg-hover: var(--rvt-color-neutral-3);
+  --rvt-color-btn-text-bg-active: var(--rvt-color-neutral-5);
+  --rvt-color-btn-primary-bg-active: var(--rvt-color-neutral-0);
+
+  // Card
+  --rvt-color-card-background: var(--rvt-color-neutral-1);
+  --rvt-color-card-border: var(--rvt-color-neutral-1);
+
+  // Drawer
+  --rvt-color-drawer-apron: var(--rvt-color-neutral-6-alpha-28);
+
+  // Radio button
+  --rvt-color-radio-selected: var(--rvt-color-neutral-8);
+
+  // Slider
+  --rvt-color-slider-track: var(--rvt-color-neutral-5);
+  --rvt-color-slider-track-hover: var(--rvt-color-neutral-6);
+
+  // Snackbar
+  --rvt-color-snackbar-btn-text: var(--rvt-color-neutral-0);
+
+  // Tile
+  --rvt-tile-background: var(--rvt-color-neutral-1);
+  --rvt-tile-button-hover: var(--rvt-color-neutral-3);
+  --rvt-tile-button-active: var(--rvt-color-neutral-4);
+  --rvt-tile-hover-border: var(--rvt-color-neutral-5);
 
 }
 
 :root {
 
-    /* +++++++++++++ Base Level Colors +++++++++++++++++++ */
-    --rvt-color-primary: hsl(247, 30%, 45%);
-    --rvt-color-primary-dark: hsl(241, 44%, 28%);
-    --rvt-color-primary-light: hsl(249, 40%, 63%);
+  /* +++++++++++++ Base Level Colors +++++++++++++++++++ */
+  --rvt-color-primary: hsl(247, 30%, 45%);
+  --rvt-color-primary-dark: hsl(241, 44%, 28%);
+  --rvt-color-primary-light: hsl(249, 40%, 63%);
 
-    --rvt-color-primary-alpha-10: hsla(247, 30%, 45%, 0.1);
-    --rvt-color-primary-alpha-28: hsla(247, 30%, 45%, 0.28);
+  --rvt-color-primary-alpha-10: hsla(247, 30%, 45%, 0.1);
+  --rvt-color-primary-alpha-28: hsla(247, 30%, 45%, 0.28);
 
-    --rvt-color-accent: hsl(39, 78%, 56%);
+  --rvt-color-accent: hsl(39, 78%, 56%);
 
 
-    --rvt-color-neutral-0: hsl(240, 0%, 100%); // #FFFFFF
-    --rvt-color-neutral-1: hsl(240, 0%, 97%); // #F7F7F7
-    --rvt-color-neutral-2: hsl(240, 3%, 92%); // #EBEBEC
-    --rvt-color-neutral-3: hsl(222, 11%, 82%); // #CBCED5
-    --rvt-color-neutral-4: hsl(222, 11%, 76%); // #BCC0C9 - Disabled
-    --rvt-color-neutral-5: hsl(219, 12%, 71%); // #ADB3BE
-    --rvt-color-neutral-6: hsl(220, 9%, 46%); // #6B7280
-    --rvt-color-neutral-7: hsl(227, 22%, 29%); // #394059
-    --rvt-color-neutral-8: hsl(223, 39%, 16%); // #192239
+  --rvt-color-neutral-0: hsl(240, 0%, 100%); // #FFFFFF
+  --rvt-color-neutral-1: hsl(240, 0%, 97%); // #F7F7F7
+  --rvt-color-neutral-2: hsl(240, 3%, 92%); // #EBEBEC
+  --rvt-color-neutral-3: hsl(222, 11%, 82%); // #CBCED5
+  --rvt-color-neutral-4: hsl(222, 11%, 76%); // #BCC0C9 - Disabled
+  --rvt-color-neutral-5: hsl(219, 12%, 71%); // #ADB3BE
+  --rvt-color-neutral-6: hsl(220, 9%, 46%); // #6B7280
+  --rvt-color-neutral-7: hsl(227, 22%, 29%); // #394059
+  --rvt-color-neutral-8: hsl(223, 39%, 16%); // #192239
 
-    --rvt-color-neutral-0-contrast: hsl(240, 0%, 100%); // #FFFFFF
-    --rvt-color-neutral-1-contrast: hsl(240, 0%, 97%); // #F7F7F7
-    --rvt-color-neutral-2-contrast: hsl(240, 3%, 92%); // #EBEBEC
-    --rvt-color-neutral-3-contrast: hsl(222, 11%, 82%); // #CBCED5
-    --rvt-color-neutral-4-contrast: hsl(222, 11%, 76%); // #BCC0C9 - Disabled
-    --rvt-color-neutral-5-contrast: hsl(219, 12%, 71%); // #ADB3BE
-    --rvt-color-neutral-6-contrast: hsl(220, 9%, 46%); // #6B7280
-    --rvt-color-neutral-7-contrast: hsl(227, 22%, 29%); // #394059
-    --rvt-color-neutral-8-contrast: hsl(223, 39%, 16%); // #192239
+  --rvt-color-neutral-0-contrast: hsl(240, 0%, 100%); // #FFFFFF
+  --rvt-color-neutral-1-contrast: hsl(240, 0%, 97%); // #F7F7F7
+  --rvt-color-neutral-2-contrast: hsl(240, 3%, 92%); // #EBEBEC
+  --rvt-color-neutral-3-contrast: hsl(222, 11%, 82%); // #CBCED5
+  --rvt-color-neutral-4-contrast: hsl(222, 11%, 76%); // #BCC0C9 - Disabled
+  --rvt-color-neutral-5-contrast: hsl(219, 12%, 71%); // #ADB3BE
+  --rvt-color-neutral-6-contrast: hsl(220, 9%, 46%); // #6B7280
+  --rvt-color-neutral-7-contrast: hsl(227, 22%, 29%); // #394059
+  --rvt-color-neutral-8-contrast: hsl(223, 39%, 16%); // #192239
 
-    // Old variables - DO NOT USE
-    --rvt-color-neutral-light: hsl(0, 100%, 100%);
-    --rvt-color-neutral-white: hsl(240, 0%, 100%);
-    --rvt-color-neutral-dark: hsl(223, 39%, 16%);
-    // end old variables
+  // Old variables - DO NOT USE
+  --rvt-color-neutral-light: hsl(0, 100%, 100%);
+  --rvt-color-neutral-white: hsl(240, 0%, 100%);
+  --rvt-color-neutral-dark: hsl(223, 39%, 16%);
+  // end old variables
 
-    --rvt-color-neutral-3-alpha-90: hsla(222, 11%, 82%, 0.9);
-    --rvt-color-neutral-6-alpha-10: hsla(227, 22%, 29%, 0.1);
-    --rvt-color-neutral-6-alpha-28: hsla(227, 22%, 29%, 0.28);
-    --rvt-color-neutral-6-alpha-71: hsla(227, 22%, 29%, 0.71);
+  --rvt-color-neutral-3-alpha-90: hsla(222, 11%, 82%, 0.9);
+  --rvt-color-neutral-6-alpha-10: hsla(227, 22%, 29%, 0.1);
+  --rvt-color-neutral-6-alpha-28: hsla(227, 22%, 29%, 0.28);
+  --rvt-color-neutral-6-alpha-71: hsla(227, 22%, 29%, 0.71);
 
-    --rvt-btn-inverse-primary-bg-hover: hsla(240, 0%, 100%, 0.85);
-    --rvt-btn-inverse-primary-bg-active: hsla(240, 0%, 100%, 0.70);
-    --rvt-btn-inverse-secondary-hover: hsla(240, 0%, 100%, 0.25);
-    --rvt-btn-inverse-secondary-active: hsla(240, 0%, 100%, 0.35);
-    --rvt-tab-inverse-bg-hover: hsla(240, 0%, 100%, 0.25);
+  --rvt-btn-inverse-primary-bg-hover: hsla(240, 0%, 100%, 0.85);
+  --rvt-btn-inverse-primary-bg-active: hsla(240, 0%, 100%, 0.70);
+  --rvt-btn-inverse-secondary-hover: hsla(240, 0%, 100%, 0.25);
+  --rvt-btn-inverse-secondary-active: hsla(240, 0%, 100%, 0.35);
+  --rvt-tab-inverse-bg-hover: hsla(240, 0%, 100%, 0.25);
 
-    @include common-colors;
-    @include interpolated-colors;
+  @include common-colors;
+  @include interpolated-colors;
 }

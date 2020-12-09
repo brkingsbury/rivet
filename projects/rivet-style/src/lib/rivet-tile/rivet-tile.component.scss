@@ -44,7 +44,7 @@ $transitionTime: 300ms;
     }
 
     button.rvt-tile-content {
-        background: none;
+        background-color: var(--rvt-tile-background);
         border: none;
         display: flex;
         justify-content: center;
@@ -152,6 +152,7 @@ $transitionTime: 300ms;
         position: relative;
         height: 30px;
         bottom: 0;
+        background-color: var(--rvt-tile-background);
         border: 2px solid var(--rvt-tile-border);
         border-top: 0;
         line-height: 32px;
@@ -172,6 +173,12 @@ $transitionTime: 300ms;
         &.rivet-icon-delete {
             border-left-width: 0;
             border-radius: 0 0 $tileBorderRadius 0;
+        }
+        &:hover, &:focus {
+          background-color: var(--rvt-tile-button-hover); 
+        }
+        &:active {
+          background-color: var(--rvt-tile-button-active);
         }
     }
 

@@ -1,27 +1,53 @@
 @import './rivetTheme.scss';
 
-mat-slider {
+mat-slider,
+mat-slider.mat-accent {
+  .mat-slider-track-background {
+    background-color: var(--rvt-color-slider-track);
+    transition: background-color 200ms ease !important;
+  }
+
+  .mat-slider-track-fill {
+    background-color: var(--rvt-color-slider-track-fill);
+  }
+
+  .mat-slider-thumb {
+    background-color: var(--rvt-color-slider-thumb);
+    transition: transform 200ms ease;
+  }
+
+  &:hover:not(.mat-slider-disabled),
+  &:focus:not(.mat-slider-disabled),
+  &.cdk-focused:not(.mat-slider-disabled) {
+    .mat-slider-thumb {
+      transform: scale(0.8);
+    }
+
+    .mat-slider-track-wrapper .mat-slider-track-background {
+      background-color: var(--rvt-color-slider-track-hover);
+    }
+  }
+
+  &.cdk-keyboard-focused:not(.mat-slider-disabled) .mat-slider-thumb {
+    border: 2px solid var(--rvt-color-neutral-7);
+    transform: scale(0.9);
+  }
+
+  &:disabled,
+  &.mat-slider-disabled {
+
     .mat-slider-track-background {
-        background-color: var(--rvt-color-neutral-6);
+      background-color: var(--rvt-color-slider-track-disabled);
     }
 
-    &:hover .mat-slider-track-wrapper {
-        .mat-slider-track-background{
-            background-color: var(--rvt-color-neutral-6);
-        }
+    .mat-slider-track-fill {
+      background-color: var(--rvt-color-slider-track-fill-disabled);
     }
 
-    &.mat-accent {
-        .mat-slider-track-fill {
-            background-color: var(--rvt-color-radio-selected);
-        }
-        .mat-slider-thumb {
-            background-color: var(--rvt-color-radio-selected);
-        }
+    .mat-slider-thumb {
+      background-color: var(--rvt-color-slider-thumb-disabled);
+      border-color: var(--rvt-color-slider-thumb-disabled);
+      transform: scale(0.7); // sets transform back to default size
     }
-}
-.cdk-focused .mat-slider-track-wrapper {
-    .mat-slider-track-background{
-        background-color: var(--rvt-color-neutral-6);
-    }
+  }
 }
